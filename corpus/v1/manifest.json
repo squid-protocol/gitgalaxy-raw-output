@@ -1,0 +1,2606 @@
+{
+  "version": "v1",
+  "description": "Pinned corpus of source repositories scanned by gitgalaxy, as of this snapshot.",
+  "repo_count": 323,
+  "repos": [
+    {
+      "name": "AFNetworking",
+      "group": null,
+      "clone_path": "AFNetworking",
+      "url": "https://github.com/AFNetworking/AFNetworking.git",
+      "commit": "d9f589cc2c1fe9d55eb5eea00558010afea7a41e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "Alamofire",
+      "group": null,
+      "clone_path": "Alamofire",
+      "url": "https://github.com/Alamofire/Alamofire",
+      "commit": "36f1747e31305e0cfda27864091318950c66a5b1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "Apollo-11",
+      "group": null,
+      "clone_path": "Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "commit": "247dd7d0d1b0e7f9f270750ec08983e0a72e73e1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "AppFlowy",
+      "group": null,
+      "clone_path": "AppFlowy",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy",
+      "commit": "4af02cdc87468be10ab15dbb4afd27fbf53ce89b",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Correios-Brasil",
+      "group": null,
+      "clone_path": "Correios-Brasil",
+      "url": "https://github.com/FinotiLucas/Correios-Brasil.git",
+      "commit": "03eef682886174627cc559163a25b7180c642e54",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "DOOM",
+      "group": null,
+      "clone_path": "DOOM",
+      "url": "https://github.com/id-Software/DOOM.git",
+      "commit": "a77dfb96cb91780ca334d0d4cfd86957558007e0",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "HolyLang",
+      "group": null,
+      "clone_path": "HolyLang",
+      "url": "https://github.com/chadsec1/HolyLang",
+      "commit": "48d8b0cf55e60b0aa77de02b9464d35a69a797b7",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "PowerShell",
+      "group": null,
+      "clone_path": "PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell",
+      "commit": "a17f1761eca57d90856062e35add0f013a1c703f",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "PowerToys",
+      "group": null,
+      "clone_path": "PowerToys",
+      "url": "https://github.com/microsoft/PowerToys.git",
+      "commit": "4ce451edd0a66ba4fe1366ff6a912c30be59feb3",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "WorldWideWeb",
+      "group": null,
+      "clone_path": "WorldWideWeb",
+      "url": "https://github.com/simonw/1991-WWW-NeXT-Implementation.git",
+      "commit": "032807bfe9b77b434c638667cba051be50047b23",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "abap-cleaner",
+      "group": null,
+      "clone_path": "abap-cleaner",
+      "url": "https://github.com/SAP/abap-cleaner",
+      "commit": "952c68076fb0c5a258d947ca269e876d12603190",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "abap2xlsx",
+      "group": null,
+      "clone_path": "abap2xlsx",
+      "url": "https://github.com/abap2xlsx/abap2xlsx.git",
+      "commit": "f33b94c8efbe3f5228aa6bdb85ecedf25e0b5def",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "abapGit",
+      "group": null,
+      "clone_path": "abapGit",
+      "url": "https://github.com/abapGit/abapGit",
+      "commit": "951e2243efbf0dbbfb4978a4ffa182b77e2ee939",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "alphafold_2018",
+      "group": null,
+      "clone_path": "alphafold_2018",
+      "url": "https://github.com/google-deepmind/deepmind-research.git",
+      "commit": "f5de0ede8430809180254ee957abf36ed62579ef",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "angr",
+      "group": null,
+      "clone_path": "angr",
+      "url": "https://github.com/angr/angr.git",
+      "commit": "ac1ad40678a32222344f788c7f74378bc213e50a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "ansible",
+      "group": null,
+      "clone_path": "ansible",
+      "url": "https://github.com/ansible/ansible",
+      "commit": "8d24f0d32ffbc135cd1890c494ffa6730b994c8f",
+      "branch_at_scan_time": "devel"
+    },
+    {
+      "name": "apex-recipes",
+      "group": null,
+      "clone_path": "apex-recipes",
+      "url": "https://github.com/trailheadapps/apex-recipes",
+      "commit": "3462c7d4bd72998b97da95bd613913a944c4bc0d",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "bevy",
+      "group": null,
+      "clone_path": "bevy",
+      "url": "https://github.com/bevyengine/bevy.git",
+      "commit": "c7f779b8425e6bd110a5b6be28152206d139367b",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "bitcoin-0.1.0",
+      "group": null,
+      "clone_path": "bitcoin-0.1.0",
+      "url": "https://github.com/trottier/original-bitcoin.git",
+      "commit": "92ee8d9a994391d148733da77e2bbc2f4acc43cd",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "blast",
+      "group": null,
+      "clone_path": "blast",
+      "url": "https://github.com/ncbi/ncbi-cxx-toolkit-public.git",
+      "commit": "0046959f6c628416d0fbb4f8f53b224c8244ace7",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "brew",
+      "group": null,
+      "clone_path": "brew",
+      "url": "https://github.com/Homebrew/brew",
+      "commit": "ff29aa966b3127a32e5637bde7d5c0195186d6d4",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "bugzilla",
+      "group": null,
+      "clone_path": "bugzilla",
+      "url": "https://github.com/bugzilla/bugzilla",
+      "commit": "4299886770979cfb98c7417a6094c36a3ab19c00",
+      "branch_at_scan_time": "5.2"
+    },
+    {
+      "name": "bun",
+      "group": null,
+      "clone_path": "bun",
+      "url": "https://github.com/oven-sh/bun",
+      "commit": "1cc837687b1d1f8d558a40110fbe3e61cc41fbcd",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cics-genapp",
+      "group": null,
+      "clone_path": "cics-genapp",
+      "url": "https://github.com/cicsdev/cics-genapp.git",
+      "commit": "63eca1b670d9199637bdc2ca7df6e4189a58c892",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "circuitpython",
+      "group": null,
+      "clone_path": "circuitpython",
+      "url": "https://github.com/adafruit/circuitpython",
+      "commit": "f7f0fd6c45bc71410dfb0acd439bc69516145463",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cobol-check",
+      "group": null,
+      "clone_path": "cobol-check",
+      "url": "https://github.com/openmainframeproject/cobol-check.git",
+      "commit": "e372dd7f436c471883bd58ac71aab49861a57e5d",
+      "branch_at_scan_time": "Developer"
+    },
+    {
+      "name": "cobol-programming-course",
+      "group": null,
+      "clone_path": "cobol-programming-course",
+      "url": "https://github.com/openmainframeproject/cobol-programming-course.git",
+      "commit": "11aca51998e11181925ff16c20b32c220360ff66",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cpython",
+      "group": null,
+      "clone_path": "cpython",
+      "url": "https://github.com/python/cpython",
+      "commit": "1fd66eadd258223a0e3446b5b23ff2303294112c",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "curl",
+      "group": null,
+      "clone_path": "curl",
+      "url": "https://github.com/curl/curl",
+      "commit": "8f3f470baec57f5e53e11fc2ecaa749201ca9c0c",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "db-tutorial",
+      "group": null,
+      "clone_path": "db-tutorial",
+      "url": "https://github.com/dunwu/db-tutorial.git",
+      "commit": "47d7d1552f1be6cde030d44b19d976553965886a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "discourse",
+      "group": null,
+      "clone_path": "discourse",
+      "url": "https://github.com/discourse/discourse",
+      "commit": "544e36f477511818b9df96ec37e44af5e4bab7d9",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "django",
+      "group": null,
+      "clone_path": "django",
+      "url": "https://github.com/django/django.git",
+      "commit": "6b90f8a8d6994dc62cd91dde911fe56ec3389494",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "eeglab",
+      "group": null,
+      "clone_path": "eeglab",
+      "url": "https://github.com/sccn/eeglab",
+      "commit": "514a923047228fe24bfd9564c587e8a6b1cf56bb",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "effect",
+      "group": null,
+      "clone_path": "effect",
+      "url": "https://github.com/Effect-TS/effect.git",
+      "commit": "70ce155cd73a3b4cd723fe955454b5837b428f76",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "elasticsearch",
+      "group": null,
+      "clone_path": "elasticsearch",
+      "url": "https://github.com/elastic/elasticsearch",
+      "commit": "294a6f34f172eedc0e922627982b1dbec702c77a",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "element",
+      "group": null,
+      "clone_path": "element",
+      "url": "https://github.com/ElemeFE/element.git",
+      "commit": "c345bb453bf11badb4831a6a3f600c9372b3a336",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "exiftool",
+      "group": null,
+      "clone_path": "exiftool",
+      "url": "https://github.com/exiftool/exiftool",
+      "commit": "78ef8fcfe519df7d074d15ed973efc9a9663a8e3",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "express",
+      "group": null,
+      "clone_path": "express",
+      "url": "https://github.com/expressjs/express",
+      "commit": "6c4249feec8ab40631817c8e7001baf2ed022224",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "fflib-apex-common",
+      "group": null,
+      "clone_path": "fflib-apex-common",
+      "url": "https://github.com/apex-enterprise-patterns/fflib-apex-common",
+      "commit": "286d0d12b40f22b1cb41a5fb451d4a9dd690e11a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "fieldtrip",
+      "group": null,
+      "clone_path": "fieldtrip",
+      "url": "https://github.com/fieldtrip/fieldtrip",
+      "commit": "2f3917526e6a01d37fbb224a02618f4fc61d47d9",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "fineract",
+      "group": null,
+      "clone_path": "fineract",
+      "url": "https://github.com/apache/fineract.git",
+      "commit": "e6e5a4b6eec5a33d327546c640e6b7f281b5ae42",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "flask",
+      "group": null,
+      "clone_path": "flask",
+      "url": "https://github.com/pallets/flask.git",
+      "commit": "7ef2946fb5151b745df30201b8c27790cac53875",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "flutter",
+      "group": null,
+      "clone_path": "flutter",
+      "url": "https://github.com/flutter/flutter",
+      "commit": "75910740753c13a858bb39c3686afb71675e8dc4",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "freebsd-src",
+      "group": null,
+      "clone_path": "freebsd-src",
+      "url": "https://github.com/freebsd/freebsd-src.git",
+      "commit": "c70755bc0d8f703dbaa1520c15e8213a95847dd5",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "ghostty",
+      "group": null,
+      "clone_path": "ghostty",
+      "url": "https://github.com/ghostty-org/ghostty",
+      "commit": "debcffbadb75221a030319c075fae12cfe114176",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "gitgalaxy",
+      "group": null,
+      "clone_path": "gitgalaxy",
+      "url": "https://github.com/squid-protocol/gitgalaxy.git",
+      "commit": "6d4138bf29d304c22e10e06ec9dfe1ea10948cd7",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "gnucobol",
+      "group": null,
+      "clone_path": "gnucobol",
+      "url": "https://github.com/OCamlPro/gnucobol.git",
+      "commit": "253e5cc2602e6e420ff5a770f6f3d5b61aa9f94a",
+      "branch_at_scan_time": "gitside-gnucobol-3.x"
+    },
+    {
+      "name": "gnupg",
+      "group": null,
+      "clone_path": "gnupg",
+      "url": "https://github.com/gpg/gnupg.git",
+      "commit": "9673bbc47bc006f360da6ce938c6ea682116c7e2",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "go",
+      "group": null,
+      "clone_path": "go",
+      "url": "https://github.com/golang/go",
+      "commit": "d247ed00e498e9717fb7c80d126bee5a8afdb4e8",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "godot",
+      "group": null,
+      "clone_path": "godot",
+      "url": "https://github.com/godotengine/godot.git",
+      "commit": "4a919adccf8e398aceca75399c539078c54fe97f",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "gradle",
+      "group": null,
+      "clone_path": "gradle",
+      "url": "https://github.com/gradle/gradle",
+      "commit": "db62c2f2b404217cb6a7eef2598c6e84ab08fa27",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "impacket",
+      "group": null,
+      "clone_path": "impacket",
+      "url": "https://github.com/fortra/impacket.git",
+      "commit": "76ee87746d49522fc9c3f8d8fc8d5b15126d389e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "iwubi",
+      "group": null,
+      "clone_path": "iwubi",
+      "url": "https://github.com/Honghe/iwubi.git",
+      "commit": "b30fbd4bf79116874c9484d2c752940c88c23c63",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "jellyfin",
+      "group": null,
+      "clone_path": "jellyfin",
+      "url": "https://github.com/jellyfin/jellyfin.git",
+      "commit": "dbc42bb8e236f9ead33ddd47d500b7d00f52805d",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "jenkins",
+      "group": null,
+      "clone_path": "jenkins",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "commit": "bc6a2222ce5a9e104a4f5a96653f0e879461936b",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "kafka",
+      "group": null,
+      "clone_path": "kafka",
+      "url": "https://github.com/apache/kafka",
+      "commit": "eb111f6695ef30889e7367bbad759f7e772d65ea",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "kotlin",
+      "group": null,
+      "clone_path": "kotlin",
+      "url": "https://github.com/JetBrains/kotlin",
+      "commit": "bcdc78880f23dd07f10607332e8a89a5e72d4e9a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "kubernetes",
+      "group": null,
+      "clone_path": "kubernetes",
+      "url": "https://github.com/kubernetes/kubernetes.git",
+      "commit": "da663405beb487d66c27a0220ea4073305ae9077",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "laravel",
+      "group": null,
+      "clone_path": "laravel",
+      "url": "https://github.com/laravel/laravel",
+      "commit": "83db153670f42c192e7253b5c3cb59492bc3701b",
+      "branch_at_scan_time": "13.x"
+    },
+    {
+      "name": "linux-1.0",
+      "group": null,
+      "clone_path": "linux-1.0",
+      "url": "https://github.com/kalamangga-net/linux-1.0.git",
+      "commit": "733a0282d6e855c5eee87c86733dca8c0f3e1a42",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "livecode",
+      "group": null,
+      "clone_path": "livecode",
+      "url": "https://github.com/livecode/livecode.git",
+      "commit": "4606a10ea10b16d5071d0f9f263ccdd7ede8b31d",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "macports-base",
+      "group": null,
+      "clone_path": "macports-base",
+      "url": "https://github.com/macports/macports-base",
+      "commit": "81fb1d2acda818f1075dd2196b650466dbd35117",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "mall",
+      "group": null,
+      "clone_path": "mall",
+      "url": "https://github.com/macrozheng/mall.git",
+      "commit": "d9501e97a78eb2bb0ae8eaa273eeb1cfc7c5d386",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "mediawiki",
+      "group": null,
+      "clone_path": "mediawiki",
+      "url": "https://github.com/wikimedia/mediawiki.git",
+      "commit": "8863834e673e4f297bfbc40cd4d54ee9027ad876",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "micropython",
+      "group": null,
+      "clone_path": "micropython",
+      "url": "https://github.com/micropython/micropython",
+      "commit": "2dc2e30d98ee225070e990586526f8e43b3c95a2",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "micropython-ulab",
+      "group": null,
+      "clone_path": "micropython-ulab",
+      "url": "https://github.com/v923z/micropython-ulab",
+      "commit": "2a94125bdabe02144875abe1dd5665acbba95620",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "moby",
+      "group": null,
+      "clone_path": "moby",
+      "url": "https://github.com/moby/moby",
+      "commit": "d74daf1afe932c3579fc98ffc8f4378e5357c2a0",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "node",
+      "group": null,
+      "clone_path": "node",
+      "url": "https://github.com/nodejs/node",
+      "commit": "cc967413c9b32e4d34d74a3b758ca71bee7a7746",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "nvda",
+      "group": null,
+      "clone_path": "nvda",
+      "url": "https://github.com/nvaccess/nvda.git",
+      "commit": "a94c7f85bd2e8e3e290b314244ea921c4cd01b4c",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "odoo",
+      "group": null,
+      "clone_path": "odoo",
+      "url": "https://github.com/odoo/odoo.git",
+      "commit": "93095e1e9507fde18aefe91aac8c9cb53cadc2f3",
+      "branch_at_scan_time": "19.0"
+    },
+    {
+      "name": "okhttp",
+      "group": null,
+      "clone_path": "okhttp",
+      "url": "https://github.com/square/okhttp",
+      "commit": "c396b08f7a06e412c4cc8f5c83b0d7ed19f7fa6c",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "opencv",
+      "group": null,
+      "clone_path": "opencv",
+      "url": "https://github.com/opencv/opencv.git",
+      "commit": "69bdcc93861cda196df935dd2975e6f1384ceced",
+      "branch_at_scan_time": "4.x"
+    },
+    {
+      "name": "openzeppelin-contracts",
+      "group": null,
+      "clone_path": "openzeppelin-contracts",
+      "url": "https://github.com/OpenZeppelin/openzeppelin-contracts.git",
+      "commit": "9cfdccd35350f7bcc585cf2ede08cd04e7f0ec10",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "pandas",
+      "group": null,
+      "clone_path": "pandas",
+      "url": "https://github.com/pandas-dev/pandas.git",
+      "commit": "7629c655b22b998dd86bf98c2f1c721998e9e4f1",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pandoc",
+      "group": null,
+      "clone_path": "pandoc",
+      "url": "https://github.com/jgm/pandoc.git",
+      "commit": "7777de6adb166d92b4c9ee4b24054637ab8477b7",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "platform_dalvik",
+      "group": null,
+      "clone_path": "platform_dalvik",
+      "url": "https://github.com/aosp-mirror/platform_dalvik.git",
+      "commit": "838bd34deecb3715b2b4006edede2ab79e42e336",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "prometheus",
+      "group": null,
+      "clone_path": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "commit": "cb3382314d63ed457279c9582cd6db63d0a06631",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pwntools",
+      "group": null,
+      "clone_path": "pwntools",
+      "url": "https://github.com/Gallopsled/pwntools.git",
+      "commit": "fd3cf3d43f39d4b50c1d0f33875bdc733afb48fa",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "pyarmor",
+      "group": null,
+      "clone_path": "pyarmor",
+      "url": "https://github.com/dashingsoft/pyarmor.git",
+      "commit": "9e8858bcdf590491c0dd83f7539381d34ff356d5",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "python-simplebench",
+      "group": null,
+      "clone_path": "python-simplebench",
+      "url": "https://github.com/JerilynFranz/python-simplebench.git",
+      "commit": "f36f50afe458be260d7490a0746168ea70423537",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "racket",
+      "group": null,
+      "clone_path": "racket",
+      "url": "https://github.com/racket/racket",
+      "commit": "afbc55a2ad3d98158c1cc8207be87936e3706c5a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "rails",
+      "group": null,
+      "clone_path": "rails",
+      "url": "https://github.com/rails/rails.git",
+      "commit": "afd103d69abb7441da3d2ac5c737f8de3e678779",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "react",
+      "group": null,
+      "clone_path": "react",
+      "url": "https://github.com/facebook/react",
+      "commit": "74568e8627aa43469b74f2972f427a209639d0b6",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "redis",
+      "group": null,
+      "clone_path": "redis",
+      "url": "https://github.com/redis/redis",
+      "commit": "2ba0194fbe5820cab8602bfa633a7d27e97cabdd",
+      "branch_at_scan_time": "unstable"
+    },
+    {
+      "name": "retrofit",
+      "group": null,
+      "clone_path": "retrofit",
+      "url": "https://github.com/square/retrofit",
+      "commit": "77e6ba21d9ba372d1b23ef29881912910da23347",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "ripgrep",
+      "group": null,
+      "clone_path": "ripgrep",
+      "url": "https://github.com/BurntSushi/ripgrep",
+      "commit": "4519153e5e461527f4bca45b042fff45c4ec6fb9",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "root",
+      "group": null,
+      "clone_path": "root",
+      "url": "https://github.com/root-project/root.git",
+      "commit": "e082dce9bac50cc8ea6f3acb68c306692b712770",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "roslyn",
+      "group": null,
+      "clone_path": "roslyn",
+      "url": "https://github.com/dotnet/roslyn",
+      "commit": "849bed61024b171e673b9a1fac565b30e3ae1934",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "runtime",
+      "group": null,
+      "clone_path": "runtime",
+      "url": "https://github.com/dotnet/runtime.git",
+      "commit": "aba46e33ea5ddd45d90e5c6a8b46bba6744ddc9a",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "rust",
+      "group": null,
+      "clone_path": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "commit": "3f3c6f45dc68eb71d1e01ae716bad4da164dfbf1",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "scapy",
+      "group": null,
+      "clone_path": "scapy",
+      "url": "https://github.com/secdev/scapy.git",
+      "commit": "9ae49f850db81ae2023e667014cc0f1ed5aa7a35",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "sdk",
+      "group": null,
+      "clone_path": "sdk",
+      "url": "https://github.com/dart-lang/sdk",
+      "commit": "eb59896079d9cda5351c2f713a22be89b9f9562c",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "spamassassin",
+      "group": null,
+      "clone_path": "spamassassin",
+      "url": "https://github.com/apache/spamassassin",
+      "commit": "8493b4283a201804e107d2493777ff73fb382af4",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "spm12",
+      "group": null,
+      "clone_path": "spm12",
+      "url": "https://github.com/spm/spm12",
+      "commit": "03ac9473cad402407b6472228377c0167fdc54b8",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "spock",
+      "group": null,
+      "clone_path": "spock",
+      "url": "https://github.com/spockframework/spock",
+      "commit": "b71e3d7590dae28d608aa92f90b45bef33aaeda8",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "spring-boot",
+      "group": null,
+      "clone_path": "spring-boot",
+      "url": "https://github.com/spring-projects/spring-boot",
+      "commit": "5cecd3922fce651f13d16a85d8a29efaa7f44cfd",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "sqlite",
+      "group": null,
+      "clone_path": "sqlite",
+      "url": "https://github.com/sqlite/sqlite.git",
+      "commit": "f270460366134e350ad6e1509957f812c9700d2b",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "sqlmap",
+      "group": null,
+      "clone_path": "sqlmap",
+      "url": "https://github.com/sqlmapproject/sqlmap.git",
+      "commit": "c310c695a100268f8b91613c33e0541a6e5cda17",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "srfi-1",
+      "group": null,
+      "clone_path": "srfi-1",
+      "url": "https://github.com/scheme-requests-for-implementation/srfi-1",
+      "commit": "a05b8a6e84144c2bae2ad80ff7c0669509d9c554",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "swift",
+      "group": null,
+      "clone_path": "swift",
+      "url": "https://github.com/apple/swift",
+      "commit": "0bf253232eabdc1a2a8ae926aa462d86f1ae1941",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "tauri",
+      "group": null,
+      "clone_path": "tauri",
+      "url": "https://github.com/tauri-apps/tauri",
+      "commit": "e5b00795c226c4d44f7b47257eb8982bd73b1025",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "tcpip_historical",
+      "group": null,
+      "clone_path": "tcpip_historical",
+      "url": "https://github.com/weiss/original-bsd.git",
+      "commit": "b44636d7febc9dcf553118bd320571864188351d",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "tensorflow",
+      "group": null,
+      "clone_path": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow.git",
+      "commit": "c21c40c048e9b35d032d31ce41809c2cadeb8fca",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "terraform",
+      "group": null,
+      "clone_path": "terraform",
+      "url": "https://github.com/hashicorp/terraform",
+      "commit": "73c225dff4f1dc2a2464ffffe6f590e1d5692c05",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "tigerbeetle",
+      "group": null,
+      "clone_path": "tigerbeetle",
+      "url": "https://github.com/tigerbeetle/tigerbeetle",
+      "commit": "f25402aa63c8231dbf7d039a6a4c381cd36f89c0",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "tokio",
+      "group": null,
+      "clone_path": "tokio",
+      "url": "https://github.com/tokio-rs/tokio",
+      "commit": "ee4de818065a97c0be0d6bfc18fb36725349aef8",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "vapor",
+      "group": null,
+      "clone_path": "vapor",
+      "url": "https://github.com/vapor/vapor",
+      "commit": "ff88583e10f02aa47be49e632d5179f89e855e03",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "voyager",
+      "group": null,
+      "clone_path": "voyager",
+      "url": "https://github.com/Zaneham/voyager-fds-emulator.git",
+      "commit": "f866488ee9977e0a0b684a77eb5260b64b5f58c1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "vscode",
+      "group": null,
+      "clone_path": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "commit": "23c0b41d69d42b85e1ae7ee4b99801dc4e21e232",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "vue",
+      "group": null,
+      "clone_path": "vue",
+      "url": "https://github.com/vuejs/vue",
+      "commit": "9e88707940088cb1f4cd7dd210c9168a50dc347c",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "vyre",
+      "group": null,
+      "clone_path": "vyre",
+      "url": "https://github.com/santhsecurity/vyre",
+      "commit": "4d759595a12966433d417fea8fc54558253b834f",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "wordpress",
+      "group": null,
+      "clone_path": "wordpress",
+      "url": "https://github.com/WordPress/WordPress.git",
+      "commit": "5f913088f4a04816043be019737a6e4590eae845",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "wrf-fortran",
+      "group": null,
+      "clone_path": "wrf-fortran",
+      "url": "https://github.com/wrf-model/WRF.git",
+      "commit": "f15568ccc1447780e3bd664b9f0196edd784bf33",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "BareMetal-OS",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/BareMetal-OS",
+      "url": "https://github.com/ReturnInfinity/BareMetal-OS.git",
+      "commit": "0edc83522071f88256a80c376e58662d9187115a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "ChrysaLisp",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/ChrysaLisp",
+      "url": "https://github.com/vygr/ChrysaLisp.git",
+      "commit": "8d8d528d59b1f58c9f22160088d9e49226f95bd4",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "HelloSilicon",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/HelloSilicon",
+      "url": "https://github.com/below/HelloSilicon.git",
+      "commit": "29170b7e69970e8bfb74e5f210bfe20fa2229d8a",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "MS-DOS",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/MS-DOS",
+      "url": "https://github.com/microsoft/MS-DOS.git",
+      "commit": "2d04cacc5322951f187bb17e017c12920ac8ebe2",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Much-Assembly-Required",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/Much-Assembly-Required",
+      "url": "https://github.com/simon987/Much-Assembly-Required.git",
+      "commit": "ac374f5b525615da3ecb36b08cc5fc53ab73dc96",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "RaspberryPi",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/RaspberryPi",
+      "url": "https://github.com/PeterLemon/RaspberryPi.git",
+      "commit": "5783e31ba16353413a9248431da464e37a5619d1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "asm",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/asm",
+      "url": "https://github.com/0xAX/asm.git",
+      "commit": "0b63ccb7aabbc575b9e80dba61f4cfddf9212a65",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "blst",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/blst",
+      "url": "https://github.com/supranational/blst.git",
+      "commit": "f62244ef50ad1a603decdb8f215e982d2a467bb6",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "bootOS",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/bootOS",
+      "url": "https://github.com/nanochess/bootOS.git",
+      "commit": "766f7011a951b29f4e9c87ff6f30f9bab03b4574",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "capstone",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/capstone",
+      "url": "https://github.com/capstone-engine/capstone.git",
+      "commit": "95fe762a411783c7507218e3d895f3b93e3238d5",
+      "branch_at_scan_time": "next"
+    },
+    {
+      "name": "cosmopolitan",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/cosmopolitan",
+      "url": "https://github.com/jart/cosmopolitan.git",
+      "commit": "eedf7d2db6e5ee0e228862690339c166a3f003a7",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cpm65",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/cpm65",
+      "url": "https://github.com/davidgiven/cpm65.git",
+      "commit": "ff7f5f938607195c562e53f0a4558086aab4663a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "keystone",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/keystone",
+      "url": "https://github.com/keystone-engine/keystone.git",
+      "commit": "fb92f32391c6cced868252167509590319eeb58b",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "nasm",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/nasm",
+      "url": "https://github.com/netwide-assembler/nasm.git",
+      "commit": "3cb6231581679a9ab1a8eeb0342375eb7002cebe",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "os-tutorial",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/os-tutorial",
+      "url": "https://github.com/cfenollosa/os-tutorial.git",
+      "commit": "8002382ee56f876119f77217220b8a5034e9bac1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "pillman",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/pillman",
+      "url": "https://github.com/nanochess/pillman.git",
+      "commit": "d3945524359134f7db890affe64742515b1d25bd",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "raspberrypi",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/raspberrypi",
+      "url": "https://github.com/dwelch67/raspberrypi.git",
+      "commit": "cbb3a102d83dfeb4586e503749111d1bfbf8fc88",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "x86-bare-metal-examples",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/x86-bare-metal-examples",
+      "url": "https://github.com/cirosantilli/x86-bare-metal-examples.git",
+      "commit": "528ab2becc4992218ca0b7e297f3e1f1674268de",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "xv6-public",
+      "group": "corpus_assembly",
+      "clone_path": "corpus_assembly/xv6-public",
+      "url": "https://github.com/mit-pdos/xv6-public.git",
+      "commit": "eeb7b415dbcb12cc362d0783e41c3d1f44066b17",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "CICS-Cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/CICS-Cobol",
+      "url": "https://github.com/mainframe-projects/CICS-Cobol.git",
+      "commit": "3fd4d46cabc39079ab198c52c235e58ab017beb7",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "COBOL-Guide",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/COBOL-Guide",
+      "url": "https://github.com/mikeroyal/COBOL-Guide.git",
+      "commit": "587be2272bf3bac1bfeea718d718b5898b765b31",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "COBOL_Tutorial",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/COBOL_Tutorial",
+      "url": "https://github.com/Armin-AF/COBOL_Tutorial.git",
+      "commit": "edbf8efea523d2534c25da10db37d8cc6026fb72",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Cobol-Projects",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/Cobol-Projects",
+      "url": "https://github.com/dscobol/Cobol-Projects.git",
+      "commit": "2cc05108d07d8d1ee2297e4f5bd6d274638b7f6e",
+      "branch_at_scan_time": "release"
+    },
+    {
+      "name": "Mainframe",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/Mainframe",
+      "url": "https://github.com/fullstackhq/Mainframe.git",
+      "commit": "c66473156e6040a8e41552571cdc323707c3e2e9",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "awesome-cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/awesome-cobol",
+      "url": "https://github.com/mickaelandrieu/awesome-cobol.git",
+      "commit": "a0bab8d146430a1eff4ebec81ddd12ea9f3b3b56",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cash-account-cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cash-account-cobol",
+      "url": "https://github.com/IBMStockTrader/cash-account-cobol.git",
+      "commit": "c35db0d1f283367109bcd5dfadd76560cf53b2dc",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "che-che4z-lsp-for-cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/che-che4z-lsp-for-cobol",
+      "url": "https://github.com/eclipse/che-che4z-lsp-for-cobol.git",
+      "commit": "dd1133952579575082914476fa699667b8790e1d",
+      "branch_at_scan_time": "development"
+    },
+    {
+      "name": "cics-banking-sample-application-cbsa",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cics-banking-sample-application-cbsa",
+      "url": "https://github.com/cicsdev/cics-banking-sample-application-cbsa.git",
+      "commit": "46cbda52051d5cded017d72ad653df68b8ec1b60",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cics-genapp",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cics-genapp",
+      "url": "https://github.com/cicsdev/cics-genapp.git",
+      "commit": "63eca1b670d9199637bdc2ca7df6e4189a58c892",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cics-java-jcics-samples",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cics-java-jcics-samples",
+      "url": "https://github.com/cicsdev/cics-java-jcics-samples.git",
+      "commit": "11e86326f2600220cc610bdf4bee9afa77c206c0",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cobol-dialect-template",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cobol-dialect-template",
+      "url": "https://github.com/BroadcomMFD/cobol-dialect-template.git",
+      "commit": "fe28bea4382cd42b9a0c93b60e7e473610c03b18",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "cobol-programming-course",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cobol-programming-course",
+      "url": "https://github.com/openmainframeproject/cobol-programming-course.git",
+      "commit": "11aca51998e11181925ff16c20b32c220360ff66",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cobol-samples",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cobol-samples",
+      "url": "https://github.com/neopragma/cobol-samples.git",
+      "commit": "11ad5f8c9fc80d0f3fd913ea30afc48bd506541d",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cobrix",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/cobrix",
+      "url": "https://github.com/AbsaOSS/cobrix.git",
+      "commit": "7200b77cdebb4244137f88b48e908acfc4ccbee1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "code4z",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/code4z",
+      "url": "https://github.com/BroadcomMFD/code4z.git",
+      "commit": "4c6127a9851bfd6c12068b8ca20f41c111524b79",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "gnucobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/gnucobol",
+      "url": "https://github.com/paulsmith/gnucobol.git",
+      "commit": "d139d06201cf0aba9d143e0f675f446c19603b36",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "hyperion",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/hyperion",
+      "url": "https://github.com/hercules-390/hyperion.git",
+      "commit": "bec74e3a3dc26acb251eb820b3aeafcee0576b88",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "jcl-assess",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/jcl-assess",
+      "url": "https://github.com/ykhwong/jcl-assess.git",
+      "commit": "e8f1033b8987968fd0bb8316ec63c047afb51a80",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "language-cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/language-cobol",
+      "url": "https://github.com/mquevill/language-cobol.git",
+      "commit": "987189cc7fe485ef2d2b7f5de0af9558e9818b50",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "learning-cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/learning-cobol",
+      "url": "https://github.com/deniseyu/learning-cobol.git",
+      "commit": "c420efd949ced56cd84c6c47c715391af1b8fd4a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "otterkit",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/otterkit",
+      "url": "https://github.com/otterkit/otterkit.git",
+      "commit": "bb4eea98a1f371fa41a5d12281712fdcd2199849",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "vscode_cobol",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/vscode_cobol",
+      "url": "https://github.com/spgennard/vscode_cobol.git",
+      "commit": "89d3f07af1062616bf0c433e049f270d0f5e2c4d",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "zopeneditor-sample",
+      "group": "corpus_cobol",
+      "clone_path": "corpus_cobol/zopeneditor-sample",
+      "url": "https://github.com/IBM/zopeneditor-sample.git",
+      "commit": "41f70551d85233829a90f7891af2b56092b471c3",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Dancer2",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/Dancer2",
+      "url": "https://github.com/PerlDancer/Dancer2.git",
+      "commit": "25176c5b860493b4a6dcda5bc12ecbefa67df716",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "FlameGraph",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/FlameGraph",
+      "url": "https://github.com/brendangregg/FlameGraph.git",
+      "commit": "41fee1f99f9276008b7cd112fca19dc3ea84ac32",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "Perl-Critic",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/Perl-Critic",
+      "url": "https://github.com/Perl-Critic/Perl-Critic.git",
+      "commit": "c437d557ec903c99c5114bac738a484dfedb1f9f",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "Rex",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/Rex",
+      "url": "https://github.com/RexOps/Rex.git",
+      "commit": "3159b71860d2f75850c75965462f0d7cd791dd57",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "ack3",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/ack3",
+      "url": "https://github.com/beyondgrep/ack3.git",
+      "commit": "1c9cfd3508dd1109815d85e64c55656b00454289",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "bugzilla",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/bugzilla",
+      "url": "https://github.com/bugzilla/bugzilla.git",
+      "commit": "4299886770979cfb98c7417a6094c36a3ab19c00",
+      "branch_at_scan_time": "5.2"
+    },
+    {
+      "name": "catalyst-runtime",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/catalyst-runtime",
+      "url": "https://github.com/perl-catalyst/catalyst-runtime.git",
+      "commit": "1d40b8ea5a7f4a4ae99af921b914f04e7c9a21c3",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "diff-so-fancy",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/diff-so-fancy",
+      "url": "https://github.com/so-fancy/diff-so-fancy.git",
+      "commit": "2b0a4a9dd82e6d5cc613393c74743a654fc99515",
+      "branch_at_scan_time": "next"
+    },
+    {
+      "name": "exiftool",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/exiftool",
+      "url": "https://github.com/exiftool/exiftool.git",
+      "commit": "de11d240cf7e521e939a0575a128ffe01b63be05",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "libwww-perl",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/libwww-perl",
+      "url": "https://github.com/libwww-perl/libwww-perl.git",
+      "commit": "7420d1bfff7cd5369ca24e87c37edf97b2cbb0c1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "mojo",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/mojo",
+      "url": "https://github.com/mojolicious/mojo.git",
+      "commit": "19fc4f19a0d83204a458ae4a19d192b7eaf4ba81",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "perl5",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/perl5",
+      "url": "https://github.com/Perl/perl5.git",
+      "commit": "8ef751faca0eea850cb6a8604bd4ae7e45a87031",
+      "branch_at_scan_time": "blead"
+    },
+    {
+      "name": "prokka",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/prokka",
+      "url": "https://github.com/tseemann/prokka.git",
+      "commit": "045d3c5f8a1a54a873d76eb4b6c8f85d4fb82944",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "spamassassin",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/spamassassin",
+      "url": "https://github.com/apache/spamassassin.git",
+      "commit": "cd27d984b5eed731d8b4aae0dc654267fc7b9917",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "sqitch",
+      "group": "corpus_perl",
+      "clone_path": "corpus_perl/sqitch",
+      "url": "https://github.com/sqitchers/sqitch.git",
+      "commit": "0ab857e3bb5060e6feda0dd3e05ebb04f7aac85b",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "Carbon",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/Carbon",
+      "url": "https://github.com/briannesbitt/Carbon.git",
+      "commit": "e890471a3494740f7d9326d72ce6a8c559ffee60",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "CodeIgniter",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/CodeIgniter",
+      "url": "https://github.com/bcit-ci/CodeIgniter.git",
+      "commit": "3658d731eaabe6117298a105ffb5b9dd59e190ce",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "WordPress",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/WordPress",
+      "url": "https://github.com/WordPress/WordPress.git",
+      "commit": "29c8a8073453a3e6f735206fd6d3988a573c0128",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cakephp",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/cakephp",
+      "url": "https://github.com/cakephp/cakephp.git",
+      "commit": "d70712c983e6879bfcddd67d975d4b8ef3328aae",
+      "branch_at_scan_time": "5.x"
+    },
+    {
+      "name": "guzzle",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/guzzle",
+      "url": "https://github.com/guzzle/guzzle.git",
+      "commit": "fb92d95f80a9da51bf8f2a5b26d8e8ea3b6d99ed",
+      "branch_at_scan_time": "7.10"
+    },
+    {
+      "name": "laravel_core",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/laravel_core",
+      "url": "https://github.com/laravel/framework.git",
+      "commit": "6e6ec058bd555cd70b33656bd7254f3667b73822",
+      "branch_at_scan_time": "13.x"
+    },
+    {
+      "name": "magento2",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/magento2",
+      "url": "https://github.com/magento/magento2.git",
+      "commit": "8d95ae6ee2a7dc1960f8f853af011fbabec2e0f0",
+      "branch_at_scan_time": "2.4-develop"
+    },
+    {
+      "name": "monolog",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/monolog",
+      "url": "https://github.com/Seldaek/monolog.git",
+      "commit": "68b974809baff3f071893de61447212e9e688ee7",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "symfony",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/symfony",
+      "url": "https://github.com/symfony/symfony.git",
+      "commit": "d75aa6cb9200149510699b90cb57e6e9be1408f9",
+      "branch_at_scan_time": "8.1"
+    },
+    {
+      "name": "yii2",
+      "group": "corpus_php",
+      "clone_path": "corpus_php/yii2",
+      "url": "https://github.com/yiisoft/yii2.git",
+      "commit": "9265980e089733f657609a37a95ab86176cb6c00",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "Adafruit_CircuitPython_Bundle",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/Adafruit_CircuitPython_Bundle",
+      "url": "https://github.com/adafruit/Adafruit_CircuitPython_Bundle.git",
+      "commit": "da814949065283a213cf0743af9252d677eec4c4",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "GitPython",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/GitPython",
+      "url": "https://github.com/gitpython-developers/GitPython.git",
+      "commit": "5937d14a2c5e532fcb3ece0f45bf75e5bf18539e",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Python",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/Python",
+      "url": "https://github.com/TheAlgorithms/Python.git",
+      "commit": "840ca00ad389a947205a4a928171499f2228cbb7",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "airflow",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/airflow",
+      "url": "https://github.com/apache/airflow.git",
+      "commit": "f391942b90f2347272c321bcdd092c7b109cdc9e",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "biopython",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/biopython",
+      "url": "https://github.com/biopython/biopython.git",
+      "commit": "d59ab34b2483c7e58c18d13f66fdff5339a11a08",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "black",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/black",
+      "url": "https://github.com/psf/black.git",
+      "commit": "e079b7e100d1e181d4ee860ee4512bf3326f32c3",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "core",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/core",
+      "url": "https://github.com/home-assistant/core.git",
+      "commit": "375bd55ae6ea27814de1eaaf7c66846c4e767dc5",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "cython",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/cython",
+      "url": "https://github.com/cython/cython.git",
+      "commit": "72cfcf80e8aca6b200fac4c08027447a52291055",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "docker-py",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/docker-py",
+      "url": "https://github.com/docker/docker-py.git",
+      "commit": "df3f8e2abc5a03de482e37214dddef9e0cee1bb1",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "esphome",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/esphome",
+      "url": "https://github.com/esphome/esphome.git",
+      "commit": "710186998baa241b360f30ad08e90218eaea8a3a",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "fastapi",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/fastapi",
+      "url": "https://github.com/tiangolo/fastapi.git",
+      "commit": "1f442c454f2f74c7419f83c203e6333955399528",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "jedi",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/jedi",
+      "url": "https://github.com/davidhalter/jedi.git",
+      "commit": "76c1e03f07b351c07b54609df12615dfb9379a9a",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "kivy",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/kivy",
+      "url": "https://github.com/kivy/kivy.git",
+      "commit": "dc32205ac51ba5452eb904b2fd78cdafffd64ccd",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "mypy",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/mypy",
+      "url": "https://github.com/python/mypy.git",
+      "commit": "d7e3268ddd200ff390989d7359dd1e1b42bb94df",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "networkx",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/networkx",
+      "url": "https://github.com/networkx/networkx.git",
+      "commit": "6628a781503211153d16f2a2ef184e75daba69e5",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "numpy",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/numpy",
+      "url": "https://github.com/numpy/numpy.git",
+      "commit": "5bceafeb63c6049a579d8163bd9d6b54171731a8",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pip",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pip",
+      "url": "https://github.com/pypa/pip.git",
+      "commit": "fc9550be97a09d3752b7ee77791418f17c27bb6e",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pygments",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pygments",
+      "url": "https://github.com/pygments/pygments.git",
+      "commit": "a763de564943ea67ae5914dd615e9e50830e83d1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "pylint",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pylint",
+      "url": "https://github.com/pylint-dev/pylint.git",
+      "commit": "2d28041770ea719cfcffd8ce12278ff4683fd784",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pypy",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pypy",
+      "url": "https://github.com/pypy/pypy.git",
+      "commit": "e371778f304422ddbb06fdf373c557a7d643c68f",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pyqtgraph",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pyqtgraph",
+      "url": "https://github.com/pyqtgraph/pyqtgraph.git",
+      "commit": "d588dd3ec30915e61c8496a0fe1db21fc25e4da5",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "python-patterns",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/python-patterns",
+      "url": "https://github.com/faif/python-patterns.git",
+      "commit": "74151cfec27663a968f44185adada7c2a1f38165",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "pytudes",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pytudes",
+      "url": "https://github.com/norvig/pytudes.git",
+      "commit": "2e8234232da3e6d0ffeccaea081810862b3e6f99",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "pywat",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/pywat",
+      "url": "https://github.com/cosmologicon/pywat.git",
+      "commit": "9d6c02c6743b71216da8336fbd5a48c3332ef94c",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "rdkit",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/rdkit",
+      "url": "https://github.com/rdkit/rdkit.git",
+      "commit": "9e301c15d6c2f5cab848ffaa788300505d69ff94",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "rich",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/rich",
+      "url": "https://github.com/Textualize/rich.git",
+      "commit": "fc41075a3206d2a5fd846c6f41c4d2becab814fa",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "scikit-learn",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/scikit-learn",
+      "url": "https://github.com/scikit-learn/scikit-learn.git",
+      "commit": "94af1dff678e8a7a6fc627b85a5489980c063331",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "scipy",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/scipy",
+      "url": "https://github.com/scipy/scipy.git",
+      "commit": "355b747ccae64368a7dce38825361eca6055fcd1",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "selenium",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/selenium",
+      "url": "https://github.com/SeleniumHQ/selenium.git",
+      "commit": "549261ba1cccb1d3bfa662d35d7b144607abf51c",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "sentry",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/sentry",
+      "url": "https://github.com/getsentry/sentry.git",
+      "commit": "9dd18724889684bca65cbd14dd34918bf2bbeb63",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "setuptools",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/setuptools",
+      "url": "https://github.com/pypa/setuptools.git",
+      "commit": "5a13876673a41e3cd21d4d6e587f53d0fb4fd8e5",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "textual",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/textual",
+      "url": "https://github.com/Textualize/textual.git",
+      "commit": "04b03c8db64266a6a7811cc161bae9986e53b1a1",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "tornado",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/tornado",
+      "url": "https://github.com/tornadoweb/tornado.git",
+      "commit": "0ca3c5f8279d402b245718d16522bc18a8f5d958",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "twisted",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/twisted",
+      "url": "https://github.com/twisted/twisted.git",
+      "commit": "3d84863915f8b6ec8a11be2132ebb2bd0b3d0c03",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "wtfpython",
+      "group": "corpus_python",
+      "clone_path": "corpus_python/wtfpython",
+      "url": "https://github.com/satwikkansal/wtfpython.git",
+      "commit": "9323b863218670404405e0a0b9f54d2841a7452e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "actix-web",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/actix-web",
+      "url": "https://github.com/actix/actix-web.git",
+      "commit": "4702c0fdf97f796a38e45a9c1f8306ea08d79f1b",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "alacritty",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/alacritty",
+      "url": "https://github.com/alacritty/alacritty.git",
+      "commit": "f99dc71708d31d5c32d4b3fa611f9a87bf22657e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "bevy",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/bevy",
+      "url": "https://github.com/bevyengine/bevy.git",
+      "commit": "842fa5c4559303edbd1774013bc0f3d0dd529799",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "bootloader",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/bootloader",
+      "url": "https://github.com/rust-osdev/bootloader.git",
+      "commit": "f58194f0dd2dbd6bd1e44d4a8cf4cafde7b3e78f",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cargo",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/cargo",
+      "url": "https://github.com/rust-lang/cargo.git",
+      "commit": "da53118344a2d62d8fde15c1e2a782357488e136",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "curve25519-dalek",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/curve25519-dalek",
+      "url": "https://github.com/dalek-cryptography/curve25519-dalek.git",
+      "commit": "fc23dd4a8660353233d54a8bd1244b920ab5ebdc",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "deno",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/deno",
+      "url": "https://github.com/denoland/deno.git",
+      "commit": "d198cda44b7fddb56d892a8ef2349d1630adfa37",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "fd",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/fd",
+      "url": "https://github.com/sharkdp/fd.git",
+      "commit": "866ba9bfd52b0a0fef537afee285d0c0703aa48e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "hyper",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/hyper",
+      "url": "https://github.com/hyperium/hyper.git",
+      "commit": "0d6c7d5469baa09e2fb127ee3758a79b3271a4f0",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "nushell",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/nushell",
+      "url": "https://github.com/nushell/nushell.git",
+      "commit": "8a5a9ae1f8707658d96ddb695f7703e838b33ded",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "quote",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/quote",
+      "url": "https://github.com/dtolnay/quote.git",
+      "commit": "ba07807af385afeff97a5e75186f7a92eb629a79",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "redox",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/redox",
+      "url": "https://github.com/redox-os/redox.git",
+      "commit": "79fb42097d2d91ed85aac7c0f20d75e50c9ad9fb",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "ripgrep",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/ripgrep",
+      "url": "https://github.com/BurntSushi/ripgrep.git",
+      "commit": "4519153e5e461527f4bca45b042fff45c4ec6fb9",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "rust",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/rust",
+      "url": "https://github.com/rust-lang/rust.git",
+      "commit": "55e86c996809902e8bbad512cfb4d2c18be446d9",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "rust-analyzer",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/rust-analyzer",
+      "url": "https://github.com/rust-lang/rust-analyzer.git",
+      "commit": "9767050b2db436f5a770c5f91a548c88fd91ec71",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "serde",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/serde",
+      "url": "https://github.com/serde-rs/serde.git",
+      "commit": "fa7da4a93567ed347ad0735c28e439fca688ef26",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "solana",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/solana",
+      "url": "https://github.com/solana-labs/solana.git",
+      "commit": "7700cb3128c1f19820de67b81aa45d18f73d2ac0",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "substrate",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/substrate",
+      "url": "https://github.com/paritytech/substrate.git",
+      "commit": "033d4e86cc7eff0066cd376b9375f815761d653c",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "syn",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/syn",
+      "url": "https://github.com/dtolnay/syn.git",
+      "commit": "ae257c4e05a338f73655aa1fa3d144e047daccf1",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "tauri",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/tauri",
+      "url": "https://github.com/tauri-apps/tauri.git",
+      "commit": "b27be063ff3052cb1071ac3ec719cfa104460fa4",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "tokio",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/tokio",
+      "url": "https://github.com/tokio-rs/tokio.git",
+      "commit": "1fc450aefba4b05cdff9b7825ca5e39cccb3780e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "wasmtime",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/wasmtime",
+      "url": "https://github.com/bytecodealliance/wasmtime.git",
+      "commit": "5b5e3573d7de1314c6fcd0d327d4e3640ce58138",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "wgpu",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/wgpu",
+      "url": "https://github.com/gfx-rs/wgpu.git",
+      "commit": "41bb9cbd25fca25b398c0ccb203164fe1ff8c0b8",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "zellij",
+      "group": "corpus_rust",
+      "clone_path": "corpus_rust/zellij",
+      "url": "https://github.com/zellij-org/zellij.git",
+      "commit": "0532949bbdcee5116e91807ddb45a85d78a2aafc",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Babylon.js",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/Babylon.js",
+      "url": "https://github.com/BabylonJS/Babylon.js.git",
+      "commit": "8a9572aaf79143d490a55a164c489632a9a1196e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "Excalibur",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/Excalibur",
+      "url": "https://github.com/excaliburjs/Excalibur.git",
+      "commit": "3aa48c717952d2a01339eee72acc8036d087137a",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Rocket.Chat",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/Rocket.Chat",
+      "url": "https://github.com/RocketChat/Rocket.Chat.git",
+      "commit": "8ebf44bf53420a9c35a517b419af4100e0070f09",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "TypeScript",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/TypeScript",
+      "url": "https://github.com/microsoft/TypeScript.git",
+      "commit": "7b8cb3bdf82f400642b73173f941335775d6f730",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "arktype",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/arktype",
+      "url": "https://github.com/arktypeio/arktype.git",
+      "commit": "d075962caee162bb28e241723863e8f11cb58390",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "assemblyscript",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/assemblyscript",
+      "url": "https://github.com/AssemblyScript/assemblyscript.git",
+      "commit": "be8e56d524a4deccfb6f2242b93a6d30fcf1a589",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "berry",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/berry",
+      "url": "https://github.com/yarnpkg/berry.git",
+      "commit": "4bd2b2111867ca3a9dc46438aa3010145e31910b",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cli",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/cli",
+      "url": "https://github.com/npm/cli.git",
+      "commit": "63b9a7c1a65361eb2e082d5f4aff267df52ba817",
+      "branch_at_scan_time": "latest"
+    },
+    {
+      "name": "desktop",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/desktop",
+      "url": "https://github.com/desktop/desktop.git",
+      "commit": "371bde25d10f8a90663dd26bedd443813a867e8d",
+      "branch_at_scan_time": "development"
+    },
+    {
+      "name": "esbuild",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/esbuild",
+      "url": "https://github.com/evanw/esbuild.git",
+      "commit": "6a794dff68e6a43539f6da671e3080efdf11ca70",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "fp-ts",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/fp-ts",
+      "url": "https://github.com/gcanti/fp-ts.git",
+      "commit": "09045f5819af260b5a6c4aeabdf2fbc8d9b9e335",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "ionic-framework",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/ionic-framework",
+      "url": "https://github.com/ionic-team/ionic-framework.git",
+      "commit": "4d81b026a72e57a4b330de15a2053fa86f0084ca",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "lazygit",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/lazygit",
+      "url": "https://github.com/jesseduffield/lazygit.git",
+      "commit": "4c2c0ce32dd3136503ceef2e1bd6649794047cf0",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "mikro-orm",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/mikro-orm",
+      "url": "https://github.com/mikro-orm/mikro-orm.git",
+      "commit": "cb44ba007a75171878bfc59eb899ab395e1119ed",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "nest",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/nest",
+      "url": "https://github.com/nestjs/nest.git",
+      "commit": "dea5279ef8fcb568de158003e4281759a2cd7675",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "next.js",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/next.js",
+      "url": "https://github.com/vercel/next.js.git",
+      "commit": "cc79ef8cda9725008aacc9071aed423a584253d4",
+      "branch_at_scan_time": "canary"
+    },
+    {
+      "name": "nx",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/nx",
+      "url": "https://github.com/nrwl/nx.git",
+      "commit": "557c876e96c1f92f39eb05cb79f0cf06973ee214",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "pixijs",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/pixijs",
+      "url": "https://github.com/pixijs/pixijs.git",
+      "commit": "627a356cf297c027019195a7a27f1bf4b46c4767",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "prettier",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/prettier",
+      "url": "https://github.com/prettier/prettier.git",
+      "commit": "574b18d7d692370ace1b67c763b486926b4fb139",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "prisma",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/prisma",
+      "url": "https://github.com/prisma/prisma.git",
+      "commit": "ada077ba32b5801d00d32f1434a45aaae7bc09a9",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "react-router",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/react-router",
+      "url": "https://github.com/remix-run/react-router.git",
+      "commit": "201cd41be3e2fadf0fe851d9ac6c836458707ca3",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "storybook",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/storybook",
+      "url": "https://github.com/storybookjs/storybook.git",
+      "commit": "ce8c743b04264c5e8010df1181c828171a04c33a",
+      "branch_at_scan_time": "next"
+    },
+    {
+      "name": "swc",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/swc",
+      "url": "https://github.com/swc-project/swc.git",
+      "commit": "52303ecaacdec85cac9b3200e1ab1dd3863d3f5c",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "trpc",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/trpc",
+      "url": "https://github.com/trpc/trpc.git",
+      "commit": "1638ac173aac937982afe82075502596c60faa44",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "type-challenges",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/type-challenges",
+      "url": "https://github.com/type-challenges/type-challenges.git",
+      "commit": "0b0b0b18bcb7ac42dc22ce26ffb438231d4754b1",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "type-fest",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/type-fest",
+      "url": "https://github.com/sindresorhus/type-fest.git",
+      "commit": "b390869422d9207e008863a8784914177e55fb4a",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "typeorm",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/typeorm",
+      "url": "https://github.com/typeorm/typeorm.git",
+      "commit": "5b5058c4a2aacffd4e3f7c72833803df3707cf1c",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "typescript-eslint",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/typescript-eslint",
+      "url": "https://github.com/typescript-eslint/typescript-eslint.git",
+      "commit": "493341709fe7d1d6433332b7bd2724e3332c7cdf",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "workers-sdk",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/workers-sdk",
+      "url": "https://github.com/cloudflare/workers-sdk.git",
+      "commit": "f07100810d6d8c00e7d1977f0b760b369b52aed0",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "zod",
+      "group": "corpus_typescript",
+      "clone_path": "corpus_typescript/zod",
+      "url": "https://github.com/colinhacks/zod.git",
+      "commit": "c7805073fef5b6b8857307c3d4b3597a70613bc2",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "Chart.js",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/Chart.js",
+      "url": "https://github.com/chartjs/Chart.js.git",
+      "commit": "a153556861074e827358446ec937555ac58c3d11",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "angular",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/angular",
+      "url": "https://github.com/angular/angular.git",
+      "commit": "9d76ac82290e047f1481fb38bd95233e951a77de",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "ant-design",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/ant-design",
+      "url": "https://github.com/ant-design/ant-design.git",
+      "commit": "a8ae51fe861dc0db2fc581938b38d7bbab5ba8f5",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "bootstrap",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/bootstrap",
+      "url": "https://github.com/twbs/bootstrap.git",
+      "commit": "060ff24924a2be67feb309b121b32559a549d02c",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "canvas-lms",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/canvas-lms",
+      "url": "https://github.com/instructure/canvas-lms.git",
+      "commit": "24ea71c7a99edd7393a4e2ab3572b1c2d6214605",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cesium",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/cesium",
+      "url": "https://github.com/CesiumGS/cesium.git",
+      "commit": "0becdbfc17b1015c338e147103876e2ac049f91e",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "content",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/content",
+      "url": "https://github.com/mdn/content.git",
+      "commit": "3d49f18251e1f3493ef2e3a70519603345f8b7dc",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "core",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/core",
+      "url": "https://github.com/vuejs/core.git",
+      "commit": "fa23116437250b3fdec41112f276211cb284136e",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "cypress",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/cypress",
+      "url": "https://github.com/cypress-io/cypress.git",
+      "commit": "58bbebcbcd6d685956dd9bcd3bf58d93bac5f998",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "cytoscape.js",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/cytoscape.js",
+      "url": "https://github.com/cytoscape/cytoscape.js.git",
+      "commit": "816e98077a6447f491efec81b22cab19e5a56f25",
+      "branch_at_scan_time": "unstable"
+    },
+    {
+      "name": "d3",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/d3",
+      "url": "https://github.com/d3/d3.git",
+      "commit": "42ccb63d8f4a4262f78b48aa1431e1f645bcc844",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "excalidraw",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw.git",
+      "commit": "e18c1dd213000dde0ae94ef7eb00aab537b39708",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "freeCodeCamp",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/freeCodeCamp",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp.git",
+      "commit": "a72fe073991cf3c824da02a4ff2e991ac8b0a4a8",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "grafana",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/grafana",
+      "url": "https://github.com/grafana/grafana.git",
+      "commit": "d9c23be0842c8ffd27e9dd7e7b6c78f0ea2a916b",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "gutenberg",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/gutenberg",
+      "url": "https://github.com/wordpress/gutenberg.git",
+      "commit": "4af0efd09488abc25e84933c634230ac884cc2f8",
+      "branch_at_scan_time": "trunk"
+    },
+    {
+      "name": "html5-boilerplate",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/html5-boilerplate",
+      "url": "https://github.com/h5bp/html5-boilerplate.git",
+      "commit": "ce8ad3c32e1744da4adecb978797168d5ee7df51",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "igv.js",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/igv.js",
+      "url": "https://github.com/igvteam/igv.js.git",
+      "commit": "020ed83d7371c3b9a361766b68c280592bc1e574",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "javascript-algorithms",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms.git",
+      "commit": "115e42816808484f76de4e6703caa8280e03ed54",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "jquery",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/jquery",
+      "url": "https://github.com/jquery/jquery.git",
+      "commit": "b43c8046f5196186fcba0860dae1680f42797f93",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "material-ui",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/material-ui",
+      "url": "https://github.com/mui/material-ui.git",
+      "commit": "d7d328cf02ac669419a181ea1c357618cb753322",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "moment",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/moment",
+      "url": "https://github.com/moment/moment.git",
+      "commit": "18aba135ab927ffe7f868ee09276979bed6993a6",
+      "branch_at_scan_time": "develop"
+    },
+    {
+      "name": "ngl",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/ngl",
+      "url": "https://github.com/nglviewer/ngl.git",
+      "commit": "60be69b5fe0e9c43cb3a06fe1cb691fa9478c790",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "playwright",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/playwright",
+      "url": "https://github.com/microsoft/playwright.git",
+      "commit": "ff6d41b3cb7bbf31f8d5b75793fec38c0151ca44",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "puppeteer",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/puppeteer",
+      "url": "https://github.com/puppeteer/puppeteer.git",
+      "commit": "bf1e9722eef723c80250119d81fd9d9e0596c074",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "react",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/react",
+      "url": "https://github.com/facebook/react.git",
+      "commit": "1b45e2439289fd8e094c44161c89e06c5488671e",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "react-flow",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/react-flow",
+      "url": "https://github.com/wbkd/react-flow.git",
+      "commit": "a58568f11bc0e1a1bdca1b3549e959e2e1ca0cdd",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "reveal.js",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/reveal.js",
+      "url": "https://github.com/hakimel/reveal.js.git",
+      "commit": "8bbbcf83104b817f5882a0e04772b9f9e26b265b",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "tailwindcss",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/tailwindcss",
+      "url": "https://github.com/tailwindlabs/tailwindcss.git",
+      "commit": "d7fc281a0e678bf92f0e82f4ab1b8edfd7cb1675",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "three.js",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/three.js",
+      "url": "https://github.com/mrdoob/three.js.git",
+      "commit": "f04b082d40e8104ea3003c13fdf9dd6db8f88971",
+      "branch_at_scan_time": "dev"
+    },
+    {
+      "name": "vscode",
+      "group": "corpus_web",
+      "clone_path": "corpus_web/vscode",
+      "url": "https://github.com/microsoft/vscode.git",
+      "commit": "a8d7dcd8683eef847562052b722d477b5134ef76",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "DOOM-fire-zig",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/DOOM-fire-zig",
+      "url": "https://github.com/const-void/DOOM-fire-zig.git",
+      "commit": "eb0631b141b5778eefc6f5767bb45f8974c1be71",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "Zig",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/Zig",
+      "url": "https://github.com/TheAlgorithms/Zig.git",
+      "commit": "5ace5387ce700f0ab692cfaa57ac2c7d998b7633",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "bog",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/bog",
+      "url": "https://github.com/Vexu/bog.git",
+      "commit": "6d585996b431718ff27c8247fa994feb24a83b10",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "bun",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/bun",
+      "url": "https://github.com/oven-sh/bun.git",
+      "commit": "17bd6cb1f32fc56ae8781883acacc91f8cc43a95",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "capy",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/capy",
+      "url": "https://github.com/capy-ui/capy.git",
+      "commit": "fd77077e296a969ae258c595e75a0723183b3138",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "cyber",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/cyber",
+      "url": "https://github.com/fubark/cyber.git",
+      "commit": "c853fcc2b79da014ac40e9418db7c4cebea63177",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "http.zig",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/http.zig",
+      "url": "https://github.com/karlseguin/http.zig.git",
+      "commit": "af1df361d599dbc3f9534b0183a8b5e3fe2af83e",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "libxev",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/libxev",
+      "url": "https://github.com/mitchellh/libxev.git",
+      "commit": "d398cba9bf711fa4dd21c48bf73d25e4d8986408",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "mach",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/mach",
+      "url": "https://github.com/hexops/mach.git",
+      "commit": "77e4ea34baad312022ddefbbca0829a2c9557017",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "microzig",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/microzig",
+      "url": "https://github.com/ZigEmbeddedGroup/microzig.git",
+      "commit": "ef1eaba76d8f948ce4a440b19c1395802592c7a9",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "ncdu",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/ncdu",
+      "url": "https://github.com/rofl0r/ncdu.git",
+      "commit": "a216bc2d35b6edf4dadf55350f09d7cbf229fbf7",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "poop",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/poop",
+      "url": "https://github.com/andrewrk/poop.git",
+      "commit": "67ab6632c53af751a4d9cfb214ff67ef55fd1ceb",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "river",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/river",
+      "url": "https://github.com/ifreund/river.git",
+      "commit": "79e09c3628a88b7b71fc178dccd1b5ab8e7681b0",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "sokol-zig",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/sokol-zig",
+      "url": "https://github.com/floooh/sokol-zig.git",
+      "commit": "bdaddbf17a69fb2837a17ec8bca9e516b8351151",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "tigerbeetle",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/tigerbeetle",
+      "url": "https://github.com/tigerbeetle/tigerbeetle.git",
+      "commit": "cd3c8cbe7e70354cfeedb366ac8f79a4c379a3fa",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "zap",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zap",
+      "url": "https://github.com/zigzap/zap.git",
+      "commit": "76679f308c702cd8880201e6e93914e1d836a54b",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "zig",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zig",
+      "url": "https://github.com/ziglang/zig.git",
+      "commit": "738d2be9d6b6ef3ff3559130c05159ef53336224",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "zig-book",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zig-book",
+      "url": "https://github.com/pedropark99/zig-book.git",
+      "commit": "29901ebc56fbb263d3426eb20527d53de6dd65f3",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "zig-gamedev",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zig-gamedev",
+      "url": "https://github.com/michal-z/zig-gamedev.git",
+      "commit": "9af37ec05bbfe5164dafc4c741a7d35667bd09c5",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "zig-okredis",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zig-okredis",
+      "url": "https://github.com/kristoff-it/zig-okredis.git",
+      "commit": "f00a50311e5fcc5a688fc027bd0a7ebbe8e2f0cc",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "ziglings",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/ziglings",
+      "url": "https://github.com/ratfactor/ziglings.git",
+      "commit": "6903b9480d3d4f6ce2b828242e92dd544cb397a6",
+      "branch_at_scan_time": "main"
+    },
+    {
+      "name": "zigup",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zigup",
+      "url": "https://github.com/marler8997/zigup.git",
+      "commit": "659aa0024ad2139c5d45ad1f4663834f14972c67",
+      "branch_at_scan_time": "master"
+    },
+    {
+      "name": "zls",
+      "group": "corpus_zig",
+      "clone_path": "corpus_zig/zls",
+      "url": "https://github.com/zigtools/zls.git",
+      "commit": "ef64fa01d9b513add8596eec09574df8feadbd5c",
+      "branch_at_scan_time": "master"
+    }
+  ],
+  "excluded_non_git_paths": [
+    "DOOM_systems",
+    "OS",
+    "npm_top_200",
+    "openclaw-typescript",
+    "pypi_top_200",
+    "reddit_data",
+    "temp_jcl_out",
+    "corpus_cobol/batch_test_reports",
+    "corpus_cobol/cics-genapp_forged_20260425_161736",
+    "corpus_cobol/compilers",
+    "corpus_cobol/fake_cobol_repo",
+    "corpus_cobol/temp",
+    "corpus_cobol/zopeneditor_compilers"
+  ]
+}

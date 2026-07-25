@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+
+# In case setup_corpus.py is ever run with --dest pointing inside this repo
+/corpus_data/
