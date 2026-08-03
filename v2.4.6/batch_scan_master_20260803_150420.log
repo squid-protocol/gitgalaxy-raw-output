@@ -1,0 +1,1392 @@
+Output directory established at: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6
+📜 Master Log File active at: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/batch_scan_master_20260803_150420.log
+🎯 Direct Repo Detected : AFNetworking
+🎯 Direct Repo Detected : Alamofire
+🎯 Direct Repo Detected : Apollo-11
+🎯 Direct Repo Detected : AppFlowy
+🎯 Direct Repo Detected : Correios-Brasil
+🎯 Direct Repo Detected : DOOM
+📦 Container Detected   : DOOM_systems (Found 10 repos inside)
+🎯 Direct Repo Detected : HolyLang
+📦 Container Detected   : OS (Found 6 repos inside)
+🎯 Direct Repo Detected : PowerShell
+🎯 Direct Repo Detected : PowerToys
+🎯 Direct Repo Detected : WorldWideWeb
+🎯 Direct Repo Detected : abap-cleaner
+🎯 Direct Repo Detected : abap2xlsx
+🎯 Direct Repo Detected : abapGit
+🎯 Direct Repo Detected : alphafold_2018
+🎯 Direct Repo Detected : angr
+🎯 Direct Repo Detected : ansible
+🎯 Direct Repo Detected : apex-recipes
+🎯 Direct Repo Detected : bevy
+🎯 Direct Repo Detected : bitcoin-0.1.0
+🎯 Direct Repo Detected : blast
+🎯 Direct Repo Detected : brew
+🎯 Direct Repo Detected : bugzilla
+🎯 Direct Repo Detected : bun
+🎯 Direct Repo Detected : cics-genapp
+🎯 Direct Repo Detected : circuitpython
+🎯 Direct Repo Detected : cobol-check
+🎯 Direct Repo Detected : cobol-programming-course
+📦 Container Detected   : corpus_assembly (Found 19 repos inside)
+📦 Container Detected   : corpus_cobol (Found 30 repos inside)
+📦 Container Detected   : corpus_perl (Found 15 repos inside)
+📦 Container Detected   : corpus_php (Found 10 repos inside)
+📦 Container Detected   : corpus_python (Found 35 repos inside)
+📦 Container Detected   : corpus_rust (Found 24 repos inside)
+📦 Container Detected   : corpus_typescript (Found 30 repos inside)
+📦 Container Detected   : corpus_web (Found 30 repos inside)
+📦 Container Detected   : corpus_zig (Found 23 repos inside)
+🎯 Direct Repo Detected : cpython
+🎯 Direct Repo Detected : curl
+🎯 Direct Repo Detected : db-tutorial
+🎯 Direct Repo Detected : discourse
+🎯 Direct Repo Detected : django
+🎯 Direct Repo Detected : eeglab
+🎯 Direct Repo Detected : effect
+🎯 Direct Repo Detected : elasticsearch
+🎯 Direct Repo Detected : element
+🎯 Direct Repo Detected : exiftool
+🎯 Direct Repo Detected : express
+🎯 Direct Repo Detected : fflib-apex-common
+🎯 Direct Repo Detected : fieldtrip
+🎯 Direct Repo Detected : fineract
+🎯 Direct Repo Detected : flask
+🎯 Direct Repo Detected : flutter
+🎯 Direct Repo Detected : freebsd-src
+🎯 Direct Repo Detected : ghostty
+🎯 Direct Repo Detected : gitgalaxy
+🎯 Direct Repo Detected : gnucobol
+🎯 Direct Repo Detected : gnupg
+🎯 Direct Repo Detected : go
+🎯 Direct Repo Detected : godot
+🎯 Direct Repo Detected : gradle
+🎯 Direct Repo Detected : impacket
+🎯 Direct Repo Detected : iwubi
+🎯 Direct Repo Detected : jellyfin
+🎯 Direct Repo Detected : jenkins
+🎯 Direct Repo Detected : kafka
+🎯 Direct Repo Detected : kotlin
+🎯 Direct Repo Detected : kubernetes
+🎯 Direct Repo Detected : laravel
+🎯 Direct Repo Detected : linux-1.0
+🎯 Direct Repo Detected : livecode
+🎯 Direct Repo Detected : macports-base
+🎯 Direct Repo Detected : mall
+🎯 Direct Repo Detected : mediawiki
+🎯 Direct Repo Detected : micropython
+🎯 Direct Repo Detected : micropython-ulab
+🎯 Direct Repo Detected : moby
+🎯 Direct Repo Detected : node
+📦 Container Detected   : npm_top_200 (Found 200 repos inside)
+🎯 Direct Repo Detected : nvda
+🎯 Direct Repo Detected : odoo
+🎯 Direct Repo Detected : okhttp
+🎯 Naked Repo Detected  : openclaw-typescript (No .git folder)
+🎯 Direct Repo Detected : opencv
+🎯 Direct Repo Detected : openzeppelin-contracts
+🎯 Direct Repo Detected : pandas
+🎯 Direct Repo Detected : pandoc
+🎯 Direct Repo Detected : platform_dalvik
+🎯 Direct Repo Detected : prometheus
+🎯 Direct Repo Detected : pwntools
+🎯 Direct Repo Detected : pyarmor
+📦 Container Detected   : pypi_top_200 (Found 200 repos inside)
+🎯 Direct Repo Detected : python-simplebench
+🎯 Direct Repo Detected : racket
+🎯 Direct Repo Detected : rails
+🎯 Direct Repo Detected : react
+🎯 Naked Repo Detected  : reddit_data (No .git folder)
+🎯 Direct Repo Detected : redis
+🎯 Direct Repo Detected : retrofit
+🎯 Direct Repo Detected : ripgrep
+🎯 Direct Repo Detected : root
+🎯 Direct Repo Detected : roslyn
+🎯 Direct Repo Detected : runtime
+🎯 Direct Repo Detected : rust
+🎯 Direct Repo Detected : scapy
+🎯 Direct Repo Detected : sdk
+🎯 Direct Repo Detected : spamassassin
+🎯 Direct Repo Detected : spm12
+🎯 Direct Repo Detected : spock
+🎯 Direct Repo Detected : spring-boot
+🎯 Direct Repo Detected : sqlite
+🎯 Direct Repo Detected : sqlmap
+🎯 Direct Repo Detected : srfi-1
+🎯 Direct Repo Detected : swift
+🎯 Direct Repo Detected : tauri
+🎯 Direct Repo Detected : tcpip_historical
+🎯 Naked Repo Detected  : temp_jcl_out (No .git folder)
+🎯 Direct Repo Detected : tensorflow
+🎯 Direct Repo Detected : terraform
+🎯 Direct Repo Detected : tigerbeetle
+🎯 Direct Repo Detected : tokio
+🎯 Direct Repo Detected : vapor
+🎯 Direct Repo Detected : voyager
+🎯 Direct Repo Detected : vscode
+🎯 Direct Repo Detected : vue
+🎯 Direct Repo Detected : vyre
+🎯 Direct Repo Detected : wordpress
+🎯 Direct Repo Detected : wrf-fortran
+
+🎯 Found 748 total repositories/packages to scan.
+🚀 Starting BATCH SCAN for all 748 targets...
+
+
+============================================================
+[1/748] 🚀 IGNITING GALAXYOSCOPE FOR: AFNetworking
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/AFNetworking
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:04:25,938 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:04:25,997 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:04:25,998 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.00s. Achieved 0.0% active coverage (0/211 files via 0 events).
+2026-08-03 15:04:25,998 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.06s) | Visible Timeline: 367106548s | Cached Artifacts: 0
+2026-08-03 15:04:25,998 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:04:26,103 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/AFNetworking/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:04:26,403 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:04:26,403 [INFO] [GalaxyScope] --- PIPELINE_START: AFNetworking (vlatest) ---
+2026-08-03 15:04:26,403 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:04:26,406 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 1 intent locks, 0 pattern rules, and 2 documentation shields.
+2026-08-03 15:04:26,435 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 211 tracked artifacts via Git.
+2026-08-03 15:04:26,435 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 100 artifacts via ProcessPoolExecutor.
+2026-08-03 15:04:26,756 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:04:26,758 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:04:26,758 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:04:26,759 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:04:26,760 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 36.4%. Applying +50.0 density bonus.
+2026-08-03 15:04:26,794 [INFO] [GalaxyScope] 🚨 Escalated 28 critical credential exposures onto the 3D map.
+2026-08-03 15:04:26,794 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 128 nodes...
+2026-08-03 15:04:26,812 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:04:26,812 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:04:26,812 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:04:26,813 [INFO] [GalaxyScope.statistical_auditor] Scanning 128 artifacts for structural anomalies and data dumps...
+2026-08-03 15:04:26,813 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 128 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:04:26,813 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 128 nodes...
+2026-08-03 15:04:26,814 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 211 artifacts (128 verified, 83 unparsable)...
+2026-08-03 15:04:26,815 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 39.3%
+2026-08-03 15:04:26,817 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:04:26,819 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:04:26,821 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:04:26,844 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 80 potential threats.
+2026-08-03 15:04:26,844 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Example/tvOS Example/ViewController.swift
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Example/Certificates/adn.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Example/Certificates/digicert_ca_3.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Example/Certificates/root_ca.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/ADN.net/ADNNetServerTrustChain/adn_0.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/ADN.net/ADNNetServerTrustChain/adn_1.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/ADN.net/ADNNetServerTrustChain/adn_2.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/Equifax_Secure_Certificate_Authority_Root.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GeoTrust_Global_CA-cross.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GeoTrust_Global_CA_Root.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GoogleComServerTrustChainPath1/googlecom_0.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GoogleComServerTrustChainPath1/googlecom_1.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GoogleComServerTrustChainPath2/googlecom_0.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GoogleComServerTrustChainPath2/googlecom_1.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GoogleComServerTrustChainPath2/googlecom_2.cer
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,014 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/GoogleInternetAuthorityG2.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Google.com/google.com.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/Amazon Root CA 1.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/Amazon.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/HTTPBinOrgServerTrustChain/httpbin_0.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/HTTPBinOrgServerTrustChain/httpbin_1.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/HTTPBinOrgServerTrustChain/httpbin_2.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/HTTPBinOrgServerTrustChain/httpbin_3.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/Starfield Services Root Certificate Authority - G2.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/HTTPBin.org/httpbinorg_02182021.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/SelfSigned/AltName.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/SelfSigned/NoDomains.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/SelfSigned/foobar.com.cer
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: fastlane/.env
+2026-08-03 15:04:27,015 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:27,015 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:04:27,050 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_audit.json
+2026-08-03 15:04:27,050 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking
+2026-08-03 15:04:27,050 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'AFNetworking'...
+2026-08-03 15:04:27,215 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_graph.sqlite
+2026-08-03 15:04:27,215 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_master.db
+2026-08-03 15:04:27,454 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_sarif.json
+2026-08-03 15:04:27,454 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:04:27,458 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 260 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_sarif.json
+2026-08-03 15:04:27,458 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_sbom.json
+2026-08-03 15:04:27,458 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on AFNetworking...
+2026-08-03 15:04:27,460 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 3 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_sbom.json
+2026-08-03 15:04:27,460 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_gpu.json
+2026-08-03 15:04:27,460 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:04:27,501 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_gpu.json
+2026-08-03 15:04:27,579 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 128 files mapped in 0.61s ---
+2026-08-03 15:04:27,579 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 23,708 lines of code at 38,612 LOC/s ---
+2026-08-03 15:04:27,579 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AFNetworking/AFNetworking_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: AFNetworking completed.
+
+   📦 Compressed AFNetworking_galaxy_audit.json -> AFNetworking_galaxy_audit.json.gz
+   📦 Compressed AFNetworking_galaxy_graph.sqlite -> AFNetworking_galaxy_graph.sqlite.gz
+   📦 Compressed AFNetworking_galaxy_sbom.json -> AFNetworking_galaxy_sbom.json.gz
+   📦 Compressed AFNetworking_galaxy_master.db -> AFNetworking_galaxy_master.db.gz
+   📦 Compressed AFNetworking_galaxy_sarif.json -> AFNetworking_galaxy_sarif.json.gz
+
+============================================================
+[2/748] 🚀 IGNITING GALAXYOSCOPE FOR: Alamofire
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/Alamofire
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:04:33,535 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:04:33,592 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:04:33,612 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.02s. Achieved 50.0% active coverage (283/566 files via 284 events).
+2026-08-03 15:04:33,612 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.08s) | Visible Timeline: 367985112s | Cached Artifacts: 283
+2026-08-03 15:04:33,612 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:04:33,745 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/Alamofire/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:04:34,042 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:04:34,042 [INFO] [GalaxyScope] --- PIPELINE_START: Alamofire (vlatest) ---
+2026-08-03 15:04:34,042 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:04:34,044 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 1 intent locks, 0 pattern rules, and 4 documentation shields.
+2026-08-03 15:04:34,098 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 566 tracked artifacts via Git.
+2026-08-03 15:04:34,098 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 122 artifacts via ProcessPoolExecutor.
+2026-08-03 15:04:34,618 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:04:34,620 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:04:34,620 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:04:34,620 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:04:34,622 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 66.0%. Applying +50.0 density bonus.
+2026-08-03 15:04:34,666 [INFO] [GalaxyScope] 🚨 Escalated 21 critical credential exposures onto the 3D map.
+2026-08-03 15:04:34,667 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 141 nodes...
+2026-08-03 15:04:34,679 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:04:34,679 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:04:34,680 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:04:34,681 [INFO] [GalaxyScope.statistical_auditor] Scanning 141 artifacts for structural anomalies and data dumps...
+2026-08-03 15:04:34,681 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 141 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:04:34,681 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 141 nodes...
+2026-08-03 15:04:34,683 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 566 artifacts (141 verified, 425 unparsable)...
+2026-08-03 15:04:34,683 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.01 | Darkness Ratio: 75.1%
+2026-08-03 15:04:34,684 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:04:34,686 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:04:34,689 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:04:34,716 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 96 potential threats.
+2026-08-03 15:04:34,716 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Example/Source/DetailViewController.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Example/Source/MasterViewController.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 95.3%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/AFError.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/DataRequest.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/DataStreamRequest.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/HTTPHeaders.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/ParameterEncoder.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/ParameterEncoding.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/Request.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/RequestTaskMap.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.5%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/Response.swift
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.9%
+2026-08-03 15:04:34,875 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/Session.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/SessionDelegate.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/UploadRequest.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Core/WebSocketRequest.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/AuthenticationInterceptor.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/CachedResponseHandler.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/Combine.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/Concurrency.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/EventMonitor.swift
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,876 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/MultipartFormData.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/NetworkReachabilityManager.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/OfflineRetrier.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/RedirectHandler.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/RequestCompression.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.8%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/RequestInterceptor.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/ResponseSerialization.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/RetryPolicy.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/ServerTrustEvaluation.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/URLEncodedFormEncoder.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Source/Features/Validation.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/AuthenticationInterceptorTests.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/AuthenticationTests.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/BaseTestCase.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 96.4%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/CacheTests.swift
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,877 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/CachedResponseHandlerTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/CombineTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/ConcurrencyTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/DataStreamTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/DownloadTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/HTTPHeadersTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.9%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/InspectorEventMonitor.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/MultipartFormDataTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/NSLoggingEventMonitor.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/ParameterEncoderTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/ProtectedTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/RequestInterceptorTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/RequestTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/ResponseTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/RetryPolicyTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/ServerTrustEvaluatorTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 68.3%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/SessionTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/TLSEvaluationTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/TestHelpers.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/UploadTests.swift
+2026-08-03 15:04:34,878 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/ValidationTests.swift
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/WebSocketTests.swift
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/alamofire-root-ca.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/alamofire-signing-ca1.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/alamofire-signing-ca2.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/expired.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/missing-dns-name-and-uri.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/multiple-dns-names.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/signed-by-ca1.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/signed-by-ca2.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/test.alamofire.org.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/valid-dns-name.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/valid-uri.cer
+2026-08-03 15:04:34,879 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/alamofire-org/wildcard.alamofire.org.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/expired-badssl-com/expired.badssl.com-intermediate-ca-1.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/expired-badssl-com/expired.badssl.com-intermediate-ca-2.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/expired-badssl-com/expired.badssl.com-leaf.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/expired-badssl-com/expired.badssl.com-root-ca.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/selfSignedAndMalformedCerts/certDER.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/selfSignedAndMalformedCerts/certDER.crt
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/selfSignedAndMalformedCerts/certPEM.cer
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/selfSignedAndMalformedCerts/certPEM.crt
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: Tests/Resources/Certificates/selfSignedAndMalformedCerts/randomGibberish.crt
+2026-08-03 15:04:34,880 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:34,880 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:04:34,925 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_audit.json
+2026-08-03 15:04:34,925 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire
+2026-08-03 15:04:34,925 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'Alamofire'...
+2026-08-03 15:04:35,100 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_graph.sqlite
+2026-08-03 15:04:35,100 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_master.db
+2026-08-03 15:04:35,331 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_sarif.json
+2026-08-03 15:04:35,331 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:04:35,336 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 383 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_sarif.json
+2026-08-03 15:04:35,336 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_sbom.json
+2026-08-03 15:04:35,337 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on Alamofire...
+2026-08-03 15:04:35,338 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 2 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_sbom.json
+2026-08-03 15:04:35,338 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_gpu.json
+2026-08-03 15:04:35,338 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:04:35,387 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_gpu.json
+2026-08-03 15:04:35,472 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 141 files mapped in 0.84s ---
+2026-08-03 15:04:35,472 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 50,200 lines of code at 59,566 LOC/s ---
+2026-08-03 15:04:35,472 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Alamofire/Alamofire_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: Alamofire completed.
+
+   📦 Compressed Alamofire_galaxy_graph.sqlite -> Alamofire_galaxy_graph.sqlite.gz
+   📦 Compressed Alamofire_galaxy_audit.json -> Alamofire_galaxy_audit.json.gz
+   📦 Compressed Alamofire_galaxy_master.db -> Alamofire_galaxy_master.db.gz
+   📦 Compressed Alamofire_galaxy_sarif.json -> Alamofire_galaxy_sarif.json.gz
+   📦 Compressed Alamofire_galaxy_sbom.json -> Alamofire_galaxy_sbom.json.gz
+
+⏭️  [3/748] SKIPPING: 'Apollo-11' (Already scanned at Apollo-11)
+
+============================================================
+[4/748] 🚀 IGNITING GALAXYOSCOPE FOR: AppFlowy
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/AppFlowy
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:04:41,447 [INFO] [root] 🌌 DIALECT DETECTED: Injecting Project Overrides for 'AppFlowy'
+2026-08-03 15:04:41,457 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:04:41,616 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:04:41,633 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.03s. Achieved 0.6% active coverage (28/4597 files via 35 events).
+2026-08-03 15:04:41,633 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.18s) | Visible Timeline: 150138311s | Cached Artifacts: 28
+2026-08-03 15:04:41,633 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:04:41,821 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/AppFlowy/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:04:42,120 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:04:42,120 [INFO] [GalaxyScope] --- PIPELINE_START: AppFlowy (vlatest) ---
+2026-08-03 15:04:42,120 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:04:42,180 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 0 intent locks, 0 pattern rules, and 28 documentation shields.
+2026-08-03 15:04:42,711 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 4597 tracked artifacts via Git.
+2026-08-03 15:04:42,711 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 1735 artifacts via ProcessPoolExecutor.
+2026-08-03 15:04:42,810 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,835 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,840 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,840 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,841 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,841 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,879 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,881 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,889 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,893 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,921 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,922 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,941 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,949 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:42,955 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,046 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,046 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,060 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,085 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,085 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,101 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:04:43,917 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:04:43,951 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:04:43,958 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'proc_macro::TokenStream' in frontend/rust-lib/build-tool/flowy-derive/src/lib.rs closely matches anchor 'proc_macro2::TokenStream'!
+2026-08-03 15:04:43,958 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'DashSet' in frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/util.rs closely matches anchor 'HashSet'!
+2026-08-03 15:04:43,963 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'LayoutSettings' in frontend/rust-lib/flowy-database2/src/template.rs closely matches anchor 'LayoutSetting'!
+2026-08-03 15:04:43,964 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'CollabParams' in frontend/rust-lib/flowy-server/src/af_cloud/impls/user/cloud_service_impl.rs closely matches anchor 'rCollabParams'!
+2026-08-03 15:04:43,966 [WARNING] [GalaxyScope] Intercepted 4 typosquatting attempts via repository baseline analysis.
+2026-08-03 15:04:43,969 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:04:43,976 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:04:43,999 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.9%. Applying +1.7 density bonus.
+2026-08-03 15:04:44,473 [INFO] [GalaxyScope] 🚨 Escalated 2 critical credential exposures onto the 3D map.
+2026-08-03 15:04:44,473 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 1704 nodes...
+2026-08-03 15:04:44,653 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:04:44,653 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:04:44,659 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:04:44,663 [INFO] [GalaxyScope.statistical_auditor] Scanning 1704 artifacts for structural anomalies and data dumps...
+2026-08-03 15:04:44,666 [INFO] [GalaxyScope.statistical_auditor] Consensus Engine: Stabilized 2 ambiguous extensions based on repository trends.
+2026-08-03 15:04:44,667 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 1704 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:04:44,667 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 1704 nodes...
+2026-08-03 15:04:44,681 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 4597 artifacts (1704 verified, 2893 unparsable)...
+2026-08-03 15:04:44,682 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 62.9%
+2026-08-03 15:04:44,703 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:04:44,715 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:04:44,733 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:04:44,942 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 792 potential threats.
+2026-08-03 15:04:44,942 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:04:45,548 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/dsa_pub.pem
+2026-08-03 15:04:45,548 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:45,548 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/flowy-sqlite/.env
+2026-08-03 15:04:45,548 [WARNING] [GalaxyScope.firewall]    -> Memory Corruption Risk: 100.0%
+2026-08-03 15:04:45,549 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_backend/example/macos/Podfile
+2026-08-03 15:04:45,549 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:45,549 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,550 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/lib/workspace/presentation/settings/widgets/emoji_picker/src/default_emoji_picker_view.dart
+2026-08-03 15:04:45,550 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_popover/lib/src/popover.dart
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/example/lib/src/dropdown_menu/dropdown_menu_page.dart
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/example/lib/src/menu/menu_page.dart
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/lib/src/component/button/base_button/base_button.dart
+2026-08-03 15:04:45,551 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,552 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/lib/src/component/dropdown_menu/dropdown_menu.dart
+2026-08-03 15:04:45,552 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.0%
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/lib/src/component/popover/popover.dart
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/lib/src/component/popover/shadcn/_mouse_area.dart
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/lib/src/component/popover/shadcn/_portal.dart
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/appflowy_ui/lib/src/theme/data/shared.dart
+2026-08-03 15:04:45,553 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,555 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/flowy_infra_ui/lib/src/flowy_overlay/flowy_overlay.dart
+2026-08-03 15:04:45,555 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,558 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/event/KeyboardEventHandler.java
+2026-08-03 15:04:45,558 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:04:45,558 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/dart_event.rs
+2026-08-03 15:04:45,558 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 99.8%
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/mod.rs
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_gen.rs
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 99.9%
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/mod.rs
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/build-tool/flowy-codegen/src/util.rs
+2026-08-03 15:04:45,559 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:45,560 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/flowy-ai-pub/src/persistence/chat_sql.rs
+2026-08-03 15:04:45,560 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 99.3%
+2026-08-03 15:04:45,571 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/flowy-folder-pub/src/sql/workspace_shared_user_sql.rs
+2026-08-03 15:04:45,571 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 99.9%
+2026-08-03 15:04:45,574 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/flowy-storage/src/sqlite_sql.rs
+2026-08-03 15:04:45,574 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:04:45,574 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/flowy-user-pub/src/sql/user_sql.rs
+2026-08-03 15:04:45,574 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 99.7%
+2026-08-03 15:04:45,575 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: frontend/rust-lib/flowy-user-pub/src/sql/workspace_sql.rs
+2026-08-03 15:04:45,575 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 94.3%
+2026-08-03 15:04:45,577 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:04:45,919 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_audit.json
+2026-08-03 15:04:45,924 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy
+2026-08-03 15:04:45,924 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'AppFlowy'...
+2026-08-03 15:04:46,181 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_graph.sqlite
+2026-08-03 15:04:46,181 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_master.db
+2026-08-03 15:04:46,577 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_sarif.json
+2026-08-03 15:04:46,577 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:04:46,601 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 1020 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_sarif.json
+2026-08-03 15:04:46,602 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_sbom.json
+2026-08-03 15:04:46,602 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on AppFlowy...
+2026-08-03 15:04:46,603 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 0 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_sbom.json
+2026-08-03 15:04:46,603 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_gpu.json
+2026-08-03 15:04:46,603 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:04:46,840 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_gpu.json
+2026-08-03 15:04:46,916 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 1704 files mapped in 3.49s ---
+2026-08-03 15:04:46,916 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 131,916 lines of code at 37,845 LOC/s ---
+2026-08-03 15:04:46,916 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/AppFlowy/AppFlowy_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: AppFlowy completed.
+
+   📦 Compressed AppFlowy_galaxy_audit.json -> AppFlowy_galaxy_audit.json.gz
+   📦 Compressed AppFlowy_galaxy_sarif.json -> AppFlowy_galaxy_sarif.json.gz
+   📦 Compressed AppFlowy_galaxy_graph.sqlite -> AppFlowy_galaxy_graph.sqlite.gz
+   📦 Compressed AppFlowy_galaxy_sbom.json -> AppFlowy_galaxy_sbom.json.gz
+   📦 Compressed AppFlowy_galaxy_master.db -> AppFlowy_galaxy_master.db.gz
+
+============================================================
+[5/748] 🚀 IGNITING GALAXYOSCOPE FOR: Correios-Brasil
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/Correios-Brasil
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:04:53,044 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:04:53,085 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:04:53,086 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.00s. Achieved 0.0% active coverage (0/25 files via 0 events).
+2026-08-03 15:04:53,086 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.04s) | Visible Timeline: 100491454s | Cached Artifacts: 0
+2026-08-03 15:04:53,086 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:04:53,191 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/Correios-Brasil/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:04:53,487 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:04:53,487 [INFO] [GalaxyScope] --- PIPELINE_START: Correios-Brasil (vlatest) ---
+2026-08-03 15:04:53,488 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:04:53,494 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 5 intent locks, 0 pattern rules, and 1 documentation shields.
+2026-08-03 15:04:53,503 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 25 tracked artifacts via Git.
+2026-08-03 15:04:53,503 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 13 artifacts via ProcessPoolExecutor.
+2026-08-03 15:04:53,563 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:04:53,564 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:04:53,564 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:04:53,564 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:04:53,564 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:04:53,568 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 12 nodes...
+2026-08-03 15:04:53,573 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:04:53,573 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.statistical_auditor] Scanning 12 artifacts for structural anomalies and data dumps...
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 12 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 12 nodes...
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 25 artifacts (12 verified, 13 unparsable)...
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 52.0%
+2026-08-03 15:04:53,574 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:04:53,575 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:04:53,575 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:04:53,602 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 8 potential threats.
+2026-08-03 15:04:53,602 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:04:53,620 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:04:53,628 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_audit.json
+2026-08-03 15:04:53,628 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil
+2026-08-03 15:04:53,628 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'Correios-Brasil'...
+2026-08-03 15:04:53,776 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_graph.sqlite
+2026-08-03 15:04:53,776 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_master.db
+2026-08-03 15:04:54,000 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_sarif.json
+2026-08-03 15:04:54,000 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:04:54,001 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 17 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_sarif.json
+2026-08-03 15:04:54,001 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_sbom.json
+2026-08-03 15:04:54,001 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on Correios-Brasil...
+2026-08-03 15:04:54,004 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 28 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_sbom.json
+2026-08-03 15:04:54,004 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_gpu.json
+2026-08-03 15:04:54,004 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:04:54,036 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_gpu.json
+2026-08-03 15:04:54,150 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 12 files mapped in 0.13s ---
+2026-08-03 15:04:54,150 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 1,206 lines of code at 9,086 LOC/s ---
+2026-08-03 15:04:54,151 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/Correios-Brasil/Correios-Brasil_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: Correios-Brasil completed.
+
+   📦 Compressed Correios-Brasil_galaxy_graph.sqlite -> Correios-Brasil_galaxy_graph.sqlite.gz
+   📦 Compressed Correios-Brasil_galaxy_master.db -> Correios-Brasil_galaxy_master.db.gz
+   📦 Compressed Correios-Brasil_galaxy_sbom.json -> Correios-Brasil_galaxy_sbom.json.gz
+   📦 Compressed Correios-Brasil_galaxy_audit.json -> Correios-Brasil_galaxy_audit.json.gz
+   📦 Compressed Correios-Brasil_galaxy_sarif.json -> Correios-Brasil_galaxy_sarif.json.gz
+
+============================================================
+[6/748] 🚀 IGNITING GALAXYOSCOPE FOR: DOOM
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:05:00,143 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:05:00,169 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:05:00,170 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.00s. Achieved 0.0% active coverage (0/165 files via 0 events).
+2026-08-03 15:05:00,170 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.03s) | Visible Timeline: 377376537s | Cached Artifacts: 0
+2026-08-03 15:05:00,170 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:05:00,283 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/DOOM/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:05:00,578 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:05:00,578 [INFO] [GalaxyScope] --- PIPELINE_START: DOOM (vlatest) ---
+2026-08-03 15:05:00,578 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:05:00,579 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 0 intent locks, 0 pattern rules, and 0 documentation shields.
+2026-08-03 15:05:00,600 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 165 tracked artifacts via Git.
+2026-08-03 15:05:00,600 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 151 artifacts via ProcessPoolExecutor.
+2026-08-03 15:05:00,960 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:05:00,962 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:05:00,962 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'st_lib.h' in linuxdoom-1.10/st_stuff.c closely matches anchor 'stdlib.h'!
+2026-08-03 15:05:00,962 [WARNING] [GalaxyScope] Intercepted 1 typosquatting attempts via repository baseline analysis.
+2026-08-03 15:05:00,962 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:05:00,963 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:05:00,965 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:05:01,009 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 146 nodes...
+2026-08-03 15:05:01,054 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:05:01,054 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:05:01,055 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:05:01,055 [INFO] [GalaxyScope.statistical_auditor] Scanning 146 artifacts for structural anomalies and data dumps...
+2026-08-03 15:05:01,055 [INFO] [GalaxyScope.statistical_auditor] Consensus Engine: Stabilized 18 ambiguous extensions based on repository trends.
+2026-08-03 15:05:01,056 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 146 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:05:01,056 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 146 nodes...
+2026-08-03 15:05:01,057 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 165 artifacts (146 verified, 19 unparsable)...
+2026-08-03 15:05:01,057 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 11.5%
+2026-08-03 15:05:01,059 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:05:01,061 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:05:01,064 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:05:01,090 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 138 potential threats.
+2026-08-03 15:05:01,090 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:05:01,244 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: sersrc/SERSTR.H
+2026-08-03 15:05:01,244 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:05:01,244 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:05:01,277 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_audit.json
+2026-08-03 15:05:01,277 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM
+2026-08-03 15:05:01,278 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'DOOM'...
+2026-08-03 15:05:01,445 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_graph.sqlite
+2026-08-03 15:05:01,445 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_master.db
+2026-08-03 15:05:01,651 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_sarif.json
+2026-08-03 15:05:01,651 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:05:01,656 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 367 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_sarif.json
+2026-08-03 15:05:01,657 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_sbom.json
+2026-08-03 15:05:01,657 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on DOOM...
+2026-08-03 15:05:01,659 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 0 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_sbom.json
+2026-08-03 15:05:01,659 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_gpu.json
+2026-08-03 15:05:01,659 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:05:01,699 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_gpu.json
+2026-08-03 15:05:01,784 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 146 files mapped in 0.67s ---
+2026-08-03 15:05:01,784 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 49,940 lines of code at 74,616 LOC/s ---
+2026-08-03 15:05:01,784 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/DOOM/DOOM_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: DOOM completed.
+
+   📦 Compressed DOOM_galaxy_graph.sqlite -> DOOM_galaxy_graph.sqlite.gz
+   📦 Compressed DOOM_galaxy_sarif.json -> DOOM_galaxy_sarif.json.gz
+   📦 Compressed DOOM_galaxy_audit.json -> DOOM_galaxy_audit.json.gz
+   📦 Compressed DOOM_galaxy_sbom.json -> DOOM_galaxy_sbom.json.gz
+   📦 Compressed DOOM_galaxy_master.db -> DOOM_galaxy_master.db.gz
+
+============================================================
+[7/748] 🚀 IGNITING GALAXYOSCOPE FOR: css_doom_pure
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/css_doom_pure
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:05:07,757 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:05:07,813 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:05:07,837 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.03s. Achieved 50.0% active coverage (523/1047 files via 549 events).
+2026-08-03 15:05:07,837 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.08s) | Visible Timeline: 705193s | Cached Artifacts: 523
+2026-08-03 15:05:07,837 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:05:07,942 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/css_doom_pure/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:05:08,244 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:05:08,245 [INFO] [GalaxyScope] --- PIPELINE_START: css_doom_pure (vlatest) ---
+2026-08-03 15:05:08,245 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:05:08,246 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 1 intent locks, 0 pattern rules, and 1 documentation shields.
+2026-08-03 15:05:08,337 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 1047 tracked artifacts via Git.
+2026-08-03 15:05:08,337 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 95 artifacts via ProcessPoolExecutor.
+2026-08-03 15:05:08,578 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:05:08,580 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:05:08,580 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:05:08,580 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:05:08,581 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:05:08,610 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 95 nodes...
+2026-08-03 15:05:08,623 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:05:08,623 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:05:08,623 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:05:08,624 [INFO] [GalaxyScope.statistical_auditor] Scanning 95 artifacts for structural anomalies and data dumps...
+2026-08-03 15:05:08,624 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 95 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:05:08,624 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 95 nodes...
+2026-08-03 15:05:08,625 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 1047 artifacts (95 verified, 952 unparsable)...
+2026-08-03 15:05:08,625 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.02 | Darkness Ratio: 90.9%
+2026-08-03 15:05:08,626 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:05:08,630 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:05:08,631 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:05:08,652 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 54 potential threats.
+2026-08-03 15:05:08,652 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:05:08,766 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/audio/audio.js
+2026-08-03 15:05:08,766 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 64.4%
+2026-08-03 15:05:08,766 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/entities/ai.js
+2026-08-03 15:05:08,766 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/entities/projectiles.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/line-of-sight.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.9%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/mechanics/doors.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 88.6%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/mechanics/lifts.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/physics.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/player/damage.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/player/pickups.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/game/spatial-grid.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/input/gamepad.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/input/touch.js
+2026-08-03 15:05:08,767 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 93.8%
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/renderer/scene/culling.js
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/renderer/scene/entities/sprites.js
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.2%
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/renderer/scene/surfaces/horizontal.js
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 89.4%
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/renderer/scene/surfaces/walls.js
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 99.9%
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/ui/debug.js
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/ui/spectator.js
+2026-08-03 15:05:08,768 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:08,768 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:05:08,806 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_audit.json
+2026-08-03 15:05:08,806 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure
+2026-08-03 15:05:08,806 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'css_doom_pure'...
+2026-08-03 15:05:08,978 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_graph.sqlite
+2026-08-03 15:05:08,978 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_master.db
+2026-08-03 15:05:09,193 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_sarif.json
+2026-08-03 15:05:09,193 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:05:09,196 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 145 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_sarif.json
+2026-08-03 15:05:09,196 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_sbom.json
+2026-08-03 15:05:09,196 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on css_doom_pure...
+2026-08-03 15:05:09,198 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 2 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_sbom.json
+2026-08-03 15:05:09,198 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_gpu.json
+2026-08-03 15:05:09,198 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:05:09,240 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_gpu.json
+2026-08-03 15:05:09,309 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 95 files mapped in 0.53s ---
+2026-08-03 15:05:09,309 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 11,133 lines of code at 21,158 LOC/s ---
+2026-08-03 15:05:09,310 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_pure/css_doom_pure_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: css_doom_pure completed.
+
+   📦 Compressed css_doom_pure_galaxy_sarif.json -> css_doom_pure_galaxy_sarif.json.gz
+   📦 Compressed css_doom_pure_galaxy_audit.json -> css_doom_pure_galaxy_audit.json.gz
+   📦 Compressed css_doom_pure_galaxy_graph.sqlite -> css_doom_pure_galaxy_graph.sqlite.gz
+   📦 Compressed css_doom_pure_galaxy_sbom.json -> css_doom_pure_galaxy_sbom.json.gz
+   📦 Compressed css_doom_pure_galaxy_master.db -> css_doom_pure_galaxy_master.db.gz
+
+============================================================
+[8/748] 🚀 IGNITING GALAXYOSCOPE FOR: css_doom_typescript
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/css_doom_typescript
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:05:15,279 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:05:15,355 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:05:15,356 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.01s. Achieved 0.0% active coverage (0/273 files via 0 events).
+2026-08-03 15:05:15,356 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.08s) | Visible Timeline: 131059441s | Cached Artifacts: 0
+2026-08-03 15:05:15,356 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:05:15,484 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/css_doom_typescript/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:05:15,784 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:05:15,784 [INFO] [GalaxyScope] --- PIPELINE_START: css_doom_typescript (vlatest) ---
+2026-08-03 15:05:15,784 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:05:15,786 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 2 intent locks, 0 pattern rules, and 1 documentation shields.
+2026-08-03 15:05:15,819 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 273 tracked artifacts via Git.
+2026-08-03 15:05:15,819 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 138 artifacts via ProcessPoolExecutor.
+2026-08-03 15:05:15,948 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:05:15,950 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:05:15,950 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:05:15,951 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:05:15,953 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:05:15,992 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 138 nodes...
+2026-08-03 15:05:16,018 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:05:16,019 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:05:16,019 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:05:16,019 [INFO] [GalaxyScope.statistical_auditor] Scanning 138 artifacts for structural anomalies and data dumps...
+2026-08-03 15:05:16,020 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 138 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:05:16,020 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 138 nodes...
+2026-08-03 15:05:16,021 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 273 artifacts (138 verified, 135 unparsable)...
+2026-08-03 15:05:16,021 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 49.5%
+2026-08-03 15:05:16,023 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:05:16,024 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:05:16,027 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:05:16,069 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 106 potential threats.
+2026-08-03 15:05:16,069 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:05:16,151 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/ui/screens/LevelSelect/LevelSelect.tsx
+2026-08-03 15:05:16,151 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 93.9%
+2026-08-03 15:05:16,151 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: src/ui/screens/Menu/Menu.tsx
+2026-08-03 15:05:16,151 [WARNING] [GalaxyScope.firewall]    -> Logic Bomb Risk: 100.0%
+2026-08-03 15:05:16,153 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:05:16,190 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_audit.json
+2026-08-03 15:05:16,190 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript
+2026-08-03 15:05:16,190 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'css_doom_typescript'...
+2026-08-03 15:05:16,362 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_graph.sqlite
+2026-08-03 15:05:16,362 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_master.db
+2026-08-03 15:05:16,602 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_sarif.json
+2026-08-03 15:05:16,602 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:05:16,606 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 186 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_sarif.json
+2026-08-03 15:05:16,606 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_sbom.json
+2026-08-03 15:05:16,607 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on css_doom_typescript...
+2026-08-03 15:05:16,611 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 33 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_sbom.json
+2026-08-03 15:05:16,611 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_gpu.json
+2026-08-03 15:05:16,611 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:05:16,655 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_gpu.json
+2026-08-03 15:05:16,727 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 138 files mapped in 0.37s ---
+2026-08-03 15:05:16,727 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 4,443 lines of code at 11,911 LOC/s ---
+2026-08-03 15:05:16,727 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/css_doom_typescript/css_doom_typescript_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: css_doom_typescript completed.
+
+   📦 Compressed css_doom_typescript_galaxy_master.db -> css_doom_typescript_galaxy_master.db.gz
+   📦 Compressed css_doom_typescript_galaxy_audit.json -> css_doom_typescript_galaxy_audit.json.gz
+   📦 Compressed css_doom_typescript_galaxy_sbom.json -> css_doom_typescript_galaxy_sbom.json.gz
+   📦 Compressed css_doom_typescript_galaxy_sarif.json -> css_doom_typescript_galaxy_sarif.json.gz
+   📦 Compressed css_doom_typescript_galaxy_graph.sqlite -> css_doom_typescript_galaxy_graph.sqlite.gz
+
+============================================================
+[9/748] 🚀 IGNITING GALAXYOSCOPE FOR: loony_ascii_doom
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/loony_ascii_doom
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:05:22,758 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:05:22,820 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:05:22,821 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.01s. Achieved 0.0% active coverage (0/193 files via 0 events).
+2026-08-03 15:05:22,821 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.06s) | Visible Timeline: 106268382s | Cached Artifacts: 0
+2026-08-03 15:05:22,821 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:05:22,926 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/loony_ascii_doom/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:05:23,223 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:05:23,223 [INFO] [GalaxyScope] --- PIPELINE_START: loony_ascii_doom (vlatest) ---
+2026-08-03 15:05:23,223 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:05:23,224 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 8 intent locks, 0 pattern rules, and 1 documentation shields.
+2026-08-03 15:05:23,257 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 193 tracked artifacts via Git.
+2026-08-03 15:05:23,257 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 187 artifacts via ProcessPoolExecutor.
+2026-08-03 15:05:23,309 [WARNING] [GalaxyScope.Worker.splicer] [DIAGNOSTIC] Unregistered rule 'hardcoded_secrets' found in 'yaml'. Ignoring to preserve schema.
+2026-08-03 15:05:23,698 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:05:23,700 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:05:23,700 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'strings.h' in src/doomtype.h closely matches anchor 'string.h'!
+2026-08-03 15:05:23,700 [WARNING] [GalaxyScope] Intercepted 1 typosquatting attempts via repository baseline analysis.
+2026-08-03 15:05:23,700 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:05:23,701 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:05:23,703 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:05:23,754 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 182 nodes...
+2026-08-03 15:05:23,837 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:05:23,837 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:05:23,838 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:05:23,838 [INFO] [GalaxyScope.statistical_auditor] Scanning 182 artifacts for structural anomalies and data dumps...
+2026-08-03 15:05:23,838 [INFO] [GalaxyScope.statistical_auditor] Consensus Engine: Stabilized 31 ambiguous extensions based on repository trends.
+2026-08-03 15:05:23,839 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 182 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:05:23,839 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 182 nodes...
+2026-08-03 15:05:23,841 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 193 artifacts (182 verified, 11 unparsable)...
+2026-08-03 15:05:23,841 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 5.7%
+2026-08-03 15:05:23,843 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:05:23,845 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:05:23,850 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:05:23,880 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 179 potential threats.
+2026-08-03 15:05:23,880 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:05:24,000 [WARNING] [GalaxyScope.firewall] 🚨 [THREAT DETECTED] Risk Threshold Breached in: target.mk
+2026-08-03 15:05:24,000 [WARNING] [GalaxyScope.firewall]    -> Data Injection Risk: 100.0%
+2026-08-03 15:05:24,003 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:05:24,044 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_audit.json
+2026-08-03 15:05:24,044 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom
+2026-08-03 15:05:24,044 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'loony_ascii_doom'...
+2026-08-03 15:05:24,223 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_graph.sqlite
+2026-08-03 15:05:24,223 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_master.db
+2026-08-03 15:05:24,428 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_sarif.json
+2026-08-03 15:05:24,428 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:05:24,435 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 469 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_sarif.json
+2026-08-03 15:05:24,435 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_sbom.json
+2026-08-03 15:05:24,435 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on loony_ascii_doom...
+2026-08-03 15:05:24,437 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 0 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_sbom.json
+2026-08-03 15:05:24,437 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_gpu.json
+2026-08-03 15:05:24,437 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:05:24,481 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_gpu.json
+2026-08-03 15:05:24,578 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 182 files mapped in 0.79s ---
+2026-08-03 15:05:24,578 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 59,807 lines of code at 76,091 LOC/s ---
+2026-08-03 15:05:24,578 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/loony_ascii_doom/loony_ascii_doom_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: loony_ascii_doom completed.
+
+   📦 Compressed loony_ascii_doom_galaxy_graph.sqlite -> loony_ascii_doom_galaxy_graph.sqlite.gz
+   📦 Compressed loony_ascii_doom_galaxy_sbom.json -> loony_ascii_doom_galaxy_sbom.json.gz
+   📦 Compressed loony_ascii_doom_galaxy_sarif.json -> loony_ascii_doom_galaxy_sarif.json.gz
+   📦 Compressed loony_ascii_doom_galaxy_master.db -> loony_ascii_doom_galaxy_master.db.gz
+   📦 Compressed loony_ascii_doom_galaxy_audit.json -> loony_ascii_doom_galaxy_audit.json.gz
+
+============================================================
+[10/748] 🚀 IGNITING GALAXYOSCOPE FOR: normal_doomgeneric
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/normal_doomgeneric
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:05:30,582 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:05:30,629 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:05:30,646 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.02s. Achieved 2.4% active coverage (5/211 files via 6 events).
+2026-08-03 15:05:30,646 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.06s) | Visible Timeline: 446655045s | Cached Artifacts: 5
+2026-08-03 15:05:30,646 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:05:30,760 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/normal_doomgeneric/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:05:31,059 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:05:31,059 [INFO] [GalaxyScope] --- PIPELINE_START: normal_doomgeneric (vlatest) ---
+2026-08-03 15:05:31,059 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:05:31,060 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 0 intent locks, 0 pattern rules, and 1 documentation shields.
+2026-08-03 15:05:31,095 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 211 tracked artifacts via Git.
+2026-08-03 15:05:31,095 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 188 artifacts via ProcessPoolExecutor.
+2026-08-03 15:05:31,536 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:05:31,539 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:05:31,539 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'strings.h' in doomgeneric/doomtype.h closely matches anchor 'string.h'!
+2026-08-03 15:05:31,540 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'st_lib.h' in doomgeneric/st_stuff.c closely matches anchor 'stdlib.h'!
+2026-08-03 15:05:31,540 [WARNING] [GalaxyScope] Intercepted 2 typosquatting attempts via repository baseline analysis.
+2026-08-03 15:05:31,540 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:05:31,541 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:05:31,543 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:05:31,596 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 182 nodes...
+2026-08-03 15:05:31,680 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:05:31,680 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:05:31,681 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:05:31,682 [INFO] [GalaxyScope.statistical_auditor] Scanning 182 artifacts for structural anomalies and data dumps...
+2026-08-03 15:05:31,682 [INFO] [GalaxyScope.statistical_auditor] Consensus Engine: Stabilized 31 ambiguous extensions based on repository trends.
+2026-08-03 15:05:31,682 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 182 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:05:31,682 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 182 nodes...
+2026-08-03 15:05:31,684 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 211 artifacts (182 verified, 29 unparsable)...
+2026-08-03 15:05:31,684 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.01 | Darkness Ratio: 13.7%
+2026-08-03 15:05:31,686 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:05:31,688 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:05:31,693 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:05:31,738 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 180 potential threats.
+2026-08-03 15:05:31,738 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:05:31,762 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:05:31,805 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_audit.json
+2026-08-03 15:05:31,806 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric
+2026-08-03 15:05:31,806 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'normal_doomgeneric'...
+2026-08-03 15:05:32,057 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_graph.sqlite
+2026-08-03 15:05:32,057 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_master.db
+2026-08-03 15:05:32,270 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_sarif.json
+2026-08-03 15:05:32,270 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:05:32,278 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 488 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_sarif.json
+2026-08-03 15:05:32,279 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_sbom.json
+2026-08-03 15:05:32,279 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on normal_doomgeneric...
+2026-08-03 15:05:32,280 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 0 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_sbom.json
+2026-08-03 15:05:32,281 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_gpu.json
+2026-08-03 15:05:32,281 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:05:32,324 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_gpu.json
+2026-08-03 15:05:32,428 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 182 files mapped in 0.71s ---
+2026-08-03 15:05:32,428 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 61,718 lines of code at 87,208 LOC/s ---
+2026-08-03 15:05:32,428 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_doomgeneric/normal_doomgeneric_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: normal_doomgeneric completed.
+
+   📦 Compressed normal_doomgeneric_galaxy_master.db -> normal_doomgeneric_galaxy_master.db.gz
+   📦 Compressed normal_doomgeneric_galaxy_audit.json -> normal_doomgeneric_galaxy_audit.json.gz
+   📦 Compressed normal_doomgeneric_galaxy_sbom.json -> normal_doomgeneric_galaxy_sbom.json.gz
+   📦 Compressed normal_doomgeneric_galaxy_graph.sqlite -> normal_doomgeneric_galaxy_graph.sqlite.gz
+   📦 Compressed normal_doomgeneric_galaxy_sarif.json -> normal_doomgeneric_galaxy_sarif.json.gz
+
+============================================================
+[11/748] 🚀 IGNITING GALAXYOSCOPE FOR: normal_esp32_doom
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/normal_esp32_doom
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+
+2026-08-03 15:05:38,424 [INFO] [GalaxyScope.filter] Aperture Filter Online | Tracking 315 valid extensions.
+2026-08-03 15:05:38,532 [INFO] [GalaxyScope.chronometer] Chronometer: Engaging 1-Year Historical Sweep. Budget: 60.0s
+2026-08-03 15:05:38,533 [INFO] [GalaxyScope.chronometer] Temporal Sync Complete | Sweep finished in 0.01s. Achieved 0.0% active coverage (0/203 files via 0 events).
+2026-08-03 15:05:38,533 [INFO] [GalaxyScope.chronometer] Chronometer Calibration Complete (0.11s) | Visible Timeline: 26585217s | Cached Artifacts: 0
+2026-08-03 15:05:38,533 [INFO] [GalaxyScope.processing] Signal Processor Online | Context-Aware Risk Schema & ML Archetypes loaded.
+2026-08-03 15:05:38,661 [WARNING] [GalaxyScope] 🗂️ No dependency audit baseline found — created new cache at /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/normal_esp32_doom/.gitgalaxy/dependency_cache.db. This run verifies dependencies incrementally; coverage accumulates across runs. Use --full-dependency-scan to build a complete baseline in one pass. (Recommend adding .gitgalaxy/ to your .gitignore.)
+2026-08-03 15:05:38,965 [INFO] [GalaxyScope.ml_auditor] 🧠 XGBoost Threat Model loaded successfully from: /srv/storage_16tb/projects/gitgalaxy/v6/gitgalaxy/security/gitgalaxy_malware_xgb_multiclass.json
+2026-08-03 15:05:38,966 [INFO] [GalaxyScope] --- PIPELINE_START: normal_esp32_doom (vlatest) ---
+2026-08-03 15:05:38,966 [INFO] [GalaxyScope.guidestar] GuideStar: Scanning sectors for Contextual Baselines & Roadmap Proof...
+2026-08-03 15:05:38,967 [INFO] [GalaxyScope.guidestar] GuideStar: Scan complete. Cached 2 intent locks, 0 pattern rules, and 0 documentation shields.
+2026-08-03 15:05:38,993 [INFO] [GalaxyScope] CENSUS_COMPLETE: Found 203 tracked artifacts via Git.
+2026-08-03 15:05:38,993 [INFO] [GalaxyScope] PASS_1: Optical sequence initiated for 188 artifacts via ProcessPoolExecutor.
+2026-08-03 15:05:39,572 [INFO] [GalaxyScope] PASS_1.5: Resolving import graphs via O(1) Pre-computed Suffix Hash Maps...
+2026-08-03 15:05:39,575 [INFO] [GalaxyScope] PASS_1.5: Running Air-Gapped Typosquatting & Dependency Confusion Radar...
+2026-08-03 15:05:39,575 [CRITICAL] [GalaxyScope] 🚨 TYPOSQUATTING DETECTED: 'st_lib.h' in components/prboom/st_stuff.c closely matches anchor 'stdlib.h'!
+2026-08-03 15:05:39,576 [WARNING] [GalaxyScope] Intercepted 1 typosquatting attempts via repository baseline analysis.
+2026-08-03 15:05:39,576 [INFO] [GalaxyScope] PASS_2: Calculating structural impact and Tiered Normalization.
+2026-08-03 15:05:39,577 [INFO] [GalaxyScope] PASS_2: Extracting Test Coverage Mapping...
+2026-08-03 15:05:39,580 [INFO] [GalaxyScope] UMBRELLA SHIELD: Repo test coverage is 0.0%. Applying +0.0 density bonus.
+2026-08-03 15:05:39,634 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Initializing Directed Graph for 181 nodes...
+2026-08-03 15:05:39,713 [INFO] [GalaxyScope.network_sensor] Network Risk Sensor: Vector Mathematics & Graph Topology Complete.
+2026-08-03 15:05:39,713 [INFO] [GalaxyScope.guardrails] Executing Autonomous Agent Firewall & Token Density Validation...
+2026-08-03 15:05:39,715 [INFO] [GalaxyScope.appsec_sensor] AI AppSec Sensor: Scanning for Agentic Vulnerabilities...
+2026-08-03 15:05:39,715 [INFO] [GalaxyScope.statistical_auditor] Scanning 181 artifacts for structural anomalies and data dumps...
+2026-08-03 15:05:39,716 [INFO] [GalaxyScope.statistical_auditor] Consensus Engine: Stabilized 17 ambiguous extensions based on repository trends.
+2026-08-03 15:05:39,716 [INFO] [GalaxyScope.statistical_auditor] Anomaly sweep concluded | Stable Files Mapped: 181 | Collapsed to Exclusion Queue: 0
+2026-08-03 15:05:39,716 [INFO] [GalaxyScope.spatial_mapper] Spatial Mapper: Executing Ray-Casting Dynamic Mask packing for 181 nodes...
+2026-08-03 15:05:39,717 [INFO] [GalaxyScope.processing] Synthesizing repository metrics across 203 artifacts (181 verified, 22 unparsable)...
+2026-08-03 15:05:39,717 [INFO] [GalaxyScope.processing] Synthesis Complete | Volatility Index: 0.00 | Darkness Ratio: 10.8%
+2026-08-03 15:05:39,719 [INFO] [GalaxyScope.processing] Generating forensic exposure rankings...
+2026-08-03 15:05:39,721 [INFO] [GalaxyScope.ml_auditor] Resolving N-th degree dependency graphs...
+2026-08-03 15:05:39,726 [INFO] [GalaxyScope.ml_auditor] Executing XGBoost Threat Inference across all artifacts...
+2026-08-03 15:05:39,756 [INFO] [GalaxyScope.ml_auditor] XGBoost Inference Complete. Found 178 potential threats.
+2026-08-03 15:05:39,756 [INFO] [GalaxyScope] Phase 10: Executing Ecosystem Security Audits (X-Ray, Firewall, API Mapper)...
+2026-08-03 15:05:39,961 [INFO] [GalaxyScope] 🧹 Sanitizing telemetry to prevent export of mitigated and ignored threats...
+2026-08-03 15:05:40,000 [INFO] [GalaxyScope.audit_recorder] Audit Success: Forensic manifest sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_audit.json
+2026-08-03 15:05:40,000 [INFO] [GalaxyScope] LLM: Generating AI translation artifacts -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom
+2026-08-03 15:05:40,000 [INFO] [GalaxyScope.llm_recorder] Initiating LLM Artifact Generation for 'normal_esp32_doom'...
+2026-08-03 15:05:40,199 [INFO] [GalaxyScope.llm_recorder] AI Artifact Generation Complete:
+ -> Markdown: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_llm.md
+ -> SQLite: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_graph.sqlite
+2026-08-03 15:05:40,199 [INFO] [GalaxyScope] SQLITE: Generating repository-specific database -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_master.db
+2026-08-03 15:05:40,412 [INFO] [GalaxyScope] SARIF: Generating standardized security payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_sarif.json
+2026-08-03 15:05:40,412 [INFO] [GalaxyScope.sarif_recorder] SARIF: Translating RAM state to industry-standard SARIF 2.1.0 payload...
+2026-08-03 15:05:40,423 [INFO] [GalaxyScope.sarif_recorder] SARIF: Successfully exported 563 findings to /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_sarif.json
+2026-08-03 15:05:40,423 [INFO] [GalaxyScope] SBOM: Generating standard manifest -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_sbom.json
+2026-08-03 15:05:40,423 [INFO] [GalaxyScope.sbom_recorder] SBOM: Engaging Universal Zero-Trust Generation on normal_esp32_doom...
+2026-08-03 15:05:40,424 [INFO] [GalaxyScope.sbom_recorder] SBOM_SEALED: 0 dependencies mapped -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_sbom.json
+2026-08-03 15:05:40,424 [INFO] [GalaxyScope] GPU: Generating minified payload -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_gpu.json
+2026-08-03 15:05:40,424 [INFO] [GalaxyScope.gpu_recorder] GPU_RECORDER: Engaging Stage 3.3 Destructive RAM Eviction.
+2026-08-03 15:05:40,471 [INFO] [GalaxyScope.gpu_recorder] GPU Manifest Sealed -> /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_gpu.json
+2026-08-03 15:05:40,570 [INFO] [GalaxyScope] --- PIPELINE_SUCCESS: 181 files mapped in 1.0s ---
+2026-08-03 15:05:40,570 [INFO] [GalaxyScope] --- ENGINE_TELEMETRY: Processed 72,835 lines of code at 72,872 LOC/s ---
+2026-08-03 15:05:40,570 [INFO] [GalaxyScope] --- ARCHIVES_SEALED: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_gpu.json & /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_audit.json ---
+
+===========================================================================
+ 🌌 READY FOR VISUALIZATION (100% LOCAL / ZERO UPLOAD)
+===========================================================================
+ 1. Open your browser to: [94m[4mhttps://gitgalaxy.io/[0m
+ 2. Drag and drop '/srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_esp32_doom/normal_esp32_doom_galaxy_gpu.json'
+
+ * PRIVACY SECURED: Your data never leaves your machine.
+   All architectural rendering executes locally in your browser.
+===========================================================================
+
+
+✅ SUCCESS: normal_esp32_doom completed.
+
+   📦 Compressed normal_esp32_doom_galaxy_audit.json -> normal_esp32_doom_galaxy_audit.json.gz
+   📦 Compressed normal_esp32_doom_galaxy_sarif.json -> normal_esp32_doom_galaxy_sarif.json.gz
+   📦 Compressed normal_esp32_doom_galaxy_master.db -> normal_esp32_doom_galaxy_master.db.gz
+   📦 Compressed normal_esp32_doom_galaxy_graph.sqlite -> normal_esp32_doom_galaxy_graph.sqlite.gz
+   📦 Compressed normal_esp32_doom_galaxy_sbom.json -> normal_esp32_doom_galaxy_sbom.json.gz
+
+============================================================
+[12/748] 🚀 IGNITING GALAXYOSCOPE FOR: normal_rp2040_doom
+               Target Path: /srv/storage_16tb/projects/gitgalaxy/data/DOOM_systems/normal_rp2040_doom
+               Output Path: /srv/storage_16tb/projects/gitgalaxy-raw-output/v2.4.6/normal_rp2040_doom
+============================================================
+
+================================================================================
+ 🪐 GALAXYSCOPE V2 ONLINE
+================================================================================
+ ⚠️  LICENSE MISSING: No commercial key detected in the environment.
+ Executing under PolyForm Noncommercial License 1.0.0.
+ Commercial use in corporate networks or CI/CD pipelines requires a valid license.
+ Contact joe@gitgalaxy.io to acquire a commercial key.
+
+ >>> Enforcing 5-second synchronization delay for compliance visibility...
+================================================================================
+

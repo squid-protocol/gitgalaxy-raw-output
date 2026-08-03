@@ -59,6 +59,8 @@ def main():
     parser.add_argument("--dest", required=True, help="Directory to clone repos into")
     parser.add_argument("--only", default=None,
                          help="Only clone repos in this group (e.g. corpus_python), or top-level repos if 'root'")
+    parser.add_argument("--scan", action="store_true", help="Trigger GitGalaxy batch scan after cloning/pinning corpus")
+    parser.add_argument("--output", default=None, help="Output destination folder for scan artifacts when --scan is used")
     args = parser.parse_args()
 
     manifest = load_manifest(args.version)
@@ -84,8 +86,25 @@ def main():
     print(f"Done. {len(repos) - len(failures)}/{len(repos)} repos ready at their pinned commit.")
     if failures:
         print(f"❌ Failed: {', '.join(failures)}")
+        
+    if args.scan:
+        print("\n🚀 Initiating GitGalaxy Batch Scan...")
+        batch_script = Path("/srv/storage_16tb/projects/gitgalaxy/v6/utilities/batch_process.py")
+        if not batch_script.exists():
+            print(f"❌ Batch process script not found at {batch_script}")
+            sys.exit(1)
+        
+        scan_cmd = [sys.executable, str(batch_script), str(dest_root)]
+        if args.output:
+            scan_cmd.extend(["--output", str(Path(args.output).resolve())])
+        
+        proc = subprocess.run(scan_cmd)
+        if proc.returncode != 0:
+            print(f"⚠️ Batch scan completed with exit code {proc.returncode}")
+    
     print("=" * 50)
 
 
 if __name__ == "__main__":
     main()
+
