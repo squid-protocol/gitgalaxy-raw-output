@@ -99,6 +99,14 @@ automatically whenever a new `v*/batch_scan_master_*.log` is pushed, and writes:
   strictly above or below the fitted trend line (never over a point) and connected back to its
   dot by a thin line, so the labeled set reads as two open clusters rather than clutter over the
   data.
+- **`speed_charts/latest/loc_vs_time.png`** — a stable path that always holds a copy of the chart
+  from whichever version is numerically newest. The image below points at that stable path, so it
+  updates in place on every new batch without anyone editing this README:
+
+  ![Latest LOC-vs-engine-time speed chart](speed_charts/latest/loc_vs_time.png)
+
+  The version and date it was generated from are baked into the chart's own subtitle (and in
+  `speed_charts/latest/version.json`), since the image path itself deliberately never changes.
 
 To regenerate by hand (e.g. after editing the parser, or to backfill an older version):
 

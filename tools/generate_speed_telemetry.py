@@ -13,6 +13,7 @@ import csv
 import json
 import math
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -20,6 +21,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HISTORY_CSV = REPO_ROOT / "speed_history.csv"
+LATEST_DIR = REPO_ROOT / "speed_charts" / "latest"
 HISTORY_FIELDS = [
     "version", "log_file", "run_date", "total_repos", "failed_repos",
     "total_loc", "total_time_s", "avg_rate_loc_s", "slow_files_gt10s",
@@ -407,6 +409,19 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
 
 # ---------------------------------------------------------------------------
 
+def version_key(version_dir_name: str):
+    """'v2.4.10' -> (2, 4, 10), so this sorts numerically, not lexically."""
+    parts = re.findall(r"\d+", version_dir_name)
+    return tuple(int(p) for p in parts) if parts else (0,)
+
+
+def is_highest_version(version: str) -> bool:
+    all_versions = [p.name for p in REPO_ROOT.glob("v*") if p.is_dir()]
+    if not all_versions:
+        return True
+    return version_key(version) == max(version_key(v) for v in all_versions)
+
+
 def process_version(version_dir: Path):
     version = version_dir.name
     log_path = pick_canonical_log(version_dir)
@@ -424,6 +439,19 @@ def process_version(version_dir: Path):
     chart_path = version_dir / "speed_charts" / "loc_vs_time.png"
     render_loc_vs_time_chart(version, summary, chart_path)
     print(f"[{version}] wrote {chart_path.relative_to(REPO_ROOT)}")
+
+    # speed_charts/latest/ is a stable path the README embeds directly, so the
+    # README's markdown never needs editing -- only ever overwritten by whichever
+    # version is numerically newest, so reprocessing an older version by hand
+    # (e.g. --all backfill) can't clobber it with stale data.
+    if is_highest_version(version):
+        LATEST_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(chart_path, LATEST_DIR / "loc_vs_time.png")
+        with open(LATEST_DIR / "version.json", "w") as f:
+            json.dump({"version": version, "run_date": summary["run_date"]}, f, indent=2)
+        print(f"[{version}] updated {LATEST_DIR.relative_to(REPO_ROOT)}/ (highest version)")
+    else:
+        print(f"[{version}] not the highest version present -- left speed_charts/latest/ alone")
 
 
 def main():
