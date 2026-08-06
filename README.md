@@ -1,5 +1,18 @@
 # gitgalaxy-raw-output
 
+GitGalaxy claims to scan real, independently-chosen repositories fast — from 9-line toy
+projects to 33-million-line kernels. Here's what that actually looks like:
+
+![Latest LOC-vs-engine-time speed chart](speed_charts/latest/loc_vs_time.png)
+
+Every repo in the batch, one dot each, log–log. Always the newest scanner version —
+regenerated automatically on every new batch, nothing here is hand-updated.
+
+![Latest scan rate model](speed_charts/latest/rate_model.png)
+
+The two-regime fit behind that chart: flat below the knee, near-linear power law above it.
+Full methodology and file layout in [Speed Telemetry](#speed-telemetry) below.
+
 ## Why This Exists
 
 [GitGalaxy's README](https://github.com/squid-protocol/gitgalaxy) makes claims about scanning
@@ -84,15 +97,11 @@ part of the batch `v1` doesn't yet cover). This is meant to be checked, not take
 
 ## Speed Telemetry
 
-![Latest LOC-vs-engine-time speed chart](speed_charts/latest/loc_vs_time.png)
-
-Every repo in the batch, log–log. This always reflects the newest scanner version — it
-regenerates automatically on every new batch, nothing here is hand-updated.
+The chart and rate-model equation at the top of this README are generated from this data —
+this section is where they come from and how to reproduce them.
 
 **Why not just report an average LOC/s?** Rate depends on repo size, not batch mix — a single
 average blends two different regimes into a meaningless number, so it's fit as two instead:
-
-![Latest scan rate model](speed_charts/latest/rate_model.png)
 
 - **Below the knee:** flat, fixed-overhead time — not LOC-dependent
 - **Above it:** power-law scan time, near-linear (exponent ≈0.97 — not superlinear)
@@ -106,7 +115,7 @@ average blends two different regimes into a meaningless number, so it's fit as t
 - `speed_history.csv` — one row per version, for rate trend across releases
 - `v<version>/speed_summary.json` — full per-repo table + anomaly report
 - `v<version>/speed_charts/{loc_vs_time,rate_model}.{png,json,txt}` — that version's own charts
-- `speed_charts/latest/` — stable copies of the newest version (what's embedded above)
+- `speed_charts/latest/` — stable copies of the newest version (what's embedded at the top of this README)
 
 To regenerate by hand (e.g. after editing the parser, or to backfill an older version):
 
