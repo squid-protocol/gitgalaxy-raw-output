@@ -84,46 +84,29 @@ part of the batch `v1` doesn't yet cover). This is meant to be checked, not take
 
 ## Speed Telemetry
 
-"Average LOC/s" is close to meaningless for this engine -- it depends heavily on repo size, not
-just batch composition. Small repos are dominated by fixed per-run overhead; larger ones settle
-into a clean, near-linear scaling law. So instead of one average, every batch gets fit as two
-regimes and reported as an equation, not a single number:
+![Latest LOC-vs-engine-time speed chart](speed_charts/latest/loc_vs_time.png)
+
+Every repo in the batch, log–log. This always reflects the newest scanner version — it
+regenerates automatically on every new batch, nothing here is hand-updated.
+
+**Why not just report an average LOC/s?** Rate depends on repo size, not batch mix — a single
+average blends two different regimes into a meaningless number, so it's fit as two instead:
 
 ![Latest scan rate model](speed_charts/latest/rate_model.png)
 
-That image always reflects the newest version (`speed_charts/latest/rate_model.png`), same
-self-updating mechanism as the chart below. The methodology -- why the threshold and exponent are
-*derived* from the data rather than eyeballed, and the honesty caveats about cross-repo fits vs.
-one-repo-at-multiple-sizes -- is documented in `compute_rate_model()`'s docstring in
-`tools/generate_speed_telemetry.py`. Full numbers (not just the rounded headline figures) are in
-`speed_charts/latest/rate_model.json` and the plain-text `rate_model.txt`.
+- **Below the knee:** flat, fixed-overhead time — not LOC-dependent
+- **Above it:** power-law scan time, near-linear (exponent ≈0.97 — not superlinear)
+- Methodology and full-precision numbers: `compute_rate_model()` in
+  `tools/generate_speed_telemetry.py`, `speed_charts/latest/rate_model.{json,txt}`
 
-Each batch run's `batch_scan_master_*.log` ends with a `MISSION COMPLETE` engine report (per-repo
-LOC/rate/time) and a `BATCH ANOMALY & ERROR REPORT` (failed repos, files that hit the ReDoS-fuse
-ceiling, typosquat-heuristic hits). `.github/workflows/speed-telemetry.yml` parses that report
-automatically whenever a new `v*/batch_scan_master_*.log` is pushed, and writes:
+**Generated automatically** by `.github/workflows/speed-telemetry.yml` whenever a new
+`v*/batch_scan_master_*.log` is pushed (parsed from the log's own `MISSION COMPLETE` report and
+`BATCH ANOMALY & ERROR REPORT`):
 
-- **`speed_history.csv`** (repo root) — one row per scanner version: total repos/LOC/time,
-  average LOC/s, failed-repo count, slow-file count, typosquat hit count. This is the file to
-  read for rate trend *across* releases, not any single version's numbers in isolation.
-- **`v<version>/speed_summary.json`** — the full parsed per-repo table plus the anomaly report
-  for that one version, machine-readable.
-- **`v<version>/speed_charts/rate_model.{png,json,txt}`** — the two-regime rate model described
-  above, for that one version.
-- **`v<version>/speed_charts/loc_vs_time.png`** — a square, log–log LOC-vs-engine-time scatter
-  of every repo in the batch. Most repos are unlabeled dots; a spread subset gets a name, placed
-  strictly above or below the fitted trend line (never over a point) and connected back to its
-  dot by a thin line, so the labeled set reads as two open clusters rather than clutter over the
-  data.
-- **`speed_charts/latest/`** — stable paths (`loc_vs_time.png`, `rate_model.{png,json,txt}`,
-  `version.json`) that always hold a copy of whichever version is numerically newest. The images
-  in this README point at those stable paths, so they update in place on every new batch without
-  anyone editing this file:
-
-  ![Latest LOC-vs-engine-time speed chart](speed_charts/latest/loc_vs_time.png)
-
-  The version and date each was generated from are baked into the image's own subtitle (and in
-  `speed_charts/latest/version.json`), since the paths themselves deliberately never change.
+- `speed_history.csv` — one row per version, for rate trend across releases
+- `v<version>/speed_summary.json` — full per-repo table + anomaly report
+- `v<version>/speed_charts/{loc_vs_time,rate_model}.{png,json,txt}` — that version's own charts
+- `speed_charts/latest/` — stable copies of the newest version (what's embedded above)
 
 To regenerate by hand (e.g. after editing the parser, or to backfill an older version):
 
