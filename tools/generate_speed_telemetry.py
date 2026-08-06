@@ -202,11 +202,13 @@ def upsert_history(version: str, summary: dict):
 def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
     rows = summary["repos"]
 
+    LABEL_FONT_SIZE = 19  # repo point-labels -- the floor every other chart font must meet
+
     f_title = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), 33)
-    f_sub = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), 15)
-    f_tick = ImageFont.truetype(find_font(FONT_CANDIDATES_MONO), 14)
-    f_axis = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), 25)
-    f_label = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), 19)
+    f_sub = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), LABEL_FONT_SIZE)
+    f_tick = ImageFont.truetype(find_font(FONT_CANDIDATES_MONO), LABEL_FONT_SIZE)
+    f_axis = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), max(25, LABEL_FONT_SIZE))
+    f_label = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), LABEL_FONT_SIZE)
 
     COL_BG = (255, 255, 255)
     COL_PLOT_BORDER = (215, 222, 228)
@@ -347,8 +349,36 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
         if try_place_one(p, "bottom"):
             bot_count += 1
 
-    ML, MR, MT, MB = 92, 92, 112, 72
+    # Margins are sized around the actual font metrics rather than fixed constants,
+    # since every font here is pinned to (or derived from) LABEL_FONT_SIZE and a
+    # hardcoded margin that fit the old, smaller tick/subtitle fonts clips or
+    # overlaps once those fonts grow to match the label size floor.
+    GAP_TICK_AXIS = 10
+    GAP_TICK_YLABEL = 14
+    GAP_YLABEL_EDGE = 14
+    max_ytick_w = max(text_w(lbl, f_tick) for _, lbl in Y_TICKS)
+    ylabel_thickness = f_axis.size + 16
+    ML = MR = GAP_TICK_AXIS + max_ytick_w + GAP_TICK_YLABEL + ylabel_thickness + GAP_YLABEL_EDGE
+
+    tick_line_h = f_tick.size + 6
+    GAP_TICK_XLAB = 12
+    BOTTOM_PAD = 16
+    MB = GAP_TICK_AXIS - 2 + tick_line_h + GAP_TICK_XLAB + f_axis.size + BOTTOM_PAD
+
+    PAD_TOP = 14
+    GAP_TITLE_SUB = 14
+    GAP_SUB_PLOT = 22
+    MT = PAD_TOP + f_title.size + GAP_TITLE_SUB + f_sub.size + GAP_SUB_PLOT
+
+    # keep the outer canvas square by padding out whichever margin pair is smaller
+    if ML + MR > MT + MB:
+        MB += (ML + MR) - (MT + MB)
+    else:
+        extra = (MT + MB) - (ML + MR)
+        ML += extra // 2
+        MR += extra - extra // 2
     assert ML + MR == MT + MB
+
     W = H = ML + PLOT_W + MR
     img = Image.new("RGB", (W, H), COL_BG)
     d = ImageDraw.Draw(img)
@@ -366,24 +396,26 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
         x = tx(logx(val))
         d.line([(x, py0), (x, py1)], fill=COL_GRID, width=1)
         tw = text_w(lbl, f_tick)
-        d.text((x - tw / 2, py1 + 8), lbl, font=f_tick, fill=COL_TICK)
+        d.text((x - tw / 2, py1 + GAP_TICK_AXIS - 2), lbl, font=f_tick, fill=COL_TICK)
     for val, lbl in Y_TICKS:
         y = ty(logy(val))
         d.line([(px0, y), (px1, y)], fill=COL_GRID, width=1)
         tw = text_w(lbl, f_tick)
-        d.text((px0 - tw - 10, y - 8), lbl, font=f_tick, fill=COL_TICK)
+        d.text((px0 - tw - GAP_TICK_AXIS, y - f_tick.size / 2), lbl, font=f_tick, fill=COL_TICK)
 
     xlab = "LOC scanned (log scale)"
     tw = text_w(xlab, f_axis)
-    d.text(((px0 + px1) / 2 - tw / 2, py1 + 34), xlab, font=f_axis, fill=COL_AXIS)
+    d.text(((px0 + px1) / 2 - tw / 2, py1 + GAP_TICK_AXIS - 2 + tick_line_h + GAP_TICK_XLAB),
+           xlab, font=f_axis, fill=COL_AXIS)
 
     ylab_text = "Engine time, seconds (log scale)"
     ylab_w = text_w(ylab_text, f_axis) + 8
-    ylab_img = Image.new("RGBA", (ylab_w, 34), (255, 255, 255, 0))
+    ylab_img = Image.new("RGBA", (ylab_w, ylabel_thickness), (255, 255, 255, 0))
     yd = ImageDraw.Draw(ylab_img)
     yd.text((0, 0), ylab_text, font=f_axis, fill=COL_AXIS)
     ylab_img = ylab_img.rotate(90, expand=True)
-    img.paste(ylab_img, (int(px0 - 62), int((py0 + py1) / 2 - ylab_img.height / 2)), ylab_img)
+    ylab_x = px0 - GAP_TICK_AXIS - max_ytick_w - GAP_TICK_YLABEL - ylabel_thickness
+    img.paste(ylab_img, (int(ylab_x), int((py0 + py1) / 2 - ylab_img.height / 2)), ylab_img)
 
     for p in pts:
         x, y = tx(p["x"]), ty(p["y"])
@@ -396,8 +428,8 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
         lx, ly = tx(pl["lx"]), ty(pl["ly"])
         d.text((lx - pl["lw"] / 2, ly - LABEL_H / 2 + 1), pl["repo"], font=f_label, fill=COL_LABEL)
 
-    d.text((tx(0), ty(-98)), "Total LOC vs. engine time", font=f_title, fill=COL_TITLE)
-    d.text((tx(0), ty(-58)),
+    d.text((tx(0), PAD_TOP), "Total LOC vs. engine time", font=f_title, fill=COL_TITLE)
+    d.text((tx(0), PAD_TOP + f_title.size + GAP_TITLE_SUB),
            f"{len(rows)} repos, log–log scale — {len(placed)} labeled "
            f"({top_count} above / {bot_count} below trend) — GitGalaxy {version} batch, {summary['run_date']}",
            font=f_sub, fill=COL_SUB)
