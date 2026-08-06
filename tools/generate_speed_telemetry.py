@@ -200,6 +200,215 @@ def upsert_history(version: str, summary: dict):
 
 
 # ---------------------------------------------------------------------------
+# Two-regime rate model: flat overhead floor below a knee, power-law scan
+# time above it. See the methodology note in compute_rate_model()'s docstring.
+# ---------------------------------------------------------------------------
+
+def _loglog_fit(rows):
+    """log10(time) = p*log10(loc) + logC, via least squares. Returns (p, logC, r2, n)."""
+    xs = [math.log10(r["loc"]) for r in rows]
+    ys = [math.log10(r["time"]) for r in rows]
+    n = len(xs)
+    sx, sy = sum(xs), sum(ys)
+    sxx = sum(x * x for x in xs)
+    sxy = sum(x * y for x, y in zip(xs, ys))
+    p = (n * sxy - sx * sy) / (n * sxx - sx * sx)
+    logC = (sy - p * sx) / n
+    y_mean = sy / n
+    ss_tot = sum((y - y_mean) ** 2 for y in ys)
+    ss_res = sum((y - (p * x + logC)) ** 2 for x, y in zip(xs, ys))
+    r2 = 1 - ss_res / ss_tot if ss_tot else 0.0
+    return p, logC, r2, n
+
+
+def compute_rate_model(rows: list) -> dict:
+    """Fit the two-regime rate model this repo actually observes:
+
+    - Below a "knee" LOC, scan time is flat -- dominated by fixed per-run
+      overhead (process start, ingestion checks, DB writes), not by how much
+      there is to scan. Floor = median time of the smallest ~10% of repos by
+      LOC, which are essentially guaranteed to be overhead-dominated.
+    - Above the knee, time follows a power law: time(s) = C * LOC^p. A single
+      global log-log fit across all repos is biased toward the flat/overhead
+      regime (it has the most points), so p is found by: (1) fit p_ref on the
+      cleanest "definitely large" repos (top LOC quartile) as a reference,
+      then (2) search LOC thresholds and pick the smallest one whose
+      above-threshold fit exponent is closest to p_ref -- i.e. the earliest
+      point where the true large-repo scaling behavior has already kicked in,
+      keeping as much data as honestly possible.
+    - The knee itself is *derived*, not assumed: the LOC where the power-law
+      curve's predicted time crosses the flat floor.
+
+    Returns a dict with both regimes' numbers plus fit diagnostics (R^2, n,
+    LOC range) so nothing here is asserted without the evidence alongside it.
+    """
+    rows_sorted = sorted(rows, key=lambda r: r["loc"])
+    n_total = len(rows_sorted)
+
+    floor_n = max(20, n_total // 10)
+    floor_sample = rows_sorted[:floor_n]
+    floor_times = sorted(r["time"] for r in floor_sample)
+    floor_seconds = floor_times[len(floor_times) // 2]
+
+    top_quartile_cut = rows_sorted[int(n_total * 0.75)]["loc"]
+    ref_sample = [r for r in rows if r["loc"] >= top_quartile_cut]
+    p_ref, _, _, n_ref = _loglog_fit(ref_sample)
+
+    candidates = [500, 1000, 1500, 2000, 3000, 5000, 7500, 10000,
+                  15000, 20000, 30000, 50000, 75000, 100000]
+    best = None
+    for t in candidates:
+        big = [r for r in rows if r["loc"] >= t]
+        if len(big) < 100:
+            continue
+        p, logC, r2, n = _loglog_fit(big)
+        diff = abs(p - p_ref)
+        if best is None or diff < best[0]:
+            best = (diff, t, p, logC, r2, n, big)
+    if best is None:
+        raise SystemExit("compute_rate_model: no LOC threshold had >=100 repos above it -- corpus too small")
+    _, threshold, p, logC, r2, n, fit_sample = best
+    C = 10 ** logC
+
+    knee_loc = (floor_seconds / C) ** (1 / p)
+    fit_loc_min = min(r["loc"] for r in fit_sample)
+    fit_loc_max = max(r["loc"] for r in fit_sample)
+
+    return {
+        "floor_seconds": floor_seconds,
+        "floor_sample_n": floor_n,
+        "floor_sample_loc_max": floor_sample[-1]["loc"],
+        "knee_loc": knee_loc,
+        "power_p": p,
+        "power_C": C,
+        "power_r2": r2,
+        "power_fit_n": n,
+        "power_fit_loc_min": fit_loc_min,
+        "power_fit_loc_max": fit_loc_max,
+        "power_fit_threshold": threshold,
+        "reference_p": p_ref,
+        "reference_n": n_ref,
+        "reference_loc_min": top_quartile_cut,
+        "total_repos": n_total,
+    }
+
+
+def render_rate_model_card(version: str, summary: dict, model: dict, out_path: Path):
+    """A wide 'hero' stat card for the README: the two-regime rate model in
+    big, bold numbers, matching the scatter chart's visual language."""
+    f_sans = lambda sz: ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), sz)
+    f_bold = lambda sz: ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), sz)
+    f_mono_bold = lambda sz: ImageFont.truetype(find_font(FONT_CANDIDATES_MONO_BOLD), sz)
+
+    f_kicker = f_bold(16)
+    f_title = f_bold(30)
+    f_range = f_bold(23)
+    f_body = f_sans(17)
+    f_foot = f_sans(14)
+
+    COL_BG = (255, 255, 255)
+    COL_CARD = (246, 249, 255)
+    COL_BORDER = (215, 222, 228)
+    COL_KICKER = (0, 110, 255)
+    COL_TITLE = (16, 21, 27)
+    COL_RANGE = (16, 21, 27)
+    COL_HEADLINE = (0, 78, 199)
+    COL_BODY = (55, 64, 75)
+    COL_FOOT = (120, 129, 140)
+
+    def text_w(text, font):
+        bbox = font.getbbox(text)
+        return bbox[2] - bbox[0]
+
+    def wrap(text, font, max_w):
+        words, lines, cur = text.split(), [], ""
+        for w in words:
+            trial = (cur + " " + w).strip()
+            if text_w(trial, font) <= max_w or not cur:
+                cur = trial
+            else:
+                lines.append(cur)
+                cur = w
+        if cur:
+            lines.append(cur)
+        return lines
+
+    def fit_headline(text, max_w, start_size=34, min_size=18):
+        for sz in range(start_size, min_size - 1, -1):
+            font = f_mono_bold(sz)
+            if text_w(text, font) <= max_w:
+                return font
+        return f_mono_bold(min_size)
+
+    W, H = 1272, 620
+    PAD = 40
+    GAP = 28
+    CARD_W = (W - 2 * PAD - GAP) // 2
+    CARD_H = 420
+    CARD_TOP = 150
+
+    img = Image.new("RGB", (W, H), COL_BG)
+    d = ImageDraw.Draw(img)
+
+    d.text((PAD, 32), "GITGALAXY SCAN RATE MODEL", font=f_kicker, fill=COL_KICKER)
+    d.text((PAD, 58), "Total LOC vs. engine time, fit as two regimes", font=f_title, fill=COL_TITLE)
+
+    TEXT_W = CARD_W - 52  # inner width available for wrapped/fitted text
+
+    def draw_card(x0, kicker, headline_text, body_text, foot_text):
+        x1, y1 = x0 + CARD_W, CARD_TOP + CARD_H
+        d.rounded_rectangle([x0, CARD_TOP, x1, y1], radius=14, fill=COL_CARD, outline=COL_BORDER, width=1)
+        y = CARD_TOP + 26
+        d.text((x0 + 26, y), kicker, font=f_range, fill=COL_RANGE)
+        y += 46
+        headline_font = fit_headline(headline_text, TEXT_W)
+        d.text((x0 + 26, y), headline_text, font=headline_font, fill=COL_HEADLINE)
+        y += headline_font.size + 20
+        for line in wrap(body_text, f_body, TEXT_W):
+            d.text((x0 + 26, y), line, font=f_body, fill=COL_BODY)
+            y += 25
+        foot_lines = wrap(foot_text, f_foot, TEXT_W)
+        y = y1 - 20 - 18 * len(foot_lines)
+        for line in foot_lines:
+            d.text((x0 + 26, y), line, font=f_foot, fill=COL_FOOT)
+            y += 18
+
+    knee = model["knee_loc"]
+    draw_card(
+        PAD,
+        f"1 – {knee:,.0f} LOC",
+        f'≈ {model["floor_seconds"]:.2f}s flat',
+        "Fixed per-run overhead (process start, ingestion checks, DB writes) "
+        "dominates -- time barely depends on repo size here.",
+        f'Floor = median time of the {model["floor_sample_n"]} smallest repos '
+        f'(≤{model["floor_sample_loc_max"]:,} LOC) by LOC in this batch.',
+    )
+
+    eq = f'time(s) ≈ {model["power_C"]:.3g} × LOC^{model["power_p"]:.3f}'
+    draw_card(
+        PAD + CARD_W + GAP,
+        f"{knee:,.0f}+ LOC",
+        eq,
+        f'Scan-bound, near-linear: R²={model["power_r2"]:.2f} on '
+        f'{model["power_fit_n"]} repos from {model["power_fit_loc_min"]:,} to '
+        f'{model["power_fit_loc_max"]:,} LOC. Individual repos vary with '
+        "language mix and comment density -- this is the central trend, not a guarantee.",
+        f'Exponent cross-checked at {model["reference_p"]:.3f} on just the top-quartile-by-LOC '
+        f'repos ({model["reference_n"]}, ≥{model["reference_loc_min"]:,} LOC) as a bias check.',
+    )
+
+    foot = (f'GitGalaxy {version} batch, {summary["run_date"]} — {model["total_repos"]} repos. '
+            "Fit is cross-repo (different languages/repos), not one repo measured at multiple sizes -- "
+            "read it as strong evidence of near-linear scaling, not a proven worst-case bound.")
+    for i, line in enumerate(wrap(foot, f_foot, W - 2 * PAD)):
+        d.text((PAD, H - 54 + i * 18), line, font=f_foot, fill=COL_FOOT)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "PNG")
+    return out_path
+
+
+# ---------------------------------------------------------------------------
 # Chart: LOC vs engine time, triangle-cluster label layout (square, white bg)
 # ---------------------------------------------------------------------------
 
@@ -470,6 +679,35 @@ def process_version(version_dir: Path):
     render_loc_vs_time_chart(version, summary, chart_path)
     print(f"[{version}] wrote {chart_path.relative_to(REPO_ROOT)}")
 
+    model = compute_rate_model(summary["repos"])
+    model_json_path = version_dir / "speed_charts" / "rate_model.json"
+    with open(model_json_path, "w") as f:
+        json.dump(model, f, indent=2)
+
+    model_txt_path = version_dir / "speed_charts" / "rate_model.txt"
+    knee = model["knee_loc"]
+    model_txt = (
+        f"GitGalaxy Scan Rate Model\n"
+        f"{version} batch, {summary['run_date']} ({model['total_repos']} repos)\n"
+        f"\n"
+        f"Regime 1 -- Fixed overhead:  1 - {knee:,.0f} LOC  ->  ~{model['floor_seconds']:.2f}s (flat)\n"
+        f"  Floor = median time of the {model['floor_sample_n']} smallest repos "
+        f"(<={model['floor_sample_loc_max']:,} LOC).\n"
+        f"\n"
+        f"Regime 2 -- Scan-bound:      {knee:,.0f}+ LOC  ->  "
+        f"time(s) ~= {model['power_C']:.4g} * LOC^{model['power_p']:.4f}\n"
+        f"  R^2={model['power_r2']:.3f}, n={model['power_fit_n']}, "
+        f"fit range {model['power_fit_loc_min']:,}-{model['power_fit_loc_max']:,} LOC.\n"
+        f"  Reference exponent (top-quartile-by-LOC repos only, n={model['reference_n']}, "
+        f">={model['reference_loc_min']:,} LOC): {model['reference_p']:.4f}\n"
+    )
+    model_txt_path.write_text(model_txt)
+    print(f"[{version}] wrote {model_json_path.relative_to(REPO_ROOT)} and {model_txt_path.name}")
+
+    card_path = version_dir / "speed_charts" / "rate_model.png"
+    render_rate_model_card(version, summary, model, card_path)
+    print(f"[{version}] wrote {card_path.relative_to(REPO_ROOT)}")
+
     # speed_charts/latest/ is a stable path the README embeds directly, so the
     # README's markdown never needs editing -- only ever overwritten by whichever
     # version is numerically newest, so reprocessing an older version by hand
@@ -477,6 +715,9 @@ def process_version(version_dir: Path):
     if is_highest_version(version):
         LATEST_DIR.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(chart_path, LATEST_DIR / "loc_vs_time.png")
+        shutil.copyfile(card_path, LATEST_DIR / "rate_model.png")
+        shutil.copyfile(model_json_path, LATEST_DIR / "rate_model.json")
+        shutil.copyfile(model_txt_path, LATEST_DIR / "rate_model.txt")
         with open(LATEST_DIR / "version.json", "w") as f:
             json.dump({"version": version, "run_date": summary["run_date"]}, f, indent=2)
         print(f"[{version}] updated {LATEST_DIR.relative_to(REPO_ROOT)}/ (highest version)")

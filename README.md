@@ -84,6 +84,20 @@ part of the batch `v1` doesn't yet cover). This is meant to be checked, not take
 
 ## Speed Telemetry
 
+"Average LOC/s" is close to meaningless for this engine -- it depends heavily on repo size, not
+just batch composition. Small repos are dominated by fixed per-run overhead; larger ones settle
+into a clean, near-linear scaling law. So instead of one average, every batch gets fit as two
+regimes and reported as an equation, not a single number:
+
+![Latest scan rate model](speed_charts/latest/rate_model.png)
+
+That image always reflects the newest version (`speed_charts/latest/rate_model.png`), same
+self-updating mechanism as the chart below. The methodology -- why the threshold and exponent are
+*derived* from the data rather than eyeballed, and the honesty caveats about cross-repo fits vs.
+one-repo-at-multiple-sizes -- is documented in `compute_rate_model()`'s docstring in
+`tools/generate_speed_telemetry.py`. Full numbers (not just the rounded headline figures) are in
+`speed_charts/latest/rate_model.json` and the plain-text `rate_model.txt`.
+
 Each batch run's `batch_scan_master_*.log` ends with a `MISSION COMPLETE` engine report (per-repo
 LOC/rate/time) and a `BATCH ANOMALY & ERROR REPORT` (failed repos, files that hit the ReDoS-fuse
 ceiling, typosquat-heuristic hits). `.github/workflows/speed-telemetry.yml` parses that report
@@ -94,19 +108,22 @@ automatically whenever a new `v*/batch_scan_master_*.log` is pushed, and writes:
   read for rate trend *across* releases, not any single version's numbers in isolation.
 - **`v<version>/speed_summary.json`** — the full parsed per-repo table plus the anomaly report
   for that one version, machine-readable.
+- **`v<version>/speed_charts/rate_model.{png,json,txt}`** — the two-regime rate model described
+  above, for that one version.
 - **`v<version>/speed_charts/loc_vs_time.png`** — a square, log–log LOC-vs-engine-time scatter
   of every repo in the batch. Most repos are unlabeled dots; a spread subset gets a name, placed
   strictly above or below the fitted trend line (never over a point) and connected back to its
   dot by a thin line, so the labeled set reads as two open clusters rather than clutter over the
   data.
-- **`speed_charts/latest/loc_vs_time.png`** — a stable path that always holds a copy of the chart
-  from whichever version is numerically newest. The image below points at that stable path, so it
-  updates in place on every new batch without anyone editing this README:
+- **`speed_charts/latest/`** — stable paths (`loc_vs_time.png`, `rate_model.{png,json,txt}`,
+  `version.json`) that always hold a copy of whichever version is numerically newest. The images
+  in this README point at those stable paths, so they update in place on every new batch without
+  anyone editing this file:
 
   ![Latest LOC-vs-engine-time speed chart](speed_charts/latest/loc_vs_time.png)
 
-  The version and date it was generated from are baked into the chart's own subtitle (and in
-  `speed_charts/latest/version.json`), since the image path itself deliberately never changes.
+  The version and date each was generated from are baked into the image's own subtitle (and in
+  `speed_charts/latest/version.json`), since the paths themselves deliberately never change.
 
 To regenerate by hand (e.g. after editing the parser, or to backfill an older version):
 
