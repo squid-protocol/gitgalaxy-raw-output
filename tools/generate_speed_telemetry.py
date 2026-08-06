@@ -40,6 +40,10 @@ FONT_CANDIDATES_MONO = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
     "/usr/share/fonts/dejavu/DejaVuSansMono.ttf",
 ]
+FONT_CANDIDATES_MONO_BOLD = [
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",
+    "/usr/share/fonts/dejavu/DejaVuSansMono-Bold.ttf",
+]
 
 
 def find_font(candidates):
@@ -206,18 +210,18 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
 
     f_title = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), 33)
     f_sub = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), LABEL_FONT_SIZE)
-    f_tick = ImageFont.truetype(find_font(FONT_CANDIDATES_MONO), LABEL_FONT_SIZE)
-    f_axis = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS), max(25, LABEL_FONT_SIZE))
+    f_tick = ImageFont.truetype(find_font(FONT_CANDIDATES_MONO_BOLD), LABEL_FONT_SIZE + 2)
+    f_axis = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), max(28, LABEL_FONT_SIZE + 2))
     f_label = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), LABEL_FONT_SIZE)
 
     COL_BG = (255, 255, 255)
     COL_PLOT_BORDER = (215, 222, 228)
     COL_GRID = (232, 236, 240)
-    COL_TICK = (140, 148, 158)
-    COL_AXIS = (76, 88, 102)
+    COL_TICK = (90, 99, 110)
+    COL_AXIS = (35, 43, 53)
     COL_TITLE = (16, 21, 27)
     COL_SUB = (108, 118, 130)
-    COL_DOT = (42, 120, 214)
+    COL_DOT = (0, 110, 255)
     COL_DOT_RING = (255, 255, 255)
     COL_LINE = (203, 211, 220)
     COL_LABEL = (40, 46, 54)
@@ -268,28 +272,18 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
 
     for p in pts:
         p["side"] = "top" if p["y"] < line_y(p["x"]) else "bottom"
-    top_pts = [p for p in pts if p["side"] == "top"]
-    bot_pts = [p for p in pts if p["side"] == "bottom"]
-
-    def pick_spread(group, n_bins):
-        if not group:
-            return []
-        xs = [p["x"] for p in group]
-        xmin, xmax = min(xs), max(xs)
-        cells = {}
-        for p in group:
-            idx = 0 if xmax == xmin else min(n_bins - 1, int((p["x"] - xmin) / (xmax - xmin) * n_bins))
-            if idx not in cells or p["loc"] > cells[idx]["loc"]:
-                cells[idx] = p
-        return list(cells.values())
-
-    top_sel = pick_spread(top_pts, 130)
-    bot_sel = pick_spread(bot_pts, 200)
+    top_pts = sorted((p for p in pts if p["side"] == "top"), key=lambda p: p["x"])
+    bot_pts = sorted((p for p in pts if p["side"] == "bottom"), key=lambda p: p["x"])
 
     MARGIN = 22
     DOT_R = 2.6
-    XJ = (0, -12, 12, -24, 24, -38, 38, -54, 54, -72, 72, -92, 92, -114, 114,
-          -138, 138, -164, 164, -190, 190, -220, 220)
+    # How far a label can drift from its own point, both sideways and along the
+    # connector line. Generous on purpose: the top triangle has more open room
+    # than the bottom one, and letting lines run longer is what lets a label
+    # actually reach into that leftover space instead of giving up early.
+    XJ = tuple(range(-280, 281, 14))
+    MAX_OFFSET_STEPS = 160
+    OFFSET_STEP_PX = 7
 
     def in_bounds(x0, y0, x1, y1):
         return x0 >= 2 and y0 >= 2 and x1 <= PLOT_W - 2 and y1 <= PLOT_H - 2
@@ -319,8 +313,8 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
         vdir = -1 if side == "top" else 1
         w = text_w(p["repo"], f_label)
         h = LABEL_H
-        for step in range(0, 130):
-            offset = 14 + step * 7
+        for step in range(0, MAX_OFFSET_STEPS):
+            offset = 14 + step * OFFSET_STEP_PX
             for xj in XJ:
                 lx, ly = p["x"] + xj, p["y"] + vdir * offset
                 x0, y0, x1, y1 = lx - w / 2, ly - h / 2, lx + w / 2, ly + h / 2
@@ -336,18 +330,22 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
                 return True
         return False
 
-    TARGET_PER_SIDE = 100
-    top_count = bot_count = 0
-    for p in sorted(top_sel, key=lambda p: p["x"]):
-        if top_count >= TARGET_PER_SIDE:
-            break
-        if try_place_one(p, "top"):
-            top_count += 1
-    for p in sorted(bot_sel, key=lambda p: p["x"]):
-        if bot_count >= TARGET_PER_SIDE:
-            break
-        if try_place_one(p, "bottom"):
-            bot_count += 1
+    def fill_side(side_pts, side, stride=7):
+        """Walk the side's points taking every `stride`-th one, then repeat with
+        the next starting offset (1st, 8th, 15th... then 2nd, 9th, 16th...) so
+        the label set is spread evenly across the whole LOC range -- covering
+        small, mid, and huge repos alike -- rather than biased toward whichever
+        repos happen to be biggest, and keep going until nothing more fits."""
+        n = len(side_pts)
+        count = 0
+        for phase in range(stride):
+            for i in range(phase, n, stride):
+                if try_place_one(side_pts[i], side):
+                    count += 1
+        return count
+
+    top_count = fill_side(top_pts, "top")
+    bot_count = fill_side(bot_pts, "bottom")
 
     # Margins are sized around the actual font metrics rather than fixed constants,
     # since every font here is pinned to (or derived from) LABEL_FONT_SIZE and a
