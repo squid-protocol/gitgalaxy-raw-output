@@ -1,0 +1,17 @@
+{
+  "floor_seconds": 0.11,
+  "floor_sample_n": 59,
+  "floor_sample_loc_max": 123,
+  "knee_loc": 4258.213487947652,
+  "power_p": 0.968687074792933,
+  "power_C": 3.355884312932857e-05,
+  "power_r2": 0.8848613353808429,
+  "power_fit_n": 181,
+  "power_fit_loc_min": 76630,
+  "power_fit_loc_max": 33271064,
+  "power_fit_threshold": 75000,
+  "reference_p": 1.0016773801982197,
+  "reference_n": 150,
+  "reference_loc_min": 129791,
+  "total_repos": 599
+}
