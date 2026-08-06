@@ -65,7 +65,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add speed_history.csv v*/speed_summary.json v*/speed_charts/*.png
+          git add speed_history.csv v*/speed_summary.json v*/speed_charts/*.png speed_charts/latest/
           if git diff --cached --quiet; then
             echo "No telemetry changes to commit."
           else
