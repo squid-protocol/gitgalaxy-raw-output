@@ -1,0 +1,74 @@
+name: Speed Telemetry
+
+# Regenerates speed_summary.json, speed_history.csv, and the LOC-vs-time chart
+# whenever a new batch scan log lands under a v*/ folder. Self-contained: reads
+# and writes only within this repo, no cross-repo token needed. The commit this
+# workflow makes never touches batch_scan_master_*.log itself, so it can't
+# retrigger its own path filter.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "v*/batch_scan_master_*.log"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version folder to (re)process, e.g. v2.4.6. Leave blank to process all v*/ folders."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-dejavu-core
+          pip install --quiet pillow
+
+      - name: Determine changed version folders
+        id: versions
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            echo "list=${{ github.event.inputs.version }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # manual run with no version specified -> process everything
+            echo "list=$(ls -d v*/ 2>/dev/null | sed 's#/##' | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          else
+            changed=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'v*/batch_scan_master_*.log')
+            versions=$(echo "$changed" | cut -d/ -f1 | sort -u | tr '\n' ' ')
+            echo "list=$versions" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate telemetry
+        run: |
+          for v in ${{ steps.versions.outputs.list }}; do
+            echo "::group::$v"
+            python tools/generate_speed_telemetry.py "$v"
+            echo "::endgroup::"
+          done
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add speed_history.csv v*/speed_summary.json v*/speed_charts/*.png
+          if git diff --cached --quiet; then
+            echo "No telemetry changes to commit."
+          else
+            git commit -m "chore: regenerate speed telemetry for ${{ steps.versions.outputs.list }}"
+            git push
+          fi

@@ -81,3 +81,32 @@ summary of what GitGalaxy extracted from it. To spot-check the "50+ languages" c
 pick any directory, open its `_galaxy_llm.md`, and compare what it reports against the actual
 source at the pinned commit in `corpus/v1/manifest.json` (or the repo's own language, for the
 part of the batch `v1` doesn't yet cover). This is meant to be checked, not taken on faith.
+
+## Speed Telemetry
+
+Each batch run's `batch_scan_master_*.log` ends with a `MISSION COMPLETE` engine report (per-repo
+LOC/rate/time) and a `BATCH ANOMALY & ERROR REPORT` (failed repos, files that hit the ReDoS-fuse
+ceiling, typosquat-heuristic hits). `.github/workflows/speed-telemetry.yml` parses that report
+automatically whenever a new `v*/batch_scan_master_*.log` is pushed, and writes:
+
+- **`speed_history.csv`** (repo root) — one row per scanner version: total repos/LOC/time,
+  average LOC/s, failed-repo count, slow-file count, typosquat hit count. This is the file to
+  read for rate trend *across* releases, not any single version's numbers in isolation.
+- **`v<version>/speed_summary.json`** — the full parsed per-repo table plus the anomaly report
+  for that one version, machine-readable.
+- **`v<version>/speed_charts/loc_vs_time.png`** — a square, log–log LOC-vs-engine-time scatter
+  of every repo in the batch. Most repos are unlabeled dots; a spread subset gets a name, placed
+  strictly above or below the fitted trend line (never over a point) and connected back to its
+  dot by a thin line, so the labeled set reads as two open clusters rather than clutter over the
+  data.
+
+To regenerate by hand (e.g. after editing the parser, or to backfill an older version):
+
+```bash
+pip install pillow   # + fonts-dejavu-core, if not already on the system
+python tools/generate_speed_telemetry.py v2.4.6   # one version
+python tools/generate_speed_telemetry.py --all    # every v*/ folder in the repo
+```
+
+The workflow's own commit only touches `speed_history.csv`, `speed_summary.json`, and the chart
+PNGs — never `batch_scan_master_*.log` itself — so it can't retrigger its own path filter.
