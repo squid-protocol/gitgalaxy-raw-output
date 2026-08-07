@@ -1,0 +1,977 @@
+# ARCHITECTURAL_BRIEF: python-patterns
+> INSTRUCTION: Deterministic Syntactic Analysis. Base architectural insights on Structural Magnitude, Extracted Signatures, and Risk overlays.
+
+## 0. FORENSIC TRACEABILITY
+| Metadata | Value |
+|---|---|
+| **Engine** | `GitGalaxy Scope vlatest (Delta Mode)` |
+| **Target Path** | `/srv/storage_16tb/projects/gitgalaxy/data/corpus_python/python-patterns` |
+| **Timestamp** | `2026-08-07T04:01:31.825070+00:00` |
+| **Scan Duration** | `0.28s` |
+| **Git Branch** | `master` |
+| **Git Commit** | `74151cfec27663a968f44185adada7c2a1f38165` |
+| **Git Remote** | `https://github.com/faif/python-patterns.git` |
+| **Zero-Dependency Mode** | `Inactive (Full Precision)` |
+
+## 0.5 AI THREAT AUDIT STATUS
+> **🚨 ML_CONFIRMED_THREAT_DETECTED**
+> XGBoost Structural Signatures model identified 75 malicious artifacts.
+
+## 1. SYSTEM ROLE & PHILOSOPHY
+> You are a Senior Technical Storyteller and Codebase Architect. GitGalaxy has translated the non-visual architecture of this repository into measurable Structural Signatures (regex-derived counts, not an AST or compiler pass). Your job is to weave those signatures into a coherent, factual narrative about how this system is built -- its architecture, design patterns, and complexity -- not to render a verdict.
+> 
+> **CORE DIRECTIVES:**
+> 1. **Narrate the Architecture, Don't Judge the Author:** Frame every observation as a blameless description of the system's physical reality. High Risk Exposure (e.g., Cognitive Load Exposure) describes where the architecture may be drifting into fragile territory, not developer incompetence -- it is a prompt to investigate, never a verdict.
+> 2. **The Physical Reality Rule:** Base your narrative strictly on the provided Structural Signatures and the numbers derived from them. Do not hallucinate meaning, and do not restate a heuristic's raw label (e.g. a 'Logic Bomb' or 'O(2^N)' flag) as a confirmed finding of malice or a guaranteed defect -- explain what the signature actually measures, weave it into the story of the file, and let the reader draw their own conclusion.
+> 3. **Risk vs. Defense:** Code is a balance. A file with high `flux` (state mutation) is risky unless balanced by `freeze_hits` (immutability). High `danger` is brittle unless wrapped in `safety`. Tell that balance as part of the narrative, not as an isolated alarm.
+> 
+> **THE STRUCTURAL SIGNATURE LEXICON:**
+> * **Structure & Mass:** `branch` (splits), `linear` (paths), `args` (coupling), `func_start` (entry points).
+> * **Risk & Volatility:** `danger` (dynamic execution), `flux` (state mutation), `graveyard` (commented-out logic), `safety_neg` (security bypasses).
+> * **Architecture & Domain:** `io` (network latency), `concurrency` (async orchestration), `api` (public surface), `import` (dependencies).
+> * **Defensive Guardrails:** `safety` (Error handling), `freeze_hits` (immutability), `cleanup` (state destruction).
+## 2. THE 13-POINT RISK EXPOSURE ANALYSIS (EQUATIONS & CONTEXT)
+> **How the SAST Engine Calculates Risk Exposure (Lower Risk 0 - Higher Risk Exposure 100%):**
+> Most scores use a Sigmoid curve based on density (Hits / LOC) to prevent massive files from mathematically hiding their flaws.
+> 
+> 1. **Cognitive Load Exposure:** Measures the mental effort required for a developer to read and understand the file. `Density(Branches + (Flux * 2) + Async/Danger)` mitigated by `Doc Coverage`.
+> 2. **Error & Exception Risk Exposure:** Measures structural integrity and resilience against runtime errors. `Net Exposure = (Danger + Safety_Neg + Flux) - (Safety + Tests + Docs)`.
+> 3. **Tech Debt Exposure:** Measures the density of developer-annotated structural stress. `Density(TODOs [1x] + FIXMEs/Hacks [3x] + Empty Stubs [0.5x])`.
+> 4. **Verification Risk Exposure:** Evaluates test coverage by comparing a function's structural complexity against the scope of the tests validating it.
+> 5. **API Risk Exposure:** Measures the public surface area of a module. `Ratio(API Hits / Total Functions & Classes)`.
+> 6. **Concurrency Risk Exposure:** Measures the density of asynchronous operations, threading, and parallel execution logic.
+> 7. **State Flux Risk Exposure:** Measures the frequency of data mutation and variable reassignment.
+> 8. **Commented Logic (dead code):** Measures the presence of abandoned, commented-out logic blocks.
+> 9. **Spec Match Risk Exposure:** Measures how closely code aligns with formal specifications or architectural requirements.
+> 10. **Stability:** Measures the recency of edits relative to the repository's entire lifespan.
+> 11. **Deep Churn:** Measures the historical volatility and frequency of modification.
+> 12. **Documentation Risk Exposure:** Measures the lack of structured documentation and ownership metadata.
+> 13. **Indentation Consistency:** Measures formatting alignment (Tabs vs. Spaces). Provided for codebase standardization context, not a functional risk.
+> 
+> **--- THE SECURITY & VULNERABILITY LENS ---**
+> 14. **Obfuscation & Evasion Risk:** Measures the density of obfuscated logic, packed strings, and non-standard encoding.
+> 15. **Logic Bomb / Sabotage Risk:** Measures condition-heavy execution leading to destructive OS, memory, or process commands.
+> 16. **Injection Surface Risk Exposure:** Measures external network/I/O input flowing directly into dynamic execution contexts (XSS, SQLi, RCE).
+> 17. **Memory Corruption Risk Exposure:** Measures the density of raw pointer math and manual memory allocations (Buffer Overflows, UAF).
+> 18. **Secrets Risk Exposure:** Measures the presence of hardcoded credentials exposed to logs or globals.
+> 
+> **--- STRUCTURAL MAGNITUDE (NOT RISK) ---**
+> **19. Function Magnitude (Impact Score):** Measures the physical footprint and 'heaviness' of a specific function. `((BranchHits + 1) * (Args + 1) + (0.05 * LOC)) * 10`. This is NOT a risk score.
+> **20. File Magnitude (Total Impact):** Measures the total structural impact of a file. `Sum(Function Impacts) + API + Concurrency + Flux + (LOC / 50)`. This is NOT a risk score.
+
+## 3. MACRO STATE
+| Metric | Value |
+|---|---|
+| Total Artifacts | 123 |
+| Analyzed Artifacts (Scanned) | 78 |
+| Excluded Artifacts (Unparsable data, binaries, unsupported formats) | 45 |
+| Total LOC | 2272 |
+| Volatility Index | 0.013 |
+| % Scanned of codebase = | 63.4% |
+| Dominant Lang | PYTHON |
+
+## 3.5 MACRO-NETWORK TOPOLOGY (Resilience & Coupling)
+| Metric | Value | Interpretation |
+|---|---|---|
+| Modularity | 0.96 | High = Clean micro-boundaries. Low = Spaghetti coupling. |
+| Assortativity | 0.0 | Positive = Resilient core. Negative = Fragile single-points-of-failure. |
+| Cyclic Density | 0.0% | % of files trapped in dependency loops (Static Friction). |
+| Avg Path Length | 1.0 | Hops between files. Lower = Tighter coupling. |
+| Articulation Pts | 0 | Number of single files that, if removed, shatter the network. |
+
+## 4. COMPOSITION
+| Lang | Files | LOC | Share |
+|---|---|---|---|
+| PYTHON | 73 | 2204 | 93.6% |
+| PLAINTEXT | 2 | 0 | 2.6% |
+| MAKEFILE | 1 | 55 | 1.3% |
+| MARKDOWN | 1 | 0 | 1.3% |
+| SHELL | 1 | 13 | 1.3% |
+
+## 4.5 REPOSITORY ECOSYSTEM BASELINE (GLOBAL ARCHITECTURE)
+> **Assigned Ecosystem Baseline:** `Cluster 3`
+> **Architectural Drift Z-Score:** `4.635`
+> **⚠️ UNIQUE INTERPRETATION:** This repository has a high Z-Score. While it maps closest to this archetype, its internal structure is a highly unique or hybrid interpretation of the pattern.
+
+## 4.6 FILE ARCHETYPES & STATIC ASSETS
+### Active Execution Logic (ML Clusters)
+| Archetype | Count | Repo % |
+|---|---|---|
+| file_cluster_16 | 28 | 35.9% |
+| file_cluster_8 | 24 | 30.8% |
+| file_cluster_13 | 20 | 25.6% |
+| file_cluster_0 | 2 | 2.6% |
+| file_cluster_12 | 1 | 1.3% |
+
+### Inert Structural Mass (Static Categories)
+| Category | Count | Repo % |
+|---|---|---|
+| Static: Literature & Documentation | 3 | 3.8% |
+
+## 5. EXCLUDED ARTIFACTS (Unparsable or Shielded Files)
+*Total Excluded Artifacts: 45*
+
+**Composition by Extension & Reason:**
+- `.png`: 35x Excluded (Explicitly Denied Extension: '.png')
+- `no_extension`: 3x Excluded (System Exclusion, Hidden Directory, or Dynamic Ignored Dir)
+- `.yml`: 3x Excluded (System Exclusion, Hidden Directory, or Dynamic Ignored Dir)
+- `.ini`: 2x Excluded (Unsupported Extension: '.ini')
+- `.cfg`: 1x Excluded (Unsupported Extension: '.cfg')
+- `.lock`: 1x Excluded (Unsupported Extension: '.lock')
+
+## 6. RISK EXPOSURE ANALYSIS (0-100%)
+| Risk Vector | Min | Max | Mean | Med | Mode |
+|---|---|---|---|---|---|
+| Cognitive Load Exposure | 0.0 | 48.6 | 15.8 | 9.1 | 5.0 |
+| Error & Exception Exposure | 0.0 | 88.1 | 39.0 | 44.7 | 0.0 |
+| Tech Debt Exposure | 0.0 | 100.0 | 46.1 | 0.0 | 0.0 |
+| Testing Exposure | 0.0 | 80.0 | 3.4 | 2.4 | 0.0 |
+| API Exposure | 0.0 | 12.3 | 5.9 | 6.1 | 0.0 |
+| Concurrency Exposure | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| State Flux Exposure | 0.0 | 100.0 | 36.3 | 0.0 | 0.0 |
+| Commented Logic Exposure | 0.0 | 23.1 | 0.9 | 0.0 | 0.0 |
+| Specification Exposure | 6.7 | 100.0 | 87.9 | 100.0 | 100.0 |
+| Instability Exposure | 0.0 | 2.9 | 1.0 | 0.0 | 0.0 |
+| Volatility Exposure | 0.0 | 56.8 | 8.7 | 0.0 | 0.0 |
+| Documentation Exposure | 0.0 | 100.0 | 45.4 | 15.2 | 0.0 |
+| Hardcoded Payload Artifacts | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+## 7. ARCHITECTURAL CHOKE POINTS & DEPENDENCIES
+### Top I/O Latency Risks
+- `Makefile` (Hits: 5)
+- `lint.sh` (Hits: 4)
+- `tests/structural/test_proxy.py` (Hits: 3)
+
+### Top 5 Structural Pillars (Highest 'Imported By' / Blast Radius)
+These are the most interconnected files relative to the rest of this repository. On a repo with dense internal coupling, that means core load-bearing infrastructure -- changes carry real cascading-break risk. On a repo with a flatter internal architecture, the gap between #1 and #5 may be small, and this list is a weaker signal accordingly; compare the connection counts below before treating it as a verdict.
+
+1. **catalog.py** (`patterns/behavioral/catalog.py`) — 1 inbound connections
+2. **mediator.py** (`patterns/behavioral/mediator.py`) — 1 inbound connections
+3. **memento.py** (`patterns/behavioral/memento.py`) — 1 inbound connections
+4. **observer.py** (`patterns/behavioral/observer.py`) — 1 inbound connections
+5. **publish_subscribe.py** (`patterns/behavioral/publish_subscribe.py`) — 1 inbound connections
+
+### Top 5 Orchestrators (Highest 'Imports' / Fragility Index)
+These files pull in the most external dependencies. They are highly coupled and fragile to API changes.
+
+1. **memento.py** (`patterns/behavioral/memento.py`) — 5 outbound dependencies
+2. **mvc.py** (`patterns/structural/mvc.py`) — 5 outbound dependencies
+3. **pool.py** (`patterns/creational/pool.py`) — 4 outbound dependencies
+4. **blackboard.py** (`patterns/other/blackboard.py`) — 4 outbound dependencies
+5. **test_proxy.py** (`tests/structural/test_proxy.py`) — 4 outbound dependencies
+
+## 8. CORE FUNCTION HITLIST (Heaviest Functions)
+> *Note: The 'Impact' metric below represents Structural Magnitude (complexity, arguments, and length), NOT operational risk. These are the load-bearing pillars of the logic.*
+
+- `find_shortest_path_bfs` (@ `patterns/other/graph_search.py`) -> Impact: **15.2** | LOC: 25
+- `template_function` (@ `patterns/behavioral/template.py`) -> Impact: **10.7** | LOC: 13
+- `visit` (@ `patterns/behavioral/visitor.py`) -> Impact: **9.5** | LOC: 11
+- `do_the_job` (@ `patterns/structural/proxy.py`) -> Impact: **9.2** | LOC: 10
+- `__set__` (@ `patterns/behavioral/strategy.py`) -> Impact: **8.2** | LOC: 5
+- `test_rollback_on_transaction` (@ `tests/behavioral/test_memento.py`) -> Impact: **7.7** | LOC: 15
+- `__init__` (@ `patterns/behavioral/catalog.py`) -> Impact: **7.6** | LOC: 14
+- `validate` (@ `patterns/behavioral/strategy.py`) -> Impact: **7.5** | LOC: 11
+- `calculate_area` (@ `patterns/behavioral/servant.py`) -> Impact: **7.4** | LOC: 9
+- `calculate_perimeter` (@ `patterns/behavioral/servant.py`) -> Impact: **7.4** | LOC: 9
+  * *Intent:* """ Servant class providing geometry-related services, including area and perimeter calculations and position updates. """
+
+## 9. DIRECTORY GROUPS (Top 10 Heaviest Modules)
+| Folder Path | Files | Total Impact | Avg Cog Load | Avg Debt |
+|---|---|---|---|---|
+| `patterns/behavioral` | 18 | 648.34 | 22.47% | 77.77% |
+| `patterns/structural` | 12 | 341.5 | 20.47% | 73.67% |
+| `patterns/creational` | 8 | 230.18 | 25.69% | 75.0% |
+| `__monolith__` | 5 | 175.7 | 3.05% | 20.0% |
+| `patterns/other/hsm` | 2 | 130.38 | 11.73% | 50.0% |
+| `tests/structural` | 7 | 126.7 | 5.26% | 0.0% |
+| `tests/creational` | 7 | 125.28 | 10.76% | 0.0% |
+| `patterns/other` | 3 | 122.32 | 25.38% | 58.49% |
+| `tests/behavioral` | 9 | 117.62 | 3.93% | 0.0% |
+| `tests` | 2 | 59.74 | 5.26% | 0.0% |
+
+## 10. TARGETED RISK VECTORS (Top 5 by Exposure)
+### Highest Tech Debt (Fragile/Planned)
+- `lint.sh` -> **100.0%** Exposure
+- `patterns/behavioral/catalog.py` -> **100.0%** Exposure
+- `patterns/behavioral/chain_of_responsibility.py` -> **100.0%** Exposure
+- `patterns/behavioral/chaining_method.py` -> **100.0%** Exposure
+- `patterns/behavioral/command.py` -> **100.0%** Exposure
+### Highest State Flux (Mutation/Volatility)
+- `patterns/creational/pool.py` -> **100.0%** Exposure
+- `patterns/creational/borg.py` -> **99.9996%** Exposure
+- `patterns/other/graph_search.py` -> **99.9984%** Exposure
+- `patterns/behavioral/publish_subscribe.py` -> **99.9966%** Exposure
+- `patterns/behavioral/observer.py` -> **99.9959%** Exposure
+### Highest Design Slop (Dead & Duplicated Logic)
+- `patterns/other/hsm/hsm.py` -> **0** Orphaned Functions | **22** Duplicates
+- `patterns/behavioral/specification.py` -> **0** Orphaned Functions | **17** Duplicates
+- `patterns/other/blackboard.py` -> **2** Orphaned Functions | **14** Duplicates
+- `tests/test_hsm.py` -> **8** Orphaned Functions | **6** Duplicates
+- `patterns/behavioral/catalog.py` -> **0** Orphaned Functions | **12** Duplicates
+
+## 10.5 AI THREAT INTELLIGENCE (XGBoost)
+> **CRITICAL THREATS DETECTED.** The following files possess the structural signatures of known vulnerabilities.
+
+1. **`Makefile`** -> AI Confidence: **99.29%**
+2. **`lint.sh`** -> AI Confidence: **99.17%**
+3. **`patterns/other/graph_search.py`** -> AI Confidence: **99.06%**
+4. **`patterns/structural/mvc.py`** -> AI Confidence: **98.96%**
+5. **`patterns/behavioral/strategy.py`** -> AI Confidence: **98.92%**
+6. **`patterns/structural/front_controller.py`** -> AI Confidence: **98.92%**
+7. **`patterns/behavioral/catalog.py`** -> AI Confidence: **98.89%**
+8. **`patterns/behavioral/iterator_alt.py`** -> AI Confidence: **98.89%**
+9. **`patterns/behavioral/servant.py`** -> AI Confidence: **98.89%**
+10. **`patterns/behavioral/template.py`** -> AI Confidence: **98.89%**
+
+## 10.6 WEAPONIZABLE SURFACE EXPOSURES (RULE-BASED SAST)
+> Secondary Evidence: The following files tripped specific static threat signatures. Use these to explain *why* the XGBoost model flagged the files above.
+
+*No critical vulnerabilities or security lens thresholds breached.*
+
+## 10.7 ECOSYSTEM SECURITY AUDITS
+> **AI CONTEXT:** High-level perimeter defense metrics from the X-Ray, Supply Chain Firewall, and API Network Mapper.
+
+### ☢️ X-Ray & 🧱 Supply Chain Firewall
+- **Binary Anomalies (X-Ray):** `0` (High entropy, packed payloads, or magic byte mismatches).
+- **Blacklisted Dependencies:** `0` explicitly banned packages imported.
+- **Unknown Dependencies:** `149` packages imported that bypass the Zero-Trust whitelist.
+
+## 11. CUMULATIVE RISK HITLIST (Top 10 Highest Risk Files)
+> Cumulative Risk is the sum of all individual risk exposures. These files represent the highest multi-dimensional technical debt and architectural fragility.
+
+### 1. `patterns/behavioral/memento.py` (PYTHON) -> Cumulative Risk: **587.0**
+- **Archetype:** `file_cluster_16` (Distance: 12.453 IQR)
+- **Magnitude:** 64.74 | **LOC:** 146 | **CtrlFlow:** 18.8% | **Authorship Centralization:** 33.3%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), Documentation (100.0%), State Flux (99.8036%)
+- **Heaviest Functions:** `memento` (Impact: 5.6), `Transactional` (Impact: 4.5), `__get__` (Impact: 4.5)
+
+### 2. `patterns/other/hsm/hsm.py` (PYTHON) -> Cumulative Risk: **569.11**
+- **Archetype:** `file_cluster_8` (Distance: 10.46 IQR)
+- **Magnitude:** 119.86 | **LOC:** 178 | **CtrlFlow:** 4.8% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), Documentation (99.9205%), State Flux (97.0192%)
+- **Heaviest Functions:** `on_message` (Impact: 5.4), `_next_state` (Impact: 3.7), `__init__` (Impact: 2.7)
+
+### 3. `patterns/behavioral/catalog.py` (PYTHON) -> Cumulative Risk: **566.56**
+- **Archetype:** `file_cluster_16` (Distance: 12.059 IQR)
+- **Magnitude:** 80.98 | **LOC:** 176 | **CtrlFlow:** 27.7% | **Authorship Centralization:** 25.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), State Flux (99.9352%), Verification (80.0%)
+- **Heaviest Functions:** `__init__` (Impact: 7.6), `__init__` (Impact: 7.3), `__init__` (Impact: 7.2)
+
+### 4. `patterns/structural/adapter.py` (PYTHON) -> Cumulative Risk: **547.6**
+- **Archetype:** `file_cluster_16` (Distance: 12.308 IQR)
+- **Magnitude:** 43.08 | **LOC:** 126 | **CtrlFlow:** 3.7% | **Authorship Centralization:** 100.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), Documentation (100.0%), State Flux (99.1664%)
+- **Heaviest Functions:** `__init__` (Impact: 2.2), `__getattr__` (Impact: 1.9), `original_dict` (Impact: 1.9)
+
+### 5. `patterns/behavioral/publish_subscribe.py` (PYTHON) -> Cumulative Risk: **538.29**
+- **Archetype:** `file_cluster_16` (Distance: 11.891 IQR)
+- **Magnitude:** 50.1 | **LOC:** 96 | **CtrlFlow:** 14.3% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), State Flux (99.9966%), Documentation (99.8388%)
+- **Heaviest Functions:** `update` (Impact: 5.4), `subscribe` (Impact: 2.1), `unsubscribe` (Impact: 2.1)
+
+### 6. `patterns/behavioral/observer.py` (PYTHON) -> Cumulative Risk: **534.04**
+- **Archetype:** `file_cluster_16` (Distance: 13.052 IQR)
+- **Magnitude:** 54.04 | **LOC:** 136 | **CtrlFlow:** 14.3% | **Authorship Centralization:** 100.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), Documentation (100.0%), State Flux (99.9959%)
+- **Heaviest Functions:** `detach` (Impact: 3.8), `attach` (Impact: 3.7), `notify` (Impact: 3.7)
+
+### 7. `patterns/creational/prototype.py` (PYTHON) -> Cumulative Risk: **532.27**
+- **Archetype:** `file_cluster_16` (Distance: 12.176 IQR)
+- **Magnitude:** 27.46 | **LOC:** 84 | **CtrlFlow:** 5.6% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), State Flux (99.0775%), Documentation (98.6769%)
+- **Heaviest Functions:** `register_object` (Impact: 2.2), `__init__` (Impact: 2.1), `clone` (Impact: 2.1)
+
+### 8. `patterns/creational/builder.py` (PYTHON) -> Cumulative Risk: **525.51**
+- **Archetype:** `file_cluster_16` (Distance: 11.5 IQR)
+- **Magnitude:** 49.44 | **LOC:** 113 | **CtrlFlow:** 8.3% | **Authorship Centralization:** 100.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), Documentation (100.0%), State Flux (99.8288%)
+- **Heaviest Functions:** `build_size` (Impact: 3.6), `construct_building` (Impact: 2.0), `__init__` (Impact: 1.9)
+
+### 9. `patterns/behavioral/state.py` (PYTHON) -> Cumulative Risk: **510.39**
+- **Archetype:** `file_cluster_16` (Distance: 12.779 IQR)
+- **Magnitude:** 44.96 | **LOC:** 90 | **CtrlFlow:** 11.1% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), Documentation (92.2259%), State Flux (85.0%)
+- **Heaviest Functions:** `scan` (Impact: 3.8), `__init__` (Impact: 2.0), `__init__` (Impact: 2.0)
+
+### 10. `patterns/structural/front_controller.py` (PYTHON) -> Cumulative Risk: **506.08**
+- **Archetype:** `file_cluster_13` (Distance: 12.514 IQR)
+- **Magnitude:** 48.52 | **LOC:** 96 | **CtrlFlow:** 25.8% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Tech Debt (100.0%), Spec Match (100.0%), State Flux (99.992%), Documentation (90.289%)
+- **Heaviest Functions:** `dispatch` (Impact: 7.4), `dispatch_request` (Impact: 5.5), `__init__` (Impact: 5.5)
+
+## 12. SCANNED ARTIFACTS HITLIST (Top 25 Heaviest Files)
+> *Note: 'Magnitude' represents the file's total Structural Magnitude and impact within the system. It is independent of its Risk Profile. High magnitude implies high structural importance and centralization.*
+
+### `Makefile` (MAKEFILE | Tier 2 | 🚨 AI THREAT: 99.29%)
+- **Global Archetype:** `file_cluster_8` (Drift: 7.129 IQR)
+- **Top Global Matches:** file_cluster_8: 7.129, file_cluster_7: 8.21, file_cluster_1: 8.463
+- **Magnitude:** 162.6 | **LOC:** 88 | **CtrlFlow:** 80.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (10.2435%), Tech Debt (0.0%)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 12`, `structural_boundaries: 3`, `func_start: 4`
+* *Risk/State:* None
+* *Architecture:* `io: 5`, `api: 4`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/other/hsm/hsm.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.84%)
+- **Global Archetype:** `file_cluster_8` (Drift: 10.46 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 5.623 IQR)
+- **Top Global Matches:** file_cluster_8: 10.46, file_cluster_1: 10.793, file_cluster_7: 10.834
+- **Magnitude:** 119.86 | **LOC:** 178 | **CtrlFlow:** 4.8% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (18.4622%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `on_message` (Impact: 5.4)
+  * `_next_state` (Impact: 3.7)
+  * `__init__` (Impact: 2.7)
+  * `on_fault_trigger` (Impact: 1.9)
+  * `on_switchover` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 3`, `structural_boundaries: 59`, `args: 34`, `func_start: 34`, `class_start: 11`
+* *Risk/State:* `safety_bypasses: 3`, `state_mutation: 17`, `duplicate_logic: 22`
+* *Architecture:* `api: 32`
+* *Defense:* `safety: 2`, `doc: 4`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/behavioral/catalog.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.89%)
+- **Global Archetype:** `file_cluster_16` (Drift: 12.059 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.706 IQR)
+- **Top Global Matches:** file_cluster_16: 12.059, file_cluster_0: 12.321, file_cluster_13: 12.426
+- **Magnitude:** 80.98 | **LOC:** 176 | **CtrlFlow:** 27.7% | **Authorship Centralization:** 25.0%
+- **Risk Profile:** Cognitive Load (47.0751%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `__init__` (Impact: 7.6)
+  * `__init__` (Impact: 7.3)
+    * *Intent:* # Alternative implementation for different levels of methods """catalog of multiple methods that are...
+  * `__init__` (Impact: 7.2)
+    * *Intent:* # type ignore reason: https://github.com/python/mypy/issues/10206 """catalog of multiple class metho...
+  * `__init__` (Impact: 7.2)
+    * *Intent:* """ return self._class_method_choices[self.param].__get__(None, self.__class__)() # type: ignore # t...
+  * `main_method` (Impact: 2.0)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 13`, `structural_boundaries: 34`, `args: 17`, `func_start: 17`, `class_start: 4`
+* *Risk/State:* `state_mutation: 19`, `duplicate_logic: 12`
+* *Architecture:* `api: 9`, `import: 1`
+* *Defense:* `doc: 20`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/behavioral/memento.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.83%)
+- **Global Archetype:** `file_cluster_16` (Drift: 12.453 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.414 IQR)
+- **Top Global Matches:** file_cluster_16: 12.453, file_cluster_13: 12.537, file_cluster_0: 12.92
+- **Magnitude:** 64.74 | **LOC:** 146 | **CtrlFlow:** 18.8% | **Authorship Centralization:** 33.3%
+- **Risk Profile:** Cognitive Load (37.373%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `memento` (Impact: 5.6)
+  * `Transactional` (Impact: 4.5)
+  * `__get__` (Impact: 4.5)
+  * `transaction` (Impact: 3.8)
+  * `commit` (Impact: 3.6)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 6`, `structural_boundaries: 26`, `args: 14`, `func_start: 14`, `class_start: 2`
+* *Risk/State:* `safety_bypasses: 6`, `state_mutation: 10`, `duplicate_logic: 3`
+* *Architecture:* `api: 15`, `import: 3`
+* *Defense:* `safety: 2`, `doc: 12`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest, sys, copy, typing, traceback
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/other/blackboard.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.83%)
+- **Global Archetype:** `file_cluster_0` (Drift: 11.828 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.439 IQR)
+- **Top Global Matches:** file_cluster_0: 11.828, file_cluster_16: 11.952, file_cluster_13: 11.975
+- **Magnitude:** 61.12 | **LOC:** 143 | **CtrlFlow:** 16.2% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (24.1025%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `run_loop` (Impact: 7.3)
+  * `is_eager_to_contribute` (Impact: 5.3)
+  * `__init__` (Impact: 2.1)
+  * `contribute` (Impact: 2.0)
+  * `contribute` (Impact: 2.0)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 6`, `structural_boundaries: 31`, `args: 17`, `func_start: 17`, `class_start: 6`
+* *Risk/State:* `safety_bypasses: 1`, `state_mutation: 4`, `dead_code: 1`, `duplicate_logic: 14`, `orphaned_logic: 2`
+* *Architecture:* `api: 17`, `import: 3`
+* *Defense:* `doc: 16`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` abc, doctest, random, pprint
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/behavioral/specification.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.88%)
+- **Global Archetype:** `file_cluster_16` (Drift: 10.106 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.696 IQR)
+- **Top Global Matches:** file_cluster_16: 10.106, file_cluster_13: 10.321, file_cluster_0: 10.507
+- **Magnitude:** 59.16 | **LOC:** 111 | **CtrlFlow:** 6.8% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (7.0482%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `is_satisfied_by` (Impact: 3.7)
+  * `is_satisfied_by` (Impact: 3.7)
+  * `__init__` (Impact: 2.1)
+  * `__init__` (Impact: 2.1)
+  * `and_specification` (Impact: 1.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 3`, `structural_boundaries: 41`, `args: 18`, `func_start: 18`, `class_start: 8`
+* *Risk/State:* `safety_bypasses: 2`, `state_mutation: 1`, `duplicate_logic: 17`
+* *Architecture:* `api: 22`, `import: 3`
+* *Defense:* `safety: 2`, `doc: 4`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` abc, typing, doctest
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/behavioral/observer.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.87%)
+- **Global Archetype:** `file_cluster_16` (Drift: 13.052 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 6.645 IQR)
+- **Top Global Matches:** file_cluster_16: 13.052, file_cluster_13: 13.1, file_cluster_0: 13.346
+- **Magnitude:** 54.04 | **LOC:** 136 | **CtrlFlow:** 14.3% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (31.4019%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `detach` (Impact: 3.8)
+  * `attach` (Impact: 3.7)
+  * `notify` (Impact: 3.7)
+  * `update` (Impact: 1.9)
+    * *Intent:* # observer.py from __future__ import annotations from typing import List class Observer: def update(...
+  * `__init__` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 4`, `structural_boundaries: 24`, `args: 11`, `func_start: 11`, `class_start: 5`
+* *Risk/State:* `safety_bypasses: 3`, `state_mutation: 13`, `duplicate_logic: 7`
+* *Architecture:* `api: 16`, `import: 3`
+* *Defense:* `safety: 2`, `doc: 14`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` typing, doctest, __future__
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/structural/mvc.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.96%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.051 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 5.733 IQR)
+- **Top Global Matches:** file_cluster_16: 11.051, file_cluster_13: 11.219, file_cluster_0: 11.24
+- **Magnitude:** 54.0 | **LOC:** 217 | **CtrlFlow:** 27.1% | **Authorship Centralization:** 33.3%
+- **Risk Profile:** Cognitive Load (13.2839%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `show_item_list` (Impact: 4.2)
+  * `get` (Impact: 3.7)
+  * `capitalizer` (Impact: 2.2)
+  * `show_item_list` (Impact: 2.1)
+  * `item_not_found` (Impact: 2.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 19`, `structural_boundaries: 51`, `args: 20`, `func_start: 20`, `class_start: 7`
+* *Risk/State:* `safety_bypasses: 11`, `state_mutation: 3`, `duplicate_logic: 8`
+* *Architecture:* `api: 23`, `import: 5`
+* *Defense:* `safety: 6`, `doc: 29`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest, sys, inspect, typing, abc
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/behavioral/strategy.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.92%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.16 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 5.821 IQR)
+- **Top Global Matches:** file_cluster_16: 11.16, file_cluster_13: 11.216, file_cluster_8: 11.464
+- **Magnitude:** 53.22 | **LOC:** 93 | **CtrlFlow:** 27.8% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (31.8829%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `__set__` (Impact: 8.2)
+  * `validate` (Impact: 7.5)
+  * `apply_discount` (Impact: 5.5)
+  * `__repr__` (Impact: 3.6)
+  * `__set_name__` (Impact: 2.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 10`, `structural_boundaries: 26`, `args: 10`, `func_start: 10`, `class_start: 2`
+* *Risk/State:* `state_mutation: 2`
+* *Architecture:* `api: 15`, `import: 3`
+* *Defense:* `safety: 4`, `doc: 4`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` typing, doctest, __future__
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/other/graph_search.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 99.06%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.47 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 5.037 IQR)
+- **Top Global Matches:** file_cluster_16: 11.47, file_cluster_13: 11.757, file_cluster_8: 11.835
+- **Magnitude:** 50.68 | **LOC:** 160 | **CtrlFlow:** 56.1% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (47.0303%), Tech Debt (75.458%)
+**Top Internal Functions/Classes:**
+  * `find_shortest_path_bfs` (Impact: 15.2)
+  * `__init__` (Impact: 1.8)
+  * `find_path_dfs` (Impact: 1.1)
+  * `find_all_paths_dfs` (Impact: 1.1)
+  * `find_shortest_path_dfs` (Impact: 1.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 23`, `structural_boundaries: 18`, `args: 6`, `func_start: 6`, `class_start: 1`
+* *Risk/State:* `safety_bypasses: 5`, `state_mutation: 23`, `orphaned_logic: 2`
+* *Architecture:* `api: 6`, `import: 2`
+* *Defense:* `doc: 11`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` typing, doctest
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/behavioral/publish_subscribe.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.83%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.891 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 6.741 IQR)
+- **Top Global Matches:** file_cluster_16: 11.891, file_cluster_13: 12.074, file_cluster_8: 12.507
+- **Magnitude:** 50.1 | **LOC:** 96 | **CtrlFlow:** 14.3% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (40.7912%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `update` (Impact: 5.4)
+  * `subscribe` (Impact: 2.1)
+  * `unsubscribe` (Impact: 2.1)
+  * `__init__` (Impact: 2.1)
+  * `__init__` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 3`, `structural_boundaries: 18`, `args: 12`, `func_start: 12`, `class_start: 3`
+* *Risk/State:* `safety_bypasses: 3`, `state_mutation: 11`, `duplicate_logic: 7`
+* *Architecture:* `api: 14`, `import: 2`
+* *Defense:* `doc: 4`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest, __future__
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/creational/builder.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.84%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.5 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.347 IQR)
+- **Top Global Matches:** file_cluster_16: 11.5, file_cluster_13: 11.925, file_cluster_8: 11.984
+- **Magnitude:** 49.44 | **LOC:** 113 | **CtrlFlow:** 8.3% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (26.9107%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `build_size` (Impact: 3.6)
+  * `construct_building` (Impact: 2.0)
+  * `__init__` (Impact: 1.9)
+  * `build_floor` (Impact: 1.8)
+  * `build_size` (Impact: 1.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 2`, `structural_boundaries: 22`, `args: 13`, `func_start: 13`, `class_start: 5`
+* *Risk/State:* `state_mutation: 8`, `planned_debt: 1`, `duplicate_logic: 10`
+* *Architecture:* `api: 17`, `import: 1`
+* *Defense:* `doc: 4`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `tests/test_hsm.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.86%)
+- **Global Archetype:** `file_cluster_8` (Drift: 10.56 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 4.799 IQR)
+- **Top Global Matches:** file_cluster_8: 10.56, file_cluster_13: 10.729, file_cluster_0: 10.849
+- **Magnitude:** 49.22 | **LOC:** 99 | **CtrlFlow:** 19.4% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (5.5222%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `test_given_standby_on_message_switchover` (Impact: 4.2)
+  * `test_unsupported_state_shall_raise_excep` (Impact: 3.6)
+  * `test_unsupported_message_type_shall_rais` (Impact: 3.6)
+  * `test_calling_next_state_shall_change_cur` (Impact: 2.0)
+  * `test_method_perform_switchover_shall_ret` (Impact: 2.0)
+    * *Intent:* """Exemplary HierachicalStateMachine method test. (here: _perform_switchover()). Add additional test...
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 6`, `structural_boundaries: 25`, `args: 14`, `func_start: 14`, `class_start: 2`
+* *Risk/State:* `state_mutation: 2`, `duplicate_logic: 6`, `orphaned_logic: 8`
+* *Architecture:* `api: 16`, `import: 3`
+* *Defense:* `safety: 7`, `doc: 4`, `test: 22`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` unittest.mock, patterns.other.hsm.hsm, unittest
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/structural/front_controller.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.92%)
+- **Global Archetype:** `file_cluster_13` (Drift: 12.514 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 6.022 IQR)
+- **Top Global Matches:** file_cluster_13: 12.514, file_cluster_16: 12.665, file_cluster_8: 13.04
+- **Magnitude:** 48.52 | **LOC:** 96 | **CtrlFlow:** 25.8% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (28.9305%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `dispatch` (Impact: 7.4)
+  * `dispatch_request` (Impact: 5.5)
+  * `__init__` (Impact: 5.5)
+  * `__init__` (Impact: 1.9)
+  * `show_index_page` (Impact: 1.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 8`, `structural_boundaries: 23`, `args: 8`, `func_start: 8`, `class_start: 5`
+* *Risk/State:* `safety_bypasses: 2`, `state_mutation: 12`, `duplicate_logic: 5`, `orphaned_logic: 1`
+* *Architecture:* `api: 10`, `import: 3`
+* *Defense:* `safety: 1`, `doc: 12`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` typing, doctest, __future__
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/behavioral/state.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.83%)
+- **Global Archetype:** `file_cluster_16` (Drift: 12.779 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 6.178 IQR)
+- **Top Global Matches:** file_cluster_16: 12.779, file_cluster_13: 12.95, file_cluster_8: 13.215
+- **Magnitude:** 44.96 | **LOC:** 90 | **CtrlFlow:** 11.1% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (43.5944%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `scan` (Impact: 3.8)
+  * `__init__` (Impact: 2.0)
+  * `__init__` (Impact: 2.0)
+  * `__init__` (Impact: 2.0)
+  * `toggle_amfm` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 2`, `structural_boundaries: 16`, `args: 9`, `func_start: 9`, `class_start: 4`
+* *Risk/State:* `state_mutation: 17`, `duplicate_logic: 8`
+* *Architecture:* `api: 10`, `import: 2`
+* *Defense:* `doc: 12`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest, __future__
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/structural/adapter.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.84%)
+- **Global Archetype:** `file_cluster_16` (Drift: 12.308 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.627 IQR)
+- **Top Global Matches:** file_cluster_16: 12.308, file_cluster_13: 12.625, file_cluster_12: 12.969
+- **Magnitude:** 43.08 | **LOC:** 126 | **CtrlFlow:** 3.7% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (37.6776%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `__init__` (Impact: 2.2)
+  * `__getattr__` (Impact: 1.9)
+  * `original_dict` (Impact: 1.9)
+  * `__init__` (Impact: 1.8)
+    * *Intent:* *What does this example do?
+  * `bark` (Impact: 1.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1`, `structural_boundaries: 26`, `args: 12`, `func_start: 12`, `class_start: 5`
+* *Risk/State:* `safety_bypasses: 4`, `state_mutation: 6`, `duplicate_logic: 5`
+* *Architecture:* `api: 16`, `import: 2`
+* *Defense:* `safety: 1`, `doc: 12`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` typing, doctest
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/behavioral/servant.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.89%)
+- **Global Archetype:** `file_cluster_13` (Drift: 13.1 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 5.222 IQR)
+- **Top Global Matches:** file_cluster_13: 13.1, file_cluster_0: 13.152, file_cluster_8: 13.48
+- **Magnitude:** 42.18 | **LOC:** 132 | **CtrlFlow:** 26.9% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (35.5211%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `calculate_area` (Impact: 7.4)
+  * `calculate_perimeter` (Impact: 7.4)
+    * *Intent:* """ Servant class providing geometry-related services, including area and perimeter calculations and...
+  * `__init__` (Impact: 2.4)
+  * `__init__` (Impact: 2.1)
+  * `__init__` (Impact: 2.1)
+    * *Intent:* """ import math class Position: """Representation of a 2D position with x and y coordinates."""
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 7`, `structural_boundaries: 19`, `args: 7`, `func_start: 7`, `class_start: 4`
+* *Risk/State:* `state_mutation: 7`, `duplicate_logic: 3`
+* *Architecture:* `api: 11`, `import: 2`
+* *Defense:* `safety: 4`, `doc: 18`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` math, doctest
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/behavioral/chain_of_responsibility.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.86%)
+- **Global Archetype:** `file_cluster_16` (Drift: 10.632 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 6.486 IQR)
+- **Top Global Matches:** file_cluster_16: 10.632, file_cluster_13: 10.968, file_cluster_0: 11.182
+- **Magnitude:** 39.88 | **LOC:** 124 | **CtrlFlow:** 20.6% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (17.3035%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `handle` (Impact: 5.5)
+  * `check_range` (Impact: 4.2)
+  * `check_range` (Impact: 4.2)
+  * `check_range` (Impact: 3.8)
+  * `check_range` (Impact: 3.7)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 7`, `structural_boundaries: 27`, `args: 9`, `func_start: 9`, `class_start: 5`
+* *Risk/State:* `state_mutation: 1`, `duplicate_logic: 4`, `orphaned_logic: 1`
+* *Architecture:* `api: 13`, `import: 3`
+* *Defense:* `doc: 14`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` abc, typing, doctest
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/structural/test_adapter.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.84%)
+- **Global Archetype:** `file_cluster_8` (Drift: 9.475 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 4.077 IQR)
+- **Top Global Matches:** file_cluster_8: 9.475, file_cluster_13: 10.025, file_cluster_7: 10.225
+- **Magnitude:** 39.78 | **LOC:** 75 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `test_car_adapter_shall_make_very_loud_no` (Impact: 2.1)
+  * `setUp` (Impact: 2.0)
+  * `test_dog_adapter_shall_make_noise` (Impact: 2.0)
+  * `test_cat_adapter_shall_make_noise` (Impact: 2.0)
+  * `test_human_adapter_shall_make_noise` (Impact: 2.0)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 16`, `args: 11`, `func_start: 11`, `class_start: 2`
+* *Risk/State:* `state_mutation: 4`, `orphaned_logic: 11`
+* *Architecture:* `api: 13`, `import: 2`
+* *Defense:* `test: 15`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` patterns.structural.adapter, unittest
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/creational/pool.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.86%)
+- **Global Archetype:** `file_cluster_13` (Drift: 12.412 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.727 IQR)
+- **Top Global Matches:** file_cluster_13: 12.412, file_cluster_16: 12.502, file_cluster_8: 13.004
+- **Magnitude:** 36.36 | **LOC:** 95 | **CtrlFlow:** 28.6% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (43.2482%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `__init__` (Impact: 6.2)
+  * `__enter__` (Impact: 3.7)
+  * `__del__` (Impact: 3.7)
+    * *Intent:* *TL;DR """ from queue import Queue from types import TracebackType from typing import Union class Ob...
+  * `__exit__` (Impact: 1.2)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 6`, `structural_boundaries: 15`, `args: 5`, `func_start: 5`, `class_start: 1`
+* *Risk/State:* `state_mutation: 15`
+* *Architecture:* `api: 6`, `import: 4`
+* *Defense:* `doc: 4`, `cleanup: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` types, typing, doctest, queue
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/creational/lazy_evaluation.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.87%)
+- **Global Archetype:** `file_cluster_13` (Drift: 11.408 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 6.178 IQR)
+- **Top Global Matches:** file_cluster_13: 11.408, file_cluster_16: 11.485, file_cluster_0: 11.59
+- **Magnitude:** 34.94 | **LOC:** 113 | **CtrlFlow:** 16.7% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (33.1386%), Tech Debt (99.9996%)
+**Top Internal Functions/Classes:**
+  * `lazy_property2` (Impact: 4.6)
+  * `__get__` (Impact: 4.3)
+  * `_lazy_property` (Impact: 3.7)
+  * `parents` (Impact: 3.6)
+  * `__init__` (Impact: 2.2)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 4`, `structural_boundaries: 20`, `args: 8`, `func_start: 8`, `class_start: 2`
+* *Risk/State:* `state_mutation: 4`, `duplicate_logic: 2`
+* *Architecture:* `api: 8`, `import: 3`
+* *Defense:* `safety: 2`, `doc: 6`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` typing, doctest, functools
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/behavioral/command.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.84%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.988 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 7.387 IQR)
+- **Top Global Matches:** file_cluster_16: 11.988, file_cluster_13: 12.349, file_cluster_8: 12.675
+- **Magnitude:** 32.4 | **LOC:** 108 | **CtrlFlow:** 5.9% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (10.9914%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `__init__` (Impact: 1.9)
+  * `execute` (Impact: 1.9)
+  * `undo` (Impact: 1.9)
+    * *Intent:* *Examples in Python ecosystem:
+  * `__init__` (Impact: 1.9)
+    * *Intent:* """ def __init__(self) -> None: # an array of files hidden, to undo them as needed self._hidden_file...
+  * `execute` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1`, `structural_boundaries: 16`, `args: 10`, `func_start: 10`, `class_start: 3`
+* *Risk/State:* `safety_bypasses: 2`, `state_mutation: 5`, `planned_debt: 1`, `duplicate_logic: 7`, `orphaned_logic: 2`
+* *Architecture:* `api: 10`, `import: 2`
+* *Defense:* `doc: 10`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` typing, doctest
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/structural/facade.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.83%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.644 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 6.042 IQR)
+- **Top Global Matches:** file_cluster_16: 11.644, file_cluster_13: 11.998, file_cluster_8: 12.039
+- **Magnitude:** 32.04 | **LOC:** 98 | **CtrlFlow:** 11.1% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (14.6216%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `read` (Impact: 4.1)
+  * `load` (Impact: 2.1)
+  * `start` (Impact: 2.0)
+  * `__init__` (Impact: 1.9)
+  * `freeze` (Impact: 1.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 2`, `structural_boundaries: 16`, `args: 8`, `func_start: 8`, `class_start: 4`
+* *Risk/State:* `state_mutation: 3`
+* *Architecture:* `api: 13`, `import: 1`
+* *Defense:* `doc: 12`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` doctest
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `patterns/dependency_injection.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.88%)
+- **Global Archetype:** `file_cluster_16` (Drift: 10.256 IQR)
+- **Local Micro-Species:** `Cluster 1: Declarative Glue & Initialization` (Drift: 5.899 IQR)
+- **Top Global Matches:** file_cluster_16: 10.256, file_cluster_13: 10.376, file_cluster_8: 10.543
+- **Magnitude:** 29.92 | **LOC:** 117 | **CtrlFlow:** 3.6% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (4.4859%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `get_current_time_as_html_fragment` (Impact: 2.0)
+  * `get_current_time_as_html_fragment` (Impact: 2.0)
+  * `get_current_time_as_html_fragment` (Impact: 2.0)
+  * `production_code_time_provider` (Impact: 2.0)
+  * `midnight_time_provider` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1`, `structural_boundaries: 27`, `args: 10`, `func_start: 10`, `class_start: 3`
+* *Risk/State:* `safety_bypasses: 2`, `state_mutation: 2`, `planned_debt: 1`, `duplicate_logic: 6`, `orphaned_logic: 3`
+* *Architecture:* `api: 10`, `import: 3`
+* *Defense:* `doc: 10`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 10.076
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` typing, doctest, datetime
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `patterns/structural/proxy.py` (PYTHON | Tier 1.5 | 🚨 AI THREAT: 98.85%)
+- **Global Archetype:** `file_cluster_16` (Drift: 11.441 IQR)
+- **Local Micro-Species:** `Cluster 3: Data Pipelines & I/O Operations` (Drift: 7.226 IQR)
+- **Top Global Matches:** file_cluster_16: 11.441, file_cluster_13: 11.649, file_cluster_8: 11.971
+- **Magnitude:** 29.64 | **LOC:** 92 | **CtrlFlow:** 33.3% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (18.5577%), Tech Debt (100.0%)
+**Top Internal Functions/Classes:**
+  * `do_the_job` (Impact: 9.2)
+  * `do_the_job` (Impact: 3.6)
+  * `do_the_job` (Impact: 1.8)
+  * `__init__` (Impact: 1.8)
+  * `client` (Impact: 1.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 6`, `structural_boundaries: 12`, `args: 6`, `func_start: 6`, `class_start: 3`
+* *Risk/State:* `state_mutation: 1`, `duplicate_logic: 3`
+* *Architecture:* `api: 10`, `import: 2`
+* *Defense:* `doc: 10`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 18.64
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.012987
+  * `Imports (Out-Degree: 0):` typing, doctest
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+## 13. ARCHITECTURAL DRIFT ANOMALIES & ANTI-PATTERNS
+> **AI CONTEXT:** Pay close attention to 'Anti-Pattern' files. These files blend in globally (Low Global Drift), but heavily violate the standard conventions of their native programming language (High Local Drift). 'Mixed-Responsibility' files sit perfectly between two global archetypes (Delta <= 0.9 IQR), indicating a violation of the Single Responsibility Principle.
+
+### Mixed-Responsibility Refactoring Targets for: file_cluster_0
+- `patterns/other/blackboard.py` (PYTHON) | Magnitude: 61.12 | Delta: **0.124 IQR** | Secondary Pull: `file_cluster_16`
+  * Top Architectural Signatures: indent_spaces: 61, structural_boundaries: 31, args: 17, func_start: 17
+- `tests/behavioral/test_strategy.py` (PYTHON) | Magnitude: 15.54 | Delta: **0.171 IQR** | Secondary Pull: `file_cluster_8`
+  * Top Architectural Signatures: test: 15, structural_boundaries: 14, indent_spaces: 13, args: 5
+
+### Mixed-Responsibility Refactoring Targets for: file_cluster_12
+- `lint.sh` (SHELL) | Magnitude: 6.06 | Delta: **0.001 IQR** | Secondary Pull: `file_cluster_8`
+  * Top Architectural Signatures: reflection_metaprogramming: 6, safety: 5, io: 4, branch: 3
+
+### Mixed-Responsibility Refactoring Targets for: file_cluster_13
+- `tests/behavioral/test_servant.py` (PYTHON) | Magnitude: 18.82 | Delta: **0.008 IQR** | Secondary Pull: `file_cluster_0`
+  * Top Architectural Signatures: structural_boundaries: 17, test: 16, indent_spaces: 16, safety: 6
+- `tests/behavioral/test_visitor.py` (PYTHON) | Magnitude: 11.84 | Delta: **0.008 IQR** | Secondary Pull: `file_cluster_8`
+  * Top Architectural Signatures: structural_boundaries: 11, indent_spaces: 10, test: 9, args: 4
+- `tests/structural/test_flyweight.py` (PYTHON) | Magnitude: 8.5 | Delta: **0.017 IQR** | Secondary Pull: `file_cluster_8`
+  * Top Architectural Signatures: indent_spaces: 12, structural_boundaries: 8, safety: 6, test: 6
+- `tests/creational/test_abstract_factory.py` (PYTHON) | Magnitude: 6.0 | Delta: **0.019 IQR** | Secondary Pull: `file_cluster_8`
+  * Top Architectural Signatures: structural_boundaries: 8, test: 7, indent_spaces: 6, import: 3
+- `tests/behavioral/test_observer.py` (PYTHON) | Magnitude: 11.44 | Delta: **0.029 IQR** | Secondary Pull: `file_cluster_8`
+  * Top Architectural Signatures: structural_boundaries: 15, test: 15, indent_spaces: 15, safety: 5
+
+### Mixed-Responsibility Refactoring Targets for: file_cluster_16
+- `patterns/structural/decorator.py` (PYTHON) | Magnitude: 21.18 | Delta: **0.03 IQR** | Secondary Pull: `file_cluster_2`
+  * Top Architectural Signatures: structural_boundaries: 14, indent_spaces: 14, encapsulation: 11, doc: 10
+- `patterns/behavioral/iterator_alt.py` (PYTHON) | Magnitude: 13.88 | Delta: **0.041 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 20, structural_boundaries: 10, encapsulation: 9, doc: 6
+- `patterns/behavioral/observer.py` (PYTHON) | Magnitude: 54.04 | Delta: **0.048 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 33, structural_boundaries: 24, api: 16, encapsulation: 15
+- `patterns/behavioral/strategy.py` (PYTHON) | Magnitude: 53.22 | Delta: **0.056 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 38, structural_boundaries: 26, api: 15, branch: 10
+- `patterns/behavioral/memento.py` (PYTHON) | Magnitude: 64.74 | Delta: **0.084 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 39, structural_boundaries: 26, api: 15, args: 14
+
+### Mixed-Responsibility Refactoring Targets for: file_cluster_8
+- `patterns/structural/flyweight_with_metaclass.py` (PYTHON) | Magnitude: 15.22 | Delta: **0.056 IQR** | Secondary Pull: `file_cluster_12`
+  * Top Architectural Signatures: indent_spaces: 32, structural_boundaries: 21, encapsulation: 10, safety: 8
+- `tests/behavioral/test_mediator.py` (PYTHON) | Magnitude: 3.54 | Delta: **0.087 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 9, structural_boundaries: 7, test: 5, safety: 3
+- `tests/structural/test_facade.py` (PYTHON) | Magnitude: 3.28 | Delta: **0.136 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: structural_boundaries: 8, indent_spaces: 7, test: 5, safety: 4
+- `tests/behavioral/test_catalog.py` (PYTHON) | Magnitude: 11.96 | Delta: **0.159 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 12, structural_boundaries: 11, test: 9, args: 4
+- `tests/test_hsm.py` (PYTHON) | Magnitude: 49.22 | Delta: **0.169 IQR** | Secondary Pull: `file_cluster_13`
+  * Top Architectural Signatures: indent_spaces: 70, structural_boundaries: 25, test: 22, encapsulation: 17
+
+## 13.5 STRATEGIC REFACTORING TARGETS (Volatility & Authorship Centralization)
+> **AI CONTEXT:** Use these intersections to recommend pragmatic next steps. Risk is exponentially worse when combined with high churn (frequent edits) or high authorship centralization (single points of failure).
+
+### 🔥 The Hotspot Matrix (High Volatility + High Risk)
+These files are messy, complex, and modified frequently. They are the primary source of developer friction.
+
+- `patterns/behavioral/memento.py` -> Churn: **56.75%** | Cog Load: 37.373% | Debt: 100.0%
+- `patterns/structural/mvc.py` -> Churn: **56.75%** | Cog Load: 13.2839% | Debt: 100.0%
+
+### 👤 Key Person Dependencies (High Impact + Siloed Knowledge)
+These are massive, load-bearing files written almost entirely by a single developer. They represent severe 'Bus Factor' risk.
+
+- `patterns/other/blackboard.py` -> **justpraveen** (100.0% isolated ownership) | Magnitude: 61.12
+- `patterns/behavioral/specification.py` -> **Debakar Roy** (100.0% isolated ownership) | Magnitude: 59.16
+- `patterns/behavioral/observer.py` -> **Sai Sravya Thumati** (100.0% isolated ownership) | Magnitude: 54.04
+- `patterns/other/graph_search.py` -> **Debakar Roy** (100.0% isolated ownership) | Magnitude: 50.68
+
+## 13.8 SYSTEMIC NETWORK BOTTLENECKS (N-Dimensional Topology)
+> **AI CONTEXT:** These metrics cross-multiply Network Graph Theory against Risk Exposure to identify the exact mechanisms of runtime failure.
+
+### 🃏 House of Cards (Closeness * Error Risk)
+These files are deeply embedded (1 or 2 hops from the entire codebase) but possess high error exposure. A runtime exception here will cascade instantly across the application.
+
+- `patterns/behavioral/publish_subscribe.py` -> **Severity: 1.128** (Embedded: 0.013 * Error Risk: 86.8693%)
+- `patterns/creational/prototype.py` -> **Severity: 1.116** (Embedded: 0.013 * Error Risk: 85.9165%)
+- `patterns/creational/pool.py` -> **Severity: 1.097** (Embedded: 0.013 * Error Risk: 84.5044%)
+- `patterns/behavioral/memento.py` -> **Severity: 1.092** (Embedded: 0.013 * Error Risk: 84.0518%)
+- `patterns/behavioral/state.py` -> **Severity: 1.046** (Embedded: 0.013 * Error Risk: 80.5068%)
+
+### 🙈 Opaque Critical Nodes (Dependency Blast Radius * Doc Risk)
+These are 'Core Architecture Nodes' that the entire ecosystem relies upon, but they lack human intent, documentation, or ownership metadata. Modifying them is flying blind.
+
+- `patterns/behavioral/mediator.py` -> **Severity: 1864.0** (Blast Radius: 18.64 * Doc Risk: 100.0%)
+- `patterns/behavioral/memento.py` -> **Severity: 1864.0** (Blast Radius: 18.64 * Doc Risk: 100.0%)
+- `patterns/behavioral/observer.py` -> **Severity: 1864.0** (Blast Radius: 18.64 * Doc Risk: 100.0%)
+- `patterns/behavioral/visitor.py` -> **Severity: 1864.0** (Blast Radius: 18.64 * Doc Risk: 100.0%)
+- `patterns/creational/builder.py` -> **Severity: 1864.0** (Blast Radius: 18.64 * Doc Risk: 100.0%)
+
+## AI SYSTEM INSTRUCTIONS (OUTPUT FORMAT)
+> **CRITICAL TONE DIRECTIVE:** Stay in the Senior Technical Storyteller persona from Section 1. Use grounded, professional software engineering terminology (e.g., coupling, cohesion, technical debt, single responsibility) woven into a cohesive narrative -- not a dry, disconnected bullet-point audit. DO NOT use sci-fi, dramatic, or sensational jargon (e.g., 'Trojan', 'violently violates', 'parasitic', 'chimeric'). Be objective and factual, but write like you're explaining the codebase to a colleague, not filing a verdict.
+> **When the user asks for an architectural review, structure your response using these directives:**
+> 1. **Information Flow & Purpose (The Executive Summary):** Synthesize the overarching purpose of the codebase. Trace the information flow by analyzing the Top Dependencies ('Imports' and 'Imported By') and the Language Composition. Explain how the system's archetype drives its design, but only mention Z-Score deviations if they are highly abnormal.
+> 2. **Notable Structures & Architecture:** Discuss the architecture based on the Dependency Graph. Identify the foundational load-bearers (highest inbound connections) versus the fragile orchestrators (highest outbound imports).
+> 3. **Security & Vulnerabilities:** Immediately surface any critical threats flagged in the `AI THREAT INTELLIGENCE (XGBoost)` section. If none exist, briefly confirm the repository is secure from recognized structural threats.
+> 4. **Outliers & Extremes:** Focus strictly on statistical anomalies. Highlight files or directory groups with massive Cumulative Risk, severe Z-Scores (Architectural Drift), or extreme spikes in individual risk vectors (like State Flux or Cognitive Load). Ignore normal, healthy code.
+> 5. **Recommended Next Steps (Refactoring for Stability):** Provide 2-3 highly specific, pragmatic suggestions focused strictly on reducing outliers. Instruct the user on how to refactor high Z-score files, decouple massive central nodes, or mitigate extreme risk exposures to stabilize the system's architecture.
