@@ -1,0 +1,170 @@
+# Function Micro-Species Report -- v2.4.7
+# Generated: 2026-08-07T12:39:00Z
+# Source commit (this repo): e4b0353 (v2.4.7 batch scan, 718 repos, 0 failures)
+# Tooling commit (gitgalaxy-population-analyses): 70de889294917d4ae2846f3f147bebc6d9d975f0
+# Methodology: https://github.com/squid-protocol/gitgalaxy/issues/1144
+# Note: generated manually, ahead of the population-analysis-audit.yml automation this seeds.
+
+📡 Connecting to master_db_v247.db...
+🌌 Extracting 75-Dimensional Function Micro-Species (This may take 30-90 seconds)...
+
+==============================================================================================================
+ 🌍 PHASE 0: GLOBAL POPULATION DIAGNOSTIC
+==============================================================================================================
+   - Total Functions Analyzed: 5,108,842
+   - Global Max Complexity Found: 3,388
+   - Average Function LOC: 21.8
+   - Average Z-Score (Dispersion): 0.03
+
+==============================================================================================================
+ 📊 PHASE 1: MACRO ARCHITECTURE BY MICRO-SPECIES
+==============================================================================================================
+Function Archetype                                 | % Ecosys | Z-Min   | Z-Med   | Z-Mean  | Z-Max
+---------------------------------------------------------------------------------------------------------
+fxn_cluster_4                                      |    75.8% |  -10.95 |   -0.22 |    0.06 |  109.53
+fxn_cluster_6                                      |    11.5% |  -11.37 |   -0.24 |   -0.05 |   14.71
+fxn_cluster_10                                     |     6.3% |   -5.70 |   -0.05 |    0.26 |   18.11
+fxn_cluster_1                                      |     3.8% |   -3.53 |   -0.40 |   -0.42 |    0.00
+fxn_cluster_5                                      |     1.1% |  -11.37 |   -0.38 |   -0.39 |    0.00
+fxn_cluster_8                                      |     0.8% |   -4.00 |   -0.45 |   -0.45 |    3.16
+fxn_cluster_11                                     |     0.4% |   -2.35 |   -0.24 |    0.00 |    9.71
+fxn_cluster_2                                      |     0.2% |   -2.98 |   -0.41 |   -0.42 |    3.74
+fxn_cluster_3                                      |     0.2% |   -2.82 |   -0.39 |   -0.41 |    0.00
+fxn_cluster_0                                      |     0.0% |   -1.41 |    0.10 |    0.71 |    5.43
+
+==============================================================================================================
+ 🧬 PHASE 2: LANGUAGE DOMINANCE PER MICRO-SPECIES
+==============================================================================================================
+   fxn_cluster_4 -> c (18.2%), java (13.6%), csharp (10.1%)
+   fxn_cluster_6 -> c (47.7%), cpp (12.9%), dart (6.7%)
+   fxn_cluster_10 -> c (22.3%), typescript (15.0%), dart (13.9%)
+   fxn_cluster_1 -> cpp (34.6%), c (20.6%), python (10.8%)
+   fxn_cluster_5 -> javascript (29.9%), typescript (27.1%), cpp (11.3%)
+   fxn_cluster_8 -> c (27.4%), typescript (19.4%), javascript (9.6%)
+   fxn_cluster_11 -> typescript (26.0%), javascript (19.5%), assembly (9.1%)
+   fxn_cluster_2 -> python (22.3%), typescript (20.4%), rust (19.9%)
+   fxn_cluster_3 -> typescript (30.1%), javascript (22.0%), go (11.4%)
+   fxn_cluster_0 -> javascript (35.7%), typescript (16.7%), cpp (14.3%)
+
+==============================================================================================================
+ 👾 PHASE 3: THE 'GOD FUNCTION' HUNT (ABSOLUTE HIGHEST COMPLEXITIES)
+==============================================================================================================
+1. Anonymous_Block_[Truncated] [shell]
+   ↳ Complexity: 3,388 | LOC: 7,251 | Args: 1
+   ↳ Species: fxn_cluster_4
+   ↳ Path: usr/src/contrib/ast/src/cmd/INIT/package.sh...
+
+2. banana [rust]
+   ↳ Complexity: 2,547 | LOC: 2,548 | Args: 3
+   ↳ Species: fxn_cluster_4
+   ↳ Path: tests/ui/expr/if/expr-stack-overflow.rs...
+
+3. msvcp110_dll_lookup [cpp]
+   ↳ Complexity: 2,507 | LOC: 559 | Args: 2
+   ↳ Species: fxn_cluster_4
+   ↳ Path: deps/LIEF/src/PE/utils/ordinals_lookup_tables/msvcp110_dll_lookup.hpp...
+
+4. msvcp120_dll_lookup [cpp]
+   ↳ Complexity: 2,501 | LOC: 559 | Args: 2
+   ↳ Species: fxn_cluster_4
+   ↳ Path: deps/LIEF/src/PE/utils/ordinals_lookup_tables/msvcp120_dll_lookup.hpp...
+
+5. nssl_2mom_gs [fortran]
+   ↳ Complexity: 2,493 | LOC: 9,963 | Args: 2
+   ↳ Species: fxn_cluster_4
+   ↳ Path: phys/module_mp_nssl_2mom.F...
+
+ 🕵️‍♂️ PHASE 4: ARCHITECTURAL ANOMALIES (HIGHEST Z-SCORES)
+==============================================================================================================
+ These functions were forced into a cluster but mathematically fight their classification.
+ High probability of malware, massive technical debt, or multi-purpose God Nodes.
+
+1. TestEntryPoint [csharp]
+   ↳ Z-Score Dispersion: 109.53 ⚠️
+   ↳ Hiding inside: fxn_cluster_4
+   ↳ Path: src/tests/JIT/opt/virtualstubdispatch/bigvtbl/bigvtbl.cs...
+
+2. TestEntryPoint [csharp]
+   ↳ Z-Score Dispersion: 33.70 ⚠️
+   ↳ Hiding inside: fxn_cluster_4
+   ↳ Path: src/tests/JIT/Regression/JitBlue/Runtime_64125/Runtime_64125.cs...
+
+3. TestEntryPoint [csharp]
+   ↳ Z-Score Dispersion: 33.05 ⚠️
+   ↳ Hiding inside: fxn_cluster_4
+   ↳ Path: src/tests/JIT/jit64/opt/cg/cgstress/CgStress3.cs...
+
+4. a [javascript]
+   ↳ Z-Score Dispersion: 32.38 ⚠️
+   ↳ Hiding inside: fxn_cluster_4
+   ↳ Path: packages/tools/babylonServer/public/gltf_validator.js...
+
+5. TestEntryPoint [csharp]
+   ↳ Z-Score Dispersion: 32.00 ⚠️
+   ↳ Hiding inside: fxn_cluster_4
+   ↳ Path: src/tests/JIT/jit64/opt/cg/cgstress/CgStress2.cs...
+
+ 💎 PHASE 5: THE PURE EXEMPLARS (MATHEMATICAL CENTROIDS)
+==============================================================================================================
+ These are the single most 'perfect' representations of each architectural cluster.
+ Their DNA matches the centroid almost exactly (Z-Score approaching 0.0).
+
+ fxn_cluster_0: Anonymous_Block [shell]
+   ↳ Z-Score: -1.4140 | LOC: 6 | Comp: 8
+   ↳ Path: tools/test/stress2/misc/trim8.sh...
+ fxn_cluster_1: keyframes [css]
+   ↳ Z-Score: -3.5280 | LOC: 4 | Comp: 0
+   ↳ Path: registry/src/css/main.css...
+ fxn_cluster_10: expect [typescript]
+   ↳ Z-Score: -5.7010 | LOC: 10 | Comp: 0
+   ↳ Path: packages/integration-tests/src/__tests__/integration/sqlite/__scenarios.ts...
+ fxn_cluster_11: expect [typescript]
+   ↳ Z-Score: -2.3450 | LOC: 4 | Comp: 1
+   ↳ Path: core/src/css/test/flex-utils.e2e.ts...
+ fxn_cluster_2: foo7 [kotlin]
+   ↳ Z-Score: -2.9830 | LOC: 3 | Comp: 0
+   ↳ Path: compiler/testData/diagnostics/tests/inference/pcla/specialCallsWithCallableReferencesDontC...
+ fxn_cluster_3: OBJ_GETTER0 [cpp]
+   ↳ Z-Score: -2.8220 | LOC: 3 | Comp: 0
+   ↳ Path: kotlin-native/runtime/src/test_support/cpp/CompilerGenerated.cpp...
+ fxn_cluster_4: simple_func_double [csharp]
+   ↳ Z-Score: -10.9450 | LOC: 4 | Comp: 0
+   ↳ Path: src/tests/JIT/Directed/cmov/Double_And_Op.cs...
+ fxn_cluster_5: DAA_C_FLAG [assembly]
+   ↳ Z-Score: -11.3690 | LOC: 3 | Comp: 0
+   ↳ Path: EMU/GameBoy/CPU.ASM...
+ fxn_cluster_6: CPU_CB_INST [assembly]
+   ↳ Z-Score: -11.3690 | LOC: 17 | Comp: 0
+   ↳ Path: EMU/GameBoy/CPU.ASM...
+ fxn_cluster_8: create [java]
+   ↳ Z-Score: -4.0000 | LOC: 3 | Comp: 0
+   ↳ Path: clients/src/main/java/org/apache/kafka/clients/admin/Admin.java...
+
+ 📏 PHASE 6: Z-SCORE QUANTILE DISTRIBUTION
+==============================================================================================================
+ This shows the shape of the 'Anomaly Tail' for each cluster.
+Function Archetype                            | 25th   | 50th   | 75th   | 95th   | Max
+--------------------------------------------------------------------------------------------------------------
+fxn_cluster_4                                 |  -0.49 |  -0.22 |   0.13 |   2.06 | 109.53
+fxn_cluster_6                                 |  -0.49 |  -0.24 |   0.04 |   1.51 |  14.71
+fxn_cluster_10                                |  -0.38 |  -0.05 |   0.59 |   2.47 |  18.11
+fxn_cluster_1                                 |  -0.60 |  -0.40 |  -0.20 |   0.00 |   0.00
+fxn_cluster_5                                 |  -0.61 |  -0.38 |   0.00 |   0.00 |   0.00
+fxn_cluster_8                                 |  -0.69 |  -0.45 |  -0.19 |   0.00 |   3.16
+fxn_cluster_11                                |  -0.45 |  -0.24 |   0.00 |   1.73 |   9.71
+fxn_cluster_2                                 |  -0.61 |  -0.41 |  -0.23 |   0.00 |   3.74
+fxn_cluster_3                                 |  -0.60 |  -0.39 |  -0.17 |   0.00 |   0.00
+fxn_cluster_0                                 |   0.00 |   0.10 |   0.91 |   3.43 |   5.43
+
+
+🎨 Rendering Visualizations to disk...
+✅ Saved Density Plot: func_species_complexity_violin.png
+✅ Saved Anomaly Scatter Plot: func_species_anomaly_scatter.png
+✅ Saved Z-Score Strip Plot: func_species_zscore_stripplot.png
+✅ Saved Keyword Density Plot: func_species_keyword_density.png
+✅ Saved Logic Density Plot: func_species_logic_density.png
+
+================================================================================
+ 🚀 FUNCTION SUITE ANALYSIS COMPLETE
+================================================================================
+

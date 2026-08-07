@@ -1,20 +1,26 @@
-name: DB Health Audit
+name: Population Analysis Audit
 
 # Merges a batch-scan version's per-repo SQLite databases into one queryable database and runs
-# a column-level health sweep (NULL/empty/zero rates) across it, committing only the resulting
-# text report under v*/analysis/. The merged database itself is never committed -- a single
-# version's merge is several GB, well over GitHub's 100MB per-file limit -- it's built fresh in
-# runner scratch space and discarded once the report is written.
+# the gitgalaxy-population-analyses tooling against it: a column-level DB health sweep, the
+# comprehensive risk-exposure statistics table, the function micro-species suite, and the
+# per-language risk/metric ridgeplots. Only the resulting reports/CSVs/PNGs are committed, under
+# v*/analysis/ -- the merged database itself is never committed. A single version's merge is
+# several GB, well over GitHub's 100MB per-file limit -- it's built fresh in runner scratch space
+# and discarded once every script has run against it.
 #
-# Cross-repo: the build/audit tooling (build_master_db.py, db_health_assessor.py) lives in
-# gitgalaxy-population-analyses, not here, so this workflow checks that repo out too (just the
-# two script files, sparse). See squid-protocol/gitgalaxy#1144 for the validation methodology
-# this workflow automates.
+# Cross-repo: the tooling (build_master_db.py, db_health_assessor.py,
+# detailed_risk_exposure_stats_from_db.py, function_analysis_suite.py, plot_ridgelines.py) lives
+# in gitgalaxy-population-analyses, not here, so this workflow checks that repo out too (just
+# those five script files, sparse). See squid-protocol/gitgalaxy#1144 for the validation
+# methodology the DB health portion of this workflow automates.
 #
 # Checkout of THIS repo is sparse + shallow, scoped to only the version folder(s) being audited
 # -- not the whole repo. That matters more every release: a full checkout pulls every historical
 # version's multi-GB data every run, which grows without bound. Sparse-checkout keeps this job's
-# footprint flat regardless of how many past versions have accumulated.
+# footprint flat regardless of how many past versions have accumulated. (The committed analysis
+# outputs themselves -- a few text/CSV files plus ~20 PNGs, tens of MB per version -- do grow the
+# repo over time same as speed-telemetry.yml's charts already do; that's an accepted, bounded
+# cost, unlike the merged DB which is gigabytes and must never land in git.)
 
 on:
   push:
@@ -31,10 +37,13 @@ on:
 permissions:
   contents: write
 
+env:
+  MPLBACKEND: Agg
+
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     steps:
       - name: Determine target version(s)
         id: versions
@@ -87,6 +96,9 @@ jobs:
           sparse-checkout: |
             build_master_db.py
             db_health_assessor.py
+            detailed_risk_exposure_stats_from_db.py
+            function_analysis_suite.py
+            plot_ridgelines.py
           sparse-checkout-cone-mode: false
           fetch-depth: 1
           path: _tooling
@@ -100,32 +112,58 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build merged DB and run health audit, per version
+      - name: Install analysis dependencies
+        run: pip install --quiet pandas numpy matplotlib seaborn
+
+      - name: Build merged DB and run the population-analysis suite, per version
         run: |
           mkdir -p _tooling/data
           for v in ${{ steps.versions.outputs.list }}; do
             echo "::group::$v"
 
             db_name="master_db_${v}.db"
+            db_path="_tooling/data/$db_name"
 
             python3 _tooling/build_master_db.py \
               --input-dir "$v" \
               --output "$db_name"
 
-            mkdir -p "$v/analysis"
-            report="$v/analysis/db_health_report.log"
-            {
-              echo "# DB Health Report -- $v"
+            mkdir -p "$v/analysis/ridgeplots"
+
+            header() {
+              echo "# $1 -- $v"
               echo "# Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
               echo "# Source commit (this repo): ${{ github.sha }}"
               echo "# Tooling commit (gitgalaxy-population-analyses): ${{ steps.provenance.outputs.tooling_sha }}"
               echo "# Methodology: https://github.com/squid-protocol/gitgalaxy/issues/1144"
               echo
-            } > "$report"
-            python3 _tooling/db_health_assessor.py "_tooling/data/$db_name" | tee -a "$report"
+            }
+
+            # 1. DB health sweep (NULL/empty/zero rates)
+            report="$v/analysis/db_health_report.log"
+            header "DB Health Report" > "$report"
+            python3 _tooling/db_health_assessor.py "$db_path" | tee -a "$report"
+
+            # 2. Comprehensive risk-exposure statistics (healthy-baseline distributions)
+            python3 _tooling/detailed_risk_exposure_stats_from_db.py --db "$db_path"
+            mv _tooling/analysis_outputs/comprehensive_risk_stats.csv "$v/analysis/comprehensive_risk_stats.csv"
+
+            # 3. Function micro-species suite (report + 5 visualizations)
+            fn_report="$v/analysis/function_species_report.log"
+            header "Function Micro-Species Report" > "$fn_report"
+            python3 _tooling/function_analysis_suite.py --db "$db_path" | tee -a "$fn_report"
+
+            # 4. Per-language risk/metric ridgeplots (~18 PNGs)
+            python3 _tooling/plot_ridgelines.py --db "$db_path"
+
+            # function_analysis_suite.py and plot_ridgelines.py both write into
+            # _tooling/analyses_ridgeplots/ -- move the whole batch, then clear it so the next
+            # version in this loop doesn't inherit this version's images.
+            mv _tooling/analyses_ridgeplots/*.png "$v/analysis/ridgeplots/"
+            rm -rf _tooling/analyses_ridgeplots _tooling/analysis_outputs
 
             # Free the scratch DB immediately -- don't let multiple versions' DBs coexist on disk.
-            rm -f "_tooling/data/$db_name"
+            rm -f "$db_path"
             echo "::endgroup::"
           done
           rm -rf _tooling
@@ -135,11 +173,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           for v in ${{ steps.versions.outputs.list }}; do
-            git add "$v/analysis/db_health_report.log"
+            git add "$v/analysis/"
           done
           if git diff --cached --quiet; then
-            echo "No health-report changes to commit."
+            echo "No analysis changes to commit."
           else
-            git commit -m "chore: DB health audit for ${{ steps.versions.outputs.list }}"
+            git commit -m "chore: population analysis audit for ${{ steps.versions.outputs.list }}"
             git push
           fi
