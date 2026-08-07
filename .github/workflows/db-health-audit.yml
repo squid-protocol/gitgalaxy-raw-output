@@ -1,0 +1,145 @@
+name: DB Health Audit
+
+# Merges a batch-scan version's per-repo SQLite databases into one queryable database and runs
+# a column-level health sweep (NULL/empty/zero rates) across it, committing only the resulting
+# text report under v*/analysis/. The merged database itself is never committed -- a single
+# version's merge is several GB, well over GitHub's 100MB per-file limit -- it's built fresh in
+# runner scratch space and discarded once the report is written.
+#
+# Cross-repo: the build/audit tooling (build_master_db.py, db_health_assessor.py) lives in
+# gitgalaxy-population-analyses, not here, so this workflow checks that repo out too (just the
+# two script files, sparse). See squid-protocol/gitgalaxy#1144 for the validation methodology
+# this workflow automates.
+#
+# Checkout of THIS repo is sparse + shallow, scoped to only the version folder(s) being audited
+# -- not the whole repo. That matters more every release: a full checkout pulls every historical
+# version's multi-GB data every run, which grows without bound. Sparse-checkout keeps this job's
+# footprint flat regardless of how many past versions have accumulated.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "v*/batch_scan_master_*.log"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version folder to audit, e.g. v2.4.7. Leave blank to auto-detect from the triggering push (or, on manual dispatch, to audit every v*/ folder in the repo)."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Determine target version(s)
+        id: versions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_VERSION: ${{ github.event.inputs.version }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ -n "$INPUT_VERSION" ]; then
+            versions="$INPUT_VERSION"
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            # Manual run, no version given -> audit every version folder currently in the repo.
+            versions=$(gh api "repos/${{ github.repository }}/contents" \
+              --jq '.[] | select(.type=="dir") | select(.name | test("^v[0-9]")) | .name' \
+              | sort | tr '\n' ' ')
+          else
+            versions=$(jq -r '[.commits[].added, .commits[].modified] | flatten | .[]
+                | select(test("^v[^/]+/batch_scan_master_.*\\.log$"))' "$GITHUB_EVENT_PATH" \
+              | sed -E 's#^([^/]+)/.*#\1#' | sort -u | tr '\n' ' ')
+          fi
+          versions="${versions% }"  # trim trailing space
+
+          if [ -z "$versions" ]; then
+            echo "::error::No target version(s) found to audit."
+            exit 1
+          fi
+
+          # "list" is single-line/space-separated -- safe both as a GITHUB_OUTPUT value and for
+          # direct substitution into a later `for v in ...; do` loop. "sparse_paths" is the
+          # newline-separated form actions/checkout's sparse-checkout input actually wants.
+          echo "Auditing: $versions"
+          echo "list=$versions" >> "$GITHUB_OUTPUT"
+          {
+            echo "sparse_paths<<EOF"
+            echo "$versions" | tr ' ' '\n'
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Sparse checkout this repo (only the target version folders)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: ${{ steps.versions.outputs.sparse_paths }}
+          sparse-checkout-cone-mode: true
+          fetch-depth: 1
+
+      - name: Checkout population-analyses tooling
+        uses: actions/checkout@v4
+        with:
+          repository: squid-protocol/gitgalaxy-population-analyses
+          sparse-checkout: |
+            build_master_db.py
+            db_health_assessor.py
+          sparse-checkout-cone-mode: false
+          fetch-depth: 1
+          path: _tooling
+
+      - name: Record tooling provenance
+        id: provenance
+        run: |
+          echo "tooling_sha=$(git -C _tooling rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build merged DB and run health audit, per version
+        run: |
+          mkdir -p _tooling/data
+          for v in ${{ steps.versions.outputs.list }}; do
+            echo "::group::$v"
+
+            db_name="master_db_${v}.db"
+
+            python3 _tooling/build_master_db.py \
+              --input-dir "$v" \
+              --output "$db_name"
+
+            mkdir -p "$v/analysis"
+            report="$v/analysis/db_health_report.log"
+            {
+              echo "# DB Health Report -- $v"
+              echo "# Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              echo "# Source commit (this repo): ${{ github.sha }}"
+              echo "# Tooling commit (gitgalaxy-population-analyses): ${{ steps.provenance.outputs.tooling_sha }}"
+              echo "# Methodology: https://github.com/squid-protocol/gitgalaxy/issues/1144"
+              echo
+            } > "$report"
+            python3 _tooling/db_health_assessor.py "_tooling/data/$db_name" | tee -a "$report"
+
+            # Free the scratch DB immediately -- don't let multiple versions' DBs coexist on disk.
+            rm -f "_tooling/data/$db_name"
+            echo "::endgroup::"
+          done
+          rm -rf _tooling
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for v in ${{ steps.versions.outputs.list }}; do
+            git add "$v/analysis/db_health_report.log"
+          done
+          if git diff --cached --quiet; then
+            echo "No health-report changes to commit."
+          else
+            git commit -m "chore: DB health audit for ${{ steps.versions.outputs.list }}"
+            git push
+          fi

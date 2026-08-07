@@ -1,0 +1,172 @@
+# DB Health Report -- v2.4.7
+# Generated: 2026-08-07T10:24:00Z
+# Source commit (this repo): e4b0353 (v2.4.7 batch scan, 718 repos, 0 failures)
+# Tooling commit (gitgalaxy-population-analyses): bc93559e06640450a4d1ec2e802017bcaa9d594d
+# Methodology: https://github.com/squid-protocol/gitgalaxy/issues/1144
+# Note: generated manually, ahead of the db-health-audit.yml automation this seeds.
+
+
+🩺 INITIATING DATABASE HEALTH ASSESSMENT: master_db_v247.db
+================================================================================
+
+📁 ANALYZING TABLE: MERGED_SCANS
+   Rows Evaluated: 718
+   ✅ Status: Healthy. No significant anomalies detected.
+
+📁 ANALYZING TABLE: REPO_DATA
+   Rows Evaluated: 718
+   🚨 NOTABLE ISSUES:
+      - ⚠️ MISSING TEXT DATA: 'commit_hash' is 55.2% empty or 'Unknown'
+        (396 rows).
+      - ⚠️ HIGH NULL RATE: 'network_modularity' is 55.0% NULL (395 rows).
+      - ⚠️ HIGH NULL RATE: 'network_avg_path_length' is 22.4% NULL (161
+        rows).
+      - 💀 DEAD FEATURE: 'audit_shadow_apis' is 99.7% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'tabs_vs_spaces' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_orchestrator' is 99.9% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_vector_store' is 99.7% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_var_decl' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_camel_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_snake_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_pascal_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_upper_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_short_vars' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_long_vars' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'prompt_injection' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'agentic_rce' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+
+📁 ANALYZING TABLE: FILE_DATA
+   Rows Evaluated: 1,201,836
+   🚨 NOTABLE ISSUES:
+      - ⚠️ MISSING TEXT DATA: 'parent_entity' is 89.0% empty or 'Unknown'
+        (1,070,137 rows).
+      - ⚠️ MISSING TEXT DATA: 'ecosystem_baseline' is 100.0% empty or
+        'Unknown' (1,201,836 rows).
+      - 💀 DEAD FEATURE: 'has_credentials' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'binary_anomaly' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'obfuscation_flag' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'tabs_vs_spaces' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_api' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_orchestrator' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_vector_store' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_local_compute' is 99.9% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'ml_traditional' is 99.9% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'dl_frameworks' is 99.9% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lazy_evaluation' is 99.3% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_var_decl' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_camel_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_snake_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_pascal_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_upper_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_short_vars' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_long_vars' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_code_blocks' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_diagrams' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_headers' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_links' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'prompt_injection' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'agentic_rce' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+
+📁 ANALYZING TABLE: FUNCTION_DATA
+   Rows Evaluated: 5,713,449
+   🚨 NOTABLE ISSUES:
+      - ⚠️ HIGH NULL RATE: 'parent_class_id' is 65.4% NULL (3,733,984
+        rows).
+      - ⚠️ MISSING TEXT DATA: 'docstring' is 84.5% empty or 'Unknown'
+        (4,825,504 rows).
+      - 💀 DEAD FEATURE: 'tabs_vs_spaces' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_api' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_orchestrator' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_vector_store' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'llm_local_compute' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'ml_traditional' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'dl_frameworks' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lazy_evaluation' is 99.7% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_var_decl' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_camel_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_snake_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_pascal_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_upper_case' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_short_vars' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'struct_long_vars' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_code_blocks' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_diagrams' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_headers' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'lit_links' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+      - 💀 DEAD FEATURE: 'prompt_injection' is 100.0% zeros. (Safe to drop
+        or requires upstream fix).
+      - 💀 DEAD FEATURE: 'agentic_rce' is 100.0% zeros. (Safe to drop or
+        requires upstream fix).
+
+📁 ANALYZING TABLE: FOLDER_DATA
+   Rows Evaluated: 236,725
+   ✅ Status: Healthy. No significant anomalies detected.
+
+📁 ANALYZING TABLE: CLASS_DATA
+   Rows Evaluated: 2,126,151
+   ✅ Status: Healthy. No significant anomalies detected.
+
+📁 ANALYZING TABLE: EXCLUDED_ARTIFACTS
+   Rows Evaluated: 905,480
+   ✅ Status: Healthy. No significant anomalies detected.
+
+================================================================================
+⚠️ ASSESSMENT COMPLETE: 65 anomalies require attention before ML ingestion.
+================================================================================
+
