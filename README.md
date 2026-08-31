@@ -29,7 +29,7 @@ independently-chosen repositories.
 
 This repo does **not** contain analysis code. Aggregation and population-level analysis
 (clustering, the threat classifier, the merged master database, etc.) live in a separate repo,
-`gitgalaxy-population-analyses`, which reads its raw inputs from here.
+[`gitgalaxy-population-analyses`](https://github.com/squid-protocol/gitgalaxy-population-analyses), which reads its raw inputs from here.
 
 ## Layout
 
@@ -127,3 +127,17 @@ python tools/generate_speed_telemetry.py --all    # every v*/ folder in the repo
 
 The workflow's own commit only touches `speed_history.csv`, `speed_summary.json`, and the chart
 PNGs — never `batch_scan_master_*.log` itself — so it can't retrigger its own path filter.
+
+## The GitGalaxy constellation
+
+This repo is one strand of the web of repos that build, prove, and showcase
+[GitGalaxy](https://github.com/squid-protocol/gitgalaxy):
+
+- [gitgalaxy](https://github.com/squid-protocol/gitgalaxy) — the engine every artifact here came from
+- **gitgalaxy-raw-output** — *you are here*: unedited scan outputs + speed telemetry, at scale
+- [language-crucible](https://github.com/squid-protocol/language-crucible) — the pinned adversarial corpus behind the engine's golden-master regression gate (proves *correctness*; this repo proves *it runs, fast, on real code*)
+- [keyword-rosetta](https://github.com/squid-protocol/keyword-rosetta) — one planted program in 46 languages, measuring cross-language measurement consistency
+- [gitgalaxy-population-analyses](https://github.com/squid-protocol/gitgalaxy-population-analyses) — the statistical layer that consumes this repo's outputs (clustering, risk distributions, threat-classifier studies)
+- [cobol_to_java_examples](https://github.com/squid-protocol/cobol_to_java_examples) — 10 COBOL repos auto-translated to compiling Spring Boot architectures
+- [squid-telemetry](https://github.com/squid-protocol/squid-telemetry) — public distribution/adoption metrics (the engine itself phones nothing home)
+- Docs: [architecture & methodology site](https://squid-protocol.github.io/gitgalaxy/) · [Museum of Code](https://squid-protocol.github.io/gitgalaxy/museum-of-code/) — teardowns built from exactly the kind of output stored here · [gitgalaxy.io](https://gitgalaxy.io/) · [PyPI](https://pypi.org/project/gitgalaxy/)
