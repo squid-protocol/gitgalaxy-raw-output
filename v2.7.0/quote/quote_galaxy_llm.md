@@ -1,0 +1,773 @@
+# ARCHITECTURAL_BRIEF: quote
+> INSTRUCTION: Deterministic Syntactic Analysis. Base architectural insights on Structural Magnitude, Extracted Signatures, and Risk overlays.
+
+## 0. FORENSIC TRACEABILITY
+| Metadata | Value |
+|---|---|
+| **Engine** | `GitGalaxy Scope vlatest (Delta Mode)` |
+| **Git Remote** | `https://github.com/dtolnay/quote.git` |
+| **Zero-Dependency Mode** | `Inactive (Full Precision)` |
+
+## 0.5 AI THREAT AUDIT STATUS
+> **✅ SECURE_NO_THREATS_DETECTED**
+> XGBoost Structural Signatures model found no malicious artifacts.
+
+## 1. SYSTEM ROLE & PHILOSOPHY
+> You are a Senior Technical Storyteller and Codebase Architect. GitGalaxy has translated the non-visual architecture of this repository into measurable Structural Signatures (regex-derived counts, not an AST or compiler pass). Your job is to weave those signatures into a coherent, factual narrative about how this system is built -- its architecture, design patterns, and complexity -- not to render a verdict.
+> 
+> **CORE DIRECTIVES:**
+> 1. **Narrate the Architecture, Don't Judge the Author:** Frame every observation as a blameless description of the system's physical reality. A high Structural Surface Profile reading (formerly called Risk Exposure; e.g., Complexity Load, formerly Cognitive Load Exposure) describes where the architecture may be drifting into fragile territory, not developer incompetence -- it is a prompt to investigate, never a verdict. These are activity/content surface meters, not defect-probability estimates (gitgalaxy#2991, evidence in #2982) -- describe what is there, don't imply it predicts a bug.
+> 2. **The Physical Reality Rule:** Base your narrative strictly on the provided Structural Signatures and the numbers derived from them. Do not hallucinate meaning, and do not restate a heuristic's raw label (e.g. a 'Logic Bomb' or 'O(2^N)' flag) as a confirmed finding of malice or a guaranteed defect -- explain what the signature actually measures, weave it into the story of the file, and let the reader draw their own conclusion.
+> 3. **Risk vs. Defense:** Code is a balance. A file with high `flux` (state mutation) is risky unless balanced by `freeze_hits` (immutability). High `danger` is brittle unless wrapped in `safety`. Tell that balance as part of the narrative, not as an isolated alarm.
+> 
+> **THE STRUCTURAL SIGNATURE LEXICON:**
+> * **Structure & Mass:** `branch` (splits), `linear` (paths), `args` (coupling), `func_start` (entry points).
+> * **Risk & Volatility:** `danger` (dynamic execution), `flux` (state mutation), `graveyard` (commented-out logic), `safety_neg` (security bypasses).
+> * **Architecture & Domain:** `io` (network latency), `concurrency` (async orchestration), `api` (public surface), `import` (dependencies).
+> * **Defensive Guardrails:** `safety` (Error handling), `freeze_hits` (immutability), `cleanup` (state destruction).
+## 2. THE 13-POINT STRUCTURAL SURFACE PROFILE (formerly Risk Exposure) ANALYSIS (EQUATIONS & CONTEXT)
+> **How the SAST Engine Calculates the Structural Surface Profile (Lower 0 - Higher Surface Presence 100%):**
+> Most scores use a Sigmoid curve based on density (Hits / LOC) to prevent massive files from mathematically hiding their flaws. These 13 vectors are activity/content surface meters -- they describe what is present in a file, not the probability of a defect. The temporal-crucible validation record (gitgalaxy#2982, ~3,550 scanned snapshots, two repositories, pre-registered) tested the per-file-standing-risk claim to exhaustion and found it does not hold; see docs/vectors.md for the full record and gitgalaxy#2991 for the rename this drove. `risk_*` names remain the underlying column/key names for schema compatibility -- see the 'formerly' aliases below.
+> 
+> 1. **Complexity Load** (formerly Cognitive Load Exposure)**:** Measures the mental effort required for a developer to read and understand the file. `Density(Branches + (Flux * 2) + Async/Danger)` mitigated by `Doc Coverage`.
+> 2. **Guard Balance** (formerly Error & Exception Risk Exposure)**:** Measures structural integrity and resilience against runtime errors. `Net Exposure = (Danger + Safety_Neg + Flux) - (Safety + Tests + Docs)`.
+> 3. **Debt Markers** (formerly Tech Debt Exposure)**:** Measures the density of developer-annotated structural stress. `Density(TODOs [1x] + FIXMEs/Hacks [3x] + Empty Stubs [0.5x])`.
+> 4. **Test Surface** (formerly Verification Risk Exposure)**:** Evaluates test coverage by comparing a function's structural complexity against the scope of the tests validating it.
+> 5. **Connectivity** (formerly API Risk Exposure)**:** Measures the public surface area of a module. `Ratio(API Hits / Total Functions & Classes)`.
+> 6. **Concurrency Surface** (formerly Concurrency Risk Exposure)**:** Measures the density of asynchronous operations, threading, and parallel execution logic.
+> 7. **Mutation Surface** (formerly State Flux Risk Exposure)**:** Measures the frequency of data mutation and variable reassignment.
+> 8. **Dead Code Surface** (formerly Commented Logic (dead code))**:** Measures the presence of abandoned, commented-out logic blocks.
+> 9. **Spec Alignment** (formerly Spec Match Risk Exposure)**:** Measures how closely code aligns with formal specifications or architectural requirements.
+> 10. **Historical Stability** (formerly Stability; predictive layer, promotion pending #2987)**:** Measures the recency of edits relative to the repository's entire lifespan. Part of the family the validation record actually supports as predictive -- currently ablated to zero in every scan (`GITGALAXY_DISABLE_GIT_HISTORY`, temporal-crucible#29).
+> 11. **Historical Churn** (formerly Deep Churn; predictive layer, promotion pending #2987)**:** Measures the historical volatility and frequency of modification. Same predictive-layer status and ablation caveat as Historical Stability above.
+> 12. **Documentation Surface** (formerly Documentation Risk Exposure)**:** Of the units extracted from a file, the weight-share a reader cannot recover from documentation -- public units count double, runtime-dynamic units count more, and a folder-level documentation umbrella shields the whole file. A ratio over units, not a density over lines; files with no extracted units have no value.
+> 13. **Indentation Consistency:** Measures formatting alignment (Tabs vs. Spaces). Provided for codebase standardization context, not a functional risk.
+> 
+> **--- THE SECURITY & VULNERABILITY LENS ---**
+> 14. **Obfuscation & Evasion Risk:** Measures the density of obfuscated logic, packed strings, and non-standard encoding.
+> 15. **Logic Bomb / Sabotage Risk:** Measures condition-heavy execution leading to destructive OS, memory, or process commands.
+> 16. **Injection Surface Risk Exposure:** Measures external network/I/O input flowing directly into dynamic execution contexts (XSS, SQLi, RCE).
+> 17. **Memory Corruption Risk Exposure:** Measures the density of raw pointer math and manual memory allocations (Buffer Overflows, UAF).
+> 18. **Credential Material** (formerly Secrets Risk Exposure)**:** Measures the presence of hardcoded credentials exposed to logs or globals.
+> 
+> **--- STRUCTURAL MAGNITUDE (NOT RISK) ---**
+> **19. Function Magnitude (Impact Score):** Measures the physical footprint and 'heaviness' of a specific function. `((BranchHits + 1) * (Args + 1) + (0.05 * LOC)) * 10`. This is NOT a risk score.
+> **20. File Magnitude (Total Impact):** Measures the total structural impact of a file. `Sum(Function Impacts) + API + Concurrency + Flux + (LOC / 50)`. This is NOT a risk score.
+
+## 3. MACRO STATE
+| Metric | Value |
+|---|---|
+| Total Artifacts | 37 |
+| Analyzed Artifacts (Scanned) | 24 |
+| Excluded Artifacts (Unparsable data, binaries, unsupported formats) | 13 |
+| Total LOC | 2309 |
+| Volatility Index | 0.042 |
+| % Scanned of codebase = | 64.9% |
+| Dominant Lang | RUST |
+
+## 3.5 MACRO-NETWORK TOPOLOGY (Resilience & Coupling)
+| Metric | Value | Interpretation |
+|---|---|---|
+| Modularity | 0.0 | High = Clean micro-boundaries. Low = Spaghetti coupling. |
+| Assortativity | 0.0 | Positive = Resilient core. Negative = Fragile single-points-of-failure. |
+| Cyclic Density | 0.0% | % of files trapped in dependency loops (Static Friction). |
+| Avg Path Length | 0.0 | Hops between files. Lower = Tighter coupling. |
+| Articulation Pts | 0 | Number of single files that, if removed, shatter the network. |
+
+## 4. COMPOSITION
+| Lang | Files | LOC | Share |
+|---|---|---|---|
+| RUST | 20 | 2309 | 83.3% |
+| PLAINTEXT | 2 | 0 | 8.3% |
+| MARKDOWN | 2 | 0 | 8.3% |
+
+## 4.5 REPOSITORY ECOSYSTEM BASELINE (GLOBAL ARCHITECTURE)
+> **Assigned Ecosystem Baseline:** `Cluster 3`
+> **Architectural Drift Z-Score:** `2.272`
+> **⚠️ UNIQUE INTERPRETATION:** This repository has a high Z-Score. While it maps closest to this archetype, its internal structure is a highly unique or hybrid interpretation of the pattern.
+
+## 4.6 FILE ARCHETYPES & STATIC ASSETS
+### Active Execution Logic (ML Clusters)
+| Archetype | Count | Repo % |
+|---|---|---|
+| Unclassified | 20 | 83.3% |
+
+### Inert Structural Mass (Static Categories)
+| Category | Count | Repo % |
+|---|---|---|
+| Static: Literature & Documentation | 4 | 16.7% |
+
+## 5. EXCLUDED ARTIFACTS (Unparsable or Shielded Files)
+*Total Excluded Artifacts: 13*
+
+**Composition by Extension & Reason:**
+- `.stderr`: 7x Excluded (Unsupported Extension: '.stderr')
+- `.toml`: 2x Unsupported Format (.toml), 1x Excluded (Unsupported Extension: '.toml')
+- `.yml`: 2x Excluded (System Exclusion, Hidden Directory, or Dynamic Ignored Dir)
+- `no_extension`: 1x Excluded (System Exclusion, Hidden Directory, or Dynamic Ignored Dir)
+
+## 6. STRUCTURAL SURFACE PROFILE (formerly Risk Exposure) ANALYSIS (0-100%)
+| Structural Surface Vector | Min | Max | Mean | Med | Mode |
+|---|---|---|---|---|---|
+| Complexity Load (formerly Cognitive Load Exposure) | 0.0 | 21.6 | 4.5 | 4.1 | 0.0 |
+| Guard Balance (formerly Error & Exception Exposure) | 0.0 | 66.5 | 16.8 | 0.0 | 0.0 |
+| Debt Markers (formerly Tech Debt Exposure) | 0.0 | 100.0 | 22.7 | 0.0 | 0.0 |
+| Test Surface (formerly Testing Exposure) | 0.0 | 80.0 | 12.9 | 2.3 | 0.0 |
+| Connectivity (formerly API Exposure) | 0.0 | 11.5 | 2.1 | 0.0 | 0.0 |
+| Concurrency Surface (formerly Concurrency Exposure) | 0.0 | 15.8 | 0.8 | 0.0 | 0.0 |
+| Mutation Surface (formerly State Flux Exposure) | 0.0 | 95.8 | 10.7 | 0.0 | 0.0 |
+| Dead Code Surface (formerly Commented Logic Exposure) | 0.0 | 96.3 | 10.5 | 0.0 | 0.0 |
+| Spec Alignment (formerly Specification Exposure) | 0.0 | 100.0 | 90.0 | 100.0 | 100.0 |
+| Historical Stability (predictive layer, promotion pending #2987) (formerly Instability Exposure) | 0.0 | 4.0 | 1.0 | 0.0 | 0.0 |
+| Historical Churn (predictive layer, promotion pending #2987) (formerly Volatility Exposure) | 0.0 | 100.0 | 17.1 | 0.0 | 0.0 |
+| Doc Surface (formerly Documentation Exposure) | 0.0 | 100.0 | 80.0 | 95.9 | 100.0 |
+| Credential Material (formerly Hardcoded Payload Artifacts) | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+## 6b. SURFACE FAMILY PROFILE (Tier 1/2/3 -- gitgalaxy#2994)
+> Percentile columns elsewhere in this brief that come from the Tier-2 snapshot percentiles are SNAPSHOT-RELATIVE: "87" means this file's value sits at the 87th percentile of THIS repo's files for that surface -- true by construction (Hazen average-rank), not a calibrated 0-100 risk threshold like the section 6 sigmoid scores above. An all-zero surface across the whole repo reads as 0.0 for every file, never a false-median 50.
+| Family | Repo Total | Files w/ Signal | P90 File Value | Top File |
+|---|---|---|---|---|
+| memory | 83 | 10 | 10 | `src/runtime.rs` |
+| cleanup | 0 | 0 | 0 | - |
+| guards | 20 | 8 | 1 | `src/runtime.rs` |
+| danger | 7 | 4 | 1 | `src/runtime.rs` |
+| concurrency | 2 | 1 | 0 | `tests/test.rs` |
+| connectivity | 60 | 9 | 2 | `src/runtime.rs` |
+| io | 2 | 2 | 0 | `benches/timer.rs` |
+| crypto | 0 | 0 | 0 | - |
+| ipc | 1 | 1 | 0 | `build.rs` |
+| time | 1 | 1 | 0 | `benches/timer.rs` |
+| serialization | 0 | 0 | 0 | - |
+| regex | 0 | 0 | 0 | - |
+| events | 0 | 0 | 0 | - |
+| tests | 93 | 2 | 0 | `tests/test.rs` |
+| docs | 803 | 7 | 49 | `src/lib.rs` |
+| debt | 33 | 6 | 4 | `src/to_tokens.rs` |
+| mutation | 305 | 17 | 27 | `tests/test.rs` |
+| dead_code | 118 | 17 | 11 | `tests/test.rs` |
+| credential | 0 | 0 | 0 | - |
+| threat | 34 | 7 | 5 | `src/lib.rs` |
+| ml_ai | 2 | 1 | 0 | `src/to_tokens.rs` |
+| ui | 0 | 0 | 0 | - |
+
+**Relations (repo medians):**
+- `guard_balance_ratio` (guards / (danger + 1)): **0.0**
+- `alloc_cleanup_pairing` (cleanup / (memory + 1)): **0.0**
+
+## 7. ARCHITECTURAL CHOKE POINTS & DEPENDENCIES
+### Top I/O Latency Risks
+- `benches/timer.rs` (Hits: 1)
+- `tests/ui/not-quotable.rs` (Hits: 1)
+- `LICENSE-APACHE` (Hits: 0)
+
+### Top 5 Structural Pillars (Highest 'Imported By' / Blast Radius)
+No file in this repository is imported by another file that GitGalaxy could resolve, so there is no blast-radius ranking to report. That is itself a finding: either the codebase genuinely has no internal dependency structure (a collection of scripts, documents or configuration rather than a coupled system), or its import style is one the engine does not resolve for this language. Do not infer that any file is load-bearing from this section.
+
+
+### Top 5 Orchestrators (Highest 'Imports' / Fragility Index)
+These files pull in the most external dependencies. They are highly coupled and fragile to API changes.
+
+1. **runtime.rs** (`src/runtime.rs`) — 27 outbound dependencies
+2. **to_tokens.rs** (`src/to_tokens.rs`) — 21 outbound dependencies
+3. **lib.rs** (`src/lib.rs`) — 18 outbound dependencies
+4. **test.rs** (`tests/test.rs`) — 13 outbound dependencies
+5. **timer.rs** (`benches/timer.rs`) — 7 outbound dependencies
+
+## 8. CORE FUNCTION HITLIST (Heaviest Functions)
+> *Note: The 'Impact' metric below represents Structural Magnitude (complexity, arguments, and length), NOT operational risk. These are the load-bearing pillars of the logic.*
+
+- `deserialize` (@ `benches/lib.rs`) -> Impact: **30.0** | LOC: 176
+- `visit_map` (@ `benches/lib.rs`) -> Impact: **14.8** | LOC: 54
+- `append_separated` (@ `src/ext.rs`) -> Impact: **7.2** | LOC: 24
+- `visit_seq` (@ `benches/lib.rs`) -> Impact: **6.8** | LOC: 33
+- `do_append_separated` (@ `src/ext.rs`) -> Impact: **6.8** | LOC: 15
+- `rustc_minor_version` (@ `build.rs`) -> Impact: **6.5** | LOC: 10
+- `respan_token_tree` (@ `src/runtime.rs`) -> Impact: **5.9** | LOC: 14
+  * *Intent:* // Token tree with every span replaced by the given one.
+- `main` (@ `build.rs`) -> Impact: **5.8** | LOC: 17
+- `test_advanced` (@ `tests/test.rs`) -> Impact: **5.7** | LOC: 54
+- `fmt` (@ `src/ident_fragment.rs`) -> Impact: **5.6** | LOC: 8
+
+## 9. DIRECTORY GROUPS (Top 10 Heaviest Modules)
+| Folder Path | Files | Total Impact | Avg Complexity Load | Avg Debt Markers |
+|---|---|---|---|---|
+| `src` | 7 | 423.5 | 8.67% | 43.98% |
+| `tests` | 2 | 102.64 | 1.99% | 0.0% |
+| `benches` | 4 | 91.02 | 3.94% | 27.2% |
+| `__monolith__` | 4 | 22.76 | 2.32% | 9.44% |
+| `tests/ui` | 7 | 9.32 | 0.0% | 0.0% |
+
+## 10. TARGETED STRUCTURAL SURFACE VECTORS (formerly Risk Vectors, Top 5 by Surface)
+### Highest Debt Markers (formerly Tech Debt; Fragile/Planned)
+- `src/to_tokens.rs` -> **99.9999%** Exposure
+- `src/ident_fragment.rs` -> **99.9998%** Exposure
+- `src/runtime.rs` -> **99.7808%** Exposure
+- `benches/lib.rs` -> **71.055%** Exposure
+- `benches/main.rs` -> **37.7541%** Exposure
+### Highest Mutation Surface (formerly State Flux; Mutation/Volatility)
+- `src/to_tokens.rs` -> **95.8452%** Exposure
+- `src/runtime.rs` -> **62.3963%** Exposure
+- `src/ext.rs` -> **33.6357%** Exposure
+- `src/lib.rs` -> **11.4141%** Exposure
+- `benches/lib.rs` -> **10.825%** Exposure
+### Highest Design Slop (Dead & Duplicated Logic)
+- `tests/test.rs` -> **41** Orphaned Functions | **2** Duplicates
+- `src/runtime.rs` -> **10** Orphaned Functions | **10** Duplicates
+- `src/to_tokens.rs` -> **0** Orphaned Functions | **13** Duplicates
+- `benches/lib.rs` -> **7** Orphaned Functions | **0** Duplicates
+- `src/ident_fragment.rs` -> **0** Orphaned Functions | **4** Duplicates
+
+## 10.5 AI THREAT INTELLIGENCE (XGBoost)
+*No files met the threshold for malicious structural signatures.*
+
+## 10.6 WEAPONIZABLE SURFACE EXPOSURES (RULE-BASED SAST)
+> Secondary Evidence: The following files tripped specific static threat signatures. Use these to explain *why* the XGBoost model flagged the files above.
+
+*No critical vulnerabilities or security lens thresholds breached.*
+
+## 10.7 ECOSYSTEM SECURITY AUDITS
+> **AI CONTEXT:** High-level perimeter defense metrics from the X-Ray, Supply Chain Firewall, and API Network Mapper.
+
+### ☢️ X-Ray & 🧱 Supply Chain Firewall
+- **Binary Anomalies (X-Ray):** `0` (High entropy, packed payloads, or magic byte mismatches).
+- **Blacklisted Dependencies:** `0` explicitly banned packages imported.
+- **Unknown Dependencies:** `124` packages imported that bypass the Zero-Trust whitelist.
+
+## 11. CUMULATIVE RISK HITLIST (Top 10 Highest Risk Files)
+> Cumulative Risk is the sum of all individual risk exposures. These files represent the highest multi-dimensional technical debt and architectural fragility.
+
+### 1. `src/to_tokens.rs` (RUST) -> Cumulative Risk: **629.3**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 106.7 | **LOC:** 282 | **CtrlFlow:** 18.5% | **Authorship Centralization:** 66.7%
+- **Primary Risk Drivers:** Spec Match (100.0%), Tech Debt (99.9999%), State Flux (95.8452%), Documentation (91.8919%)
+- **Heaviest Functions:** `to_tokens` (Impact: 5.4), `to_tokens` (Impact: 3.7), `to_tokens` (Impact: 1.9)
+
+### 2. `src/runtime.rs` (RUST) -> Cumulative Risk: **540.78**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 173.62 | **LOC:** 507 | **CtrlFlow:** 6.9% | **Authorship Centralization:** 72.7%
+- **Primary Risk Drivers:** Spec Match (100.0%), Tech Debt (99.7808%), Verification (80.0%), Churn (66.97%)
+- **Heaviest Functions:** `respan_token_tree` (Impact: 5.9), `ident_maybe_raw` (Impact: 5.5), `parse_spanned` (Impact: 4.3)
+
+### 3. `benches/lib.rs` (RUST) -> Cumulative Risk: **409.91**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 79.92 | **LOC:** 213 | **CtrlFlow:** 7.8% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Documentation (88.1%), Verification (80.0%), Tech Debt (71.055%)
+- **Heaviest Functions:** `deserialize` (Impact: 30.0), `visit_map` (Impact: 14.8), `visit_seq` (Impact: 6.8)
+
+### 4. `src/ext.rs` (RUST) -> Cumulative Risk: **354.14**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 49.76 | **LOC:** 139 | **CtrlFlow:** 6.5% | **Authorship Centralization:** 50.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Documentation (63.6364%), Dead Code (49.5308%), Safety Score (47.083%)
+- **Heaviest Functions:** `append_separated` (Impact: 7.2), `do_append_separated` (Impact: 6.8), `append_terminated` (Impact: 5.0)
+
+### 5. `src/ident_fragment.rs` (RUST) -> Cumulative Risk: **307.38**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 25.26 | **LOC:** 90 | **CtrlFlow:** 11.1% | **Authorship Centralization:** 100.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Tech Debt (99.9998%), Documentation (81.8182%), Churn (11.27%)
+- **Heaviest Functions:** `fmt` (Impact: 5.6), `fmt` (Impact: 1.9), `fmt` (Impact: 1.9)
+
+### 6. `build.rs` (RUST) -> Cumulative Risk: **285.91**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 12.8 | **LOC:** 33 | **CtrlFlow:** 36.0% | **Authorship Centralization:** 100.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Safety Score (66.5013%), Documentation (50.0%), Tech Debt (37.7541%)
+- **Heaviest Functions:** `rustc_minor_version` (Impact: 6.5), `main` (Impact: 5.8)
+
+### 7. `tests/test.rs` (RUST) -> Cumulative Risk: **270.35**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 101.1 | **LOC:** 576 | **CtrlFlow:** 1.9% | **Authorship Centralization:** 50.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Documentation (100.0%), Safety Score (26.5148%), Churn (22.3%)
+- **Heaviest Functions:** `test_advanced` (Impact: 5.7), `test_type_inference_for_span` (Impact: 4.3), `test_quote_impl` (Impact: 4.0)
+
+### 8. `benches/main.rs` (RUST) -> Cumulative Risk: **231.89**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 4.8 | **LOC:** 33 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Documentation (88.1%), Tech Debt (37.7541%), Api Exposure (3.7255%)
+- **Heaviest Functions:** `quote` (Impact: 1.2), `main` (Impact: 1.1)
+
+### 9. `src/spanned.rs` (RUST) -> Cumulative Risk: **230.49**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 12.48 | **LOC:** 50 | **CtrlFlow:** 17.9% | **Authorship Centralization:** 100.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Documentation (100.0%), Cognitive Load (9.8323%), Churn (8.75%)
+- **Heaviest Functions:** `join_spans` (Impact: 3.4), `__span` (Impact: 1.6), `__span` (Impact: 1.6)
+
+### 10. `tests/compiletest.rs` (RUST) -> Cumulative Risk: **200.0**
+- **Archetype:** `Unclassified` (Distance: N/A IQR)
+- **Magnitude:** 1.54 | **LOC:** 8 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Primary Risk Drivers:** Spec Match (100.0%), Documentation (100.0%)
+- **Heaviest Functions:** `ui` (Impact: 1.4)
+
+## 12. SCANNED ARTIFACTS HITLIST (Top 25 Heaviest Files)
+> *Note: 'Magnitude' represents the file's total Structural Magnitude and impact within the system. It is independent of its Risk Profile. High magnitude implies high structural importance and centralization.*
+
+### `src/runtime.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 173.62 | **LOC:** 507 | **CtrlFlow:** 6.9% | **Authorship Centralization:** 72.7%
+- **Risk Profile:** Cognitive Load (8.2347%), Tech Debt (99.7808%)
+**Top Internal Functions/Classes:**
+  * `respan_token_tree` (Impact: 5.9)
+    * *Intent:* // Token tree with every span replaced by the given one.
+  * `ident_maybe_raw` (Impact: 5.5)
+  * `parse_spanned` (Impact: 4.3)
+  * `push_group_spanned` (Impact: 2.8)
+  * `push_lifetime_spanned` (Impact: 2.5)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 3 instances
+* *State Mutation (weighted view):* 31
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 28`, `structural_boundaries: 124`, `args: 44`, `func_start: 44`, `class_start: 10`
+* *Risk/State:* `safety_bypasses: 2`, `high_risk_execution: 1`, `state_mutation: 25`, `duplicate_logic: 10`, `unreferenced_by_name: 10`
+* *Architecture:* `api: 45`, `import: 17`
+* *Defense:* `safety: 2`, `doc: 47`, `immutability_locks: 3`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` BTreeSet, GetSpanBase, GetSpanInner, Ident, Punct, RepInterp, Spacing, ToTokens...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `src/to_tokens.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 106.7 | **LOC:** 282 | **CtrlFlow:** 18.5% | **Authorship Centralization:** 66.7%
+- **Risk Profile:** Cognitive Load (21.6165%), Tech Debt (99.9999%)
+**Top Internal Functions/Classes:**
+  * `to_tokens` (Impact: 5.4)
+  * `to_tokens` (Impact: 3.7)
+  * `to_tokens` (Impact: 1.9)
+  * `to_tokens` (Impact: 1.9)
+  * `to_tokens` (Impact: 1.9)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1 instances
+* *State Mutation (weighted view):* 27
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 36`, `structural_boundaries: 85`, `args: 37`, `func_start: 37`, `class_start: 1`
+* *Risk/State:* `state_mutation: 25`, `dead_code: 6`, `duplicate_logic: 13`
+* *Architecture:* `api: 1`, `import: 10`
+* *Defense:* `safety: 1`, `doc: 49`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` Ident, Literal, Punct, Spacing, Span, ToOwned, ToTokens, TokenStream...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/test.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 101.1 | **LOC:** 576 | **CtrlFlow:** 1.9% | **Authorship Centralization:** 50.0%
+- **Risk Profile:** Cognitive Load (3.9876%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `test_advanced` (Impact: 5.7)
+  * `test_type_inference_for_span` (Impact: 4.3)
+  * `test_quote_impl` (Impact: 4.0)
+  * `test_quote_spanned_impl` (Impact: 4.0)
+  * `test_array` (Impact: 2.2)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 9`, `structural_boundaries: 191`, `args: 52`, `func_start: 48`, `class_start: 3`
+* *Risk/State:* `safety_bypasses: 2`, `state_mutation: 4`, `duplicate_logic: 2`, `unreferenced_by_name: 41`
+* *Architecture:* `concurrency: 2`, `import: 5`
+* *Defense:* `doc: 2`, `test: 92`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` CString, Group, Ident, Span, TokenStream, TokenStreamExt, proc_macro2::Delimiter, quote...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `benches/lib.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 79.92 | **LOC:** 213 | **CtrlFlow:** 7.8% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (10.6575%), Tech Debt (71.055%)
+**Top Internal Functions/Classes:**
+  * `deserialize` (Impact: 30.0)
+  * `visit_map` (Impact: 14.8)
+  * `visit_seq` (Impact: 6.8)
+  * `visit_u64` (Impact: 4.1)
+  * `visit_bytes` (Impact: 4.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 16`, `structural_boundaries: 51`, `args: 13`, `func_start: 10`, `class_start: 3`
+* *Risk/State:* `safety_bypasses: 1`, `state_mutation: 2`, `unreferenced_by_name: 7`
+* *Architecture:* `api: 1`, `import: 4`
+* *Defense:* `safety: 5`, `immutability_locks: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` benchmark, proc_macro2::Ident, proc_macro::TokenStream, quote::quote
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `src/ext.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 49.76 | **LOC:** 139 | **CtrlFlow:** 6.5% | **Authorship Centralization:** 50.0%
+- **Risk Profile:** Cognitive Load (4.1668%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `append_separated` (Impact: 7.2)
+  * `do_append_separated` (Impact: 6.8)
+  * `append_terminated` (Impact: 5.0)
+  * `do_append_terminated` (Impact: 4.5)
+  * `append_all` (Impact: 4.3)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1 instances
+* *State Mutation (weighted view):* 4
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 6`, `structural_boundaries: 33`, `args: 11`, `func_start: 11`, `class_start: 2`
+* *Risk/State:* `state_mutation: 2`, `dead_code: 4`
+* *Architecture:* `api: 2`, `import: 4`
+* *Defense:* `doc: 31`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` ToTokens, TokenStreamExt, TokenTree, core::iter, proc_macro2::TokenStream, quote::quote, super::ToTokens
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `src/lib.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 39.68 | **LOC:** 1478 | **CtrlFlow:** 1.8% | **Authorship Centralization:** 87.5%
+- **Risk Profile:** Cognitive Load (4.5392%), Tech Debt (8.1144%)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 2 instances
+* *State Mutation (weighted view):* 6
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 12`, `structural_boundaries: 152`, `args: 4`
+* *Risk/State:* `state_mutation: 2`, `dead_code: 29`, `planned_debt: 1`
+* *Architecture:* `api: 5`, `import: 7`
+* *Defense:* `safety: 1`, `doc: 552`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` Span, ToTokens, TokenStream, TokenStreamExt, crate::ext::TokenStreamExt, crate::ident_fragment::IdentFragment, crate::to_tokens::ToTokens, proc_macro2::Ident...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `src/ident_fragment.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 25.26 | **LOC:** 90 | **CtrlFlow:** 11.1% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (6.5521%), Tech Debt (99.9998%)
+**Top Internal Functions/Classes:**
+  * `fmt` (Impact: 5.6)
+  * `fmt` (Impact: 1.9)
+  * `fmt` (Impact: 1.9)
+  * `fmt` (Impact: 1.9)
+  * `fmt` (Impact: 1.9)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 7`, `structural_boundaries: 20`, `args: 11`, `func_start: 11`, `class_start: 1`
+* *Risk/State:* `duplicate_logic: 4`
+* *Architecture:* `api: 1`, `import: 4`
+* *Defense:* `safety: 1`, `doc: 12`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` Span, ToOwned, ToString, alloc::borrow::Cow, alloc::string::String, core::fmt, proc_macro2::Ident
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `src/format.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 16.0 | **LOC:** 169 | **CtrlFlow:** 4.0% | **Authorship Centralization:** 66.7%
+- **Risk Profile:** Cognitive Load (5.7533%), Tech Debt (0.0%)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 2`
+* *Risk/State:* `dead_code: 11`
+* *Architecture:* None
+* *Defense:* `doc: 110`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::format_ident
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `build.rs` (RUST | Tier 1 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 12.8 | **LOC:** 33 | **CtrlFlow:** 36.0% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (9.2793%), Tech Debt (37.7541%)
+**Top Internal Functions/Classes:**
+  * `rustc_minor_version` (Impact: 6.5)
+  * `main` (Impact: 5.8)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 9`, `structural_boundaries: 11`, `args: 2`, `func_start: 2`
+* *Risk/State:* `high_risk_execution: 1`, `unreferenced_by_name: 1`
+* *Architecture:* `import: 3`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` std::env, std::process::Command, std::str
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `src/spanned.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 12.48 | **LOC:** 50 | **CtrlFlow:** 17.9% | **Authorship Centralization:** 100.0%
+- **Risk Profile:** Cognitive Load (9.8323%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `join_spans` (Impact: 3.4)
+  * `__span` (Impact: 1.6)
+  * `__span` (Impact: 1.6)
+  * `__span` (Impact: 1.6)
+  * `__span` (Impact: 1.5)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 7`, `structural_boundaries: 19`, `args: 8`, `func_start: 5`, `class_start: 2`
+* *Risk/State:* None
+* *Architecture:* `api: 2`, `import: 6`
+* *Defense:* `safety: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` TokenStream, crate::ToTokens, proc_macro2::Span, proc_macro2::extra::DelimSpan
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `README.md` (MARKDOWN | Tier 1 | AI Safe: 0.0%)
+- **Global Archetype:** `Static: Literature & Documentation` (Drift: N/A IQR)
+- **Magnitude:** 5.42 | **LOC:** 271 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `benches/timer.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 5.3 | **LOC:** 18 | **CtrlFlow:** 6.7% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (5.1174%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `time` (Impact: 4.0)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1`, `structural_boundaries: 13`, `args: 1`, `func_start: 1`
+* *Risk/State:* None
+* *Architecture:* `io: 1`, `api: 1`, `import: 3`
+* *Defense:* `immutability_locks: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` ColorChoice, ColorSpec, StandardStream, WriteColor, std::io::Write, std::time::Instant, termcolor::Color
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `benches/main.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 4.8 | **LOC:** 33 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (37.7541%)
+**Top Internal Functions/Classes:**
+  * `quote` (Impact: 1.2)
+  * `main` (Impact: 1.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 7`, `args: 3`, `func_start: 2`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `api: 2`, `import: 3`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` Span, benchmark, benchmark::benchmark, proc_macro2::Ident
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `LICENSE-APACHE` (PLAINTEXT | Tier 1 | AI Safe: 0.0%)
+- **Global Archetype:** `Static: Literature & Documentation` (Drift: N/A IQR)
+- **Magnitude:** 3.54 | **LOC:** 177 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/compiletest.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.54 | **LOC:** 8 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `ui` (Impact: 1.4)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 1`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* None
+* *Defense:* `test: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/does-not-have-iter-interpolated-dup.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.5 | **LOC:** 10 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.4)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 2`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `import: 1`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/does-not-have-iter-interpolated.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.5 | **LOC:** 10 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.4)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 2`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `import: 1`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/not-quotable.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.32 | **LOC:** 8 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.2)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 4`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `io: 1`, `import: 2`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote, std::net::Ipv4Addr
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/not-repeatable.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.32 | **LOC:** 9 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.2)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 4`, `args: 1`, `func_start: 1`, `class_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `import: 1`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/wrong-type-span.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.32 | **LOC:** 8 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.2)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 3`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `import: 1`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote_spanned
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/does-not-have-iter-separated.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.18 | **LOC:** 6 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 1`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `import: 1`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `tests/ui/does-not-have-iter.rs` (RUST | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `Unclassified` (Drift: 0.0 IQR)
+- **Magnitude:** 1.18 | **LOC:** 6 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Top Internal Functions/Classes:**
+  * `main` (Impact: 1.1)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `structural_boundaries: 1`, `args: 1`, `func_start: 1`
+* *Risk/State:* `unreferenced_by_name: 1`
+* *Architecture:* `import: 1`
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` quote::quote
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `LICENSE-MIT` (PLAINTEXT | Tier 1 | AI Safe: 0.0%)
+- **Global Archetype:** `Static: Literature & Documentation` (Drift: N/A IQR)
+- **Magnitude:** 1.0 | **LOC:** 24 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `benches/README.md` (MARKDOWN | Tier 1 | AI Safe: 0.0%)
+- **Global Archetype:** `Static: Literature & Documentation` (Drift: N/A IQR)
+- **Magnitude:** 1.0 | **LOC:** 19 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Risk Profile:** Cognitive Load (0.0%), Tech Debt (0.0%)
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 41.667
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+## 13. ARCHITECTURAL DRIFT ANOMALIES & ANTI-PATTERNS
+> **AI CONTEXT:** Pay close attention to 'Anti-Pattern' files. These files blend in globally (Low Global Drift), but heavily violate the standard conventions of their native programming language (High Local Drift). 'Mixed-Responsibility' files sit perfectly between two global archetypes (Delta <= 0.9 IQR), indicating a violation of the Single Responsibility Principle.
+
+*No highly conflicted/drifting files detected within the 0.9 IQR threshold.*
+
+## 13.5 STRATEGIC REFACTORING TARGETS (Volatility & Authorship Centralization)
+> **AI CONTEXT:** Use these intersections to recommend pragmatic next steps. Risk is exponentially worse when combined with high churn (frequent edits) or high authorship centralization (single points of failure).
+
+### 🔥 The Hotspot Matrix (High Volatility + High Risk)
+These files are messy, complex, and modified frequently. They are the primary source of developer friction.
+
+- `src/runtime.rs` -> Churn: **66.97%** | Cog Load: 8.2347% | Debt: 99.7808%
+
+## 13.8 SYSTEMIC NETWORK BOTTLENECKS (N-Dimensional Topology)
+> **AI CONTEXT:** These metrics cross-multiply Network Graph Theory against Risk Exposure to identify the exact mechanisms of runtime failure.
+
+### 🙈 Opaque Critical Nodes (Dependency Blast Radius * Doc Risk)
+These are 'Core Architecture Nodes' that the entire ecosystem relies upon, but they lack human intent, documentation, or ownership metadata. Modifying them is flying blind.
+
+- `src/spanned.rs` -> **Severity: 4166.7** (Blast Radius: 41.667 * Doc Risk: 100.0%)
+- `tests/compiletest.rs` -> **Severity: 4166.7** (Blast Radius: 41.667 * Doc Risk: 100.0%)
+- `tests/test.rs` -> **Severity: 4166.7** (Blast Radius: 41.667 * Doc Risk: 100.0%)
+- `tests/ui/does-not-have-iter-interpolated-dup.rs` -> **Severity: 4166.7** (Blast Radius: 41.667 * Doc Risk: 100.0%)
+- `tests/ui/does-not-have-iter-interpolated.rs` -> **Severity: 4166.7** (Blast Radius: 41.667 * Doc Risk: 100.0%)
+
+## AI SYSTEM INSTRUCTIONS (OUTPUT FORMAT)
+> **CRITICAL TONE DIRECTIVE:** Stay in the Senior Technical Storyteller persona from Section 1. Use grounded, professional software engineering terminology (e.g., coupling, cohesion, technical debt, single responsibility) woven into a cohesive narrative -- not a dry, disconnected bullet-point audit. DO NOT use sci-fi, dramatic, or sensational jargon (e.g., 'Trojan', 'violently violates', 'parasitic', 'chimeric'). Be objective and factual, but write like you're explaining the codebase to a colleague, not filing a verdict.
+> **When the user asks for an architectural review, structure your response using these directives:**
+> 1. **Information Flow & Purpose (The Executive Summary):** Synthesize the overarching purpose of the codebase. Trace the information flow by analyzing the Top Dependencies ('Imports' and 'Imported By') and the Language Composition. Explain how the system's archetype drives its design, but only mention Z-Score deviations if they are highly abnormal.
+> 2. **Notable Structures & Architecture:** Discuss the architecture based on the Dependency Graph. Identify the foundational load-bearers (highest inbound connections) versus the fragile orchestrators (highest outbound imports).
+> 3. **Security & Vulnerabilities:** Immediately surface any critical threats flagged in the `AI THREAT INTELLIGENCE (XGBoost)` section. If none exist, briefly confirm the repository is secure from recognized structural threats.
+> 4. **Outliers & Extremes:** Focus strictly on statistical anomalies. Highlight files or directory groups with massive Cumulative Risk, severe Z-Scores (Architectural Drift), or extreme spikes in individual risk vectors (like State Flux or Cognitive Load). Ignore normal, healthy code.
+> 5. **Recommended Next Steps (Refactoring for Stability):** Provide 2-3 highly specific, pragmatic suggestions focused strictly on reducing outliers. Instruct the user on how to refactor high Z-score files, decouple massive central nodes, or mitigate extreme risk exposures to stabilize the system's architecture.
