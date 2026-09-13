@@ -60,7 +60,12 @@ jobs:
               --jq '.[] | select(.type=="dir") | select(.name | test("^v[0-9]")) | .name' \
               | sort | tr '\n' ' ')
           else
-            versions=$(jq -r '[.commits[].added, .commits[].modified] | flatten | .[]
+            # Null-safe: a push/merge event can carry commits (or a head_commit)
+            # whose .added/.modified is null; `strings` drops those before test()
+            # so jq never errors "null cannot be matched". head_commit is included
+            # so a squash/merge whose per-commit file lists are absent is still seen.
+            versions=$(jq -r '[ (.commits[]? | .added, .modified), (.head_commit | .added, .modified) ]
+                | flatten | .[] | strings
                 | select(test("^v[^/]+/batch_scan_master_.*\\.log$"))' "$GITHUB_EVENT_PATH" \
               | sed -E 's#^([^/]+)/.*#\1#' | sort -u | tr '\n' ' ')
           fi
