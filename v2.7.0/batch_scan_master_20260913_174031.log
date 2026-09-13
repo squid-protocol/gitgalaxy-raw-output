@@ -1,0 +1,723 @@
+==============================================================================
+REASSEMBLED TELEMETRY LOG — v2.7.0
+==============================================================================
+This log was RE-ASSEMBLED after the fact, not emitted by a live batch run,
+so the Speed Telemetry pipeline has an input to render this version's chart.
+
+Why: the batch was scanned with a parallel driver that discarded galaxyscope's
+per-repo telemetry (stdout), and the interim batch_scan_master logs were removed.
+The engine does not persist per-repo scan time/rate in its artifacts, so the
+table below could not be recovered from the outputs alone.
+
+Reassembled from:
+  - per-repo LOC : 'Total LOC' in each v2.7.0/<repo>/<repo>_galaxy_llm.md (exact).
+  - per-repo time: '✅ <repo> (<n>s)' wall times in reassembly_source_parallel_run.log.
+
+CAVEAT: times were measured under 2-way worker concurrency, so they are
+wall times, not single-process engine time — the derived LOC/s is ~1/2 of the
+engine's true throughput and is a LOWER BOUND. NOT directly comparable to the
+sequentially-measured v2.4.6/v2.4.7 batches. For a clean, comparable chart, re-run
+the sequential batch_process_restored.py (it emits this log natively).
+Coverage: 513 repos with per-repo timing reassembled; 169 omitted.
+  - omitted @aws-sdk_eventstream-handler-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @aws-sdk_util-user-agent-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @devlikeapro_n8n-openapi-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @docknetwork_node-types: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @duckdb_node-api: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @hapi_hoek: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @jsonjoy.com_fs-core: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @lydell_node-pty-linux-x64: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @module-federation_node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @nangohq_node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-llama-cpp_linux-x64-cuda-ext: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-minify_core: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-minify_terser: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-minify_utils: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-red_editor-api: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-red_registry: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @node-rs_helper: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @npmcli_node-gyp: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @octokit_graphql: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @onesignal_node-onesignal: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @opentelemetry_auto-instrumentations-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @opentelemetry_sdk-trace-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @reactflow_node-toolbar: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @rolldown_plugin-node-polyfills: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @rollup_wasm-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @rspack_binding-linux-x64-gnu: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @rspack_binding-linux-x64-musl: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @sentry_node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @sentry_node-core: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @slack_logger: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @smithy_eventstream-serde-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @smithy_hash-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @smithy_hash-stream-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @smithy_util-defaults-mode-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @snowplow_node-tracker: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @toruslabs_fetch-node-details: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @univerjs_rpc-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @workos-inc_node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted @xmldom_is-dom-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted COBOL-Guide: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted Mainframe: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted aiobotocore: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted aiosignal: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted annotated-types: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted anyio: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted attrs: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted awesome-cobol: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted awscli: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted azure-core: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted batch_test_reports: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted bcrypt: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted blinker: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted boto3: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted botocore: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted certifi: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted cffi: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted cics-genapp_forged_20260425_161736: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted core-util-is: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted cron: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted deepl-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted distlib: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted distro: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted dnspython: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted docker: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted docstring-parser: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted email-validator: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted et-xmlfile: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted frozenlist: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted fsspec: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted gitdb: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted gitpython: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted google-cloud-aiplatform: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted google-crc32c: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted google-genai: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted googleapis-common-protos: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted grpcio: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted grpcio-status: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted grpcio-tools: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted h11: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted hatchling: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted huggingface-hub: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted idna: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted importlib-metadata: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted ini: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted iniconfig: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted init-package-json: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted itsdangerous: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted jaraco-classes: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted jaraco-functools: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted jeepney: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted jiter: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted jmespath: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted jsonschema: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted keyring: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted kiwisolver: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted langchain: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted lazystream: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted markdown-it-py: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted mcp: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted mypy-extensions: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted node-html-markdown: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted node-loader: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted node-opcua-crypto: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted node-readable-to-web-readable-stream: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted node-stream: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted node-version: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted openai: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-api: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-exporter-otlp-proto-common: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-exporter-otlp-proto-grpc: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-exporter-otlp-proto-http: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-instrumentation: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-proto: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-sdk: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted opentelemetry-semantic-conventions: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted otterkit: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted packaging: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pexpect: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pillow: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pluggy: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted prompt-toolkit: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted prosemirror-trailing-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted psycopg2-binary: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted ptyprocess: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pycparser: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pydantic-core: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pyopenssl: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pytest-asyncio: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pytest-cov: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted python-multipart: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pytz: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted pywat: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted redis: excluded: logged time was for a shadowed/duplicate scan, not the committed output
+  - omitted referencing: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted renderkid: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted requests-oauthlib: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted requests-toolbelt: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted rimraf: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted rollup-plugin-polyfill-node: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted rpds-py: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted s3fs: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted s3transfer: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted secretstorage: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted six: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted snowflake-connector-python: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted sortedcontainers: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted sqlalchemy: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted starlette: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted string_decoder: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted sympy: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted tabulate: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted tar: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted threadpoolctl: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted tomlkit: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted trove-classifiers: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted types-requests: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted typing-extensions: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted uvicorn: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted virtualenv: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted vscode-languageserver-types: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted wcwidth: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted websocket-client: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted websockets: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted xmlhttprequest: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted xmlhttprequest-ssl: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted yarl: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted ziglings: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted zipp: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+  - omitted zstandard: zero scanned LOC (docs/data-only repo — not plottable on a log axis)
+
+What the pipeline needs: this MISSION COMPLETE block — a Rank|Repo|LOC|Rate|Time
+table whose row count equals 'Total Repositories Scanned', plus the totals block.
+==============================================================================
+
+================================================================================
+MISSION COMPLETE: GALAXYOSCOPE BATCH TELEMETRY REPORT
+================================================================================
+Rank  | Repository                     | LOC Scanned  | Rate (LOC/s) | Engine Time
+--------------------------------------------------------------------------------
+1     | cli                            | 712,880      | 45,697       | 15.60s
+2     | gnupg                          | 301,974      | 32,470       | 9.30s
+3     | vyre                           | 753,480      | 31,395       | 24.00s
+4     | hyperion                       | 275,082      | 30,908       | 8.90s
+5     | go                             | 1,266,619    | 30,818       | 41.10s
+6     | linux                          | 24,774,860   | 29,795       | 831.50s
+7     | rust-analyzer                  | 444,925      | 29,662       | 15.00s
+8     | cesium                         | 855,333      | 29,292       | 29.20s
+9     | linux-1.0                      | 122,811      | 28,561       | 4.30s
+10    | zellij                         | 245,335      | 28,527       | 8.60s
+11    | illumos-gate                   | 8,688,182    | 28,282       | 307.20s
+12    | prometheus                     | 302,425      | 28,264       | 10.70s
+13    | wrf-fortran                    | 1,181,896    | 27,941       | 42.30s
+14    | wgpu                           | 268,917      | 27,723       | 9.70s
+15    | livecode                       | 635,362      | 27,037       | 23.50s
+16    | node                           | 5,636,782    | 26,753       | 210.70s
+17    | nushell                        | 295,400      | 26,375       | 11.20s
+18    | godot                          | 2,904,396    | 24,223       | 119.90s
+19    | canvas-lms                     | 2,475,772    | 23,534       | 105.20s
+20    | react                          | 590,439      | 23,430       | 25.20s
+21    | racket                         | 931,847      | 23,413       | 39.80s
+22    | mikro-orm                      | 202,719      | 23,036       | 8.80s
+23    | vscode                         | 1,725,002    | 22,579       | 76.40s
+24    | pypy                           | 987,348      | 22,440       | 44.00s
+25    | angular                        | 860,399      | 22,348       | 38.50s
+26    | pandas                         | 454,772      | 22,293       | 20.40s
+27    | spm12                          | 397,971      | 22,110       | 18.00s
+28    | perl5                          | 951,586      | 21,825       | 43.60s
+29    | reactos                        | 5,870,531    | 21,711       | 270.40s
+30    | pwntools                       | 111,059      | 21,358       | 5.20s
+31    | mediawiki                      | 1,215,783    | 21,218       | 57.30s
+32    | impacket                       | 120,784      | 21,190       | 5.70s
+33    | deno                           | 723,906      | 21,105       | 34.30s
+34    | wasmtime                       | 480,307      | 21,066       | 22.80s
+35    | terraform                      | 492,438      | 20,691       | 23.80s
+36    | wordpress                      | 572,466      | 20,518       | 27.90s
+37    | react-router                   | 157,347      | 20,435       | 7.70s
+38    | biopython                      | 310,078      | 20,400       | 15.20s
+39    | openclaw-typescript            | 885,886      | 20,272       | 43.70s
+40    | haiku                          | 2,929,184    | 20,271       | 144.50s
+41    | Chart.js                       | 68,406       | 20,119       | 3.40s
+42    | tensorflow                     | 2,256,112    | 20,054       | 112.50s
+43    | scikit-learn                   | 251,700      | 19,819       | 12.70s
+44    | rdkit                          | 601,602      | 19,725       | 30.50s
+45    | pip                            | 104,046      | 19,631       | 5.30s
+46    | sqlite                         | 309,640      | 19,597       | 15.80s
+47    | WordPress                      | 573,264      | 19,565       | 29.30s
+48    | numpy                          | 367,295      | 19,537       | 18.80s
+49    | kubernetes                     | 2,462,024    | 19,493       | 126.30s
+50    | ruff                           | 255,348      | 19,492       | 13.10s
+51    | gnucobol                       | 210,308      | 19,473       | 10.80s
+52    | freebsd-src                    | 17,542,095   | 19,448       | 902.00s
+53    | opencv                         | 1,418,919    | 19,384       | 73.20s
+54    | lazygit                        | 97,028       | 19,025       | 5.10s
+55    | sentry                         | 2,456,855    | 18,826       | 130.50s
+56    | esbuild                        | 146,852      | 18,356       | 8.00s
+57    | networkx                       | 90,318       | 18,064       | 5.00s
+58    | swift                          | 2,098,379    | 17,904       | 117.20s
+59    | bun                            | 1,431,691    | 17,896       | 80.00s
+60    | microzig                       | 94,803       | 17,887       | 5.30s
+61    | workers-sdk                    | 406,338      | 17,822       | 22.80s
+62    | che-che4z-lsp-for-cobol        | 677,066      | 17,771       | 38.10s
+63    | excalidraw                     | 192,857      | 17,693       | 10.90s
+64    | substrate                      | 411,055      | 17,492       | 23.50s
+65    | solana                         | 474,488      | 17,381       | 27.30s
+66    | typescript-eslint              | 260,790      | 17,271       | 15.10s
+67    | kafka                          | 1,083,535    | 17,172       | 63.10s
+68    | okhttp                         | 100,557      | 17,044       | 5.90s
+69    | tigerbeetle                    | 145,384      | 16,905       | 8.60s
+70    | cargo                          | 268,496      | 16,677       | 16.10s
+71    | mojo                           | 53,237       | 16,637       | 3.20s
+72    | pyarrow                        | 89,778       | 16,626       | 5.40s
+73    | vue                            | 66,104       | 16,526       | 4.00s
+74    | igv.js                         | 78,851       | 16,427       | 4.80s
+75    | mypy                           | 216,100      | 16,371       | 13.20s
+76    | grafana                        | 2,254,613    | 16,338       | 138.00s
+77    | pydantic                       | 74,867       | 16,275       | 4.60s
+78    | swc                            | 3,510,495    | 16,215       | 216.50s
+79    | aiohttp                        | 74,340       | 16,161       | 4.60s
+80    | moby                           | 279,331      | 16,054       | 17.40s
+81    | temp_jcl_out                   | 24,052       | 16,035       | 1.50s
+82    | orjson                         | 106,565      | 15,905       | 6.70s
+83    | zod                            | 55,423       | 15,835       | 3.50s
+84    | gutenberg                      | 791,725      | 15,803       | 50.10s
+85    | pandoc                         | 107,406      | 15,795       | 6.80s
+86    | yii2                           | 122,963      | 15,565       | 7.90s
+87    | exiftool                       | 192,019      | 15,362       | 12.50s
+88    | cpython                        | 645,595      | 15,298       | 42.20s
+89    | rapidfuzz                      | 449,462      | 15,236       | 29.50s
+90    | alembic                        | 42,393       | 15,140       | 2.80s
+91    | zig                            | 2,205,296    | 15,105       | 146.00s
+92    | cytoscape.js                   | 54,328       | 15,091       | 3.60s
+93    | pygments                       | 101,930      | 14,990       | 6.80s
+94    | root                           | 4,887,262    | 14,855       | 329.00s
+95    | moment                         | 157,333      | 14,568       | 10.80s
+96    | pytest                         | 61,159       | 14,562       | 4.20s
+97    | scipy                          | 486,134      | 14,511       | 33.50s
+98    | kivy                           | 85,503       | 14,492       | 5.90s
+99    | three.js                       | 447,793      | 14,306       | 31.30s
+100   | spring-boot                    | 491,051      | 14,275       | 34.40s
+101   | ant-design                     | 201,582      | 14,196       | 14.20s
+102   | openzeppelin-contracts         | 58,055       | 13,823       | 4.20s
+103   | tokio                          | 93,918       | 13,811       | 6.80s
+104   | pynacl                         | 53,804       | 13,796       | 3.90s
+105   | curl                           | 228,841      | 13,786       | 16.60s
+106   | cobrix                         | 49,272       | 13,687       | 3.60s
+107   | cryptography                   | 74,113       | 13,475       | 5.50s
+108   | google-auth                    | 30,857       | 13,416       | 2.30s
+109   | platform_dalvik                | 73,736       | 13,407       | 5.50s
+110   | matplotlib                     | 85,364       | 13,338       | 6.40s
+111   | ripgrep                        | 41,276       | 13,315       | 3.10s
+112   | serenity                       | 1,065,223    | 13,216       | 80.60s
+113   | next.js                        | 1,555,168    | 13,146       | 118.30s
+114   | arktype                        | 58,872       | 13,083       | 4.50s
+115   | scapy                          | 162,733      | 12,915       | 12.60s
+116   | setuptools                     | 47,769       | 12,911       | 3.70s
+117   | jquery                         | 34,254       | 12,687       | 2.70s
+118   | desktop                        | 134,467      | 12,686       | 10.60s
+119   | retrofit                       | 44,357       | 12,673       | 3.50s
+120   | cosmopolitan                   | 296,845      | 12,632       | 23.50s
+121   | fastapi                        | 84,520       | 12,615       | 6.70s
+122   | pyarmor                        | 28,991       | 12,605       | 2.30s
+123   | rust                           | 2,451,166    | 12,596       | 194.60s
+124   | psutil                         | 32,725       | 12,587       | 2.60s
+125   | Carbon                         | 166,367      | 12,415       | 13.40s
+126   | magento2                       | 1,268,147    | 12,372       | 102.50s
+127   | flutter                        | 1,203,225    | 12,341       | 97.50s
+128   | mall                           | 66,607       | 12,335       | 5.40s
+129   | tauri                          | 85,588       | 12,227       | 7.00s
+130   | fieldtrip                      | 290,236      | 12,144       | 23.90s
+131   | actix-web                      | 59,274       | 12,097       | 4.90s
+132   | gitgalaxy                      | 73,664       | 12,076       | 6.10s
+133   | runtime                        | 7,631,994    | 12,036       | 634.10s
+134   | lxml                           | 61,157       | 11,992       | 5.10s
+135   | elasticsearch                  | 4,240,125    | 11,957       | 354.60s
+136   | nvda                           | 158,915      | 11,948       | 13.30s
+137   | jedi                           | 27,268       | 11,856       | 2.30s
+138   | ionic-framework                | 173,011      | 11,769       | 14.70s
+139   | raspberrypi                    | 48,095       | 11,730       | 4.10s
+140   | Excalibur                      | 80,574       | 11,677       | 6.90s
+141   | spock                          | 68,857       | 11,671       | 5.90s
+142   | gradle                         | 1,287,752    | 11,643       | 110.60s
+143   | hyper                          | 24,426       | 11,631       | 2.10s
+144   | docutils                       | 34,602       | 11,534       | 3.00s
+145   | airflow                        | 1,008,504    | 11,460       | 88.00s
+146   | protobuf                       | 35,341       | 11,400       | 3.10s
+147   | react-flow                     | 36,464       | 11,395       | 3.20s
+148   | berry                          | 86,539       | 11,387       | 7.60s
+149   | vapor                          | 28,358       | 11,343       | 2.50s
+150   | assemblyscript                 | 90,476       | 11,310       | 8.00s
+151   | curve25519-dalek               | 31,610       | 11,289       | 2.80s
+152   | coverage                       | 27,085       | 11,285       | 2.40s
+153   | docker-py                      | 21,301       | 11,211       | 1.90s
+154   | mach                           | 58,175       | 11,188       | 5.20s
+155   | cakephp                        | 220,746      | 11,149       | 19.80s
+156   | effect                         | 338,934      | 11,149       | 30.40s
+157   | pyqtgraph                      | 65,541       | 11,109       | 5.90s
+158   | eeglab                         | 84,580       | 10,984       | 7.70s
+159   | playwright                     | 387,074      | 10,934       | 35.40s
+160   | azure-devops-node-api          | 23,983       | 10,901       | 2.20s
+161   | twisted                        | 197,664      | 10,801       | 18.30s
+162   | jellyfin                       | 167,366      | 10,798       | 15.50s
+163   | prisma                         | 204,246      | 10,750       | 19.00s
+164   | google-cloud-storage           | 59,026       | 10,732       | 5.50s
+165   | black                          | 29,993       | 10,712       | 2.80s
+166   | storybook                      | 292,646      | 10,681       | 27.40s
+167   | capstone                       | 208,636      | 10,645       | 19.60s
+168   | ngl                            | 59,170       | 10,566       | 5.60s
+169   | cython                         | 183,735      | 10,559       | 17.40s
+170   | nest                           | 93,831       | 10,311       | 9.10s
+171   | azure-identity                 | 21,520       | 10,248       | 2.10s
+172   | selenium                       | 323,317      | 10,167       | 31.80s
+173   | micropython-ulab               | 19,165       | 10,087       | 1.90s
+174   | zls                            | 49,370       | 10,076       | 4.90s
+175   | textual                        | 77,975       | 9,997        | 7.80s
+176   | Cobol-Projects                 | 28,731       | 9,907        | 2.90s
+177   | fp-ts                          | 44,155       | 9,812        | 4.50s
+178   | sdk                            | 2,295,799    | 9,662        | 237.60s
+179   | pyasn1-modules                 | 21,939       | 9,539        | 2.30s
+180   | reveal.js                      | 19,970       | 9,510        | 2.10s
+181   | pylint                         | 75,911       | 9,489        | 8.00s
+182   | poetry-core                    | 24,622       | 9,470        | 2.60s
+183   | GitPython                      | 18,797       | 9,398        | 2.00s
+184   | google-api-core                | 15,916       | 9,362        | 1.70s
+185   | openpyxl                       | 19,641       | 9,353        | 2.10s
+186   | core                           | 2,855,865    | 9,296        | 307.20s
+187   | vscode_cobol                   | 25,866       | 9,238        | 2.80s
+188   | odoo                           | 1,916,861    | 9,076        | 211.20s
+189   | werkzeug                       | 20,758       | 9,025        | 2.30s
+190   | pyparsing                      | 64,011       | 8,890        | 7.20s
+191   | serde                          | 33,303       | 8,764        | 3.80s
+192   | django                         | 392,208      | 8,716        | 45.00s
+193   | tailwindcss                    | 116,347      | 8,683        | 13.40s
+194   | @node-red_nodes                | 38,137       | 8,668        | 4.40s
+195   | cypress                        | 426,294      | 8,665        | 49.20s
+196   | laravel_core                   | 334,464      | 8,665        | 38.60s
+197   | sqitch                         | 26,754       | 8,630        | 3.10s
+198   | Rocket.Chat                    | 607,564      | 8,497        | 71.50s
+199   | syn                            | 32,032       | 8,429        | 3.80s
+200   | CobolCraft                     | 23,390       | 8,354        | 2.80s
+201   | cics-banking-sample-appli...   | 44,267       | 8,352        | 5.30s
+202   | nx                             | 727,830      | 8,309        | 87.60s
+203   | jenkins                        | 249,769      | 8,243        | 30.30s
+204   | aws-mainframe-modernizati...   | 34,606       | 8,240        | 4.20s
+205   | Babylon.js                     | 583,911      | 8,189        | 71.30s
+206   | TypeScript                     | 2,272,541    | 8,110        | 280.20s
+207   | CodeIgniter                    | 20,218       | 8,087        | 2.50s
+208   | puppeteer                      | 77,104       | 8,032        | 9.60s
+209   | rich                           | 25,601       | 8,000        | 3.20s
+210   | ruamel-yaml                    | 11,963       | 7,975        | 1.50s
+211   | kotlin                         | 2,431,379    | 7,899        | 307.80s
+212   | element                        | 84,690       | 7,770        | 10.90s
+213   | Python                         | 47,344       | 7,761        | 6.10s
+214   | jinja2                         | 13,946       | 7,748        | 1.80s
+215   | material-ui                    | 402,153      | 7,602        | 52.90s
+216   | roslyn                         | 4,055,105    | 7,567        | 535.90s
+217   | python-simplebench             | 103,451      | 7,443        | 13.90s
+218   | multidict                      | 12,578       | 7,399        | 1.70s
+219   | river                          | 10,963       | 7,309        | 1.50s
+220   | sqlmap                         | 18,702       | 7,193        | 2.60s
+221   | httpx                          | 12,189       | 7,170        | 1.70s
+222   | cyber                          | 63,076       | 7,168        | 8.80s
+223   | spamassassin                   | 43,439       | 7,121        | 6.10s
+224   | node-linux-x64                 | 84,048       | 7,004        | 12.00s
+225   | click                          | 13,663       | 6,832        | 2.00s
+226   | fineract                       | 526,977      | 6,679        | 78.90s
+227   | libxev                         | 16,696       | 6,678        | 2.50s
+228   | pixijs                         | 113,831      | 6,657        | 17.10s
+229   | catalyst-runtime               | 13,096       | 6,548        | 2.00s
+230   | rails                          | 398,126      | 6,505        | 61.20s
+231   | prettier                       | 129,267      | 6,496        | 19.90s
+232   | typeorm                        | 217,706      | 6,441        | 33.80s
+233   | oauthlib                       | 11,522       | 6,401        | 1.80s
+234   | tornado                        | 28,051       | 6,375        | 4.40s
+235   | typer                          | 16,499       | 6,346        | 2.60s
+236   | guzzle                         | 10,019       | 6,262        | 1.60s
+237   | express                        | 15,994       | 6,152        | 2.60s
+238   | @grpc_grpc-js                  | 17,206       | 6,145        | 2.80s
+239   | symfony                        | 1,658,053    | 6,127        | 270.60s
+240   | greenlet                       | 9,672        | 6,045        | 1.60s
+241   | urllib3                        | 8,201        | 5,858        | 1.40s
+242   | contourpy                      | 11,681       | 5,840        | 2.00s
+243   | httpcore                       | 9,280        | 5,800        | 1.60s
+244   | type-fest                      | 18,857       | 5,714        | 3.30s
+245   | javascript-algorithms          | 15,318       | 5,673        | 2.70s
+246   | pydantic-settings              | 10,765       | 5,666        | 1.90s
+247   | msal                           | 9,038        | 5,649        | 1.60s
+248   | freeCodeCamp                   | 207,220      | 5,631        | 36.80s
+249   | ack3                           | 10,618       | 5,588        | 1.90s
+250   | joblib                         | 8,364        | 5,576        | 1.50s
+251   | @types_node                    | 12,139       | 5,518        | 2.20s
+252   | monolog                        | 17,095       | 5,515        | 3.10s
+253   | wrapt                          | 11,562       | 5,506        | 2.10s
+254   | capy                           | 20,909       | 5,502        | 3.80s
+255   | micropython                    | 419,704      | 5,479        | 76.60s
+256   | temp                           | 9,796        | 5,442        | 1.80s
+257   | bog                            | 12,902       | 5,376        | 2.40s
+258   | beautifulsoup4                 | 10,447       | 5,224        | 2.00s
+259   | alacritty                      | 26,023       | 5,103        | 5.10s
+260   | xv6-public                     | 8,110        | 5,069        | 1.60s
+261   | circuitpython                  | 398,760      | 4,899        | 81.40s
+262   | db-tutorial                    | 18,580       | 4,889        | 3.80s
+263   | @whatwg-node_node-fetch        | 6,351        | 4,885        | 1.30s
+264   | pyasn1                         | 13,272       | 4,740        | 2.80s
+265   | Dancer2                        | 10,832       | 4,710        | 2.30s
+266   | pathspec                       | 8,897        | 4,683        | 1.90s
+267   | tcpip_historical               | 14,876       | 4,375        | 3.40s
+268   | Perl-Critic                    | 9,107        | 4,337        | 2.10s
+269   | Rex                            | 6,863        | 4,289        | 1.60s
+270   | esphome                        | 462,044      | 4,204        | 109.90s
+271   | charset-normalizer             | 5,769        | 4,121        | 1.40s
+272   | zig-okredis                    | 6,476        | 4,048        | 1.60s
+273   | node-addon-api                 | 8,874        | 4,034        | 2.20s
+274   | fd                             | 6,005        | 4,003        | 1.50s
+275   | rollup-plugin-node-polyfills   | 32,409       | 4,001        | 8.10s
+276   | rollup-plugin-node-builtins    | 4,730        | 3,942        | 1.20s
+277   | os-tutorial                    | 6,676        | 3,927        | 1.70s
+278   | http.zig                       | 9,015        | 3,920        | 2.30s
+279   | flask                          | 10,796       | 3,856        | 2.80s
+280   | js-beautify                    | 4,981        | 3,832        | 1.30s
+281   | browserstack-node-sdk          | 5,631        | 3,754        | 1.50s
+282   | requests                       | 6,981        | 3,674        | 1.90s
+283   | Zig                            | 6,562        | 3,454        | 1.90s
+284   | bootloader                     | 7,904        | 3,437        | 2.30s
+285   | tqdm                           | 5,786        | 3,404        | 1.70s
+286   | proto-plus                     | 4,468        | 3,191        | 1.40s
+287   | soupsieve                      | 6,050        | 3,184        | 1.90s
+288   | srfi-1                         | 4,127        | 3,175        | 1.30s
+289   | ncdu                           | 3,714        | 3,095        | 1.20s
+290   | regex                          | 27,817       | 3,091        | 9.00s
+291   | redox                          | 12,319       | 3,080        | 4.00s
+292   | @azure_msal-node               | 6,699        | 3,045        | 2.20s
+293   | pyjwt                          | 5,394        | 2,997        | 1.80s
+294   | filelock                       | 3,853        | 2,964        | 1.30s
+295   | python-dateutil                | 3,796        | 2,920        | 1.30s
+296   | cics-event-consumer            | 6,671        | 2,900        | 2.30s
+297   | more-itertools                 | 10,498       | 2,837        | 3.70s
+298   | python-discovery               | 4,051        | 2,701        | 1.50s
+299   | node-red-node-ui-table         | 2,951        | 2,683        | 1.10s
+300   | sokol-zig                      | 46,744       | 2,473        | 18.90s
+301   | pytudes                        | 6,156        | 2,462        | 2.50s
+302   | cachetools                     | 3,401        | 2,429        | 1.40s
+303   | msgpack                        | 2,854        | 2,378        | 1.20s
+304   | node-stdlib-browser            | 3,329        | 2,378        | 1.40s
+305   | @livekit_rtc-node              | 4,497        | 2,367        | 1.90s
+306   | pyyaml                         | 4,448        | 2,341        | 1.90s
+307   | tenacity                       | 3,441        | 2,294        | 1.50s
+308   | platformdirs                   | 2,724        | 2,270        | 1.20s
+309   | aiohappyeyeballs               | 2,626        | 2,188        | 1.20s
+310   | google-cloud-core              | 2,612        | 2,009        | 1.30s
+311   | libwww-perl                    | 3,961        | 1,980        | 2.00s
+312   | python-dotenv                  | 2,367        | 1,972        | 1.20s
+313   | quote                          | 2,309        | 1,924        | 1.20s
+314   | type-challenges                | 6,809        | 1,891        | 3.60s
+315   | @node-red_editor-client        | 3,898        | 1,856        | 2.10s
+316   | exceptiongroup                 | 2,376        | 1,828        | 1.30s
+317   | zap                            | 17,144       | 1,732        | 9.90s
+318   | wheel                          | 2,357        | 1,684        | 1.40s
+319   | zig-book                       | 3,511        | 1,672        | 2.10s
+320   | x86-bare-metal-examples        | 2,428        | 1,619        | 1.50s
+321   | cobol-unit-test                | 5,502        | 1,618        | 3.40s
+322   | voyager                        | 1,865        | 1,554        | 1.20s
+323   | watchfiles                     | 1,954        | 1,503        | 1.30s
+324   | defusedxml                     | 1,783        | 1,486        | 1.20s
+325   | ansible                        | 230,064      | 1,472        | 156.30s
+326   | diff-so-fancy                  | 1,791        | 1,378        | 1.30s
+327   | trpc                           | 83,010       | 1,279        | 64.90s
+328   | zopeneditor-sample             | 1,791        | 1,279        | 1.40s
+329   | isodate                        | 1,525        | 1,271        | 1.20s
+330   | @sveltejs_adapter-node         | 1,645        | 1,265        | 1.30s
+331   | pillman                        | 1,639        | 1,261        | 1.30s
+332   | python-patterns                | 2,272        | 1,196        | 1.90s
+333   | FPS.cob                        | 2,735        | 1,189        | 2.30s
+334   | cics-java-jcics-samples        | 2,087        | 1,159        | 1.80s
+335   | @node-red_runtime              | 1,842        | 1,151        | 1.60s
+336   | deprecated                     | 1,377        | 1,148        | 1.20s
+337   | zigup                          | 2,035        | 1,131        | 1.80s
+338   | @mergeapi_merge-node-client    | 60,638       | 1,119        | 54.20s
+339   | CICS-Cobol                     | 1,543        | 1,102        | 1.40s
+340   | FlameGraph                     | 2,087        | 1,098        | 1.90s
+341   | macports-base                  | 3,455        | 1,080        | 3.20s
+342   | rsa                            | 1,085        | 986          | 1.10s
+343   | discourse                      | 1,410,525    | 976          | 1445.50s
+344   | cobol-samples                  | 1,522        | 951          | 1.60s
+345   | node-cleanup                   | 1,042        | 947          | 1.10s
+346   | jcl-assess                     | 1,455        | 909          | 1.60s
+347   | sse-starlette                  | 1,338        | 892          | 1.50s
+348   | node-api-headers               | 1,138        | 875          | 1.30s
+349   | propcache                      | 1,040        | 867          | 1.20s
+350   | yauzl                          | 1,008        | 840          | 1.20s
+351   | @types_node-forge              | 1,089        | 778          | 1.40s
+352   | @nx_node                       | 1,270        | 747          | 1.70s
+353   | @segment_analytics-node        | 874          | 728          | 1.20s
+354   | prokka                         | 2,402        | 728          | 3.30s
+355   | zopeneditor_compilers          | 947          | 728          | 1.30s
+356   | @sentry-internal_node-cpu...   | 937          | 721          | 1.30s
+357   | jsonschema-specifications      | 851          | 709          | 1.20s
+358   | cobol-dialect-template         | 1,131        | 707          | 1.60s
+359   | compilers                      | 777          | 706          | 1.10s
+360   | typing-inspection              | 981          | 701          | 1.40s
+361   | poop                           | 764          | 695          | 1.10s
+362   | laravel                        | 893          | 687          | 1.30s
+363   | d3                             | 855          | 658          | 1.30s
+364   | colorama                       | 843          | 648          | 1.30s
+365   | tomli                          | 666          | 605          | 1.10s
+366   | fonttools                      | 2,772        | 590          | 4.70s
+367   | pn                             | 626          | 569          | 1.10s
+368   | avvio                          | 619          | 563          | 1.10s
+369   | markupsafe                     | 724          | 557          | 1.30s
+370   | language-cobol                 | 601          | 546          | 1.10s
+371   | node-abi                       | 587          | 534          | 1.10s
+372   | object-inspect                 | 623          | 519          | 1.20s
+373   | @rudderstack_rudder-sdk-node   | 560          | 509          | 1.10s
+374   | cics-async-api-credit-car...   | 736          | 491          | 1.50s
+375   | http-parser-js                 | 534          | 485          | 1.10s
+376   | smmap                          | 507          | 461          | 1.10s
+377   | ghostty                        | 218,839      | 459          | 477.00s
+378   | node-fzf                       | 839          | 442          | 1.90s
+379   | bootstrap                      | 25,641       | 412          | 62.30s
+380   | node-sql-parser                | 518          | 398          | 1.30s
+381   | pg-pool                        | 416          | 378          | 1.10s
+382   | check-node-version             | 402          | 365          | 1.10s
+383   | webbol                         | 621          | 365          | 1.70s
+384   | iwubi                          | 468          | 360          | 1.30s
+385   | COBOL_Tutorial                 | 465          | 358          | 1.30s
+386   | decorator                      | 603          | 355          | 1.70s
+387   | formdata-polyfill              | 384          | 349          | 1.10s
+388   | html5-boilerplate              | 383          | 348          | 1.10s
+389   | @textlint_ast-node-types       | 380          | 345          | 1.10s
+390   | Cisp                           | 839          | 336          | 2.50s
+391   | @expo_rudder-sdk-node          | 498          | 332          | 1.50s
+392   | DOOM-fire-zig                  | 554          | 326          | 1.70s
+393   | mdurl                          | 342          | 311          | 1.10s
+394   | node-exports-info              | 340          | 309          | 1.10s
+395   | shellingham                    | 361          | 301          | 1.20s
+396   | chartjs-node-canvas            | 358          | 298          | 1.20s
+397   | cash-account-cobol             | 384          | 295          | 1.30s
+398   | fetch-blob                     | 310          | 282          | 1.10s
+399   | @tiptap_extension-node-range   | 308          | 280          | 1.10s
+400   | @types_node-sass               | 306          | 278          | 1.10s
+401   | log4js                         | 305          | 277          | 1.10s
+402   | lazy                           | 296          | 269          | 1.10s
+403   | config                         | 321          | 268          | 1.20s
+404   | @pollyjs_adapter-node-http     | 290          | 264          | 1.10s
+405   | jaraco-context                 | 278          | 253          | 1.10s
+406   | node-abort-controller          | 270          | 245          | 1.10s
+407   | touch                          | 283          | 236          | 1.20s
+408   | editables                      | 297          | 228          | 1.30s
+409   | node-red-vue                   | 251          | 228          | 1.10s
+410   | wtfpython                      | 408          | 227          | 1.80s
+411   | @swc-node_register             | 260          | 217          | 1.20s
+412   | @types_node-fetch              | 229          | 208          | 1.10s
+413   | cobol-on-wheelchair            | 372          | 207          | 1.80s
+414   | @types_node-jose               | 227          | 206          | 1.10s
+415   | @pollyjs_node-server           | 176          | 160          | 1.10s
+416   | learning-cobol                 | 178          | 148          | 1.20s
+417   | content                        | 5,939        | 147          | 40.30s
+418   | bindings                       | 160          | 145          | 1.10s
+419   | node-cache                     | 158          | 144          | 1.10s
+420   | dom-serialize                  | 155          | 141          | 1.10s
+421   | util.promisify                 | 167          | 139          | 1.20s
+422   | @types_node-rsa                | 151          | 137          | 1.10s
+423   | cobol-is-fun                   | 256          | 135          | 1.90s
+424   | sniffio                        | 148          | 135          | 1.10s
+425   | async-timeout                  | 146          | 133          | 1.10s
+426   | @protobufjs_aspromise          | 142          | 129          | 1.10s
+427   | @improved_node                 | 195          | 122          | 1.60s
+428   | @ledgerhq_hw-transport-no...   | 162          | 116          | 1.40s
+429   | node-static                    | 128          | 116          | 1.10s
+430   | @ledgerhq_hw-transport-no...   | 172          | 115          | 1.50s
+431   | why-is-node-running            | 114          | 114          | 1.00s
+432   | cics-async-fetch-variatio...   | 196          | 103          | 1.90s
+433   | @types_analytics-node          | 108          | 98           | 1.10s
+434   | @types_node-schedule           | 87           | 87           | 1.00s
+435   | @node-ipc_js-queue             | 137          | 86           | 1.60s
+436   | broccoli-node-info             | 95           | 86           | 1.10s
+437   | simple-lru-cache               | 86           | 86           | 1.00s
+438   | node-source-walk               | 89           | 81           | 1.10s
+439   | gatsby-node-helpers            | 88           | 80           | 1.10s
+440   | node-hook                      | 88           | 80           | 1.10s
+441   | create-hmac                    | 87           | 79           | 1.10s
+442   | @types_node-statsd             | 87           | 72           | 1.20s
+443   | node-api-version               | 78           | 71           | 1.10s
+444   | node-gyp-build                 | 78           | 71           | 1.10s
+445   | vscode-languageserver          | 71           | 71           | 1.00s
+446   | acorn-node                     | 77           | 70           | 1.10s
+447   | @types_node-notifier           | 131          | 69           | 1.90s
+448   | fake_cobol_repo                | 80           | 67           | 1.20s
+449   | raf                            | 69           | 63           | 1.10s
+450   | util-promisify                 | 68           | 62           | 1.10s
+451   | node-gyp-build-optional-p...   | 76           | 58           | 1.30s
+452   | @lydell_node-pty               | 82           | 51           | 1.60s
+453   | eslint-import-resolver-node    | 56           | 51           | 1.10s
+454   | tzdata                         | 84           | 44           | 1.90s
+455   | annotated-doc                  | 52           | 43           | 1.20s
+456   | slack-node                     | 43           | 43           | 1.00s
+457   | Adafruit_CircuitPython_Bu...   | 55           | 42           | 1.30s
+458   | pg-types                       | 45           | 41           | 1.10s
+459   | @types_node-polyglot           | 43           | 39           | 1.10s
+460   | methods                        | 38           | 38           | 1.00s
+461   | node-libs-browser              | 38           | 35           | 1.10s
+462   | node-vibrant                   | 39           | 35           | 1.10s
+463   | is-reference                   | 32           | 29           | 1.10s
+464   | please-upgrade-node            | 32           | 29           | 1.10s
+465   | @nrwl_node                     | 35           | 25           | 1.40s
+466   | supports-preserve-symlink...   | 28           | 25           | 1.10s
+467   | @types_node-int64              | 25           | 23           | 1.10s
+468   | @types_node-uuid               | 25           | 23           | 1.10s
+469   | @types_webpack-node-exter...   | 23           | 23           | 1.00s
+470   | dom-walk                       | 24           | 22           | 1.10s
+471   | fflib-apex-common              | 35           | 22           | 1.60s
+472   | node-fetch-retry               | 24           | 22           | 1.10s
+473   | @flmngr_flmngr-server-node     | 30           | 20           | 1.50s
+474   | node-range                     | 32           | 20           | 1.60s
+475   | @rspack_binding                | 20           | 18           | 1.10s
+476   | @types_node-cron               | 20           | 17           | 1.20s
+477   | xero-node                      | 21           | 16           | 1.30s
+478   | babel-plugin-dynamic-impo...   | 15           | 15           | 1.00s
+479   | dprint-node                    | 16           | 15           | 1.10s
+480   | node-schedule                  | 15           | 15           | 1.00s
+481   | customerio-node                | 14           | 13           | 1.10s
+482   | @tsconfig_node12               | 13           | 12           | 1.10s
+483   | @tsconfig_node14               | 13           | 12           | 1.10s
+484   | @tsconfig_node16               | 13           | 12           | 1.10s
+485   | @node-red_util                 | 18           | 11           | 1.60s
+486   | @tsconfig_node10               | 12           | 11           | 1.10s
+487   | @launchdarkly_openfeature...   | 16           | 10           | 1.60s
+488   | cross-fetch                    | 11           | 10           | 1.10s
+489   | node-zip                       | 10           | 10           | 1.00s
+490   | code4z                         | 10           | 9            | 1.10s
+491   | node-fingerprint               | 10           | 9            | 1.10s
+492   | node-jq                        | 10           | 9            | 1.10s
+493   | @apollo_utils.createhash       | 12           | 8            | 1.60s
+494   | @jsii_check-node               | 12           | 8            | 1.60s
+495   | node-opcua-pki                 | 13           | 8            | 1.70s
+496   | zig-gamedev                    | 9            | 8            | 1.20s
+497   | git-node-fs                    | 6            | 6            | 1.00s
+498   | unist-util-is                  | 5            | 5            | 1.10s
+499   | @apollo_utils.isnodelike       | 6            | 4            | 1.60s
+500   | @opentelemetry_instrument...   | 6            | 4            | 1.50s
+501   | react-remove-scroll            | 4            | 4            | 1.10s
+502   | @types_node-gzip               | 3            | 3            | 1.10s
+503   | mdast-util-to-string           | 3            | 3            | 1.00s
+504   | fs-constants                   | 2            | 2            | 1.10s
+505   | node-geocoder                  | 4            | 2            | 1.60s
+506   | unist-util-find-after          | 2            | 2            | 1.30s
+507   | unist-util-position            | 2            | 2            | 1.20s
+508   | @node-llama-cpp_linux-arm64    | 1            | 1            | 1.50s
+509   | @node-llama-cpp_linux-armv7l   | 1            | 1            | 1.60s
+510   | @node-llama-cpp_linux-x64      | 1            | 1            | 1.60s
+511   | node-statsd                    | 1            | 1            | 1.10s
+512   | reddit_data                    | 1            | 1            | 1.30s
+513   | tunnel                         | 1            | 1            | 1.20s
+--------------------------------------------------------------------------------
+Total Repositories Scanned : 513
+Total LOC Scanned          : 185,157,300
+Total Clock Time Taken     : 7294.00 seconds
+Global Average Scan Rate   : 25,385 LOC/s
+
+================================================================================
+ 🚨 BATCH ANOMALY & ERROR REPORT
+================================================================================
+❌ Failed Repositories: 0
