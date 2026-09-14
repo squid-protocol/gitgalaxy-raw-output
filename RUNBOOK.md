@@ -26,11 +26,19 @@ Read this before running a batch.
 ```bash
 FP=<gitgalaxy>/.crucible_venvs/full_precision/bin/python   # full-deps venv
 ENGINE=<gitgalaxy worktree checked out at the release tag, e.g. v2.7.0>
+export GITGALAXY_LICENSE_KEY="COMMUNITY_FREE_TIER"   # ← REQUIRED for timing (see below)
 # The driver runs each repo one at a time and writes batch_scan_master_<ts>.log to --output.
 PYTHONPATH="$ENGINE" "$FP" batch_process_restored.py \
     /srv/storage_16tb/projects/gitgalaxy/data \
     --output /srv/storage_16tb/projects/gitgalaxy-raw-output/v<version>
 ```
+
+- **License key — set it or every timing is +5s.** `licensing.py::enforce_licensing_guard()`
+  injects a fixed **5-second `time.sleep`** per process when no valid `GITGALAXY_LICENSE_KEY`
+  is present (10s if a key is FORGED). Unset ⇒ every repo's wall-time is inflated by 5s,
+  which wrecks the small-repo end of the rate model and any outlier analysis. Export the
+  honor-system value `COMMUNITY_FREE_TIER` (documented in `gitgalaxy/README.md`) — or a valid
+  commercial key — before scanning; both skip the delay. Do **not** remove the delay itself.
 
 - **Engine:** check out the release **tag** in a worktree and point at it (via `PYTHONPATH`
   and the driver's `project_root`). Do not assume `v6` equals the tag — it drifts.
