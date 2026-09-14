@@ -1,4 +1,4 @@
 version,log_file,run_date,total_repos,failed_repos,total_loc,total_time_s,avg_rate_loc_s,slow_files_gt10s,typosquat_hits,typosquat_repos
 v2.4.6,batch_scan_master_20260803_150601.log,2026-08-03,599,0,232915268,9328.45,24968,23,1932,153
 v2.4.7,batch_scan_master_20260806_232904.log,2026-08-06,610,0,233511820,7963.66,29322,24,1958,159
-v2.7.0,batch_scan_master_20260913_174031.log,2026-09-13,513,0,185157300,7294.0,25385,0,0,0
+v2.7.0,batch_scan_master_20260913_180255.log,2026-09-13,628,0,279861678,12013.94,23295,501,2438,176
