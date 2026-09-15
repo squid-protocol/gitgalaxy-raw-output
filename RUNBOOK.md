@@ -73,9 +73,13 @@ test -n "$(ls $V/batch_scan_master_*.log 2>/dev/null)"      # THE LOG EXISTS  �
 ```bash
 git remote set-url origin git@github.com:squid-protocol/gitgalaxy-raw-output.git  # SSH, not HTTPS
 git checkout -b batch/v<version> origin/main
-# Commit + push in ~1.1 GB chunks so each pack stays < 2 GB (GitHub's hard push limit).
-# See the chunking loop used for v2.7.0 (scratchpad/chunked_push.sh): greedily bucket the
-# repo dirs by `du -sm`, and `git add <bucket>; git commit; git push` per bucket.
+# Greedily bucket the repo dirs by `du -sm` into ~1.1 GB commits so each pack stays
+# < 2 GB (GitHub's hard push limit), then push each commit BY SHA, one at a time:
+#   git -c pack.compression=0 push origin <sha>:refs/heads/batch/v<version>
+# - pack.compression=0 is required: the artifacts are already gzipped, so git's default
+#   zlib pass just burns minutes re-compressing incompressible data before any transfer.
+# - Push in the FOREGROUND with a long timeout (~10 min): a background push of ~1 GB gets
+#   reaped mid-transfer. Measured upload ~4.8 MiB/s, so a ~1.1 GB chunk lands in ~4 min.
 ```
 
 Open a PR into `main`; merging it triggers the two workflows below.
@@ -94,6 +98,24 @@ Both trigger on `push` to `main` touching `v*/batch_scan_master_*.log` (+ `workf
 
 Both derive the version from the pushed log; the auto-detect jq is null-safe for merge events
 (#13). If you ever push a batch **without** a log, neither runs — that is the v2.7.0 bug.
+
+## 4b. Find the next perf targets (outlier residuals)
+
+Once `speed_charts/rate_model.json` and `speed_summary.json` exist for the version,
+rank every repo by how far its ACTUAL scan time deviates from the model's own equation
+(`ratio = actual / predicted`). Points far above the line harbor a superlinear/pathological
+hot path — this residual is what first surfaced the ghostty ReDoS (26× over the line in
+v2.7.0).
+
+```bash
+python tools/rank_outliers.py v<version> --top 20   # prints the ranking, writes speed_charts/outliers.json
+```
+
+It reuses the canonical telemetry (no re-scan), ranks repos at/above the model's
+`power_fit_threshold` (below it the floor dominates and the ratio is noise), and writes
+`v<version>/speed_charts/outliers.json` (ranked outliers + all rows for charting). A
+clustered set of top deviators in one language ecosystem points at a shared hot path
+rather than isolated repos — the highest-leverage place to look next.
 
 ## 5. If telemetry was lost (recovery, not the happy path)
 
