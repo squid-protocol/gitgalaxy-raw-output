@@ -1,0 +1,6877 @@
+{
+  "version": "v2.8.1",
+  "equation": "t = 2.412e-05 * LOC^0.9919",
+  "knee_loc": 1762.0594922140704,
+  "floor_seconds": 0.04,
+  "loc_floor_for_ranking": 50000,
+  "n_ranked": 230,
+  "median_ratio": 0.929,
+  "outliers": [
+    {
+      "repo": "@mergeapi_merge-node-client",
+      "loc": 121270,
+      "actual_s": 37.44,
+      "predicted_s": 2.66,
+      "ratio": 14.075,
+      "above_threshold": true
+    },
+    {
+      "repo": "nx",
+      "loc": 881584,
+      "actual_s": 78.82,
+      "predicted_s": 19.03,
+      "ratio": 4.142,
+      "above_threshold": true
+    },
+    {
+      "repo": "cypress",
+      "loc": 588256,
+      "actual_s": 38.47,
+      "predicted_s": 12.74,
+      "ratio": 3.02,
+      "above_threshold": true
+    },
+    {
+      "repo": "node-linux-x64",
+      "loc": 124970,
+      "actual_s": 8.24,
+      "predicted_s": 2.74,
+      "ratio": 3.007,
+      "above_threshold": true
+    },
+    {
+      "repo": "material-ui",
+      "loc": 498964,
+      "actual_s": 32.45,
+      "predicted_s": 10.82,
+      "ratio": 2.999,
+      "above_threshold": true
+    },
+    {
+      "repo": "roslyn",
+      "loc": 5351289,
+      "actual_s": 322.93,
+      "predicted_s": 113.82,
+      "ratio": 2.837,
+      "above_threshold": true
+    },
+    {
+      "repo": "TypeScript",
+      "loc": 3519910,
+      "actual_s": 205.12,
+      "predicted_s": 75.12,
+      "ratio": 2.73,
+      "above_threshold": true
+    },
+    {
+      "repo": "core",
+      "loc": 3572858,
+      "actual_s": 194.02,
+      "predicted_s": 76.24,
+      "ratio": 2.545,
+      "above_threshold": true
+    },
+    {
+      "repo": "Much-Assembly-Required",
+      "loc": 65696,
+      "actual_s": 3.39,
+      "predicted_s": 1.45,
+      "ratio": 2.341,
+      "above_threshold": true
+    },
+    {
+      "repo": "aws-mainframe-modernizati...",
+      "loc": 50007,
+      "actual_s": 2.25,
+      "predicted_s": 1.1,
+      "ratio": 2.037,
+      "above_threshold": true
+    },
+    {
+      "repo": "sokol-zig",
+      "loc": 62707,
+      "actual_s": 2.77,
+      "predicted_s": 1.38,
+      "ratio": 2.003,
+      "above_threshold": true
+    },
+    {
+      "repo": "grafana",
+      "loc": 2730762,
+      "actual_s": 112.52,
+      "predicted_s": 58.4,
+      "ratio": 1.927,
+      "above_threshold": true
+    },
+    {
+      "repo": "berry",
+      "loc": 117620,
+      "actual_s": 4.83,
+      "predicted_s": 2.58,
+      "ratio": 1.872,
+      "above_threshold": true
+    },
+    {
+      "repo": "element",
+      "loc": 117767,
+      "actual_s": 4.72,
+      "predicted_s": 2.58,
+      "ratio": 1.827,
+      "above_threshold": true
+    },
+    {
+      "repo": "gradle",
+      "loc": 2252729,
+      "actual_s": 85.75,
+      "predicted_s": 48.25,
+      "ratio": 1.777,
+      "above_threshold": true
+    },
+    {
+      "repo": "odoo",
+      "loc": 2879878,
+      "actual_s": 108.4,
+      "predicted_s": 61.56,
+      "ratio": 1.761,
+      "above_threshold": true
+    },
+    {
+      "repo": "capstone",
+      "loc": 246714,
+      "actual_s": 9.18,
+      "predicted_s": 5.38,
+      "ratio": 1.706,
+      "above_threshold": true
+    },
+    {
+      "repo": "jellyfin",
+      "loc": 242646,
+      "actual_s": 8.93,
+      "predicted_s": 5.29,
+      "ratio": 1.687,
+      "above_threshold": true
+    },
+    {
+      "repo": "prettier",
+      "loc": 220608,
+      "actual_s": 8.07,
+      "predicted_s": 4.82,
+      "ratio": 1.676,
+      "above_threshold": true
+    },
+    {
+      "repo": "python-simplebench",
+      "loc": 137223,
+      "actual_s": 5.04,
+      "predicted_s": 3.01,
+      "ratio": 1.676,
+      "above_threshold": true
+    },
+    {
+      "repo": "pylint",
+      "loc": 126769,
+      "actual_s": 4.55,
+      "predicted_s": 2.78,
+      "ratio": 1.637,
+      "above_threshold": true
+    },
+    {
+      "repo": "storybook",
+      "loc": 376375,
+      "actual_s": 13.38,
+      "predicted_s": 8.18,
+      "ratio": 1.636,
+      "above_threshold": true
+    },
+    {
+      "repo": "fastapi",
+      "loc": 110587,
+      "actual_s": 3.9,
+      "predicted_s": 2.43,
+      "ratio": 1.607,
+      "above_threshold": true
+    },
+    {
+      "repo": "prisma",
+      "loc": 262840,
+      "actual_s": 9.12,
+      "predicted_s": 5.73,
+      "ratio": 1.592,
+      "above_threshold": true
+    },
+    {
+      "repo": "che-che4z-lsp-for-cobol",
+      "loc": 774985,
+      "actual_s": 26.49,
+      "predicted_s": 16.74,
+      "ratio": 1.582,
+      "above_threshold": true
+    },
+    {
+      "repo": "runtime",
+      "loc": 10435027,
+      "actual_s": 347.63,
+      "predicted_s": 220.75,
+      "ratio": 1.575,
+      "above_threshold": true
+    },
+    {
+      "repo": "tailwindcss",
+      "loc": 145249,
+      "actual_s": 5.01,
+      "predicted_s": 3.18,
+      "ratio": 1.575,
+      "above_threshold": true
+    },
+    {
+      "repo": "sdk",
+      "loc": 2928980,
+      "actual_s": 97.47,
+      "predicted_s": 62.6,
+      "ratio": 1.557,
+      "above_threshold": true
+    },
+    {
+      "repo": "typeorm",
+      "loc": 291800,
+      "actual_s": 9.85,
+      "predicted_s": 6.35,
+      "ratio": 1.55,
+      "above_threshold": true
+    },
+    {
+      "repo": "typescript-eslint",
+      "loc": 310724,
+      "actual_s": 10.43,
+      "predicted_s": 6.76,
+      "ratio": 1.542,
+      "above_threshold": true
+    },
+    {
+      "repo": "excalidraw",
+      "loc": 225234,
+      "actual_s": 7.45,
+      "predicted_s": 4.92,
+      "ratio": 1.516,
+      "above_threshold": true
+    },
+    {
+      "repo": "PowerToys",
+      "loc": 621245,
+      "actual_s": 20.35,
+      "predicted_s": 13.45,
+      "ratio": 1.513,
+      "above_threshold": true
+    },
+    {
+      "repo": "next.js",
+      "loc": 1851547,
+      "actual_s": 57.86,
+      "predicted_s": 39.72,
+      "ratio": 1.457,
+      "above_threshold": true
+    },
+    {
+      "repo": "Babylon.js",
+      "loc": 853385,
+      "actual_s": 25.27,
+      "predicted_s": 18.42,
+      "ratio": 1.372,
+      "above_threshold": true
+    },
+    {
+      "repo": "swc",
+      "loc": 3930373,
+      "actual_s": 113.91,
+      "predicted_s": 83.81,
+      "ratio": 1.359,
+      "above_threshold": true
+    },
+    {
+      "repo": "django",
+      "loc": 524456,
+      "actual_s": 15.33,
+      "predicted_s": 11.37,
+      "ratio": 1.349,
+      "above_threshold": true
+    },
+    {
+      "repo": "pixijs",
+      "loc": 199909,
+      "actual_s": 5.85,
+      "predicted_s": 4.37,
+      "ratio": 1.34,
+      "above_threshold": true
+    },
+    {
+      "repo": "nest",
+      "loc": 121507,
+      "actual_s": 3.56,
+      "predicted_s": 2.67,
+      "ratio": 1.336,
+      "above_threshold": true
+    },
+    {
+      "repo": "RaspberryPi",
+      "loc": 95885,
+      "actual_s": 2.77,
+      "predicted_s": 2.11,
+      "ratio": 1.315,
+      "above_threshold": true
+    },
+    {
+      "repo": "cosmopolitan",
+      "loc": 472471,
+      "actual_s": 13.37,
+      "predicted_s": 10.25,
+      "ratio": 1.304,
+      "above_threshold": true
+    },
+    {
+      "repo": "kotlin",
+      "loc": 6414323,
+      "actual_s": 176.36,
+      "predicted_s": 136.23,
+      "ratio": 1.295,
+      "above_threshold": true
+    },
+    {
+      "repo": "assemblyscript",
+      "loc": 114387,
+      "actual_s": 3.25,
+      "predicted_s": 2.51,
+      "ratio": 1.295,
+      "above_threshold": true
+    },
+    {
+      "repo": "sentry",
+      "loc": 3024483,
+      "actual_s": 83.2,
+      "predicted_s": 64.63,
+      "ratio": 1.287,
+      "above_threshold": true
+    },
+    {
+      "repo": "spamassassin",
+      "loc": 76029,
+      "actual_s": 2.14,
+      "predicted_s": 1.67,
+      "ratio": 1.278,
+      "above_threshold": true
+    },
+    {
+      "repo": "retrofit",
+      "loc": 59410,
+      "actual_s": 1.67,
+      "predicted_s": 1.31,
+      "ratio": 1.274,
+      "above_threshold": true
+    },
+    {
+      "repo": "vue",
+      "loc": 80014,
+      "actual_s": 2.21,
+      "predicted_s": 1.76,
+      "ratio": 1.255,
+      "above_threshold": true
+    },
+    {
+      "repo": "fineract",
+      "loc": 823245,
+      "actual_s": 22.28,
+      "predicted_s": 17.78,
+      "ratio": 1.253,
+      "above_threshold": true
+    },
+    {
+      "repo": "ant-design",
+      "loc": 272161,
+      "actual_s": 7.42,
+      "predicted_s": 5.93,
+      "ratio": 1.251,
+      "above_threshold": true
+    },
+    {
+      "repo": "esphome",
+      "loc": 605922,
+      "actual_s": 16.4,
+      "predicted_s": 13.12,
+      "ratio": 1.25,
+      "above_threshold": true
+    },
+    {
+      "repo": "ngl",
+      "loc": 86218,
+      "actual_s": 2.37,
+      "predicted_s": 1.9,
+      "ratio": 1.25,
+      "above_threshold": true
+    },
+    {
+      "repo": "cics-banking-sample-appli...",
+      "loc": 67564,
+      "actual_s": 1.86,
+      "predicted_s": 1.49,
+      "ratio": 1.249,
+      "above_threshold": true
+    },
+    {
+      "repo": "magento2",
+      "loc": 2347607,
+      "actual_s": 62.36,
+      "predicted_s": 50.27,
+      "ratio": 1.241,
+      "above_threshold": true
+    },
+    {
+      "repo": "circuitpython",
+      "loc": 624785,
+      "actual_s": 16.53,
+      "predicted_s": 13.52,
+      "ratio": 1.222,
+      "above_threshold": true
+    },
+    {
+      "repo": "spring-boot",
+      "loc": 843718,
+      "actual_s": 21.97,
+      "predicted_s": 18.22,
+      "ratio": 1.206,
+      "above_threshold": true
+    },
+    {
+      "repo": "jenkins",
+      "loc": 638644,
+      "actual_s": 16.66,
+      "predicted_s": 13.82,
+      "ratio": 1.205,
+      "above_threshold": true
+    },
+    {
+      "repo": "serenity",
+      "loc": 1507585,
+      "actual_s": 38.39,
+      "predicted_s": 32.4,
+      "ratio": 1.185,
+      "above_threshold": true
+    },
+    {
+      "repo": "blast",
+      "loc": 245453,
+      "actual_s": 6.33,
+      "predicted_s": 5.35,
+      "ratio": 1.183,
+      "above_threshold": true
+    },
+    {
+      "repo": "rust",
+      "loc": 3630679,
+      "actual_s": 91.49,
+      "predicted_s": 77.47,
+      "ratio": 1.181,
+      "above_threshold": true
+    },
+    {
+      "repo": "AppFlowy",
+      "loc": 133001,
+      "actual_s": 3.4,
+      "predicted_s": 2.92,
+      "ratio": 1.166,
+      "above_threshold": true
+    },
+    {
+      "repo": "igv.js",
+      "loc": 112412,
+      "actual_s": 2.77,
+      "predicted_s": 2.47,
+      "ratio": 1.123,
+      "above_threshold": true
+    },
+    {
+      "repo": "Rocket.Chat",
+      "loc": 877384,
+      "actual_s": 21.21,
+      "predicted_s": 18.94,
+      "ratio": 1.12,
+      "above_threshold": true
+    },
+    {
+      "repo": "pygments",
+      "loc": 183256,
+      "actual_s": 4.48,
+      "predicted_s": 4.01,
+      "ratio": 1.118,
+      "above_threshold": true
+    },
+    {
+      "repo": "react-flow",
+      "loc": 51065,
+      "actual_s": 1.26,
+      "predicted_s": 1.13,
+      "ratio": 1.117,
+      "above_threshold": true
+    },
+    {
+      "repo": "fp-ts",
+      "loc": 83512,
+      "actual_s": 2.04,
+      "predicted_s": 1.84,
+      "ratio": 1.11,
+      "above_threshold": true
+    },
+    {
+      "repo": "mall",
+      "loc": 110941,
+      "actual_s": 2.7,
+      "predicted_s": 2.44,
+      "ratio": 1.109,
+      "above_threshold": true
+    },
+    {
+      "repo": "Excalibur",
+      "loc": 110008,
+      "actual_s": 2.66,
+      "predicted_s": 2.41,
+      "ratio": 1.102,
+      "above_threshold": true
+    },
+    {
+      "repo": "elasticsearch",
+      "loc": 5862098,
+      "actual_s": 137.06,
+      "predicted_s": 124.59,
+      "ratio": 1.1,
+      "above_threshold": true
+    },
+    {
+      "repo": "airflow",
+      "loc": 1550549,
+      "actual_s": 36.61,
+      "predicted_s": 33.31,
+      "ratio": 1.099,
+      "above_threshold": true
+    },
+    {
+      "repo": "workers-sdk",
+      "loc": 535978,
+      "actual_s": 12.67,
+      "predicted_s": 11.62,
+      "ratio": 1.091,
+      "above_threshold": true
+    },
+    {
+      "repo": "raspberrypi",
+      "loc": 87283,
+      "actual_s": 2.09,
+      "predicted_s": 1.92,
+      "ratio": 1.089,
+      "above_threshold": true
+    },
+    {
+      "repo": "ionic-framework",
+      "loc": 254497,
+      "actual_s": 6.01,
+      "predicted_s": 5.55,
+      "ratio": 1.083,
+      "above_threshold": true
+    },
+    {
+      "repo": "textual",
+      "loc": 131112,
+      "actual_s": 3.07,
+      "predicted_s": 2.87,
+      "ratio": 1.068,
+      "above_threshold": true
+    },
+    {
+      "repo": "discourse",
+      "loc": 1790243,
+      "actual_s": 40.61,
+      "predicted_s": 38.42,
+      "ratio": 1.057,
+      "above_threshold": true
+    },
+    {
+      "repo": "cython",
+      "loc": 338683,
+      "actual_s": 7.79,
+      "predicted_s": 7.37,
+      "ratio": 1.057,
+      "above_threshold": true
+    },
+    {
+      "repo": "keystone",
+      "loc": 106079,
+      "actual_s": 2.46,
+      "predicted_s": 2.33,
+      "ratio": 1.056,
+      "above_threshold": true
+    },
+    {
+      "repo": "gitgalaxy",
+      "loc": 132770,
+      "actual_s": 3.06,
+      "predicted_s": 2.91,
+      "ratio": 1.052,
+      "above_threshold": true
+    },
+    {
+      "repo": "angular",
+      "loc": 1234994,
+      "actual_s": 27.9,
+      "predicted_s": 26.58,
+      "ratio": 1.05,
+      "above_threshold": true
+    },
+    {
+      "repo": "ansible",
+      "loc": 373919,
+      "actual_s": 8.53,
+      "predicted_s": 8.13,
+      "ratio": 1.05,
+      "above_threshold": true
+    },
+    {
+      "repo": "matplotlib",
+      "loc": 145897,
+      "actual_s": 3.35,
+      "predicted_s": 3.2,
+      "ratio": 1.048,
+      "above_threshold": true
+    },
+    {
+      "repo": "pynacl",
+      "loc": 73371,
+      "actual_s": 1.68,
+      "predicted_s": 1.62,
+      "ratio": 1.04,
+      "above_threshold": true
+    },
+    {
+      "repo": "trpc",
+      "loc": 127246,
+      "actual_s": 2.9,
+      "predicted_s": 2.79,
+      "ratio": 1.039,
+      "above_threshold": true
+    },
+    {
+      "repo": "exiftool",
+      "loc": 211211,
+      "actual_s": 4.76,
+      "predicted_s": 4.61,
+      "ratio": 1.032,
+      "above_threshold": true
+    },
+    {
+      "repo": "desktop",
+      "loc": 186997,
+      "actual_s": 4.21,
+      "predicted_s": 4.09,
+      "ratio": 1.03,
+      "above_threshold": true
+    },
+    {
+      "repo": "canvas-lms",
+      "loc": 3347792,
+      "actual_s": 73.29,
+      "predicted_s": 71.48,
+      "ratio": 1.025,
+      "above_threshold": true
+    },
+    {
+      "repo": "gutenberg",
+      "loc": 1150157,
+      "actual_s": 25.37,
+      "predicted_s": 24.77,
+      "ratio": 1.024,
+      "above_threshold": true
+    },
+    {
+      "repo": "kafka",
+      "loc": 1547585,
+      "actual_s": 33.99,
+      "predicted_s": 33.25,
+      "ratio": 1.022,
+      "above_threshold": true
+    },
+    {
+      "repo": "orjson",
+      "loc": 154806,
+      "actual_s": 3.46,
+      "predicted_s": 3.39,
+      "ratio": 1.021,
+      "above_threshold": true
+    },
+    {
+      "repo": "vscode",
+      "loc": 2225045,
+      "actual_s": 48.33,
+      "predicted_s": 47.66,
+      "ratio": 1.014,
+      "above_threshold": true
+    },
+    {
+      "repo": "rapidfuzz",
+      "loc": 676340,
+      "actual_s": 14.75,
+      "predicted_s": 14.63,
+      "ratio": 1.008,
+      "above_threshold": true
+    },
+    {
+      "repo": "selenium",
+      "loc": 520578,
+      "actual_s": 11.36,
+      "predicted_s": 11.28,
+      "ratio": 1.007,
+      "above_threshold": true
+    },
+    {
+      "repo": "cyber",
+      "loc": 78158,
+      "actual_s": 1.73,
+      "predicted_s": 1.72,
+      "ratio": 1.006,
+      "above_threshold": true
+    },
+    {
+      "repo": "symfony",
+      "loc": 2017082,
+      "actual_s": 43.36,
+      "predicted_s": 43.24,
+      "ratio": 1.003,
+      "above_threshold": true
+    },
+    {
+      "repo": "tensorflow",
+      "loc": 3334757,
+      "actual_s": 71.17,
+      "predicted_s": 71.2,
+      "ratio": 1.0,
+      "above_threshold": true
+    },
+    {
+      "repo": "moby",
+      "loc": 398698,
+      "actual_s": 8.65,
+      "predicted_s": 8.66,
+      "ratio": 0.999,
+      "above_threshold": true
+    },
+    {
+      "repo": "openclaw-typescript",
+      "loc": 1026455,
+      "actual_s": 22.05,
+      "predicted_s": 22.13,
+      "ratio": 0.997,
+      "above_threshold": true
+    },
+    {
+      "repo": "port_csharp_manageddoom",
+      "loc": 54514,
+      "actual_s": 1.2,
+      "predicted_s": 1.2,
+      "ratio": 0.997,
+      "above_threshold": true
+    },
+    {
+      "repo": "spock",
+      "loc": 121032,
+      "actual_s": 2.63,
+      "predicted_s": 2.65,
+      "ratio": 0.991,
+      "above_threshold": true
+    },
+    {
+      "repo": "flutter",
+      "loc": 1819740,
+      "actual_s": 38.18,
+      "predicted_s": 39.05,
+      "ratio": 0.978,
+      "above_threshold": true
+    },
+    {
+      "repo": "mypy",
+      "loc": 290061,
+      "actual_s": 6.18,
+      "predicted_s": 6.32,
+      "ratio": 0.978,
+      "above_threshold": true
+    },
+    {
+      "repo": "ruff",
+      "loc": 368633,
+      "actual_s": 7.78,
+      "predicted_s": 8.01,
+      "ratio": 0.971,
+      "above_threshold": true
+    },
+    {
+      "repo": "micropython",
+      "loc": 685083,
+      "actual_s": 14.29,
+      "predicted_s": 14.82,
+      "ratio": 0.964,
+      "above_threshold": true
+    },
+    {
+      "repo": "bun",
+      "loc": 1933910,
+      "actual_s": 39.92,
+      "predicted_s": 41.48,
+      "ratio": 0.962,
+      "above_threshold": true
+    },
+    {
+      "repo": "docutils",
+      "loc": 55577,
+      "actual_s": 1.18,
+      "predicted_s": 1.23,
+      "ratio": 0.962,
+      "above_threshold": true
+    },
+    {
+      "repo": "nvda",
+      "loc": 248063,
+      "actual_s": 5.17,
+      "predicted_s": 5.41,
+      "ratio": 0.956,
+      "above_threshold": true
+    },
+    {
+      "repo": "abap2xlsx",
+      "loc": 61073,
+      "actual_s": 1.28,
+      "predicted_s": 1.35,
+      "ratio": 0.95,
+      "above_threshold": true
+    },
+    {
+      "repo": "kivy",
+      "loc": 164273,
+      "actual_s": 3.41,
+      "predicted_s": 3.59,
+      "ratio": 0.949,
+      "above_threshold": true
+    },
+    {
+      "repo": "laravel_core",
+      "loc": 535881,
+      "actual_s": 10.96,
+      "predicted_s": 11.61,
+      "ratio": 0.944,
+      "above_threshold": true
+    },
+    {
+      "repo": "angr",
+      "loc": 319225,
+      "actual_s": 6.55,
+      "predicted_s": 6.95,
+      "ratio": 0.943,
+      "above_threshold": true
+    },
+    {
+      "repo": "moment",
+      "loc": 173100,
+      "actual_s": 3.56,
+      "predicted_s": 3.79,
+      "ratio": 0.94,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyparsing",
+      "loc": 93815,
+      "actual_s": 1.93,
+      "predicted_s": 2.06,
+      "ratio": 0.936,
+      "above_threshold": true
+    },
+    {
+      "repo": "mediawiki",
+      "loc": 1700887,
+      "actual_s": 34.13,
+      "predicted_s": 36.52,
+      "ratio": 0.935,
+      "above_threshold": true
+    },
+    {
+      "repo": "pwntools",
+      "loc": 143093,
+      "actual_s": 2.93,
+      "predicted_s": 3.13,
+      "ratio": 0.935,
+      "above_threshold": true
+    },
+    {
+      "repo": "deno",
+      "loc": 984265,
+      "actual_s": 19.8,
+      "predicted_s": 21.23,
+      "ratio": 0.933,
+      "above_threshold": true
+    },
+    {
+      "repo": "yii2",
+      "loc": 207030,
+      "actual_s": 4.22,
+      "predicted_s": 4.52,
+      "ratio": 0.933,
+      "above_threshold": true
+    },
+    {
+      "repo": "Python",
+      "loc": 126848,
+      "actual_s": 2.59,
+      "predicted_s": 2.78,
+      "ratio": 0.931,
+      "above_threshold": true
+    },
+    {
+      "repo": "aiohttp",
+      "loc": 100200,
+      "actual_s": 2.04,
+      "predicted_s": 2.2,
+      "ratio": 0.927,
+      "above_threshold": true
+    },
+    {
+      "repo": "wasmtime",
+      "loc": 658498,
+      "actual_s": 13.19,
+      "predicted_s": 14.25,
+      "ratio": 0.926,
+      "above_threshold": true
+    },
+    {
+      "repo": "zod",
+      "loc": 80043,
+      "actual_s": 1.62,
+      "predicted_s": 1.76,
+      "ratio": 0.92,
+      "above_threshold": true
+    },
+    {
+      "repo": "swift",
+      "loc": 3477739,
+      "actual_s": 68.23,
+      "predicted_s": 74.23,
+      "ratio": 0.919,
+      "above_threshold": true
+    },
+    {
+      "repo": "fieldtrip",
+      "loc": 513294,
+      "actual_s": 10.23,
+      "predicted_s": 11.13,
+      "ratio": 0.919,
+      "above_threshold": true
+    },
+    {
+      "repo": "ghostty",
+      "loc": 317797,
+      "actual_s": 6.35,
+      "predicted_s": 6.92,
+      "ratio": 0.918,
+      "above_threshold": true
+    },
+    {
+      "repo": "openzeppelin-contracts",
+      "loc": 91709,
+      "actual_s": 1.85,
+      "predicted_s": 2.02,
+      "ratio": 0.918,
+      "above_threshold": true
+    },
+    {
+      "repo": "nushell",
+      "loc": 361535,
+      "actual_s": 7.2,
+      "predicted_s": 7.86,
+      "ratio": 0.916,
+      "above_threshold": true
+    },
+    {
+      "repo": "mikro-orm",
+      "loc": 270366,
+      "actual_s": 5.35,
+      "predicted_s": 5.89,
+      "ratio": 0.908,
+      "above_threshold": true
+    },
+    {
+      "repo": "rdkit",
+      "loc": 800291,
+      "actual_s": 15.68,
+      "predicted_s": 17.29,
+      "ratio": 0.907,
+      "above_threshold": true
+    },
+    {
+      "repo": "cobrix",
+      "loc": 89942,
+      "actual_s": 1.79,
+      "predicted_s": 1.98,
+      "ratio": 0.905,
+      "above_threshold": true
+    },
+    {
+      "repo": "protobuf",
+      "loc": 52548,
+      "actual_s": 1.05,
+      "predicted_s": 1.16,
+      "ratio": 0.905,
+      "above_threshold": true
+    },
+    {
+      "repo": "godot",
+      "loc": 4252910,
+      "actual_s": 81.72,
+      "predicted_s": 90.63,
+      "ratio": 0.902,
+      "above_threshold": true
+    },
+    {
+      "repo": "react-router",
+      "loc": 211689,
+      "actual_s": 4.16,
+      "predicted_s": 4.62,
+      "ratio": 0.9,
+      "above_threshold": true
+    },
+    {
+      "repo": "three.js",
+      "loc": 741593,
+      "actual_s": 14.35,
+      "predicted_s": 16.03,
+      "ratio": 0.895,
+      "above_threshold": true
+    },
+    {
+      "repo": "lazygit",
+      "loc": 119150,
+      "actual_s": 2.34,
+      "predicted_s": 2.61,
+      "ratio": 0.895,
+      "above_threshold": true
+    },
+    {
+      "repo": "playwright",
+      "loc": 531768,
+      "actual_s": 10.27,
+      "predicted_s": 11.52,
+      "ratio": 0.891,
+      "above_threshold": true
+    },
+    {
+      "repo": "lxml",
+      "loc": 109466,
+      "actual_s": 2.12,
+      "predicted_s": 2.4,
+      "ratio": 0.882,
+      "above_threshold": true
+    },
+    {
+      "repo": "tigerbeetle",
+      "loc": 204785,
+      "actual_s": 3.92,
+      "predicted_s": 4.47,
+      "ratio": 0.876,
+      "above_threshold": true
+    },
+    {
+      "repo": "kubernetes",
+      "loc": 3340840,
+      "actual_s": 62.33,
+      "predicted_s": 71.33,
+      "ratio": 0.874,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyqtgraph",
+      "loc": 98599,
+      "actual_s": 1.89,
+      "predicted_s": 2.17,
+      "ratio": 0.872,
+      "above_threshold": true
+    },
+    {
+      "repo": "root",
+      "loc": 7432922,
+      "actual_s": 137.26,
+      "predicted_s": 157.68,
+      "ratio": 0.871,
+      "above_threshold": true
+    },
+    {
+      "repo": "content",
+      "loc": 1434067,
+      "actual_s": 26.8,
+      "predicted_s": 30.83,
+      "ratio": 0.869,
+      "above_threshold": true
+    },
+    {
+      "repo": "rails",
+      "loc": 617585,
+      "actual_s": 11.59,
+      "predicted_s": 13.37,
+      "ratio": 0.867,
+      "above_threshold": true
+    },
+    {
+      "repo": "platform_dalvik",
+      "loc": 176846,
+      "actual_s": 3.35,
+      "predicted_s": 3.87,
+      "ratio": 0.866,
+      "above_threshold": true
+    },
+    {
+      "repo": "wrf-fortran",
+      "loc": 1763150,
+      "actual_s": 32.73,
+      "predicted_s": 37.84,
+      "ratio": 0.865,
+      "above_threshold": true
+    },
+    {
+      "repo": "perl5",
+      "loc": 1362561,
+      "actual_s": 25.2,
+      "predicted_s": 29.31,
+      "ratio": 0.86,
+      "above_threshold": true
+    },
+    {
+      "repo": "pypy",
+      "loc": 1415081,
+      "actual_s": 26.14,
+      "predicted_s": 30.43,
+      "ratio": 0.859,
+      "above_threshold": true
+    },
+    {
+      "repo": "microzig",
+      "loc": 130788,
+      "actual_s": 2.46,
+      "predicted_s": 2.87,
+      "ratio": 0.858,
+      "above_threshold": true
+    },
+    {
+      "repo": "cryptography",
+      "loc": 91679,
+      "actual_s": 1.73,
+      "predicted_s": 2.02,
+      "ratio": 0.858,
+      "above_threshold": true
+    },
+    {
+      "repo": "vyre",
+      "loc": 940240,
+      "actual_s": 17.28,
+      "predicted_s": 20.28,
+      "ratio": 0.852,
+      "above_threshold": true
+    },
+    {
+      "repo": "cytoscape.js",
+      "loc": 81088,
+      "actual_s": 1.52,
+      "predicted_s": 1.78,
+      "ratio": 0.852,
+      "above_threshold": true
+    },
+    {
+      "repo": "Carbon",
+      "loc": 322845,
+      "actual_s": 5.95,
+      "predicted_s": 7.03,
+      "ratio": 0.847,
+      "above_threshold": true
+    },
+    {
+      "repo": "nasm",
+      "loc": 82136,
+      "actual_s": 1.53,
+      "predicted_s": 1.81,
+      "ratio": 0.847,
+      "above_threshold": true
+    },
+    {
+      "repo": "ripgrep",
+      "loc": 62846,
+      "actual_s": 1.17,
+      "predicted_s": 1.39,
+      "ratio": 0.844,
+      "above_threshold": true
+    },
+    {
+      "repo": "eeglab",
+      "loc": 148275,
+      "actual_s": 2.73,
+      "predicted_s": 3.25,
+      "ratio": 0.841,
+      "above_threshold": true
+    },
+    {
+      "repo": "arktype",
+      "loc": 73513,
+      "actual_s": 1.36,
+      "predicted_s": 1.62,
+      "ratio": 0.84,
+      "above_threshold": true
+    },
+    {
+      "repo": "pytest",
+      "loc": 102977,
+      "actual_s": 1.89,
+      "predicted_s": 2.26,
+      "ratio": 0.836,
+      "above_threshold": true
+    },
+    {
+      "repo": "biopython",
+      "loc": 566266,
+      "actual_s": 10.21,
+      "predicted_s": 12.27,
+      "ratio": 0.832,
+      "above_threshold": true
+    },
+    {
+      "repo": "MS-DOS",
+      "loc": 506541,
+      "actual_s": 9.14,
+      "predicted_s": 10.98,
+      "ratio": 0.832,
+      "above_threshold": true
+    },
+    {
+      "repo": "Alamofire",
+      "loc": 50727,
+      "actual_s": 0.93,
+      "predicted_s": 1.12,
+      "ratio": 0.83,
+      "above_threshold": true
+    },
+    {
+      "repo": "setuptools",
+      "loc": 81771,
+      "actual_s": 1.49,
+      "predicted_s": 1.8,
+      "ratio": 0.828,
+      "above_threshold": true
+    },
+    {
+      "repo": "cakephp",
+      "loc": 368839,
+      "actual_s": 6.61,
+      "predicted_s": 8.02,
+      "ratio": 0.824,
+      "above_threshold": true
+    },
+    {
+      "repo": "tauri",
+      "loc": 131244,
+      "actual_s": 2.37,
+      "predicted_s": 2.88,
+      "ratio": 0.824,
+      "above_threshold": true
+    },
+    {
+      "repo": "spm12",
+      "loc": 696700,
+      "actual_s": 12.4,
+      "predicted_s": 15.07,
+      "ratio": 0.823,
+      "above_threshold": true
+    },
+    {
+      "repo": "opencv",
+      "loc": 2050441,
+      "actual_s": 36.15,
+      "predicted_s": 43.95,
+      "ratio": 0.822,
+      "above_threshold": true
+    },
+    {
+      "repo": "cesium",
+      "loc": 1146378,
+      "actual_s": 20.27,
+      "predicted_s": 24.69,
+      "ratio": 0.821,
+      "above_threshold": true
+    },
+    {
+      "repo": "PowerShell",
+      "loc": 809153,
+      "actual_s": 14.35,
+      "predicted_s": 17.48,
+      "ratio": 0.821,
+      "above_threshold": true
+    },
+    {
+      "repo": "impacket",
+      "loc": 166661,
+      "actual_s": 2.98,
+      "predicted_s": 3.65,
+      "ratio": 0.817,
+      "above_threshold": true
+    },
+    {
+      "repo": "react",
+      "loc": 847301,
+      "actual_s": 14.93,
+      "predicted_s": 18.29,
+      "ratio": 0.816,
+      "above_threshold": true
+    },
+    {
+      "repo": "pip",
+      "loc": 157163,
+      "actual_s": 2.8,
+      "predicted_s": 3.44,
+      "ratio": 0.814,
+      "above_threshold": true
+    },
+    {
+      "repo": "curl",
+      "loc": 330175,
+      "actual_s": 5.84,
+      "predicted_s": 7.18,
+      "ratio": 0.813,
+      "above_threshold": true
+    },
+    {
+      "repo": "Chart.js",
+      "loc": 81843,
+      "actual_s": 1.46,
+      "predicted_s": 1.8,
+      "ratio": 0.811,
+      "above_threshold": true
+    },
+    {
+      "repo": "bugzilla",
+      "loc": 149514,
+      "actual_s": 2.65,
+      "predicted_s": 3.27,
+      "ratio": 0.809,
+      "above_threshold": true
+    },
+    {
+      "repo": "mach",
+      "loc": 70658,
+      "actual_s": 1.26,
+      "predicted_s": 1.56,
+      "ratio": 0.809,
+      "above_threshold": true
+    },
+    {
+      "repo": "puppeteer",
+      "loc": 165962,
+      "actual_s": 2.93,
+      "predicted_s": 3.63,
+      "ratio": 0.807,
+      "above_threshold": true
+    },
+    {
+      "repo": "mojo",
+      "loc": 76630,
+      "actual_s": 1.36,
+      "predicted_s": 1.69,
+      "ratio": 0.806,
+      "above_threshold": true
+    },
+    {
+      "repo": "node",
+      "loc": 7927455,
+      "actual_s": 134.2,
+      "predicted_s": 168.08,
+      "ratio": 0.798,
+      "above_threshold": true
+    },
+    {
+      "repo": "wgpu",
+      "loc": 343626,
+      "actual_s": 5.94,
+      "predicted_s": 7.47,
+      "ratio": 0.795,
+      "above_threshold": true
+    },
+    {
+      "repo": "racket",
+      "loc": 1265589,
+      "actual_s": 21.55,
+      "predicted_s": 27.24,
+      "ratio": 0.791,
+      "above_threshold": true
+    },
+    {
+      "repo": "google-cloud-storage",
+      "loc": 99451,
+      "actual_s": 1.71,
+      "predicted_s": 2.18,
+      "ratio": 0.783,
+      "above_threshold": true
+    },
+    {
+      "repo": "zls",
+      "loc": 59030,
+      "actual_s": 1.02,
+      "predicted_s": 1.3,
+      "ratio": 0.783,
+      "above_threshold": true
+    },
+    {
+      "repo": "okhttp",
+      "loc": 149585,
+      "actual_s": 2.56,
+      "predicted_s": 3.28,
+      "ratio": 0.782,
+      "above_threshold": true
+    },
+    {
+      "repo": "zellij",
+      "loc": 277963,
+      "actual_s": 4.71,
+      "predicted_s": 6.06,
+      "ratio": 0.778,
+      "above_threshold": true
+    },
+    {
+      "repo": "azure-devops-node-api",
+      "loc": 55772,
+      "actual_s": 0.95,
+      "predicted_s": 1.23,
+      "ratio": 0.772,
+      "above_threshold": true
+    },
+    {
+      "repo": "zig",
+      "loc": 3097515,
+      "actual_s": 50.91,
+      "predicted_s": 66.18,
+      "ratio": 0.769,
+      "above_threshold": true
+    },
+    {
+      "repo": "bevy",
+      "loc": 589098,
+      "actual_s": 9.81,
+      "predicted_s": 12.76,
+      "ratio": 0.769,
+      "above_threshold": true
+    },
+    {
+      "repo": "abap-cleaner",
+      "loc": 152347,
+      "actual_s": 2.56,
+      "predicted_s": 3.34,
+      "ratio": 0.768,
+      "above_threshold": true
+    },
+    {
+      "repo": "networkx",
+      "loc": 182525,
+      "actual_s": 3.06,
+      "predicted_s": 3.99,
+      "ratio": 0.767,
+      "above_threshold": true
+    },
+    {
+      "repo": "pydantic",
+      "loc": 112463,
+      "actual_s": 1.89,
+      "predicted_s": 2.47,
+      "ratio": 0.766,
+      "above_threshold": true
+    },
+    {
+      "repo": "actix-web",
+      "loc": 92636,
+      "actual_s": 1.56,
+      "predicted_s": 2.04,
+      "ratio": 0.766,
+      "above_threshold": true
+    },
+    {
+      "repo": "scipy",
+      "loc": 1327455,
+      "actual_s": 21.84,
+      "predicted_s": 28.56,
+      "ratio": 0.765,
+      "above_threshold": true
+    },
+    {
+      "repo": "alembic",
+      "loc": 58228,
+      "actual_s": 0.98,
+      "predicted_s": 1.28,
+      "ratio": 0.763,
+      "above_threshold": true
+    },
+    {
+      "repo": "scapy",
+      "loc": 232353,
+      "actual_s": 3.85,
+      "predicted_s": 5.07,
+      "ratio": 0.759,
+      "above_threshold": true
+    },
+    {
+      "repo": "WordPress",
+      "loc": 947499,
+      "actual_s": 15.49,
+      "predicted_s": 20.44,
+      "ratio": 0.758,
+      "above_threshold": true
+    },
+    {
+      "repo": "pandas",
+      "loc": 734667,
+      "actual_s": 12.0,
+      "predicted_s": 15.88,
+      "ratio": 0.756,
+      "above_threshold": true
+    },
+    {
+      "repo": "pandoc",
+      "loc": 239417,
+      "actual_s": 3.88,
+      "predicted_s": 5.22,
+      "ratio": 0.743,
+      "above_threshold": true
+    },
+    {
+      "repo": "cpm65",
+      "loc": 57582,
+      "actual_s": 0.94,
+      "predicted_s": 1.27,
+      "ratio": 0.74,
+      "above_threshold": true
+    },
+    {
+      "repo": "prometheus",
+      "loc": 377316,
+      "actual_s": 6.04,
+      "predicted_s": 8.2,
+      "ratio": 0.737,
+      "above_threshold": true
+    },
+    {
+      "repo": "haiku",
+      "loc": 4285605,
+      "actual_s": 67.12,
+      "predicted_s": 91.32,
+      "ratio": 0.735,
+      "above_threshold": true
+    },
+    {
+      "repo": "go",
+      "loc": 1831333,
+      "actual_s": 28.66,
+      "predicted_s": 39.29,
+      "ratio": 0.729,
+      "above_threshold": true
+    },
+    {
+      "repo": "numpy",
+      "loc": 1120898,
+      "actual_s": 17.57,
+      "predicted_s": 24.15,
+      "ratio": 0.728,
+      "above_threshold": true
+    },
+    {
+      "repo": "cpython",
+      "loc": 880883,
+      "actual_s": 13.85,
+      "predicted_s": 19.01,
+      "ratio": 0.728,
+      "above_threshold": true
+    },
+    {
+      "repo": "scikit-learn",
+      "loc": 459370,
+      "actual_s": 7.25,
+      "predicted_s": 9.97,
+      "ratio": 0.727,
+      "above_threshold": true
+    },
+    {
+      "repo": "solana",
+      "loc": 580592,
+      "actual_s": 9.13,
+      "predicted_s": 12.57,
+      "ratio": 0.726,
+      "above_threshold": true
+    },
+    {
+      "repo": "terraform",
+      "loc": 627404,
+      "actual_s": 9.83,
+      "predicted_s": 13.58,
+      "ratio": 0.724,
+      "above_threshold": true
+    },
+    {
+      "repo": "wordpress",
+      "loc": 945835,
+      "actual_s": 14.72,
+      "predicted_s": 20.4,
+      "ratio": 0.721,
+      "above_threshold": true
+    },
+    {
+      "repo": "substrate",
+      "loc": 604231,
+      "actual_s": 9.4,
+      "predicted_s": 13.08,
+      "ratio": 0.719,
+      "above_threshold": true
+    },
+    {
+      "repo": "rust-analyzer",
+      "loc": 534323,
+      "actual_s": 8.26,
+      "predicted_s": 11.58,
+      "ratio": 0.713,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyarrow",
+      "loc": 155413,
+      "actual_s": 2.42,
+      "predicted_s": 3.4,
+      "ratio": 0.711,
+      "above_threshold": true
+    },
+    {
+      "repo": "livecode",
+      "loc": 908809,
+      "actual_s": 13.93,
+      "predicted_s": 19.61,
+      "ratio": 0.71,
+      "above_threshold": true
+    },
+    {
+      "repo": "cargo",
+      "loc": 416453,
+      "actual_s": 6.32,
+      "predicted_s": 9.04,
+      "ratio": 0.699,
+      "above_threshold": true
+    },
+    {
+      "repo": "cli",
+      "loc": 749503,
+      "actual_s": 11.31,
+      "predicted_s": 16.2,
+      "ratio": 0.698,
+      "above_threshold": true
+    },
+    {
+      "repo": "effect",
+      "loc": 619956,
+      "actual_s": 9.36,
+      "predicted_s": 13.42,
+      "ratio": 0.698,
+      "above_threshold": true
+    },
+    {
+      "repo": "abapGit",
+      "loc": 220733,
+      "actual_s": 3.35,
+      "predicted_s": 4.82,
+      "ratio": 0.695,
+      "above_threshold": true
+    },
+    {
+      "repo": "twisted",
+      "loc": 386290,
+      "actual_s": 5.79,
+      "predicted_s": 8.39,
+      "ratio": 0.69,
+      "above_threshold": true
+    },
+    {
+      "repo": "tokio",
+      "loc": 173304,
+      "actual_s": 2.57,
+      "predicted_s": 3.79,
+      "ratio": 0.678,
+      "above_threshold": true
+    },
+    {
+      "repo": "freebsd-src",
+      "loc": 26539565,
+      "actual_s": 375.22,
+      "predicted_s": 557.2,
+      "ratio": 0.673,
+      "above_threshold": true
+    },
+    {
+      "repo": "esbuild",
+      "loc": 223669,
+      "actual_s": 3.25,
+      "predicted_s": 4.88,
+      "ratio": 0.666,
+      "above_threshold": true
+    },
+    {
+      "repo": "reactos",
+      "loc": 8310271,
+      "actual_s": 117.08,
+      "predicted_s": 176.13,
+      "ratio": 0.665,
+      "above_threshold": true
+    },
+    {
+      "repo": "normal_esp32_doom",
+      "loc": 78821,
+      "actual_s": 1.08,
+      "predicted_s": 1.73,
+      "ratio": 0.623,
+      "above_threshold": true
+    },
+    {
+      "repo": "linux",
+      "loc": 33940003,
+      "actual_s": 436.34,
+      "predicted_s": 711.15,
+      "ratio": 0.614,
+      "above_threshold": true
+    },
+    {
+      "repo": "hyperion",
+      "loc": 411612,
+      "actual_s": 5.49,
+      "predicted_s": 8.94,
+      "ratio": 0.614,
+      "above_threshold": true
+    },
+    {
+      "repo": "darwin-xnu",
+      "loc": 1885298,
+      "actual_s": 24.74,
+      "predicted_s": 40.44,
+      "ratio": 0.612,
+      "above_threshold": true
+    },
+    {
+      "repo": "redis",
+      "loc": 484826,
+      "actual_s": 6.39,
+      "predicted_s": 10.52,
+      "ratio": 0.608,
+      "above_threshold": true
+    },
+    {
+      "repo": "normal_rp2040_doom",
+      "loc": 300363,
+      "actual_s": 3.78,
+      "predicted_s": 6.54,
+      "ratio": 0.578,
+      "above_threshold": true
+    },
+    {
+      "repo": "linux-1.0",
+      "loc": 174690,
+      "actual_s": 2.19,
+      "predicted_s": 3.82,
+      "ratio": 0.573,
+      "above_threshold": true
+    },
+    {
+      "repo": "sqlite",
+      "loc": 475713,
+      "actual_s": 5.8,
+      "predicted_s": 10.32,
+      "ratio": 0.562,
+      "above_threshold": true
+    },
+    {
+      "repo": "illumos-gate",
+      "loc": 14164953,
+      "actual_s": 167.25,
+      "predicted_s": 298.92,
+      "ratio": 0.56,
+      "above_threshold": true
+    },
+    {
+      "repo": "gnupg",
+      "loc": 460134,
+      "actual_s": 5.41,
+      "predicted_s": 9.98,
+      "ratio": 0.542,
+      "above_threshold": true
+    },
+    {
+      "repo": "gnucobol",
+      "loc": 276006,
+      "actual_s": 3.23,
+      "predicted_s": 6.01,
+      "ratio": 0.537,
+      "above_threshold": true
+    },
+    {
+      "repo": "loony_ascii_doom",
+      "loc": 59716,
+      "actual_s": 0.68,
+      "predicted_s": 1.32,
+      "ratio": 0.516,
+      "above_threshold": true
+    },
+    {
+      "repo": "freeCodeCamp",
+      "loc": 2406193,
+      "actual_s": 25.84,
+      "predicted_s": 51.51,
+      "ratio": 0.502,
+      "above_threshold": true
+    },
+    {
+      "repo": "normal_doomgeneric",
+      "loc": 61932,
+      "actual_s": 0.62,
+      "predicted_s": 1.37,
+      "ratio": 0.454,
+      "above_threshold": true
+    },
+    {
+      "repo": "Apollo-11",
+      "loc": 131833,
+      "actual_s": 1.3,
+      "predicted_s": 2.89,
+      "ratio": 0.45,
+      "above_threshold": true
+    }
+  ],
+  "all_rows": [
+    {
+      "repo": "Apollo-11",
+      "loc": 131833,
+      "actual_s": 1.3,
+      "predicted_s": 2.89,
+      "ratio": 0.45,
+      "above_threshold": true
+    },
+    {
+      "repo": "normal_doomgeneric",
+      "loc": 61932,
+      "actual_s": 0.62,
+      "predicted_s": 1.37,
+      "ratio": 0.454,
+      "above_threshold": true
+    },
+    {
+      "repo": "freeCodeCamp",
+      "loc": 2406193,
+      "actual_s": 25.84,
+      "predicted_s": 51.51,
+      "ratio": 0.502,
+      "above_threshold": true
+    },
+    {
+      "repo": "loony_ascii_doom",
+      "loc": 59716,
+      "actual_s": 0.68,
+      "predicted_s": 1.32,
+      "ratio": 0.516,
+      "above_threshold": true
+    },
+    {
+      "repo": "original_doom",
+      "loc": 49940,
+      "actual_s": 0.57,
+      "predicted_s": 1.1,
+      "ratio": 0.517,
+      "above_threshold": false
+    },
+    {
+      "repo": "DOOM",
+      "loc": 49940,
+      "actual_s": 0.57,
+      "predicted_s": 1.1,
+      "ratio": 0.517,
+      "above_threshold": false
+    },
+    {
+      "repo": "gnucobol",
+      "loc": 276006,
+      "actual_s": 3.23,
+      "predicted_s": 6.01,
+      "ratio": 0.537,
+      "above_threshold": true
+    },
+    {
+      "repo": "gnupg",
+      "loc": 460134,
+      "actual_s": 5.41,
+      "predicted_s": 9.98,
+      "ratio": 0.542,
+      "above_threshold": true
+    },
+    {
+      "repo": "illumos-gate",
+      "loc": 14164953,
+      "actual_s": 167.25,
+      "predicted_s": 298.92,
+      "ratio": 0.56,
+      "above_threshold": true
+    },
+    {
+      "repo": "sqlite",
+      "loc": 475713,
+      "actual_s": 5.8,
+      "predicted_s": 10.32,
+      "ratio": 0.562,
+      "above_threshold": true
+    },
+    {
+      "repo": "linux-1.0",
+      "loc": 174690,
+      "actual_s": 2.19,
+      "predicted_s": 3.82,
+      "ratio": 0.573,
+      "above_threshold": true
+    },
+    {
+      "repo": "normal_rp2040_doom",
+      "loc": 300363,
+      "actual_s": 3.78,
+      "predicted_s": 6.54,
+      "ratio": 0.578,
+      "above_threshold": true
+    },
+    {
+      "repo": "linux",
+      "loc": 33940003,
+      "actual_s": 436.34,
+      "predicted_s": 711.15,
+      "ratio": 0.614,
+      "above_threshold": true
+    },
+    {
+      "repo": "darwin-xnu",
+      "loc": 1885298,
+      "actual_s": 24.74,
+      "predicted_s": 40.44,
+      "ratio": 0.612,
+      "above_threshold": true
+    },
+    {
+      "repo": "redis",
+      "loc": 484826,
+      "actual_s": 6.39,
+      "predicted_s": 10.52,
+      "ratio": 0.608,
+      "above_threshold": true
+    },
+    {
+      "repo": "hyperion",
+      "loc": 411612,
+      "actual_s": 5.49,
+      "predicted_s": 8.94,
+      "ratio": 0.614,
+      "above_threshold": true
+    },
+    {
+      "repo": "wtfpython",
+      "loc": 15878,
+      "actual_s": 0.22,
+      "predicted_s": 0.35,
+      "ratio": 0.621,
+      "above_threshold": false
+    },
+    {
+      "repo": "normal_esp32_doom",
+      "loc": 78821,
+      "actual_s": 1.08,
+      "predicted_s": 1.73,
+      "ratio": 0.623,
+      "above_threshold": true
+    },
+    {
+      "repo": "reactos",
+      "loc": 8310271,
+      "actual_s": 117.08,
+      "predicted_s": 176.13,
+      "ratio": 0.665,
+      "above_threshold": true
+    },
+    {
+      "repo": "freebsd-src",
+      "loc": 26539565,
+      "actual_s": 375.22,
+      "predicted_s": 557.2,
+      "ratio": 0.673,
+      "above_threshold": true
+    },
+    {
+      "repo": "esbuild",
+      "loc": 223669,
+      "actual_s": 3.25,
+      "predicted_s": 4.88,
+      "ratio": 0.666,
+      "above_threshold": true
+    },
+    {
+      "repo": "temp_jcl_out",
+      "loc": 29156,
+      "actual_s": 0.43,
+      "predicted_s": 0.65,
+      "ratio": 0.665,
+      "above_threshold": false
+    },
+    {
+      "repo": "tokio",
+      "loc": 173304,
+      "actual_s": 2.57,
+      "predicted_s": 3.79,
+      "ratio": 0.678,
+      "above_threshold": true
+    },
+    {
+      "repo": "twisted",
+      "loc": 386290,
+      "actual_s": 5.79,
+      "predicted_s": 8.39,
+      "ratio": 0.69,
+      "above_threshold": true
+    },
+    {
+      "repo": "cli",
+      "loc": 749503,
+      "actual_s": 11.31,
+      "predicted_s": 16.2,
+      "ratio": 0.698,
+      "above_threshold": true
+    },
+    {
+      "repo": "effect",
+      "loc": 619956,
+      "actual_s": 9.36,
+      "predicted_s": 13.42,
+      "ratio": 0.698,
+      "above_threshold": true
+    },
+    {
+      "repo": "cargo",
+      "loc": 416453,
+      "actual_s": 6.32,
+      "predicted_s": 9.04,
+      "ratio": 0.699,
+      "above_threshold": true
+    },
+    {
+      "repo": "abapGit",
+      "loc": 220733,
+      "actual_s": 3.35,
+      "predicted_s": 4.82,
+      "ratio": 0.695,
+      "above_threshold": true
+    },
+    {
+      "repo": "livecode",
+      "loc": 908809,
+      "actual_s": 13.93,
+      "predicted_s": 19.61,
+      "ratio": 0.71,
+      "above_threshold": true
+    },
+    {
+      "repo": "rust-analyzer",
+      "loc": 534323,
+      "actual_s": 8.26,
+      "predicted_s": 11.58,
+      "ratio": 0.713,
+      "above_threshold": true
+    },
+    {
+      "repo": "psutil",
+      "loc": 47300,
+      "actual_s": 0.73,
+      "predicted_s": 1.05,
+      "ratio": 0.698,
+      "above_threshold": false
+    },
+    {
+      "repo": "substrate",
+      "loc": 604231,
+      "actual_s": 9.4,
+      "predicted_s": 13.08,
+      "ratio": 0.719,
+      "above_threshold": true
+    },
+    {
+      "repo": "wordpress",
+      "loc": 945835,
+      "actual_s": 14.72,
+      "predicted_s": 20.4,
+      "ratio": 0.721,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyarrow",
+      "loc": 155413,
+      "actual_s": 2.42,
+      "predicted_s": 3.4,
+      "ratio": 0.711,
+      "above_threshold": true
+    },
+    {
+      "repo": "go",
+      "loc": 1831333,
+      "actual_s": 28.66,
+      "predicted_s": 39.29,
+      "ratio": 0.729,
+      "above_threshold": true
+    },
+    {
+      "repo": "terraform",
+      "loc": 627404,
+      "actual_s": 9.83,
+      "predicted_s": 13.58,
+      "ratio": 0.724,
+      "above_threshold": true
+    },
+    {
+      "repo": "haiku",
+      "loc": 4285605,
+      "actual_s": 67.12,
+      "predicted_s": 91.32,
+      "ratio": 0.735,
+      "above_threshold": true
+    },
+    {
+      "repo": "numpy",
+      "loc": 1120898,
+      "actual_s": 17.57,
+      "predicted_s": 24.15,
+      "ratio": 0.728,
+      "above_threshold": true
+    },
+    {
+      "repo": "cpython",
+      "loc": 880883,
+      "actual_s": 13.85,
+      "predicted_s": 19.01,
+      "ratio": 0.728,
+      "above_threshold": true
+    },
+    {
+      "repo": "solana",
+      "loc": 580592,
+      "actual_s": 9.13,
+      "predicted_s": 12.57,
+      "ratio": 0.726,
+      "above_threshold": true
+    },
+    {
+      "repo": "scikit-learn",
+      "loc": 459370,
+      "actual_s": 7.25,
+      "predicted_s": 9.97,
+      "ratio": 0.727,
+      "above_threshold": true
+    },
+    {
+      "repo": "prometheus",
+      "loc": 377316,
+      "actual_s": 6.04,
+      "predicted_s": 8.2,
+      "ratio": 0.737,
+      "above_threshold": true
+    },
+    {
+      "repo": "blst",
+      "loc": 48913,
+      "actual_s": 0.78,
+      "predicted_s": 1.08,
+      "ratio": 0.722,
+      "above_threshold": false
+    },
+    {
+      "repo": "pandoc",
+      "loc": 239417,
+      "actual_s": 3.88,
+      "predicted_s": 5.22,
+      "ratio": 0.743,
+      "above_threshold": true
+    },
+    {
+      "repo": "cpm65",
+      "loc": 57582,
+      "actual_s": 0.94,
+      "predicted_s": 1.27,
+      "ratio": 0.74,
+      "above_threshold": true
+    },
+    {
+      "repo": "pandas",
+      "loc": 734667,
+      "actual_s": 12.0,
+      "predicted_s": 15.88,
+      "ratio": 0.756,
+      "above_threshold": true
+    },
+    {
+      "repo": "WordPress",
+      "loc": 947499,
+      "actual_s": 15.49,
+      "predicted_s": 20.44,
+      "ratio": 0.758,
+      "above_threshold": true
+    },
+    {
+      "repo": "zig",
+      "loc": 3097515,
+      "actual_s": 50.91,
+      "predicted_s": 66.18,
+      "ratio": 0.769,
+      "above_threshold": true
+    },
+    {
+      "repo": "scipy",
+      "loc": 1327455,
+      "actual_s": 21.84,
+      "predicted_s": 28.56,
+      "ratio": 0.765,
+      "above_threshold": true
+    },
+    {
+      "repo": "scapy",
+      "loc": 232353,
+      "actual_s": 3.85,
+      "predicted_s": 5.07,
+      "ratio": 0.759,
+      "above_threshold": true
+    },
+    {
+      "repo": "bevy",
+      "loc": 589098,
+      "actual_s": 9.81,
+      "predicted_s": 12.76,
+      "ratio": 0.769,
+      "above_threshold": true
+    },
+    {
+      "repo": "networkx",
+      "loc": 182525,
+      "actual_s": 3.06,
+      "predicted_s": 3.99,
+      "ratio": 0.767,
+      "above_threshold": true
+    },
+    {
+      "repo": "abap-cleaner",
+      "loc": 152347,
+      "actual_s": 2.56,
+      "predicted_s": 3.34,
+      "ratio": 0.768,
+      "above_threshold": true
+    },
+    {
+      "repo": "alembic",
+      "loc": 58228,
+      "actual_s": 0.98,
+      "predicted_s": 1.28,
+      "ratio": 0.763,
+      "above_threshold": true
+    },
+    {
+      "repo": "pydantic",
+      "loc": 112463,
+      "actual_s": 1.89,
+      "predicted_s": 2.47,
+      "ratio": 0.766,
+      "above_threshold": true
+    },
+    {
+      "repo": "actix-web",
+      "loc": 92636,
+      "actual_s": 1.56,
+      "predicted_s": 2.04,
+      "ratio": 0.766,
+      "above_threshold": true
+    },
+    {
+      "repo": "libxev",
+      "loc": 23090,
+      "actual_s": 0.39,
+      "predicted_s": 0.51,
+      "ratio": 0.76,
+      "above_threshold": false
+    },
+    {
+      "repo": "node",
+      "loc": 7927455,
+      "actual_s": 134.2,
+      "predicted_s": 168.08,
+      "ratio": 0.798,
+      "above_threshold": true
+    },
+    {
+      "repo": "zellij",
+      "loc": 277963,
+      "actual_s": 4.71,
+      "predicted_s": 6.06,
+      "ratio": 0.778,
+      "above_threshold": true
+    },
+    {
+      "repo": "racket",
+      "loc": 1265589,
+      "actual_s": 21.55,
+      "predicted_s": 27.24,
+      "ratio": 0.791,
+      "above_threshold": true
+    },
+    {
+      "repo": "azure-devops-node-api",
+      "loc": 55772,
+      "actual_s": 0.95,
+      "predicted_s": 1.23,
+      "ratio": 0.772,
+      "above_threshold": true
+    },
+    {
+      "repo": "okhttp",
+      "loc": 149585,
+      "actual_s": 2.56,
+      "predicted_s": 3.28,
+      "ratio": 0.782,
+      "above_threshold": true
+    },
+    {
+      "repo": "google-cloud-storage",
+      "loc": 99451,
+      "actual_s": 1.71,
+      "predicted_s": 2.18,
+      "ratio": 0.783,
+      "above_threshold": true
+    },
+    {
+      "repo": "express",
+      "loc": 26171,
+      "actual_s": 0.45,
+      "predicted_s": 0.58,
+      "ratio": 0.774,
+      "above_threshold": false
+    },
+    {
+      "repo": "wgpu",
+      "loc": 343626,
+      "actual_s": 5.94,
+      "predicted_s": 7.47,
+      "ratio": 0.795,
+      "above_threshold": true
+    },
+    {
+      "repo": "zls",
+      "loc": 59030,
+      "actual_s": 1.02,
+      "predicted_s": 1.3,
+      "ratio": 0.783,
+      "above_threshold": true
+    },
+    {
+      "repo": "react",
+      "loc": 847301,
+      "actual_s": 14.93,
+      "predicted_s": 18.29,
+      "ratio": 0.816,
+      "above_threshold": true
+    },
+    {
+      "repo": "puppeteer",
+      "loc": 165962,
+      "actual_s": 2.93,
+      "predicted_s": 3.63,
+      "ratio": 0.807,
+      "above_threshold": true
+    },
+    {
+      "repo": "opencv",
+      "loc": 2050441,
+      "actual_s": 36.15,
+      "predicted_s": 43.95,
+      "ratio": 0.822,
+      "above_threshold": true
+    },
+    {
+      "repo": "cesium",
+      "loc": 1146378,
+      "actual_s": 20.27,
+      "predicted_s": 24.69,
+      "ratio": 0.821,
+      "above_threshold": true
+    },
+    {
+      "repo": "curl",
+      "loc": 330175,
+      "actual_s": 5.84,
+      "predicted_s": 7.18,
+      "ratio": 0.813,
+      "above_threshold": true
+    },
+    {
+      "repo": "bugzilla",
+      "loc": 149514,
+      "actual_s": 2.65,
+      "predicted_s": 3.27,
+      "ratio": 0.809,
+      "above_threshold": true
+    },
+    {
+      "repo": "PowerShell",
+      "loc": 809153,
+      "actual_s": 14.35,
+      "predicted_s": 17.48,
+      "ratio": 0.821,
+      "above_threshold": true
+    },
+    {
+      "repo": "mach",
+      "loc": 70658,
+      "actual_s": 1.26,
+      "predicted_s": 1.56,
+      "ratio": 0.809,
+      "above_threshold": true
+    },
+    {
+      "repo": "Chart.js",
+      "loc": 81843,
+      "actual_s": 1.46,
+      "predicted_s": 1.8,
+      "ratio": 0.811,
+      "above_threshold": true
+    },
+    {
+      "repo": "mojo",
+      "loc": 76630,
+      "actual_s": 1.36,
+      "predicted_s": 1.69,
+      "ratio": 0.806,
+      "above_threshold": true
+    },
+    {
+      "repo": "spm12",
+      "loc": 696700,
+      "actual_s": 12.4,
+      "predicted_s": 15.07,
+      "ratio": 0.823,
+      "above_threshold": true
+    },
+    {
+      "repo": "pip",
+      "loc": 157163,
+      "actual_s": 2.8,
+      "predicted_s": 3.44,
+      "ratio": 0.814,
+      "above_threshold": true
+    },
+    {
+      "repo": "impacket",
+      "loc": 166661,
+      "actual_s": 2.98,
+      "predicted_s": 3.65,
+      "ratio": 0.817,
+      "above_threshold": true
+    },
+    {
+      "repo": "cakephp",
+      "loc": 368839,
+      "actual_s": 6.61,
+      "predicted_s": 8.02,
+      "ratio": 0.824,
+      "above_threshold": true
+    },
+    {
+      "repo": "biopython",
+      "loc": 566266,
+      "actual_s": 10.21,
+      "predicted_s": 12.27,
+      "ratio": 0.832,
+      "above_threshold": true
+    },
+    {
+      "repo": "MS-DOS",
+      "loc": 506541,
+      "actual_s": 9.14,
+      "predicted_s": 10.98,
+      "ratio": 0.832,
+      "above_threshold": true
+    },
+    {
+      "repo": "tauri",
+      "loc": 131244,
+      "actual_s": 2.37,
+      "predicted_s": 2.88,
+      "ratio": 0.824,
+      "above_threshold": true
+    },
+    {
+      "repo": "reveal.js",
+      "loc": 30422,
+      "actual_s": 0.55,
+      "predicted_s": 0.67,
+      "ratio": 0.815,
+      "above_threshold": false
+    },
+    {
+      "repo": "hyper",
+      "loc": 36966,
+      "actual_s": 0.67,
+      "predicted_s": 0.82,
+      "ratio": 0.818,
+      "above_threshold": false
+    },
+    {
+      "repo": "setuptools",
+      "loc": 81771,
+      "actual_s": 1.49,
+      "predicted_s": 1.8,
+      "ratio": 0.828,
+      "above_threshold": true
+    },
+    {
+      "repo": "type-fest",
+      "loc": 37127,
+      "actual_s": 0.68,
+      "predicted_s": 0.82,
+      "ratio": 0.827,
+      "above_threshold": false
+    },
+    {
+      "repo": "pytest",
+      "loc": 102977,
+      "actual_s": 1.89,
+      "predicted_s": 2.26,
+      "ratio": 0.836,
+      "above_threshold": true
+    },
+    {
+      "repo": "google-api-core",
+      "loc": 28282,
+      "actual_s": 0.52,
+      "predicted_s": 0.63,
+      "ratio": 0.828,
+      "above_threshold": false
+    },
+    {
+      "repo": "vyre",
+      "loc": 940240,
+      "actual_s": 17.28,
+      "predicted_s": 20.28,
+      "ratio": 0.852,
+      "above_threshold": true
+    },
+    {
+      "repo": "Alamofire",
+      "loc": 50727,
+      "actual_s": 0.93,
+      "predicted_s": 1.12,
+      "ratio": 0.83,
+      "above_threshold": true
+    },
+    {
+      "repo": "eeglab",
+      "loc": 148275,
+      "actual_s": 2.73,
+      "predicted_s": 3.25,
+      "ratio": 0.841,
+      "above_threshold": true
+    },
+    {
+      "repo": "Carbon",
+      "loc": 322845,
+      "actual_s": 5.95,
+      "predicted_s": 7.03,
+      "ratio": 0.847,
+      "above_threshold": true
+    },
+    {
+      "repo": "google-auth",
+      "loc": 48825,
+      "actual_s": 0.9,
+      "predicted_s": 1.08,
+      "ratio": 0.834,
+      "above_threshold": false
+    },
+    {
+      "repo": "arktype",
+      "loc": 73513,
+      "actual_s": 1.36,
+      "predicted_s": 1.62,
+      "ratio": 0.84,
+      "above_threshold": true
+    },
+    {
+      "repo": "root",
+      "loc": 7432922,
+      "actual_s": 137.26,
+      "predicted_s": 157.68,
+      "ratio": 0.871,
+      "above_threshold": true
+    },
+    {
+      "repo": "pypy",
+      "loc": 1415081,
+      "actual_s": 26.14,
+      "predicted_s": 30.43,
+      "ratio": 0.859,
+      "above_threshold": true
+    },
+    {
+      "repo": "perl5",
+      "loc": 1362561,
+      "actual_s": 25.2,
+      "predicted_s": 29.31,
+      "ratio": 0.86,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyarmor",
+      "loc": 46371,
+      "actual_s": 0.86,
+      "predicted_s": 1.03,
+      "ratio": 0.839,
+      "above_threshold": false
+    },
+    {
+      "repo": "wrf-fortran",
+      "loc": 1763150,
+      "actual_s": 32.73,
+      "predicted_s": 37.84,
+      "ratio": 0.865,
+      "above_threshold": true
+    },
+    {
+      "repo": "syn",
+      "loc": 42834,
+      "actual_s": 0.8,
+      "predicted_s": 0.95,
+      "ratio": 0.844,
+      "above_threshold": false
+    },
+    {
+      "repo": "ripgrep",
+      "loc": 62846,
+      "actual_s": 1.17,
+      "predicted_s": 1.39,
+      "ratio": 0.844,
+      "above_threshold": true
+    },
+    {
+      "repo": "kubernetes",
+      "loc": 3340840,
+      "actual_s": 62.33,
+      "predicted_s": 71.33,
+      "ratio": 0.874,
+      "above_threshold": true
+    },
+    {
+      "repo": "content",
+      "loc": 1434067,
+      "actual_s": 26.8,
+      "predicted_s": 30.83,
+      "ratio": 0.869,
+      "above_threshold": true
+    },
+    {
+      "repo": "nasm",
+      "loc": 82136,
+      "actual_s": 1.53,
+      "predicted_s": 1.81,
+      "ratio": 0.847,
+      "above_threshold": true
+    },
+    {
+      "repo": "cytoscape.js",
+      "loc": 81088,
+      "actual_s": 1.52,
+      "predicted_s": 1.78,
+      "ratio": 0.852,
+      "above_threshold": true
+    },
+    {
+      "repo": "rails",
+      "loc": 617585,
+      "actual_s": 11.59,
+      "predicted_s": 13.37,
+      "ratio": 0.867,
+      "above_threshold": true
+    },
+    {
+      "repo": "microzig",
+      "loc": 130788,
+      "actual_s": 2.46,
+      "predicted_s": 2.87,
+      "ratio": 0.858,
+      "above_threshold": true
+    },
+    {
+      "repo": "cryptography",
+      "loc": 91679,
+      "actual_s": 1.73,
+      "predicted_s": 2.02,
+      "ratio": 0.858,
+      "above_threshold": true
+    },
+    {
+      "repo": "openpyxl",
+      "loc": 29411,
+      "actual_s": 0.56,
+      "predicted_s": 0.65,
+      "ratio": 0.858,
+      "above_threshold": false
+    },
+    {
+      "repo": "platform_dalvik",
+      "loc": 176846,
+      "actual_s": 3.35,
+      "predicted_s": 3.87,
+      "ratio": 0.866,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyqtgraph",
+      "loc": 98599,
+      "actual_s": 1.89,
+      "predicted_s": 2.17,
+      "ratio": 0.872,
+      "above_threshold": true
+    },
+    {
+      "repo": "tigerbeetle",
+      "loc": 204785,
+      "actual_s": 3.92,
+      "predicted_s": 4.47,
+      "ratio": 0.876,
+      "above_threshold": true
+    },
+    {
+      "repo": "godot",
+      "loc": 4252910,
+      "actual_s": 81.72,
+      "predicted_s": 90.63,
+      "ratio": 0.902,
+      "above_threshold": true
+    },
+    {
+      "repo": "playwright",
+      "loc": 531768,
+      "actual_s": 10.27,
+      "predicted_s": 11.52,
+      "ratio": 0.891,
+      "above_threshold": true
+    },
+    {
+      "repo": "three.js",
+      "loc": 741593,
+      "actual_s": 14.35,
+      "predicted_s": 16.03,
+      "ratio": 0.895,
+      "above_threshold": true
+    },
+    {
+      "repo": "lxml",
+      "loc": 109466,
+      "actual_s": 2.12,
+      "predicted_s": 2.4,
+      "ratio": 0.882,
+      "above_threshold": true
+    },
+    {
+      "repo": "apex-recipes",
+      "loc": 34833,
+      "actual_s": 0.68,
+      "predicted_s": 0.77,
+      "ratio": 0.881,
+      "above_threshold": false
+    },
+    {
+      "repo": "jedi",
+      "loc": 46009,
+      "actual_s": 0.9,
+      "predicted_s": 1.02,
+      "ratio": 0.885,
+      "above_threshold": false
+    },
+    {
+      "repo": "jquery",
+      "loc": 46956,
+      "actual_s": 0.92,
+      "predicted_s": 1.04,
+      "ratio": 0.886,
+      "above_threshold": false
+    },
+    {
+      "repo": "rdkit",
+      "loc": 800291,
+      "actual_s": 15.68,
+      "predicted_s": 17.29,
+      "ratio": 0.907,
+      "above_threshold": true
+    },
+    {
+      "repo": "swift",
+      "loc": 3477739,
+      "actual_s": 68.23,
+      "predicted_s": 74.23,
+      "ratio": 0.919,
+      "above_threshold": true
+    },
+    {
+      "repo": "react-router",
+      "loc": 211689,
+      "actual_s": 4.16,
+      "predicted_s": 4.62,
+      "ratio": 0.9,
+      "above_threshold": true
+    },
+    {
+      "repo": "lazygit",
+      "loc": 119150,
+      "actual_s": 2.34,
+      "predicted_s": 2.61,
+      "ratio": 0.895,
+      "above_threshold": true
+    },
+    {
+      "repo": "mikro-orm",
+      "loc": 270366,
+      "actual_s": 5.35,
+      "predicted_s": 5.89,
+      "ratio": 0.908,
+      "above_threshold": true
+    },
+    {
+      "repo": "serde",
+      "loc": 44471,
+      "actual_s": 0.88,
+      "predicted_s": 0.98,
+      "ratio": 0.895,
+      "above_threshold": false
+    },
+    {
+      "repo": "GitPython",
+      "loc": 33872,
+      "actual_s": 0.67,
+      "predicted_s": 0.75,
+      "ratio": 0.893,
+      "above_threshold": false
+    },
+    {
+      "repo": "HolyLang",
+      "loc": 34834,
+      "actual_s": 0.69,
+      "predicted_s": 0.77,
+      "ratio": 0.894,
+      "above_threshold": false
+    },
+    {
+      "repo": "nushell",
+      "loc": 361535,
+      "actual_s": 7.2,
+      "predicted_s": 7.86,
+      "ratio": 0.916,
+      "above_threshold": true
+    },
+    {
+      "repo": "fieldtrip",
+      "loc": 513294,
+      "actual_s": 10.23,
+      "predicted_s": 11.13,
+      "ratio": 0.919,
+      "above_threshold": true
+    },
+    {
+      "repo": "cobrix",
+      "loc": 89942,
+      "actual_s": 1.79,
+      "predicted_s": 1.98,
+      "ratio": 0.905,
+      "above_threshold": true
+    },
+    {
+      "repo": "protobuf",
+      "loc": 52548,
+      "actual_s": 1.05,
+      "predicted_s": 1.16,
+      "ratio": 0.905,
+      "above_threshold": true
+    },
+    {
+      "repo": "ghostty",
+      "loc": 317797,
+      "actual_s": 6.35,
+      "predicted_s": 6.92,
+      "ratio": 0.918,
+      "above_threshold": true
+    },
+    {
+      "repo": "wasmtime",
+      "loc": 658498,
+      "actual_s": 13.19,
+      "predicted_s": 14.25,
+      "ratio": 0.926,
+      "above_threshold": true
+    },
+    {
+      "repo": "mediawiki",
+      "loc": 1700887,
+      "actual_s": 34.13,
+      "predicted_s": 36.52,
+      "ratio": 0.935,
+      "above_threshold": true
+    },
+    {
+      "repo": "deno",
+      "loc": 984265,
+      "actual_s": 19.8,
+      "predicted_s": 21.23,
+      "ratio": 0.933,
+      "above_threshold": true
+    },
+    {
+      "repo": "coverage",
+      "loc": 43266,
+      "actual_s": 0.87,
+      "predicted_s": 0.96,
+      "ratio": 0.909,
+      "above_threshold": false
+    },
+    {
+      "repo": "openzeppelin-contracts",
+      "loc": 91709,
+      "actual_s": 1.85,
+      "predicted_s": 2.02,
+      "ratio": 0.918,
+      "above_threshold": true
+    },
+    {
+      "repo": "zod",
+      "loc": 80043,
+      "actual_s": 1.62,
+      "predicted_s": 1.76,
+      "ratio": 0.92,
+      "above_threshold": true
+    },
+    {
+      "repo": "jinja2",
+      "loc": 21481,
+      "actual_s": 0.44,
+      "predicted_s": 0.48,
+      "ratio": 0.921,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node",
+      "loc": 42558,
+      "actual_s": 0.86,
+      "predicted_s": 0.94,
+      "ratio": 0.913,
+      "above_threshold": false
+    },
+    {
+      "repo": "aiohttp",
+      "loc": 100200,
+      "actual_s": 2.04,
+      "predicted_s": 2.2,
+      "ratio": 0.927,
+      "above_threshold": true
+    },
+    {
+      "repo": "yii2",
+      "loc": 207030,
+      "actual_s": 4.22,
+      "predicted_s": 4.52,
+      "ratio": 0.933,
+      "above_threshold": true
+    },
+    {
+      "repo": "river",
+      "loc": 16868,
+      "actual_s": 0.34,
+      "predicted_s": 0.38,
+      "ratio": 0.904,
+      "above_threshold": false
+    },
+    {
+      "repo": "pyasn1-modules",
+      "loc": 41110,
+      "actual_s": 0.84,
+      "predicted_s": 0.91,
+      "ratio": 0.923,
+      "above_threshold": false
+    },
+    {
+      "repo": "Python",
+      "loc": 126848,
+      "actual_s": 2.59,
+      "predicted_s": 2.78,
+      "ratio": 0.931,
+      "above_threshold": true
+    },
+    {
+      "repo": "laravel_core",
+      "loc": 535881,
+      "actual_s": 10.96,
+      "predicted_s": 11.61,
+      "ratio": 0.944,
+      "above_threshold": true
+    },
+    {
+      "repo": "pwntools",
+      "loc": 143093,
+      "actual_s": 2.93,
+      "predicted_s": 3.13,
+      "ratio": 0.935,
+      "above_threshold": true
+    },
+    {
+      "repo": "angr",
+      "loc": 319225,
+      "actual_s": 6.55,
+      "predicted_s": 6.95,
+      "ratio": 0.943,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyparsing",
+      "loc": 93815,
+      "actual_s": 1.93,
+      "predicted_s": 2.06,
+      "ratio": 0.936,
+      "above_threshold": true
+    },
+    {
+      "repo": "moment",
+      "loc": 173100,
+      "actual_s": 3.56,
+      "predicted_s": 3.79,
+      "ratio": 0.94,
+      "above_threshold": true
+    },
+    {
+      "repo": "beautifulsoup4",
+      "loc": 23200,
+      "actual_s": 0.48,
+      "predicted_s": 0.52,
+      "ratio": 0.931,
+      "above_threshold": false
+    },
+    {
+      "repo": "bun",
+      "loc": 1933910,
+      "actual_s": 39.92,
+      "predicted_s": 41.48,
+      "ratio": 0.962,
+      "above_threshold": true
+    },
+    {
+      "repo": "CodeIgniter",
+      "loc": 45329,
+      "actual_s": 0.94,
+      "predicted_s": 1.0,
+      "ratio": 0.938,
+      "above_threshold": false
+    },
+    {
+      "repo": "werkzeug",
+      "loc": 32918,
+      "actual_s": 0.68,
+      "predicted_s": 0.73,
+      "ratio": 0.932,
+      "above_threshold": false
+    },
+    {
+      "repo": "kivy",
+      "loc": 164273,
+      "actual_s": 3.41,
+      "predicted_s": 3.59,
+      "ratio": 0.949,
+      "above_threshold": true
+    },
+    {
+      "repo": "nvda",
+      "loc": 248063,
+      "actual_s": 5.17,
+      "predicted_s": 5.41,
+      "ratio": 0.956,
+      "above_threshold": true
+    },
+    {
+      "repo": "micropython",
+      "loc": 685083,
+      "actual_s": 14.29,
+      "predicted_s": 14.82,
+      "ratio": 0.964,
+      "above_threshold": true
+    },
+    {
+      "repo": "pathspec",
+      "loc": 14513,
+      "actual_s": 0.3,
+      "predicted_s": 0.32,
+      "ratio": 0.926,
+      "above_threshold": false
+    },
+    {
+      "repo": "abap2xlsx",
+      "loc": 61073,
+      "actual_s": 1.28,
+      "predicted_s": 1.35,
+      "ratio": 0.95,
+      "above_threshold": true
+    },
+    {
+      "repo": "flutter",
+      "loc": 1819740,
+      "actual_s": 38.18,
+      "predicted_s": 39.05,
+      "ratio": 0.978,
+      "above_threshold": true
+    },
+    {
+      "repo": "ruff",
+      "loc": 368633,
+      "actual_s": 7.78,
+      "predicted_s": 8.01,
+      "ratio": 0.971,
+      "above_threshold": true
+    },
+    {
+      "repo": "docker-py",
+      "loc": 31925,
+      "actual_s": 0.68,
+      "predicted_s": 0.71,
+      "ratio": 0.961,
+      "above_threshold": false
+    },
+    {
+      "repo": "mypy",
+      "loc": 290061,
+      "actual_s": 6.18,
+      "predicted_s": 6.32,
+      "ratio": 0.978,
+      "above_threshold": true
+    },
+    {
+      "repo": "docutils",
+      "loc": 55577,
+      "actual_s": 1.18,
+      "predicted_s": 1.23,
+      "ratio": 0.962,
+      "above_threshold": true
+    },
+    {
+      "repo": "tensorflow",
+      "loc": 3334757,
+      "actual_s": 71.17,
+      "predicted_s": 71.2,
+      "ratio": 1.0,
+      "above_threshold": true
+    },
+    {
+      "repo": "bog",
+      "loc": 15427,
+      "actual_s": 0.33,
+      "predicted_s": 0.34,
+      "ratio": 0.959,
+      "above_threshold": false
+    },
+    {
+      "repo": "Zig",
+      "loc": 9763,
+      "actual_s": 0.21,
+      "predicted_s": 0.22,
+      "ratio": 0.961,
+      "above_threshold": false
+    },
+    {
+      "repo": "openclaw-typescript",
+      "loc": 1026455,
+      "actual_s": 22.05,
+      "predicted_s": 22.13,
+      "ratio": 0.997,
+      "above_threshold": true
+    },
+    {
+      "repo": "sqitch",
+      "loc": 35210,
+      "actual_s": 0.76,
+      "predicted_s": 0.78,
+      "ratio": 0.974,
+      "above_threshold": false
+    },
+    {
+      "repo": "symfony",
+      "loc": 2017082,
+      "actual_s": 43.36,
+      "predicted_s": 43.24,
+      "ratio": 1.003,
+      "above_threshold": true
+    },
+    {
+      "repo": "httpx",
+      "loc": 19059,
+      "actual_s": 0.41,
+      "predicted_s": 0.42,
+      "ratio": 0.966,
+      "above_threshold": false
+    },
+    {
+      "repo": "moby",
+      "loc": 398698,
+      "actual_s": 8.65,
+      "predicted_s": 8.66,
+      "ratio": 0.999,
+      "above_threshold": true
+    },
+    {
+      "repo": "spock",
+      "loc": 121032,
+      "actual_s": 2.63,
+      "predicted_s": 2.65,
+      "ratio": 0.991,
+      "above_threshold": true
+    },
+    {
+      "repo": "vscode",
+      "loc": 2225045,
+      "actual_s": 48.33,
+      "predicted_s": 47.66,
+      "ratio": 1.014,
+      "above_threshold": true
+    },
+    {
+      "repo": "rapidfuzz",
+      "loc": 676340,
+      "actual_s": 14.75,
+      "predicted_s": 14.63,
+      "ratio": 1.008,
+      "above_threshold": true
+    },
+    {
+      "repo": "selenium",
+      "loc": 520578,
+      "actual_s": 11.36,
+      "predicted_s": 11.28,
+      "ratio": 1.007,
+      "above_threshold": true
+    },
+    {
+      "repo": "canvas-lms",
+      "loc": 3347792,
+      "actual_s": 73.29,
+      "predicted_s": 71.48,
+      "ratio": 1.025,
+      "above_threshold": true
+    },
+    {
+      "repo": "kafka",
+      "loc": 1547585,
+      "actual_s": 33.99,
+      "predicted_s": 33.25,
+      "ratio": 1.022,
+      "above_threshold": true
+    },
+    {
+      "repo": "port_csharp_manageddoom",
+      "loc": 54514,
+      "actual_s": 1.2,
+      "predicted_s": 1.2,
+      "ratio": 0.997,
+      "above_threshold": true
+    },
+    {
+      "repo": "@grpc_grpc-js",
+      "loc": 22350,
+      "actual_s": 0.49,
+      "predicted_s": 0.5,
+      "ratio": 0.986,
+      "above_threshold": false
+    },
+    {
+      "repo": "azure-identity",
+      "loc": 34120,
+      "actual_s": 0.75,
+      "predicted_s": 0.76,
+      "ratio": 0.992,
+      "above_threshold": false
+    },
+    {
+      "repo": "gutenberg",
+      "loc": 1150157,
+      "actual_s": 25.37,
+      "predicted_s": 24.77,
+      "ratio": 1.024,
+      "above_threshold": true
+    },
+    {
+      "repo": "micropython-ulab",
+      "loc": 26286,
+      "actual_s": 0.58,
+      "predicted_s": 0.58,
+      "ratio": 0.994,
+      "above_threshold": false
+    },
+    {
+      "repo": "cyber",
+      "loc": 78158,
+      "actual_s": 1.73,
+      "predicted_s": 1.72,
+      "ratio": 1.006,
+      "above_threshold": true
+    },
+    {
+      "repo": "monolog",
+      "loc": 30061,
+      "actual_s": 0.67,
+      "predicted_s": 0.67,
+      "ratio": 1.005,
+      "above_threshold": false
+    },
+    {
+      "repo": "orjson",
+      "loc": 154806,
+      "actual_s": 3.46,
+      "predicted_s": 3.39,
+      "ratio": 1.021,
+      "above_threshold": true
+    },
+    {
+      "repo": "curve25519-dalek",
+      "loc": 43731,
+      "actual_s": 0.98,
+      "predicted_s": 0.97,
+      "ratio": 1.013,
+      "above_threshold": false
+    },
+    {
+      "repo": "joblib",
+      "loc": 15547,
+      "actual_s": 0.35,
+      "predicted_s": 0.35,
+      "ratio": 1.009,
+      "above_threshold": false
+    },
+    {
+      "repo": "desktop",
+      "loc": 186997,
+      "actual_s": 4.21,
+      "predicted_s": 4.09,
+      "ratio": 1.03,
+      "above_threshold": true
+    },
+    {
+      "repo": "httpcore",
+      "loc": 13392,
+      "actual_s": 0.3,
+      "predicted_s": 0.3,
+      "ratio": 1.003,
+      "above_threshold": false
+    },
+    {
+      "repo": "exiftool",
+      "loc": 211211,
+      "actual_s": 4.76,
+      "predicted_s": 4.61,
+      "ratio": 1.032,
+      "above_threshold": true
+    },
+    {
+      "repo": "angular",
+      "loc": 1234994,
+      "actual_s": 27.9,
+      "predicted_s": 26.58,
+      "ratio": 1.05,
+      "above_threshold": true
+    },
+    {
+      "repo": "urllib3",
+      "loc": 13524,
+      "actual_s": 0.31,
+      "predicted_s": 0.3,
+      "ratio": 1.027,
+      "above_threshold": false
+    },
+    {
+      "repo": "discourse",
+      "loc": 1790243,
+      "actual_s": 40.61,
+      "predicted_s": 38.42,
+      "ratio": 1.057,
+      "above_threshold": true
+    },
+    {
+      "repo": "pyasn1",
+      "loc": 21971,
+      "actual_s": 0.5,
+      "predicted_s": 0.49,
+      "ratio": 1.023,
+      "above_threshold": false
+    },
+    {
+      "repo": "trpc",
+      "loc": 127246,
+      "actual_s": 2.9,
+      "predicted_s": 2.79,
+      "ratio": 1.039,
+      "above_threshold": true
+    },
+    {
+      "repo": "ansible",
+      "loc": 373919,
+      "actual_s": 8.53,
+      "predicted_s": 8.13,
+      "ratio": 1.05,
+      "above_threshold": true
+    },
+    {
+      "repo": "matplotlib",
+      "loc": 145897,
+      "actual_s": 3.35,
+      "predicted_s": 3.2,
+      "ratio": 1.048,
+      "above_threshold": true
+    },
+    {
+      "repo": "pynacl",
+      "loc": 73371,
+      "actual_s": 1.68,
+      "predicted_s": 1.62,
+      "ratio": 1.04,
+      "above_threshold": true
+    },
+    {
+      "repo": "cython",
+      "loc": 338683,
+      "actual_s": 7.79,
+      "predicted_s": 7.37,
+      "ratio": 1.057,
+      "above_threshold": true
+    },
+    {
+      "repo": "gitgalaxy",
+      "loc": 132770,
+      "actual_s": 3.06,
+      "predicted_s": 2.91,
+      "ratio": 1.052,
+      "above_threshold": true
+    },
+    {
+      "repo": "keystone",
+      "loc": 106079,
+      "actual_s": 2.46,
+      "predicted_s": 2.33,
+      "ratio": 1.056,
+      "above_threshold": true
+    },
+    {
+      "repo": "defusedxml",
+      "loc": 5773,
+      "actual_s": 0.13,
+      "predicted_s": 0.13,
+      "ratio": 1.002,
+      "above_threshold": false
+    },
+    {
+      "repo": "elasticsearch",
+      "loc": 5862098,
+      "actual_s": 137.06,
+      "predicted_s": 124.59,
+      "ratio": 1.1,
+      "above_threshold": true
+    },
+    {
+      "repo": "textual",
+      "loc": 131112,
+      "actual_s": 3.07,
+      "predicted_s": 2.87,
+      "ratio": 1.068,
+      "above_threshold": true
+    },
+    {
+      "repo": "ncdu",
+      "loc": 6027,
+      "actual_s": 0.14,
+      "predicted_s": 0.14,
+      "ratio": 1.034,
+      "above_threshold": false
+    },
+    {
+      "repo": "airflow",
+      "loc": 1550549,
+      "actual_s": 36.61,
+      "predicted_s": 33.31,
+      "ratio": 1.099,
+      "above_threshold": true
+    },
+    {
+      "repo": "ionic-framework",
+      "loc": 254497,
+      "actual_s": 6.01,
+      "predicted_s": 5.55,
+      "ratio": 1.083,
+      "above_threshold": true
+    },
+    {
+      "repo": "workers-sdk",
+      "loc": 535978,
+      "actual_s": 12.67,
+      "predicted_s": 11.62,
+      "ratio": 1.091,
+      "above_threshold": true
+    },
+    {
+      "repo": "oauthlib",
+      "loc": 22146,
+      "actual_s": 0.52,
+      "predicted_s": 0.49,
+      "ratio": 1.056,
+      "above_threshold": false
+    },
+    {
+      "repo": "http.zig",
+      "loc": 13192,
+      "actual_s": 0.31,
+      "predicted_s": 0.29,
+      "ratio": 1.052,
+      "above_threshold": false
+    },
+    {
+      "repo": "ruamel-yaml",
+      "loc": 17485,
+      "actual_s": 0.42,
+      "predicted_s": 0.39,
+      "ratio": 1.078,
+      "above_threshold": false
+    },
+    {
+      "repo": "raspberrypi",
+      "loc": 87283,
+      "actual_s": 2.09,
+      "predicted_s": 1.92,
+      "ratio": 1.089,
+      "above_threshold": true
+    },
+    {
+      "repo": "temp",
+      "loc": 17431,
+      "actual_s": 0.42,
+      "predicted_s": 0.39,
+      "ratio": 1.081,
+      "above_threshold": false
+    },
+    {
+      "repo": "bootstrap",
+      "loc": 34675,
+      "actual_s": 0.84,
+      "predicted_s": 0.77,
+      "ratio": 1.093,
+      "above_threshold": false
+    },
+    {
+      "repo": "Rocket.Chat",
+      "loc": 877384,
+      "actual_s": 21.21,
+      "predicted_s": 18.94,
+      "ratio": 1.12,
+      "above_threshold": true
+    },
+    {
+      "repo": "Excalibur",
+      "loc": 110008,
+      "actual_s": 2.66,
+      "predicted_s": 2.41,
+      "ratio": 1.102,
+      "above_threshold": true
+    },
+    {
+      "repo": "guzzle",
+      "loc": 17312,
+      "actual_s": 0.42,
+      "predicted_s": 0.39,
+      "ratio": 1.089,
+      "above_threshold": false
+    },
+    {
+      "repo": "tornado",
+      "loc": 47934,
+      "actual_s": 1.16,
+      "predicted_s": 1.06,
+      "ratio": 1.095,
+      "above_threshold": false
+    },
+    {
+      "repo": "mall",
+      "loc": 110941,
+      "actual_s": 2.7,
+      "predicted_s": 2.44,
+      "ratio": 1.109,
+      "above_threshold": true
+    },
+    {
+      "repo": "CobolCraft",
+      "loc": 31474,
+      "actual_s": 0.77,
+      "predicted_s": 0.7,
+      "ratio": 1.103,
+      "above_threshold": false
+    },
+    {
+      "repo": "click",
+      "loc": 21595,
+      "actual_s": 0.53,
+      "predicted_s": 0.48,
+      "ratio": 1.103,
+      "above_threshold": false
+    },
+    {
+      "repo": "fp-ts",
+      "loc": 83512,
+      "actual_s": 2.04,
+      "predicted_s": 1.84,
+      "ratio": 1.11,
+      "above_threshold": true
+    },
+    {
+      "repo": "pygments",
+      "loc": 183256,
+      "actual_s": 4.48,
+      "predicted_s": 4.01,
+      "ratio": 1.118,
+      "above_threshold": true
+    },
+    {
+      "repo": "igv.js",
+      "loc": 112412,
+      "actual_s": 2.77,
+      "predicted_s": 2.47,
+      "ratio": 1.123,
+      "above_threshold": true
+    },
+    {
+      "repo": "catalyst-runtime",
+      "loc": 20629,
+      "actual_s": 0.51,
+      "predicted_s": 0.46,
+      "ratio": 1.111,
+      "above_threshold": false
+    },
+    {
+      "repo": "react-flow",
+      "loc": 51065,
+      "actual_s": 1.26,
+      "predicted_s": 1.13,
+      "ratio": 1.117,
+      "above_threshold": true
+    },
+    {
+      "repo": "black",
+      "loc": 48533,
+      "actual_s": 1.2,
+      "predicted_s": 1.07,
+      "ratio": 1.119,
+      "above_threshold": false
+    },
+    {
+      "repo": "xv6-public",
+      "loc": 10821,
+      "actual_s": 0.27,
+      "predicted_s": 0.24,
+      "ratio": 1.115,
+      "above_threshold": false
+    },
+    {
+      "repo": "Perl-Critic",
+      "loc": 18401,
+      "actual_s": 0.46,
+      "predicted_s": 0.41,
+      "ratio": 1.122,
+      "above_threshold": false
+    },
+    {
+      "repo": "Mainframe",
+      "loc": 5363,
+      "actual_s": 0.13,
+      "predicted_s": 0.12,
+      "ratio": 1.078,
+      "above_threshold": false
+    },
+    {
+      "repo": "rust",
+      "loc": 3630679,
+      "actual_s": 91.49,
+      "predicted_s": 77.47,
+      "ratio": 1.181,
+      "above_threshold": true
+    },
+    {
+      "repo": "cics-event-consumer",
+      "loc": 14022,
+      "actual_s": 0.35,
+      "predicted_s": 0.31,
+      "ratio": 1.118,
+      "above_threshold": false
+    },
+    {
+      "repo": "serenity",
+      "loc": 1507585,
+      "actual_s": 38.39,
+      "predicted_s": 32.4,
+      "ratio": 1.185,
+      "above_threshold": true
+    },
+    {
+      "repo": "AppFlowy",
+      "loc": 133001,
+      "actual_s": 3.4,
+      "predicted_s": 2.92,
+      "ratio": 1.166,
+      "above_threshold": true
+    },
+    {
+      "repo": "Dancer2",
+      "loc": 17249,
+      "actual_s": 0.44,
+      "predicted_s": 0.38,
+      "ratio": 1.145,
+      "above_threshold": false
+    },
+    {
+      "repo": "greenlet",
+      "loc": 16113,
+      "actual_s": 0.41,
+      "predicted_s": 0.36,
+      "ratio": 1.141,
+      "above_threshold": false
+    },
+    {
+      "repo": "WorldWideWeb",
+      "loc": 8901,
+      "actual_s": 0.23,
+      "predicted_s": 0.2,
+      "ratio": 1.153,
+      "above_threshold": false
+    },
+    {
+      "repo": "blast",
+      "loc": 245453,
+      "actual_s": 6.33,
+      "predicted_s": 5.35,
+      "ratio": 1.183,
+      "above_threshold": true
+    },
+    {
+      "repo": "spring-boot",
+      "loc": 843718,
+      "actual_s": 21.97,
+      "predicted_s": 18.22,
+      "ratio": 1.206,
+      "above_threshold": true
+    },
+    {
+      "repo": "jenkins",
+      "loc": 638644,
+      "actual_s": 16.66,
+      "predicted_s": 13.82,
+      "ratio": 1.205,
+      "above_threshold": true
+    },
+    {
+      "repo": "Cobol-Projects",
+      "loc": 38962,
+      "actual_s": 1.02,
+      "predicted_s": 0.86,
+      "ratio": 1.183,
+      "above_threshold": false
+    },
+    {
+      "repo": "AFNetworking",
+      "loc": 24351,
+      "actual_s": 0.64,
+      "predicted_s": 0.54,
+      "ratio": 1.183,
+      "above_threshold": false
+    },
+    {
+      "repo": "circuitpython",
+      "loc": 624785,
+      "actual_s": 16.53,
+      "predicted_s": 13.52,
+      "ratio": 1.222,
+      "above_threshold": true
+    },
+    {
+      "repo": "vscode_cobol",
+      "loc": 32819,
+      "actual_s": 0.87,
+      "predicted_s": 0.73,
+      "ratio": 1.196,
+      "above_threshold": false
+    },
+    {
+      "repo": "cics-genapp",
+      "loc": 17431,
+      "actual_s": 0.46,
+      "predicted_s": 0.39,
+      "ratio": 1.184,
+      "above_threshold": false
+    },
+    {
+      "repo": "sqlmap",
+      "loc": 41490,
+      "actual_s": 1.1,
+      "predicted_s": 0.92,
+      "ratio": 1.198,
+      "above_threshold": false
+    },
+    {
+      "repo": "magento2",
+      "loc": 2347607,
+      "actual_s": 62.36,
+      "predicted_s": 50.27,
+      "ratio": 1.241,
+      "above_threshold": true
+    },
+    {
+      "repo": "libwww-perl",
+      "loc": 9091,
+      "actual_s": 0.24,
+      "predicted_s": 0.2,
+      "ratio": 1.179,
+      "above_threshold": false
+    },
+    {
+      "repo": "rollup-plugin-node-builtins",
+      "loc": 6983,
+      "actual_s": 0.19,
+      "predicted_s": 0.16,
+      "ratio": 1.212,
+      "above_threshold": false
+    },
+    {
+      "repo": "asm",
+      "loc": 4282,
+      "actual_s": 0.11,
+      "predicted_s": 0.1,
+      "ratio": 1.14,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-red_nodes",
+      "loc": 47152,
+      "actual_s": 1.27,
+      "predicted_s": 1.04,
+      "ratio": 1.219,
+      "above_threshold": false
+    },
+    {
+      "repo": "esphome",
+      "loc": 605922,
+      "actual_s": 16.4,
+      "predicted_s": 13.12,
+      "ratio": 1.25,
+      "above_threshold": true
+    },
+    {
+      "repo": "fineract",
+      "loc": 823245,
+      "actual_s": 22.28,
+      "predicted_s": 17.78,
+      "ratio": 1.253,
+      "above_threshold": true
+    },
+    {
+      "repo": "ant-design",
+      "loc": 272161,
+      "actual_s": 7.42,
+      "predicted_s": 5.93,
+      "ratio": 1.251,
+      "above_threshold": true
+    },
+    {
+      "repo": "poetry-core",
+      "loc": 31952,
+      "actual_s": 0.87,
+      "predicted_s": 0.71,
+      "ratio": 1.228,
+      "above_threshold": false
+    },
+    {
+      "repo": "ngl",
+      "loc": 86218,
+      "actual_s": 2.37,
+      "predicted_s": 1.9,
+      "ratio": 1.25,
+      "above_threshold": true
+    },
+    {
+      "repo": "kotlin",
+      "loc": 6414323,
+      "actual_s": 176.36,
+      "predicted_s": 136.23,
+      "ratio": 1.295,
+      "above_threshold": true
+    },
+    {
+      "repo": "sentry",
+      "loc": 3024483,
+      "actual_s": 83.2,
+      "predicted_s": 64.63,
+      "ratio": 1.287,
+      "above_threshold": true
+    },
+    {
+      "repo": "cics-banking-sample-appli...",
+      "loc": 67564,
+      "actual_s": 1.86,
+      "predicted_s": 1.49,
+      "ratio": 1.249,
+      "above_threshold": true
+    },
+    {
+      "repo": "vue",
+      "loc": 80014,
+      "actual_s": 2.21,
+      "predicted_s": 1.76,
+      "ratio": 1.255,
+      "above_threshold": true
+    },
+    {
+      "repo": "@azure_msal-node",
+      "loc": 10421,
+      "actual_s": 0.29,
+      "predicted_s": 0.23,
+      "ratio": 1.244,
+      "above_threshold": false
+    },
+    {
+      "repo": "flask",
+      "loc": 19453,
+      "actual_s": 0.54,
+      "predicted_s": 0.43,
+      "ratio": 1.247,
+      "above_threshold": false
+    },
+    {
+      "repo": "javascript-algorithms",
+      "loc": 45333,
+      "actual_s": 1.27,
+      "predicted_s": 1.0,
+      "ratio": 1.267,
+      "above_threshold": false
+    },
+    {
+      "repo": "spamassassin",
+      "loc": 76029,
+      "actual_s": 2.14,
+      "predicted_s": 1.67,
+      "ratio": 1.278,
+      "above_threshold": true
+    },
+    {
+      "repo": "wrapt",
+      "loc": 18932,
+      "actual_s": 0.53,
+      "predicted_s": 0.42,
+      "ratio": 1.257,
+      "above_threshold": false
+    },
+    {
+      "repo": "retrofit",
+      "loc": 59410,
+      "actual_s": 1.67,
+      "predicted_s": 1.31,
+      "ratio": 1.274,
+      "above_threshold": true
+    },
+    {
+      "repo": "cosmopolitan",
+      "loc": 472471,
+      "actual_s": 13.37,
+      "predicted_s": 10.25,
+      "ratio": 1.304,
+      "above_threshold": true
+    },
+    {
+      "repo": "capy",
+      "loc": 26280,
+      "actual_s": 0.74,
+      "predicted_s": 0.58,
+      "ratio": 1.268,
+      "above_threshold": false
+    },
+    {
+      "repo": "assemblyscript",
+      "loc": 114387,
+      "actual_s": 3.25,
+      "predicted_s": 2.51,
+      "ratio": 1.295,
+      "above_threshold": true
+    },
+    {
+      "repo": "vapor",
+      "loc": 38160,
+      "actual_s": 1.09,
+      "predicted_s": 0.84,
+      "ratio": 1.29,
+      "above_threshold": false
+    },
+    {
+      "repo": "charset-normalizer",
+      "loc": 8129,
+      "actual_s": 0.23,
+      "predicted_s": 0.18,
+      "ratio": 1.262,
+      "above_threshold": false
+    },
+    {
+      "repo": "multidict",
+      "loc": 15422,
+      "actual_s": 0.44,
+      "predicted_s": 0.34,
+      "ratio": 1.279,
+      "above_threshold": false
+    },
+    {
+      "repo": "rich",
+      "loc": 44652,
+      "actual_s": 1.28,
+      "predicted_s": 0.99,
+      "ratio": 1.296,
+      "above_threshold": false
+    },
+    {
+      "repo": "zig-okredis",
+      "loc": 9443,
+      "actual_s": 0.27,
+      "predicted_s": 0.21,
+      "ratio": 1.277,
+      "above_threshold": false
+    },
+    {
+      "repo": "ack3",
+      "loc": 17492,
+      "actual_s": 0.51,
+      "predicted_s": 0.39,
+      "ratio": 1.309,
+      "above_threshold": false
+    },
+    {
+      "repo": "RaspberryPi",
+      "loc": 95885,
+      "actual_s": 2.77,
+      "predicted_s": 2.11,
+      "ratio": 1.315,
+      "above_threshold": true
+    },
+    {
+      "repo": "swc",
+      "loc": 3930373,
+      "actual_s": 113.91,
+      "predicted_s": 83.81,
+      "ratio": 1.359,
+      "above_threshold": true
+    },
+    {
+      "repo": "django",
+      "loc": 524456,
+      "actual_s": 15.33,
+      "predicted_s": 11.37,
+      "ratio": 1.349,
+      "above_threshold": true
+    },
+    {
+      "repo": "pixijs",
+      "loc": 199909,
+      "actual_s": 5.85,
+      "predicted_s": 4.37,
+      "ratio": 1.34,
+      "above_threshold": true
+    },
+    {
+      "repo": "soupsieve",
+      "loc": 12140,
+      "actual_s": 0.36,
+      "predicted_s": 0.27,
+      "ratio": 1.327,
+      "above_threshold": false
+    },
+    {
+      "repo": "nest",
+      "loc": 121507,
+      "actual_s": 3.56,
+      "predicted_s": 2.67,
+      "ratio": 1.336,
+      "above_threshold": true
+    },
+    {
+      "repo": "os-tutorial",
+      "loc": 10926,
+      "actual_s": 0.32,
+      "predicted_s": 0.24,
+      "ratio": 1.309,
+      "above_threshold": false
+    },
+    {
+      "repo": "proto-plus",
+      "loc": 8033,
+      "actual_s": 0.24,
+      "predicted_s": 0.18,
+      "ratio": 1.332,
+      "above_threshold": false
+    },
+    {
+      "repo": "Babylon.js",
+      "loc": 853385,
+      "actual_s": 25.27,
+      "predicted_s": 18.42,
+      "ratio": 1.372,
+      "above_threshold": true
+    },
+    {
+      "repo": "typer",
+      "loc": 24849,
+      "actual_s": 0.76,
+      "predicted_s": 0.55,
+      "ratio": 1.377,
+      "above_threshold": false
+    },
+    {
+      "repo": "next.js",
+      "loc": 1851547,
+      "actual_s": 57.86,
+      "predicted_s": 39.72,
+      "ratio": 1.457,
+      "above_threshold": true
+    },
+    {
+      "repo": "pydantic-settings",
+      "loc": 15166,
+      "actual_s": 0.48,
+      "predicted_s": 0.34,
+      "ratio": 1.419,
+      "above_threshold": false
+    },
+    {
+      "repo": "bitcoin-0.1.0",
+      "loc": 20257,
+      "actual_s": 0.64,
+      "predicted_s": 0.45,
+      "ratio": 1.42,
+      "above_threshold": false
+    },
+    {
+      "repo": "python-dotenv",
+      "loc": 4040,
+      "actual_s": 0.13,
+      "predicted_s": 0.09,
+      "ratio": 1.427,
+      "above_threshold": false
+    },
+    {
+      "repo": "Rex",
+      "loc": 9842,
+      "actual_s": 0.32,
+      "predicted_s": 0.22,
+      "ratio": 1.452,
+      "above_threshold": false
+    },
+    {
+      "repo": "bootloader",
+      "loc": 11294,
+      "actual_s": 0.37,
+      "predicted_s": 0.25,
+      "ratio": 1.465,
+      "above_threshold": false
+    },
+    {
+      "repo": "PowerToys",
+      "loc": 621245,
+      "actual_s": 20.35,
+      "predicted_s": 13.45,
+      "ratio": 1.513,
+      "above_threshold": true
+    },
+    {
+      "repo": "msal",
+      "loc": 13697,
+      "actual_s": 0.45,
+      "predicted_s": 0.31,
+      "ratio": 1.472,
+      "above_threshold": false
+    },
+    {
+      "repo": "excalidraw",
+      "loc": 225234,
+      "actual_s": 7.45,
+      "predicted_s": 4.92,
+      "ratio": 1.516,
+      "above_threshold": true
+    },
+    {
+      "repo": "cobol-check",
+      "loc": 32926,
+      "actual_s": 1.1,
+      "predicted_s": 0.73,
+      "ratio": 1.507,
+      "above_threshold": false
+    },
+    {
+      "repo": "sdk",
+      "loc": 2928980,
+      "actual_s": 97.47,
+      "predicted_s": 62.6,
+      "ratio": 1.557,
+      "above_threshold": true
+    },
+    {
+      "repo": "runtime",
+      "loc": 10435027,
+      "actual_s": 347.63,
+      "predicted_s": 220.75,
+      "ratio": 1.575,
+      "above_threshold": true
+    },
+    {
+      "repo": "typescript-eslint",
+      "loc": 310724,
+      "actual_s": 10.43,
+      "predicted_s": 6.76,
+      "ratio": 1.542,
+      "above_threshold": true
+    },
+    {
+      "repo": "typeorm",
+      "loc": 291800,
+      "actual_s": 9.85,
+      "predicted_s": 6.35,
+      "ratio": 1.55,
+      "above_threshold": true
+    },
+    {
+      "repo": "filelock",
+      "loc": 5726,
+      "actual_s": 0.19,
+      "predicted_s": 0.13,
+      "ratio": 1.476,
+      "above_threshold": false
+    },
+    {
+      "repo": "che-che4z-lsp-for-cobol",
+      "loc": 774985,
+      "actual_s": 26.49,
+      "predicted_s": 16.74,
+      "ratio": 1.582,
+      "above_threshold": true
+    },
+    {
+      "repo": "google-cloud-core",
+      "loc": 4634,
+      "actual_s": 0.16,
+      "predicted_s": 0.1,
+      "ratio": 1.533,
+      "above_threshold": false
+    },
+    {
+      "repo": "tailwindcss",
+      "loc": 145249,
+      "actual_s": 5.01,
+      "predicted_s": 3.18,
+      "ratio": 1.575,
+      "above_threshold": true
+    },
+    {
+      "repo": "prisma",
+      "loc": 262840,
+      "actual_s": 9.12,
+      "predicted_s": 5.73,
+      "ratio": 1.592,
+      "above_threshold": true
+    },
+    {
+      "repo": "fd",
+      "loc": 10385,
+      "actual_s": 0.36,
+      "predicted_s": 0.23,
+      "ratio": 1.549,
+      "above_threshold": false
+    },
+    {
+      "repo": "@livekit_rtc-node",
+      "loc": 6441,
+      "actual_s": 0.23,
+      "predicted_s": 0.14,
+      "ratio": 1.59,
+      "above_threshold": false
+    },
+    {
+      "repo": "fastapi",
+      "loc": 110587,
+      "actual_s": 3.9,
+      "predicted_s": 2.43,
+      "ratio": 1.607,
+      "above_threshold": true
+    },
+    {
+      "repo": "js-beautify",
+      "loc": 7753,
+      "actual_s": 0.27,
+      "predicted_s": 0.17,
+      "ratio": 1.553,
+      "above_threshold": false
+    },
+    {
+      "repo": "storybook",
+      "loc": 376375,
+      "actual_s": 13.38,
+      "predicted_s": 8.18,
+      "ratio": 1.636,
+      "above_threshold": true
+    },
+    {
+      "repo": "cachetools",
+      "loc": 4477,
+      "actual_s": 0.16,
+      "predicted_s": 0.1,
+      "ratio": 1.586,
+      "above_threshold": false
+    },
+    {
+      "repo": "python-dateutil",
+      "loc": 6755,
+      "actual_s": 0.24,
+      "predicted_s": 0.15,
+      "ratio": 1.582,
+      "above_threshold": false
+    },
+    {
+      "repo": "pyjwt",
+      "loc": 7675,
+      "actual_s": 0.27,
+      "predicted_s": 0.17,
+      "ratio": 1.568,
+      "above_threshold": false
+    },
+    {
+      "repo": "requests",
+      "loc": 13021,
+      "actual_s": 0.46,
+      "predicted_s": 0.29,
+      "ratio": 1.582,
+      "above_threshold": false
+    },
+    {
+      "repo": "alphafold_2018",
+      "loc": 5025,
+      "actual_s": 0.18,
+      "predicted_s": 0.11,
+      "ratio": 1.591,
+      "above_threshold": false
+    },
+    {
+      "repo": "tqdm",
+      "loc": 9666,
+      "actual_s": 0.35,
+      "predicted_s": 0.22,
+      "ratio": 1.617,
+      "above_threshold": false
+    },
+    {
+      "repo": "python-discovery",
+      "loc": 5470,
+      "actual_s": 0.2,
+      "predicted_s": 0.12,
+      "ratio": 1.626,
+      "above_threshold": false
+    },
+    {
+      "repo": "pylint",
+      "loc": 126769,
+      "actual_s": 4.55,
+      "predicted_s": 2.78,
+      "ratio": 1.637,
+      "above_threshold": true
+    },
+    {
+      "repo": "db-tutorial",
+      "loc": 32347,
+      "actual_s": 1.16,
+      "predicted_s": 0.72,
+      "ratio": 1.618,
+      "above_threshold": false
+    },
+    {
+      "repo": "FlameGraph",
+      "loc": 7913,
+      "actual_s": 0.28,
+      "predicted_s": 0.18,
+      "ratio": 1.578,
+      "above_threshold": false
+    },
+    {
+      "repo": "prettier",
+      "loc": 220608,
+      "actual_s": 8.07,
+      "predicted_s": 4.82,
+      "ratio": 1.676,
+      "above_threshold": true
+    },
+    {
+      "repo": "python-simplebench",
+      "loc": 137223,
+      "actual_s": 5.04,
+      "predicted_s": 3.01,
+      "ratio": 1.676,
+      "above_threshold": true
+    },
+    {
+      "repo": "jellyfin",
+      "loc": 242646,
+      "actual_s": 8.93,
+      "predicted_s": 5.29,
+      "ratio": 1.687,
+      "above_threshold": true
+    },
+    {
+      "repo": "node-stdlib-browser",
+      "loc": 4931,
+      "actual_s": 0.18,
+      "predicted_s": 0.11,
+      "ratio": 1.622,
+      "above_threshold": false
+    },
+    {
+      "repo": "capstone",
+      "loc": 246714,
+      "actual_s": 9.18,
+      "predicted_s": 5.38,
+      "ratio": 1.706,
+      "above_threshold": true
+    },
+    {
+      "repo": "odoo",
+      "loc": 2879878,
+      "actual_s": 108.4,
+      "predicted_s": 61.56,
+      "ratio": 1.761,
+      "above_threshold": true
+    },
+    {
+      "repo": "cics-java-jcics-samples",
+      "loc": 6429,
+      "actual_s": 0.24,
+      "predicted_s": 0.14,
+      "ratio": 1.662,
+      "above_threshold": false
+    },
+    {
+      "repo": "gradle",
+      "loc": 2252729,
+      "actual_s": 85.75,
+      "predicted_s": 48.25,
+      "ratio": 1.777,
+      "above_threshold": true
+    },
+    {
+      "repo": "wheel",
+      "loc": 3596,
+      "actual_s": 0.14,
+      "predicted_s": 0.08,
+      "ratio": 1.725,
+      "above_threshold": false
+    },
+    {
+      "repo": "rsa",
+      "loc": 3078,
+      "actual_s": 0.12,
+      "predicted_s": 0.07,
+      "ratio": 1.725,
+      "above_threshold": false
+    },
+    {
+      "repo": "@whatwg-node_node-fetch",
+      "loc": 6590,
+      "actual_s": 0.26,
+      "predicted_s": 0.15,
+      "ratio": 1.757,
+      "above_threshold": false
+    },
+    {
+      "repo": "regex",
+      "loc": 40745,
+      "actual_s": 1.62,
+      "predicted_s": 0.9,
+      "ratio": 1.797,
+      "above_threshold": false
+    },
+    {
+      "repo": "element",
+      "loc": 117767,
+      "actual_s": 4.72,
+      "predicted_s": 2.58,
+      "ratio": 1.827,
+      "above_threshold": true
+    },
+    {
+      "repo": "msgpack",
+      "loc": 4248,
+      "actual_s": 0.17,
+      "predicted_s": 0.1,
+      "ratio": 1.776,
+      "above_threshold": false
+    },
+    {
+      "repo": "platformdirs",
+      "loc": 4091,
+      "actual_s": 0.17,
+      "predicted_s": 0.09,
+      "ratio": 1.843,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-red-node-ui-table",
+      "loc": 3261,
+      "actual_s": 0.13,
+      "predicted_s": 0.07,
+      "ratio": 1.765,
+      "above_threshold": false
+    },
+    {
+      "repo": "quote",
+      "loc": 4144,
+      "actual_s": 0.17,
+      "predicted_s": 0.09,
+      "ratio": 1.82,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-red_runtime",
+      "loc": 1924,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 1.833,
+      "above_threshold": false
+    },
+    {
+      "repo": "berry",
+      "loc": 117620,
+      "actual_s": 4.83,
+      "predicted_s": 2.58,
+      "ratio": 1.872,
+      "above_threshold": true
+    },
+    {
+      "repo": "grafana",
+      "loc": 2730762,
+      "actual_s": 112.52,
+      "predicted_s": 58.4,
+      "ratio": 1.927,
+      "above_threshold": true
+    },
+    {
+      "repo": "pillman",
+      "loc": 2182,
+      "actual_s": 0.09,
+      "predicted_s": 0.05,
+      "ratio": 1.82,
+      "above_threshold": false
+    },
+    {
+      "repo": "contourpy",
+      "loc": 15625,
+      "actual_s": 0.66,
+      "predicted_s": 0.35,
+      "ratio": 1.894,
+      "above_threshold": false
+    },
+    {
+      "repo": "isodate",
+      "loc": 2551,
+      "actual_s": 0.11,
+      "predicted_s": 0.06,
+      "ratio": 1.905,
+      "above_threshold": false
+    },
+    {
+      "repo": "deprecated",
+      "loc": 2665,
+      "actual_s": 0.11,
+      "predicted_s": 0.06,
+      "ratio": 1.824,
+      "above_threshold": false
+    },
+    {
+      "repo": "more-itertools",
+      "loc": 16904,
+      "actual_s": 0.72,
+      "predicted_s": 0.38,
+      "ratio": 1.911,
+      "above_threshold": false
+    },
+    {
+      "repo": "COBOL_Tutorial",
+      "loc": 3532,
+      "actual_s": 0.15,
+      "predicted_s": 0.08,
+      "ratio": 1.881,
+      "above_threshold": false
+    },
+    {
+      "repo": "config",
+      "loc": 1705,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "sse-starlette",
+      "loc": 2575,
+      "actual_s": 0.11,
+      "predicted_s": 0.06,
+      "ratio": 1.888,
+      "above_threshold": false
+    },
+    {
+      "repo": "sokol-zig",
+      "loc": 62707,
+      "actual_s": 2.77,
+      "predicted_s": 1.38,
+      "ratio": 2.003,
+      "above_threshold": true
+    },
+    {
+      "repo": "aws-mainframe-modernizati...",
+      "loc": 50007,
+      "actual_s": 2.25,
+      "predicted_s": 1.1,
+      "ratio": 2.037,
+      "above_threshold": true
+    },
+    {
+      "repo": "x86-bare-metal-examples",
+      "loc": 4177,
+      "actual_s": 0.19,
+      "predicted_s": 0.09,
+      "ratio": 2.018,
+      "above_threshold": false
+    },
+    {
+      "repo": "voyager",
+      "loc": 3014,
+      "actual_s": 0.14,
+      "predicted_s": 0.07,
+      "ratio": 2.055,
+      "above_threshold": false
+    },
+    {
+      "repo": "zopeneditor-sample",
+      "loc": 3463,
+      "actual_s": 0.16,
+      "predicted_s": 0.08,
+      "ratio": 2.046,
+      "above_threshold": false
+    },
+    {
+      "repo": "typing-inspection",
+      "loc": 2323,
+      "actual_s": 0.11,
+      "predicted_s": 0.05,
+      "ratio": 2.091,
+      "above_threshold": false
+    },
+    {
+      "repo": "exceptiongroup",
+      "loc": 3258,
+      "actual_s": 0.15,
+      "predicted_s": 0.07,
+      "ratio": 2.038,
+      "above_threshold": false
+    },
+    {
+      "repo": "python-patterns",
+      "loc": 5441,
+      "actual_s": 0.26,
+      "predicted_s": 0.12,
+      "ratio": 2.124,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-cleanup",
+      "loc": 1523,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@rudderstack_rudder-sdk-node",
+      "loc": 1794,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.21,
+      "above_threshold": false
+    },
+    {
+      "repo": "cobol-samples",
+      "loc": 2720,
+      "actual_s": 0.13,
+      "predicted_s": 0.06,
+      "ratio": 2.113,
+      "above_threshold": false
+    },
+    {
+      "repo": "CICS-Cobol",
+      "loc": 2387,
+      "actual_s": 0.12,
+      "predicted_s": 0.05,
+      "ratio": 2.22,
+      "above_threshold": false
+    },
+    {
+      "repo": "css_doom_pure",
+      "loc": 11271,
+      "actual_s": 0.56,
+      "predicted_s": 0.25,
+      "ratio": 2.222,
+      "above_threshold": false
+    },
+    {
+      "repo": "@ledgerhq_hw-transport-no...",
+      "loc": 1387,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "deepl-node",
+      "loc": 1414,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@ledgerhq_hw-transport-no...",
+      "loc": 1333,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "Much-Assembly-Required",
+      "loc": 65696,
+      "actual_s": 3.39,
+      "predicted_s": 1.45,
+      "ratio": 2.341,
+      "above_threshold": true
+    },
+    {
+      "repo": "type-challenges",
+      "loc": 15898,
+      "actual_s": 0.83,
+      "predicted_s": 0.35,
+      "ratio": 2.341,
+      "above_threshold": false
+    },
+    {
+      "repo": "watchfiles",
+      "loc": 3152,
+      "actual_s": 0.16,
+      "predicted_s": 0.07,
+      "ratio": 2.247,
+      "above_threshold": false
+    },
+    {
+      "repo": "HelloSilicon",
+      "loc": 3954,
+      "actual_s": 0.21,
+      "predicted_s": 0.09,
+      "ratio": 2.355,
+      "above_threshold": false
+    },
+    {
+      "repo": "@duckdb_node-api",
+      "loc": 1222,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "avvio",
+      "loc": 1574,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "core",
+      "loc": 3572858,
+      "actual_s": 194.02,
+      "predicted_s": 76.24,
+      "ratio": 2.545,
+      "above_threshold": true
+    },
+    {
+      "repo": "decorator",
+      "loc": 2807,
+      "actual_s": 0.15,
+      "predicted_s": 0.06,
+      "ratio": 2.363,
+      "above_threshold": false
+    },
+    {
+      "repo": "css_doom_typescript",
+      "loc": 4443,
+      "actual_s": 0.25,
+      "predicted_s": 0.1,
+      "ratio": 2.497,
+      "above_threshold": false
+    },
+    {
+      "repo": "tenacity",
+      "loc": 5075,
+      "actual_s": 0.29,
+      "predicted_s": 0.11,
+      "ratio": 2.539,
+      "above_threshold": false
+    },
+    {
+      "repo": "bootOS",
+      "loc": 2021,
+      "actual_s": 0.12,
+      "predicted_s": 0.05,
+      "ratio": 2.619,
+      "above_threshold": false
+    },
+    {
+      "repo": "rollup-plugin-node-polyfills",
+      "loc": 45900,
+      "actual_s": 2.66,
+      "predicted_s": 1.01,
+      "ratio": 2.621,
+      "above_threshold": false
+    },
+    {
+      "repo": "srfi-1",
+      "loc": 5316,
+      "actual_s": 0.31,
+      "predicted_s": 0.12,
+      "ratio": 2.592,
+      "above_threshold": false
+    },
+    {
+      "repo": "cobol-programming-course",
+      "loc": 13148,
+      "actual_s": 0.77,
+      "predicted_s": 0.29,
+      "ratio": 2.622,
+      "above_threshold": false
+    },
+    {
+      "repo": "TypeScript",
+      "loc": 3519910,
+      "actual_s": 205.12,
+      "predicted_s": 75.12,
+      "ratio": 2.73,
+      "above_threshold": true
+    },
+    {
+      "repo": "node-cache",
+      "loc": 987,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "check-node-version",
+      "loc": 1018,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "roslyn",
+      "loc": 5351289,
+      "actual_s": 322.93,
+      "predicted_s": 113.82,
+      "ratio": 2.837,
+      "above_threshold": true
+    },
+    {
+      "repo": "cobol-dialect-template",
+      "loc": 1969,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 2.687,
+      "above_threshold": false
+    },
+    {
+      "repo": "tar",
+      "loc": 1579,
+      "actual_s": 0.1,
+      "predicted_s": 0.04,
+      "ratio": 2.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "browserstack-node-sdk",
+      "loc": 6260,
+      "actual_s": 0.38,
+      "predicted_s": 0.14,
+      "ratio": 2.702,
+      "above_threshold": false
+    },
+    {
+      "repo": "diff-so-fancy",
+      "loc": 2845,
+      "actual_s": 0.17,
+      "predicted_s": 0.06,
+      "ratio": 2.643,
+      "above_threshold": false
+    },
+    {
+      "repo": "aiohappyeyeballs",
+      "loc": 3330,
+      "actual_s": 0.2,
+      "predicted_s": 0.08,
+      "ratio": 2.659,
+      "above_threshold": false
+    },
+    {
+      "repo": "propcache",
+      "loc": 1810,
+      "actual_s": 0.11,
+      "predicted_s": 0.04,
+      "ratio": 2.678,
+      "above_threshold": false
+    },
+    {
+      "repo": "webbol",
+      "loc": 1217,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "material-ui",
+      "loc": 498964,
+      "actual_s": 32.45,
+      "predicted_s": 10.82,
+      "ratio": 2.999,
+      "above_threshold": true
+    },
+    {
+      "repo": "cypress",
+      "loc": 588256,
+      "actual_s": 38.47,
+      "predicted_s": 12.74,
+      "ratio": 3.02,
+      "above_threshold": true
+    },
+    {
+      "repo": "yauzl",
+      "loc": 2193,
+      "actual_s": 0.14,
+      "predicted_s": 0.05,
+      "ratio": 2.817,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-linux-x64",
+      "loc": 124970,
+      "actual_s": 8.24,
+      "predicted_s": 2.74,
+      "ratio": 3.007,
+      "above_threshold": true
+    },
+    {
+      "repo": "@sveltejs_adapter-node",
+      "loc": 2205,
+      "actual_s": 0.15,
+      "predicted_s": 0.05,
+      "ratio": 3.002,
+      "above_threshold": false
+    },
+    {
+      "repo": "DOOM-fire-zig",
+      "loc": 1776,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 2.977,
+      "above_threshold": false
+    },
+    {
+      "repo": "jsonschema-specifications",
+      "loc": 1011,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "macports-base",
+      "loc": 19388,
+      "actual_s": 1.32,
+      "predicted_s": 0.43,
+      "ratio": 3.058,
+      "above_threshold": false
+    },
+    {
+      "repo": "pywat",
+      "loc": 699,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@rollup_wasm-node",
+      "loc": 858,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "Correios-Brasil",
+      "loc": 1590,
+      "actual_s": 0.11,
+      "predicted_s": 0.04,
+      "ratio": 2.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "brew",
+      "loc": 18100,
+      "actual_s": 1.27,
+      "predicted_s": 0.4,
+      "ratio": 3.15,
+      "above_threshold": false
+    },
+    {
+      "repo": "zigup",
+      "loc": 2400,
+      "actual_s": 0.17,
+      "predicted_s": 0.05,
+      "ratio": 3.128,
+      "above_threshold": false
+    },
+    {
+      "repo": "log4js",
+      "loc": 1215,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "jcl-assess",
+      "loc": 1671,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 3.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "tcpip_historical",
+      "loc": 23080,
+      "actual_s": 1.74,
+      "predicted_s": 0.51,
+      "ratio": 3.391,
+      "above_threshold": false
+    },
+    {
+      "repo": "alacritty",
+      "loc": 43114,
+      "actual_s": 3.31,
+      "predicted_s": 0.95,
+      "ratio": 3.471,
+      "above_threshold": false
+    },
+    {
+      "repo": "@segment_analytics-node",
+      "loc": 1299,
+      "actual_s": 0.1,
+      "predicted_s": 0.04,
+      "ratio": 2.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "laravel",
+      "loc": 2117,
+      "actual_s": 0.16,
+      "predicted_s": 0.05,
+      "ratio": 3.334,
+      "above_threshold": false
+    },
+    {
+      "repo": "cics-async-api-credit-car...",
+      "loc": 2043,
+      "actual_s": 0.16,
+      "predicted_s": 0.05,
+      "ratio": 3.454,
+      "above_threshold": false
+    },
+    {
+      "repo": "markupsafe",
+      "loc": 1182,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@nx_node",
+      "loc": 1486,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 3.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "chartjs-node-canvas",
+      "loc": 1024,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-abi",
+      "loc": 714,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-html-markdown",
+      "loc": 614,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "customerio-node",
+      "loc": 618,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-fzf",
+      "loc": 1568,
+      "actual_s": 0.13,
+      "predicted_s": 0.04,
+      "ratio": 3.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "colorama",
+      "loc": 1289,
+      "actual_s": 0.1,
+      "predicted_s": 0.04,
+      "ratio": 2.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "pyyaml",
+      "loc": 5812,
+      "actual_s": 0.47,
+      "predicted_s": 0.13,
+      "ratio": 3.597,
+      "above_threshold": false
+    },
+    {
+      "repo": "html5-boilerplate",
+      "loc": 1140,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-addon-api",
+      "loc": 12019,
+      "actual_s": 1.0,
+      "predicted_s": 0.27,
+      "ratio": 3.723,
+      "above_threshold": false
+    },
+    {
+      "repo": "pg-pool",
+      "loc": 934,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "ChrysaLisp",
+      "loc": 30933,
+      "actual_s": 2.62,
+      "predicted_s": 0.69,
+      "ratio": 3.819,
+      "above_threshold": false
+    },
+    {
+      "repo": "smmap",
+      "loc": 1108,
+      "actual_s": 0.1,
+      "predicted_s": 0.04,
+      "ratio": 2.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "zopeneditor_compilers",
+      "loc": 1018,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@onesignal_node-onesignal",
+      "loc": 636,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "nx",
+      "loc": 881584,
+      "actual_s": 78.82,
+      "predicted_s": 19.03,
+      "ratio": 4.142,
+      "above_threshold": true
+    },
+    {
+      "repo": "http-parser-js",
+      "loc": 838,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "tomli",
+      "loc": 1178,
+      "actual_s": 0.11,
+      "predicted_s": 0.04,
+      "ratio": 2.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "compilers",
+      "loc": 894,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "fetch-blob",
+      "loc": 714,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "object-inspect",
+      "loc": 1300,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 3.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "zap",
+      "loc": 24350,
+      "actual_s": 2.32,
+      "predicted_s": 0.54,
+      "ratio": 4.288,
+      "above_threshold": false
+    },
+    {
+      "repo": "cron",
+      "loc": 1430,
+      "actual_s": 0.14,
+      "predicted_s": 0.04,
+      "ratio": 3.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-red_editor-client",
+      "loc": 4140,
+      "actual_s": 0.4,
+      "predicted_s": 0.09,
+      "ratio": 4.286,
+      "above_threshold": false
+    },
+    {
+      "repo": "cobol-on-wheelchair",
+      "loc": 927,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@expo_rudder-sdk-node",
+      "loc": 753,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "unist-util-is",
+      "loc": 469,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-jq",
+      "loc": 497,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-abort-controller",
+      "loc": 512,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "port_rust_lidoom",
+      "loc": 863,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "d3",
+      "loc": 2656,
+      "actual_s": 0.26,
+      "predicted_s": 0.06,
+      "ratio": 4.327,
+      "above_threshold": false
+    },
+    {
+      "repo": "@octokit_graphql",
+      "loc": 465,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "BareMetal-OS",
+      "loc": 1105,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 3.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@textlint_ast-node-types",
+      "loc": 630,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@devlikeapro_n8n-openapi-...",
+      "loc": 429,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-schedule",
+      "loc": 446,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@sentry-internal_node-cpu...",
+      "loc": 1328,
+      "actual_s": 0.15,
+      "predicted_s": 0.04,
+      "ratio": 3.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-exports-info",
+      "loc": 746,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "zig-book",
+      "loc": 4704,
+      "actual_s": 0.53,
+      "predicted_s": 0.11,
+      "ratio": 5.003,
+      "above_threshold": false
+    },
+    {
+      "repo": "acorn-node",
+      "loc": 416,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "editables",
+      "loc": 495,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-forge",
+      "loc": 1725,
+      "actual_s": 0.2,
+      "predicted_s": 0.04,
+      "ratio": 5.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@launchdarkly_openfeature...",
+      "loc": 418,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "pn",
+      "loc": 700,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "dom-serialize",
+      "loc": 453,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-ipc_js-queue",
+      "loc": 452,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "poop",
+      "loc": 915,
+      "actual_s": 0.11,
+      "predicted_s": 0.04,
+      "ratio": 2.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "touch",
+      "loc": 417,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-red-vue",
+      "loc": 579,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "lazy",
+      "loc": 569,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@tiptap_extension-node-range",
+      "loc": 506,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "mdurl",
+      "loc": 567,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-geocoder",
+      "loc": 470,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@pollyjs_adapter-node-http",
+      "loc": 548,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "slack-node",
+      "loc": 342,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "gatsby-node-helpers",
+      "loc": 469,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "util.promisify",
+      "loc": 450,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "formdata-polyfill",
+      "loc": 685,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-loader",
+      "loc": 316,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "unist-util-position",
+      "loc": 325,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "cross-fetch",
+      "loc": 320,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "cobol-unit-test",
+      "loc": 7520,
+      "actual_s": 1.02,
+      "predicted_s": 0.17,
+      "ratio": 6.046,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-static",
+      "loc": 482,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-sass",
+      "loc": 573,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "cobol-is-fun",
+      "loc": 674,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "unist-util-find-after",
+      "loc": 310,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "jaraco-context",
+      "loc": 544,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "mdast-util-to-string",
+      "loc": 307,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "iwubi",
+      "loc": 801,
+      "actual_s": 0.12,
+      "predicted_s": 0.04,
+      "ratio": 3.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-source-walk",
+      "loc": 314,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "redox",
+      "loc": 15356,
+      "actual_s": 2.24,
+      "predicted_s": 0.34,
+      "ratio": 6.54,
+      "above_threshold": false
+    },
+    {
+      "repo": "pytudes",
+      "loc": 8335,
+      "actual_s": 1.24,
+      "predicted_s": 0.19,
+      "ratio": 6.637,
+      "above_threshold": false
+    },
+    {
+      "repo": "bindings",
+      "loc": 373,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-opcua-pki",
+      "loc": 322,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "why-is-node-running",
+      "loc": 337,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "awesome-cobol",
+      "loc": 407,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@opentelemetry_instrument...",
+      "loc": 399,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@opentelemetry_auto-instr...",
+      "loc": 332,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "language-cobol",
+      "loc": 628,
+      "actual_s": 0.1,
+      "predicted_s": 0.04,
+      "ratio": 2.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@lydell_node-pty",
+      "loc": 343,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "learning-cobol",
+      "loc": 367,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-api-headers",
+      "loc": 1741,
+      "actual_s": 0.27,
+      "predicted_s": 0.04,
+      "ratio": 6.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "cash-account-cobol",
+      "loc": 495,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@swc-node_register",
+      "loc": 499,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "tunnel",
+      "loc": 246,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-fetch",
+      "loc": 373,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@flmngr_flmngr-server-node",
+      "loc": 394,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "shellingham",
+      "loc": 545,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "react-remove-scroll",
+      "loc": 276,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "rimraf",
+      "loc": 390,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@module-federation_node",
+      "loc": 368,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-version",
+      "loc": 236,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-hook",
+      "loc": 286,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-jose",
+      "loc": 403,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-vibrant",
+      "loc": 286,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "ini",
+      "loc": 227,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@pollyjs_node-server",
+      "loc": 369,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "renderkid",
+      "loc": 249,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "cics-async-fetch-variatio...",
+      "loc": 393,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@workos-inc_node",
+      "loc": 218,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-notifier",
+      "loc": 253,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "vscode-languageserver",
+      "loc": 266,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "babel-plugin-dynamic-impo...",
+      "loc": 224,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "xero-node",
+      "loc": 712,
+      "actual_s": 0.14,
+      "predicted_s": 0.04,
+      "ratio": 3.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "FPS.cob",
+      "loc": 3294,
+      "actual_s": 0.66,
+      "predicted_s": 0.07,
+      "ratio": 8.871,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-opcua-crypto",
+      "loc": 207,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "raf",
+      "loc": 217,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@sentry_node-core",
+      "loc": 397,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-sql-parser",
+      "loc": 1096,
+      "actual_s": 0.23,
+      "predicted_s": 0.04,
+      "ratio": 5.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@protobufjs_aspromise",
+      "loc": 233,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@improved_node",
+      "loc": 284,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "pg-types",
+      "loc": 198,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-schedule",
+      "loc": 285,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@xmldom_is-dom-node",
+      "loc": 184,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "xmlhttprequest-ssl",
+      "loc": 188,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "sniffio",
+      "loc": 278,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "port_rust_doomgeneric",
+      "loc": 264,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "methods",
+      "loc": 189,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@rolldown_plugin-node-pol...",
+      "loc": 168,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@opentelemetry_sdk-trace-...",
+      "loc": 196,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-rsa",
+      "loc": 290,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "code4z",
+      "loc": 294,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "annotated-doc",
+      "loc": 219,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-gyp-build",
+      "loc": 209,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "rollup-plugin-polyfill-node",
+      "loc": 168,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@toruslabs_fetch-node-det...",
+      "loc": 164,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-readable-to-web-read...",
+      "loc": 164,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "supports-preserve-symlink...",
+      "loc": 176,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-statsd",
+      "loc": 234,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "Cisp",
+      "loc": 953,
+      "actual_s": 0.24,
+      "predicted_s": 0.04,
+      "ratio": 6.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "create-hmac",
+      "loc": 179,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "is-reference",
+      "loc": 171,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "simple-lru-cache",
+      "loc": 181,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "Adafruit_CircuitPython_Bu...",
+      "loc": 1085,
+      "actual_s": 0.27,
+      "predicted_s": 0.04,
+      "ratio": 6.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "lazystream",
+      "loc": 162,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "async-timeout",
+      "loc": 301,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-gyp-build-optional-p...",
+      "loc": 190,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@snowplow_node-tracker",
+      "loc": 148,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "please-upgrade-node",
+      "loc": 158,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-polyglot",
+      "loc": 170,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "tzdata",
+      "loc": 1116,
+      "actual_s": 0.3,
+      "predicted_s": 0.04,
+      "ratio": 7.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-libs-browser",
+      "loc": 152,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "eslint-import-resolver-node",
+      "loc": 157,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-statsd",
+      "loc": 135,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "prokka",
+      "loc": 4126,
+      "actual_s": 1.16,
+      "predicted_s": 0.09,
+      "ratio": 12.471,
+      "above_threshold": false
+    },
+    {
+      "repo": "broccoli-node-info",
+      "loc": 276,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-minify_utils",
+      "loc": 147,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-cron",
+      "loc": 185,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "batch_test_reports",
+      "loc": 239,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@mergeapi_merge-node-client",
+      "loc": 121270,
+      "actual_s": 37.44,
+      "predicted_s": 2.66,
+      "ratio": 14.075,
+      "above_threshold": true
+    },
+    {
+      "repo": "init-package-json",
+      "loc": 123,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-api-version",
+      "loc": 140,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "util-promisify",
+      "loc": 149,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "fonttools",
+      "loc": 5271,
+      "actual_s": 1.77,
+      "predicted_s": 0.12,
+      "ratio": 14.925,
+      "above_threshold": false
+    },
+    {
+      "repo": "@slack_logger",
+      "loc": 111,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@jsonjoy.com_fs-core",
+      "loc": 122,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-int64",
+      "loc": 125,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-fetch-retry",
+      "loc": 120,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "dom-walk",
+      "loc": 108,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@sentry_node",
+      "loc": 211,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-minify_terser",
+      "loc": 107,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "fflib-apex-common",
+      "loc": 189,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "prosemirror-trailing-node",
+      "loc": 113,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-zip",
+      "loc": 111,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_webpack-node-exter...",
+      "loc": 117,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-minify_core",
+      "loc": 101,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-range",
+      "loc": 103,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-uuid",
+      "loc": 158,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_analytics-node",
+      "loc": 180,
+      "actual_s": 0.08,
+      "predicted_s": 0.04,
+      "ratio": 2.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@hapi_hoek",
+      "loc": 95,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@rspack_binding",
+      "loc": 122,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@jsii_check-node",
+      "loc": 91,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "vscode-languageserver-types",
+      "loc": 85,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "string_decoder",
+      "loc": 83,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@aws-sdk_util-user-agent-...",
+      "loc": 88,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@univerjs_rpc-node",
+      "loc": 85,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "reddit_data",
+      "loc": 1131,
+      "actual_s": 0.55,
+      "predicted_s": 0.04,
+      "ratio": 13.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@smithy_util-defaults-mod...",
+      "loc": 85,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "xmlhttprequest",
+      "loc": 81,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-red_util",
+      "loc": 121,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-stream",
+      "loc": 111,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@reactflow_node-toolbar",
+      "loc": 80,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@aws-sdk_eventstream-hand...",
+      "loc": 77,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@tsconfig_node14",
+      "loc": 71,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@smithy_hash-stream-node",
+      "loc": 78,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@smithy_hash-node",
+      "loc": 76,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@smithy_eventstream-serde...",
+      "loc": 73,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "COBOL-Guide",
+      "loc": 81,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@tsconfig_node10",
+      "loc": 69,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@tsconfig_node16",
+      "loc": 71,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@npmcli_node-gyp",
+      "loc": 68,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-rs_helper",
+      "loc": 68,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@tsconfig_node12",
+      "loc": 71,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@nrwl_node",
+      "loc": 98,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "node-fingerprint",
+      "loc": 67,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@types_node-gzip",
+      "loc": 64,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "fake_cobol_repo",
+      "loc": 83,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@docknetwork_node-types",
+      "loc": 54,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "git-node-fs",
+      "loc": 55,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@apollo_utils.isnodelike",
+      "loc": 52,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-red_editor-api",
+      "loc": 54,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "fs-constants",
+      "loc": 51,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@nangohq_node",
+      "loc": 44,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "core-util-is",
+      "loc": 43,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@apollo_utils.createhash",
+      "loc": 64,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-red_registry",
+      "loc": 39,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@rspack_binding-linux-x64...",
+      "loc": 47,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-llama-cpp_linux-armv7l",
+      "loc": 52,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "otterkit",
+      "loc": 123,
+      "actual_s": 0.13,
+      "predicted_s": 0.04,
+      "ratio": 3.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "dprint-node",
+      "loc": 80,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "@rspack_binding-linux-x64...",
+      "loc": 47,
+      "actual_s": 0.06,
+      "predicted_s": 0.04,
+      "ratio": 1.5,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-llama-cpp_linux-arm64",
+      "loc": 52,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-llama-cpp_linux-x64...",
+      "loc": 51,
+      "actual_s": 0.07,
+      "predicted_s": 0.04,
+      "ratio": 1.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "@lydell_node-pty-linux-x64",
+      "loc": 21,
+      "actual_s": 0.04,
+      "predicted_s": 0.04,
+      "ratio": 1.0,
+      "above_threshold": false
+    },
+    {
+      "repo": "@node-llama-cpp_linux-x64",
+      "loc": 51,
+      "actual_s": 0.15,
+      "predicted_s": 0.04,
+      "ratio": 3.75,
+      "above_threshold": false
+    },
+    {
+      "repo": "ziglings",
+      "loc": 9,
+      "actual_s": 0.05,
+      "predicted_s": 0.04,
+      "ratio": 1.25,
+      "above_threshold": false
+    },
+    {
+      "repo": "zig-gamedev",
+      "loc": 9,
+      "actual_s": 0.09,
+      "predicted_s": 0.04,
+      "ratio": 2.25,
+      "above_threshold": false
+    }
+  ]
+}
