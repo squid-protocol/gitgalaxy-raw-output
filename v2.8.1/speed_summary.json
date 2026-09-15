@@ -1,0 +1,4881 @@
+{
+  "log_file": "batch_scan_master_20260915_151822.log",
+  "run_date": "2026-09-15",
+  "total_repos": 628,
+  "total_loc": 279927703,
+  "total_time_s": 6166.84,
+  "avg_rate_loc_s": 45392,
+  "failed_repos": 0,
+  "slow_files": [
+    {
+      "repo": "darwin-xnu",
+      "file": "EXTERNAL_HEADERS/AvailabilityInternal.h",
+      "seconds": 14.01
+    },
+    {
+      "repo": "bun",
+      "file": "test/js/bun/http/js-sink-sourmap-fixture/index.mjs",
+      "seconds": 10.44
+    },
+    {
+      "repo": "next.js",
+      "file": "packages/next/src/compiled/@edge-runtime/primitives/load.js",
+      "seconds": 13.63
+    },
+    {
+      "repo": "next.js",
+      "file": "packages/next/src/compiled/@edge-runtime/primitives/fetch.js",
+      "seconds": 13.7
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/pnpm-semver-range-specifier/pnpm-lock.yaml.ts",
+      "seconds": 19.04
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/nextjs/app/pnpm-lock-v6.yaml.ts",
+      "seconds": 22.05
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/nextjs/app/pnpm-lock.yaml.ts",
+      "seconds": 22.66
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/bun/large-project.bun.lock.ts",
+      "seconds": 30.14
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/nextjs/pnpm-lock.yaml.ts",
+      "seconds": 38.04
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/nextjs/pnpm-lock-v6.yaml.ts",
+      "seconds": 41.76
+    },
+    {
+      "repo": "nx",
+      "file": "packages/nx/src/plugins/js/lock-file/__fixtures__/pnpm-regression/pnpm-lock.yaml.ts",
+      "seconds": 60.66
+    },
+    {
+      "repo": "swc",
+      "file": "crates/swc_ecma_minifier/tests/fixture/next/33265/static/chunks/pages/index-cb36c1bf7f830e3c/input.js",
+      "seconds": 12.92
+    },
+    {
+      "repo": "swc",
+      "file": "crates/swc_ecma_minifier/tests/fixture/next/react-pdf-renderer/output.js",
+      "seconds": 12.58
+    },
+    {
+      "repo": "swc",
+      "file": "crates/swc_ecma_minifier/tests/fixture/next/react-ace/chunks/8a28b14e.d8fbda268ed281a1/input.js",
+      "seconds": 13.65
+    },
+    {
+      "repo": "swc",
+      "file": "crates/swc_ecma_minifier/tests/fixture/next/wrap-contracts/output.js",
+      "seconds": 13.05
+    },
+    {
+      "repo": "swc",
+      "file": "crates/swc_ecma_minifier/tests/benches-full/terser.js",
+      "seconds": 24.78
+    },
+    {
+      "repo": "cypress",
+      "file": "system-tests/__snapshots__/protocol_spec.js",
+      "seconds": 25.14
+    },
+    {
+      "repo": "grafana",
+      "file": "pkg/storage/unified/sql/rvmanager/data/resource_history_update_rv.sql",
+      "seconds": 60.0
+    },
+    {
+      "repo": "grafana",
+      "file": "pkg/storage/unified/sql/rvmanager/data/resource_update_rv.sql",
+      "seconds": 60.0
+    },
+    {
+      "repo": "godot",
+      "file": "thirdparty/vulkan/include/vulkan/vulkan_raii.hpp",
+      "seconds": 10.93
+    },
+    {
+      "repo": "gradle",
+      "file": "testing/internal-distribution-testing/src/test/groovy/org/gradle/integtests/fixtures/executer/OutputScrapingExecutionResultTest.groovy",
+      "seconds": 16.57
+    },
+    {
+      "repo": "node",
+      "file": "deps/undici/undici.js",
+      "seconds": 10.18
+    },
+    {
+      "repo": "node",
+      "file": "deps/v8/src/api/api.cc",
+      "seconds": 10.81
+    },
+    {
+      "repo": "node",
+      "file": "deps/v8/src/codegen/code-stub-assembler.cc",
+      "seconds": 15.38
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAsyncMainTests.cs",
+      "seconds": 14.88
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenDynamicTests.cs",
+      "seconds": 15.13
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAsyncTests.cs",
+      "seconds": 23.37
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAsyncEHTests.cs",
+      "seconds": 26.7
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAwaitUsingTests.cs",
+      "seconds": 26.67
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenIterators.cs",
+      "seconds": 14.02
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAsyncSpillTests.cs",
+      "seconds": 36.45
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAwaitForeachTests.cs",
+      "seconds": 36.0
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenRefConditionalOperatorTests.cs",
+      "seconds": 19.3
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenTupleTest.cs",
+      "seconds": 15.66
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAsyncLocalsTests.cs",
+      "seconds": 60.08
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/CodeGenAsyncIteratorTests.cs",
+      "seconds": 60.76
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/CheckSumTest.cs",
+      "seconds": 12.16
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/CodeGen/CodeGenSpanBasedStringConcatTests.cs",
+      "seconds": 37.24
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/Emit/LocalStateTracing/LocalStateTracingTests.cs",
+      "seconds": 35.42
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit/CodeGen/SwitchTests.cs",
+      "seconds": 60.49
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/CodeGen/CodeGenLengthBasedSwitchTests.cs",
+      "seconds": 60.56
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/Emit/EditAndContinue/EditAndContinueClosureTests.cs",
+      "seconds": 60.88
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/Emit/EditAndContinue/EditAndContinueStateMachineTests.cs",
+      "seconds": 60.64
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/Emit/EditAndContinue/EditAndContinueTests.cs",
+      "seconds": 61.82
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBAsyncTests.cs",
+      "seconds": 60.11
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBLocalFunctionTests.cs",
+      "seconds": 39.1
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBTupleTests.cs",
+      "seconds": 23.3
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBDynamicLocalsTests.cs",
+      "seconds": 60.14
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBIteratorTests.cs",
+      "seconds": 60.09
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBLambdaTests.cs",
+      "seconds": 60.11
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit3/Semantics/PrimaryConstructorTests.cs",
+      "seconds": 14.63
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBTests.cs",
+      "seconds": 60.59
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit3/Semantics/PatternMatchingTests.cs",
+      "seconds": 32.18
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit2/PDB/PDBUsingTests.cs",
+      "seconds": 60.24
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Semantic/Semantics/OverloadResolutionTests.cs",
+      "seconds": 13.81
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Semantic/Semantics/SemanticErrorTests.cs",
+      "seconds": 10.38
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit3/RefStructInterfacesTests.cs",
+      "seconds": 61.19
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit3/Semantics/LockTests.cs",
+      "seconds": 60.35
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit3/Semantics/InlineArrayTests.cs",
+      "seconds": 61.08
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Semantic/Semantics/InterpolationTests.cs",
+      "seconds": 33.2
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Semantic/Semantics/RawInterpolationTests_Handler.cs",
+      "seconds": 28.09
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Emit3/Symbols/UserDefinedCompoundAssignmentOperatorsTests.cs",
+      "seconds": 62.76
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Semantic/Semantics/MethodTypeInferenceTests.cs",
+      "seconds": 60.08
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/EditorFeatures/CSharpTest2/EmbeddedLanguages/RegularExpressions/CSharpRegexParserTests_BasicTests.cs",
+      "seconds": 11.92
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/Symbol/Symbols/UnsignedRightShiftTests.cs",
+      "seconds": 46.98
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/WinRT/CodeGen/WinRTCollectionTests.cs",
+      "seconds": 60.29
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Compilers/CSharp/Test/WinRT/Metadata/WinMdEventTests.cs",
+      "seconds": 60.41
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/ExpressionEvaluator/CSharp/Test/ExpressionCompiler/CompileExpressionsTests.cs",
+      "seconds": 30.77
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/EditorFeatures/CSharpTest2/EmbeddedLanguages/Json/CSharpJsonParserTests.cs",
+      "seconds": 44.93
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/LanguageServer/ProtocolUnitTests/Options/SolutionAnalyzerConfigOptionsUpdaterTests.cs",
+      "seconds": 10.12
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/EditorFeatures/CSharpTest/Classification/SyntacticClassifierTests.cs",
+      "seconds": 60.34
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/EditorFeatures/CSharpTest/Formatting/Indentation/SmartIndenterTests_Performance.cs",
+      "seconds": 60.09
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/Workspaces/CoreTest/Options/EditorConfigNamingStyleParserTests.cs",
+      "seconds": 15.67
+    },
+    {
+      "repo": "roslyn",
+      "file": "src/ExpressionEvaluator/CSharp/Test/ExpressionCompiler/DynamicTests.cs",
+      "seconds": 60.07
+    },
+    {
+      "repo": "runtime",
+      "file": "src/coreclr/tools/Common/JitInterface/ThunkGenerator/InstructionSetGenerator.cs",
+      "seconds": 23.76
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/Common/tests/System/RealFormatterTestsBase.cs",
+      "seconds": 18.36
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/Microsoft.Bcl.Numerics/tests/MathF.cs",
+      "seconds": 24.78
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/Common/tests/System/Security/Cryptography/AlgorithmImplementations/RSA/RSAKeyFileTests.cs",
+      "seconds": 60.13
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/Common/tests/System/Security/Cryptography/AlgorithmImplementations/RSA/RSAXml.cs",
+      "seconds": 60.13
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Linq.Expressions/tests/StackSpillerTests.cs",
+      "seconds": 18.89
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Memory/tests/ReadOnlySpan/Overlaps.cs",
+      "seconds": 17.34
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Memory/tests/Span/Overlaps.cs",
+      "seconds": 20.44
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Linq.Expressions/tests/CompilerTests.cs",
+      "seconds": 30.45
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Runtime.InteropServices/tests/System.Runtime.InteropServices.UnitTests/System/Runtime/InteropServices/NFloatTests.cs",
+      "seconds": 11.24
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Runtime.Intrinsics/ref/System.Runtime.Intrinsics.cs",
+      "seconds": 16.67
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Net.Http.WinHttpHandler/tests/UnitTests/ClientCertificateHelper.cs",
+      "seconds": 60.07
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Runtime/tests/System.Runtime.Extensions.Tests/System/Math.cs",
+      "seconds": 10.77
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Private.Xml/tests/Writers/XmlWriterApi/TCFullEndElement.cs",
+      "seconds": 36.25
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Runtime/ref/System.Runtime.cs",
+      "seconds": 26.65
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Runtime/tests/System.Runtime.Extensions.Tests/System/MathF.cs",
+      "seconds": 29.21
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Text.Json/tests/System.Text.Json.Tests/Serialization/NamingPolicyUnitTests.cs",
+      "seconds": 15.34
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Text.RegularExpressions/tests/UnitTests/RegexReductionTests.cs",
+      "seconds": 12.86
+    },
+    {
+      "repo": "runtime",
+      "file": "src/libraries/System.Text.Json/tests/Common/JsonSchemaExporterTests.cs",
+      "seconds": 48.35
+    },
+    {
+      "repo": "sdk",
+      "file": "runtime/vm/object.cc",
+      "seconds": 21.96
+    }
+  ],
+  "typosquat_hits": 0,
+  "typosquat_repos": 0,
+  "repos": [
+    {
+      "rank": 1,
+      "repo": "Apollo-11",
+      "loc": 131833,
+      "rate": 101312,
+      "time": 1.3
+    },
+    {
+      "rank": 2,
+      "repo": "normal_doomgeneric",
+      "loc": 61932,
+      "rate": 99971,
+      "time": 0.62
+    },
+    {
+      "rank": 3,
+      "repo": "freeCodeCamp",
+      "loc": 2406193,
+      "rate": 93129,
+      "time": 25.84
+    },
+    {
+      "rank": 4,
+      "repo": "loony_ascii_doom",
+      "loc": 59716,
+      "rate": 87991,
+      "time": 0.68
+    },
+    {
+      "rank": 5,
+      "repo": "original_doom",
+      "loc": 49940,
+      "rate": 87252,
+      "time": 0.57
+    },
+    {
+      "rank": 6,
+      "repo": "DOOM",
+      "loc": 49940,
+      "rate": 86883,
+      "time": 0.57
+    },
+    {
+      "rank": 7,
+      "repo": "gnucobol",
+      "loc": 276006,
+      "rate": 85439,
+      "time": 3.23
+    },
+    {
+      "rank": 8,
+      "repo": "gnupg",
+      "loc": 460134,
+      "rate": 85008,
+      "time": 5.41
+    },
+    {
+      "rank": 9,
+      "repo": "illumos-gate",
+      "loc": 14164953,
+      "rate": 84692,
+      "time": 167.25
+    },
+    {
+      "rank": 10,
+      "repo": "sqlite",
+      "loc": 475713,
+      "rate": 82026,
+      "time": 5.8
+    },
+    {
+      "rank": 11,
+      "repo": "linux-1.0",
+      "loc": 174690,
+      "rate": 79628,
+      "time": 2.19
+    },
+    {
+      "rank": 12,
+      "repo": "normal_rp2040_doom",
+      "loc": 300363,
+      "rate": 79467,
+      "time": 3.78
+    },
+    {
+      "rank": 13,
+      "repo": "linux",
+      "loc": 33940003,
+      "rate": 77783,
+      "time": 436.34
+    },
+    {
+      "rank": 14,
+      "repo": "darwin-xnu",
+      "loc": 1885298,
+      "rate": 76212,
+      "time": 24.74
+    },
+    {
+      "rank": 15,
+      "repo": "redis",
+      "loc": 484826,
+      "rate": 75876,
+      "time": 6.39
+    },
+    {
+      "rank": 16,
+      "repo": "hyperion",
+      "loc": 411612,
+      "rate": 75006,
+      "time": 5.49
+    },
+    {
+      "rank": 17,
+      "repo": "wtfpython",
+      "loc": 15878,
+      "rate": 73652,
+      "time": 0.22
+    },
+    {
+      "rank": 18,
+      "repo": "normal_esp32_doom",
+      "loc": 78821,
+      "rate": 73156,
+      "time": 1.08
+    },
+    {
+      "rank": 19,
+      "repo": "reactos",
+      "loc": 8310271,
+      "rate": 70981,
+      "time": 117.08
+    },
+    {
+      "rank": 20,
+      "repo": "freebsd-src",
+      "loc": 26539565,
+      "rate": 70730,
+      "time": 375.22
+    },
+    {
+      "rank": 21,
+      "repo": "esbuild",
+      "loc": 223669,
+      "rate": 68723,
+      "time": 3.25
+    },
+    {
+      "rank": 22,
+      "repo": "temp_jcl_out",
+      "loc": 29156,
+      "rate": 68128,
+      "time": 0.43
+    },
+    {
+      "rank": 23,
+      "repo": "tokio",
+      "loc": 173304,
+      "rate": 67454,
+      "time": 2.57
+    },
+    {
+      "rank": 24,
+      "repo": "twisted",
+      "loc": 386290,
+      "rate": 66687,
+      "time": 5.79
+    },
+    {
+      "rank": 25,
+      "repo": "cli",
+      "loc": 749503,
+      "rate": 66248,
+      "time": 11.31
+    },
+    {
+      "rank": 26,
+      "repo": "effect",
+      "loc": 619956,
+      "rate": 66204,
+      "time": 9.36
+    },
+    {
+      "rank": 27,
+      "repo": "cargo",
+      "loc": 416453,
+      "rate": 65930,
+      "time": 6.32
+    },
+    {
+      "rank": 28,
+      "repo": "abapGit",
+      "loc": 220733,
+      "rate": 65898,
+      "time": 3.35
+    },
+    {
+      "rank": 29,
+      "repo": "livecode",
+      "loc": 908809,
+      "rate": 65245,
+      "time": 13.93
+    },
+    {
+      "rank": 30,
+      "repo": "rust-analyzer",
+      "loc": 534323,
+      "rate": 64685,
+      "time": 8.26
+    },
+    {
+      "rank": 31,
+      "repo": "psutil",
+      "loc": 47300,
+      "rate": 64452,
+      "time": 0.73
+    },
+    {
+      "rank": 32,
+      "repo": "substrate",
+      "loc": 604231,
+      "rate": 64280,
+      "time": 9.4
+    },
+    {
+      "rank": 33,
+      "repo": "wordpress",
+      "loc": 945835,
+      "rate": 64236,
+      "time": 14.72
+    },
+    {
+      "rank": 34,
+      "repo": "pyarrow",
+      "loc": 155413,
+      "rate": 64191,
+      "time": 2.42
+    },
+    {
+      "rank": 35,
+      "repo": "go",
+      "loc": 1831333,
+      "rate": 63901,
+      "time": 28.66
+    },
+    {
+      "rank": 36,
+      "repo": "terraform",
+      "loc": 627404,
+      "rate": 63852,
+      "time": 9.83
+    },
+    {
+      "rank": 37,
+      "repo": "haiku",
+      "loc": 4285605,
+      "rate": 63846,
+      "time": 67.12
+    },
+    {
+      "rank": 38,
+      "repo": "numpy",
+      "loc": 1120898,
+      "rate": 63793,
+      "time": 17.57
+    },
+    {
+      "rank": 39,
+      "repo": "cpython",
+      "loc": 880883,
+      "rate": 63603,
+      "time": 13.85
+    },
+    {
+      "rank": 40,
+      "repo": "solana",
+      "loc": 580592,
+      "rate": 63581,
+      "time": 9.13
+    },
+    {
+      "rank": 41,
+      "repo": "scikit-learn",
+      "loc": 459370,
+      "rate": 63328,
+      "time": 7.25
+    },
+    {
+      "rank": 42,
+      "repo": "prometheus",
+      "loc": 377316,
+      "rate": 62489,
+      "time": 6.04
+    },
+    {
+      "rank": 43,
+      "repo": "blst",
+      "loc": 48913,
+      "rate": 62441,
+      "time": 0.78
+    },
+    {
+      "rank": 44,
+      "repo": "pandoc",
+      "loc": 239417,
+      "rate": 61773,
+      "time": 3.88
+    },
+    {
+      "rank": 45,
+      "repo": "cpm65",
+      "loc": 57582,
+      "rate": 61480,
+      "time": 0.94
+    },
+    {
+      "rank": 46,
+      "repo": "pandas",
+      "loc": 734667,
+      "rate": 61206,
+      "time": 12.0
+    },
+    {
+      "rank": 47,
+      "repo": "WordPress",
+      "loc": 947499,
+      "rate": 61175,
+      "time": 15.49
+    },
+    {
+      "rank": 48,
+      "repo": "zig",
+      "loc": 3097515,
+      "rate": 60837,
+      "time": 50.91
+    },
+    {
+      "rank": 49,
+      "repo": "scipy",
+      "loc": 1327455,
+      "rate": 60770,
+      "time": 21.84
+    },
+    {
+      "rank": 50,
+      "repo": "scapy",
+      "loc": 232353,
+      "rate": 60359,
+      "time": 3.85
+    },
+    {
+      "rank": 51,
+      "repo": "bevy",
+      "loc": 589098,
+      "rate": 60022,
+      "time": 9.81
+    },
+    {
+      "rank": 52,
+      "repo": "networkx",
+      "loc": 182525,
+      "rate": 59652,
+      "time": 3.06
+    },
+    {
+      "rank": 53,
+      "repo": "abap-cleaner",
+      "loc": 152347,
+      "rate": 59601,
+      "time": 2.56
+    },
+    {
+      "rank": 54,
+      "repo": "alembic",
+      "loc": 58228,
+      "rate": 59566,
+      "time": 0.98
+    },
+    {
+      "rank": 55,
+      "repo": "pydantic",
+      "loc": 112463,
+      "rate": 59436,
+      "time": 1.89
+    },
+    {
+      "rank": 56,
+      "repo": "actix-web",
+      "loc": 92636,
+      "rate": 59336,
+      "time": 1.56
+    },
+    {
+      "rank": 57,
+      "repo": "libxev",
+      "loc": 23090,
+      "rate": 59080,
+      "time": 0.39
+    },
+    {
+      "rank": 58,
+      "repo": "node",
+      "loc": 7927455,
+      "rate": 59072,
+      "time": 134.2
+    },
+    {
+      "rank": 59,
+      "repo": "zellij",
+      "loc": 277963,
+      "rate": 59071,
+      "time": 4.71
+    },
+    {
+      "rank": 60,
+      "repo": "racket",
+      "loc": 1265589,
+      "rate": 58739,
+      "time": 21.55
+    },
+    {
+      "rank": 61,
+      "repo": "azure-devops-node-api",
+      "loc": 55772,
+      "rate": 58731,
+      "time": 0.95
+    },
+    {
+      "rank": 62,
+      "repo": "okhttp",
+      "loc": 149585,
+      "rate": 58434,
+      "time": 2.56
+    },
+    {
+      "rank": 63,
+      "repo": "google-cloud-storage",
+      "loc": 99451,
+      "rate": 58087,
+      "time": 1.71
+    },
+    {
+      "rank": 64,
+      "repo": "express",
+      "loc": 26171,
+      "rate": 57924,
+      "time": 0.45
+    },
+    {
+      "rank": 65,
+      "repo": "wgpu",
+      "loc": 343626,
+      "rate": 57872,
+      "time": 5.94
+    },
+    {
+      "rank": 66,
+      "repo": "zls",
+      "loc": 59030,
+      "rate": 57801,
+      "time": 1.02
+    },
+    {
+      "rank": 67,
+      "repo": "react",
+      "loc": 847301,
+      "rate": 56744,
+      "time": 14.93
+    },
+    {
+      "rank": 68,
+      "repo": "puppeteer",
+      "loc": 165962,
+      "rate": 56720,
+      "time": 2.93
+    },
+    {
+      "rank": 69,
+      "repo": "opencv",
+      "loc": 2050441,
+      "rate": 56713,
+      "time": 36.15
+    },
+    {
+      "rank": 70,
+      "repo": "cesium",
+      "loc": 1146378,
+      "rate": 56546,
+      "time": 20.27
+    },
+    {
+      "rank": 71,
+      "repo": "curl",
+      "loc": 330175,
+      "rate": 56525,
+      "time": 5.84
+    },
+    {
+      "rank": 72,
+      "repo": "bugzilla",
+      "loc": 149514,
+      "rate": 56398,
+      "time": 2.65
+    },
+    {
+      "rank": 73,
+      "repo": "PowerShell",
+      "loc": 809153,
+      "rate": 56379,
+      "time": 14.35
+    },
+    {
+      "rank": 74,
+      "repo": "mach",
+      "loc": 70658,
+      "rate": 56271,
+      "time": 1.26
+    },
+    {
+      "rank": 75,
+      "repo": "Chart.js",
+      "loc": 81843,
+      "rate": 56210,
+      "time": 1.46
+    },
+    {
+      "rank": 76,
+      "repo": "mojo",
+      "loc": 76630,
+      "rate": 56173,
+      "time": 1.36
+    },
+    {
+      "rank": 77,
+      "repo": "spm12",
+      "loc": 696700,
+      "rate": 56172,
+      "time": 12.4
+    },
+    {
+      "rank": 78,
+      "repo": "pip",
+      "loc": 157163,
+      "rate": 56165,
+      "time": 2.8
+    },
+    {
+      "rank": 79,
+      "repo": "impacket",
+      "loc": 166661,
+      "rate": 55885,
+      "time": 2.98
+    },
+    {
+      "rank": 80,
+      "repo": "cakephp",
+      "loc": 368839,
+      "rate": 55784,
+      "time": 6.61
+    },
+    {
+      "rank": 81,
+      "repo": "biopython",
+      "loc": 566266,
+      "rate": 55444,
+      "time": 10.21
+    },
+    {
+      "rank": 82,
+      "repo": "MS-DOS",
+      "loc": 506541,
+      "rate": 55427,
+      "time": 9.14
+    },
+    {
+      "rank": 83,
+      "repo": "tauri",
+      "loc": 131244,
+      "rate": 55391,
+      "time": 2.37
+    },
+    {
+      "rank": 84,
+      "repo": "reveal.js",
+      "loc": 30422,
+      "rate": 55256,
+      "time": 0.55
+    },
+    {
+      "rank": 85,
+      "repo": "hyper",
+      "loc": 36966,
+      "rate": 54841,
+      "time": 0.67
+    },
+    {
+      "rank": 86,
+      "repo": "setuptools",
+      "loc": 81771,
+      "rate": 54837,
+      "time": 1.49
+    },
+    {
+      "rank": 87,
+      "repo": "type-fest",
+      "loc": 37127,
+      "rate": 54671,
+      "time": 0.68
+    },
+    {
+      "rank": 88,
+      "repo": "pytest",
+      "loc": 102977,
+      "rate": 54461,
+      "time": 1.89
+    },
+    {
+      "rank": 89,
+      "repo": "google-api-core",
+      "loc": 28282,
+      "rate": 54445,
+      "time": 0.52
+    },
+    {
+      "rank": 90,
+      "repo": "vyre",
+      "loc": 940240,
+      "rate": 54427,
+      "time": 17.28
+    },
+    {
+      "rank": 91,
+      "repo": "Alamofire",
+      "loc": 50727,
+      "rate": 54376,
+      "time": 0.93
+    },
+    {
+      "rank": 92,
+      "repo": "eeglab",
+      "loc": 148275,
+      "rate": 54326,
+      "time": 2.73
+    },
+    {
+      "rank": 93,
+      "repo": "Carbon",
+      "loc": 322845,
+      "rate": 54258,
+      "time": 5.95
+    },
+    {
+      "rank": 94,
+      "repo": "google-auth",
+      "loc": 48825,
+      "rate": 54220,
+      "time": 0.9
+    },
+    {
+      "rank": 95,
+      "repo": "arktype",
+      "loc": 73513,
+      "rate": 54201,
+      "time": 1.36
+    },
+    {
+      "rank": 96,
+      "repo": "root",
+      "loc": 7432922,
+      "rate": 54153,
+      "time": 137.26
+    },
+    {
+      "rank": 97,
+      "repo": "pypy",
+      "loc": 1415081,
+      "rate": 54139,
+      "time": 26.14
+    },
+    {
+      "rank": 98,
+      "repo": "perl5",
+      "loc": 1362561,
+      "rate": 54073,
+      "time": 25.2
+    },
+    {
+      "rank": 99,
+      "repo": "pyarmor",
+      "loc": 46371,
+      "rate": 53980,
+      "time": 0.86
+    },
+    {
+      "rank": 100,
+      "repo": "wrf-fortran",
+      "loc": 1763150,
+      "rate": 53867,
+      "time": 32.73
+    },
+    {
+      "rank": 101,
+      "repo": "syn",
+      "loc": 42834,
+      "rate": 53835,
+      "time": 0.8
+    },
+    {
+      "rank": 102,
+      "repo": "ripgrep",
+      "loc": 62846,
+      "rate": 53739,
+      "time": 1.17
+    },
+    {
+      "rank": 103,
+      "repo": "kubernetes",
+      "loc": 3340840,
+      "rate": 53603,
+      "time": 62.33
+    },
+    {
+      "rank": 104,
+      "repo": "content",
+      "loc": 1434067,
+      "rate": 53515,
+      "time": 26.8
+    },
+    {
+      "rank": 105,
+      "repo": "nasm",
+      "loc": 82136,
+      "rate": 53512,
+      "time": 1.53
+    },
+    {
+      "rank": 106,
+      "repo": "cytoscape.js",
+      "loc": 81088,
+      "rate": 53454,
+      "time": 1.52
+    },
+    {
+      "rank": 107,
+      "repo": "rails",
+      "loc": 617585,
+      "rate": 53282,
+      "time": 11.59
+    },
+    {
+      "rank": 108,
+      "repo": "microzig",
+      "loc": 130788,
+      "rate": 53200,
+      "time": 2.46
+    },
+    {
+      "rank": 109,
+      "repo": "cryptography",
+      "loc": 91679,
+      "rate": 52910,
+      "time": 1.73
+    },
+    {
+      "rank": 110,
+      "repo": "openpyxl",
+      "loc": 29411,
+      "rate": 52856,
+      "time": 0.56
+    },
+    {
+      "rank": 111,
+      "repo": "platform_dalvik",
+      "loc": 176846,
+      "rate": 52721,
+      "time": 3.35
+    },
+    {
+      "rank": 112,
+      "repo": "pyqtgraph",
+      "loc": 98599,
+      "rate": 52289,
+      "time": 1.89
+    },
+    {
+      "rank": 113,
+      "repo": "tigerbeetle",
+      "loc": 204785,
+      "rate": 52228,
+      "time": 3.92
+    },
+    {
+      "rank": 114,
+      "repo": "godot",
+      "loc": 4252910,
+      "rate": 52040,
+      "time": 81.72
+    },
+    {
+      "rank": 115,
+      "repo": "playwright",
+      "loc": 531768,
+      "rate": 51760,
+      "time": 10.27
+    },
+    {
+      "rank": 116,
+      "repo": "three.js",
+      "loc": 741593,
+      "rate": 51680,
+      "time": 14.35
+    },
+    {
+      "rank": 117,
+      "repo": "lxml",
+      "loc": 109466,
+      "rate": 51551,
+      "time": 2.12
+    },
+    {
+      "rank": 118,
+      "repo": "apex-recipes",
+      "loc": 34833,
+      "rate": 51521,
+      "time": 0.68
+    },
+    {
+      "rank": 119,
+      "repo": "jedi",
+      "loc": 46009,
+      "rate": 51260,
+      "time": 0.9
+    },
+    {
+      "rank": 120,
+      "repo": "jquery",
+      "loc": 46956,
+      "rate": 51121,
+      "time": 0.92
+    },
+    {
+      "rank": 121,
+      "repo": "rdkit",
+      "loc": 800291,
+      "rate": 51053,
+      "time": 15.68
+    },
+    {
+      "rank": 122,
+      "repo": "swift",
+      "loc": 3477739,
+      "rate": 50974,
+      "time": 68.23
+    },
+    {
+      "rank": 123,
+      "repo": "react-router",
+      "loc": 211689,
+      "rate": 50906,
+      "time": 4.16
+    },
+    {
+      "rank": 124,
+      "repo": "lazygit",
+      "loc": 119150,
+      "rate": 50839,
+      "time": 2.34
+    },
+    {
+      "rank": 125,
+      "repo": "mikro-orm",
+      "loc": 270366,
+      "rate": 50561,
+      "time": 5.35
+    },
+    {
+      "rank": 126,
+      "repo": "serde",
+      "loc": 44471,
+      "rate": 50557,
+      "time": 0.88
+    },
+    {
+      "rank": 127,
+      "repo": "GitPython",
+      "loc": 33872,
+      "rate": 50478,
+      "time": 0.67
+    },
+    {
+      "rank": 128,
+      "repo": "HolyLang",
+      "loc": 34834,
+      "rate": 50383,
+      "time": 0.69
+    },
+    {
+      "rank": 129,
+      "repo": "nushell",
+      "loc": 361535,
+      "rate": 50227,
+      "time": 7.2
+    },
+    {
+      "rank": 130,
+      "repo": "fieldtrip",
+      "loc": 513294,
+      "rate": 50190,
+      "time": 10.23
+    },
+    {
+      "rank": 131,
+      "repo": "cobrix",
+      "loc": 89942,
+      "rate": 50189,
+      "time": 1.79
+    },
+    {
+      "rank": 132,
+      "repo": "protobuf",
+      "loc": 52548,
+      "rate": 50063,
+      "time": 1.05
+    },
+    {
+      "rank": 133,
+      "repo": "ghostty",
+      "loc": 317797,
+      "rate": 50062,
+      "time": 6.35
+    },
+    {
+      "rank": 134,
+      "repo": "wasmtime",
+      "loc": 658498,
+      "rate": 49918,
+      "time": 13.19
+    },
+    {
+      "rank": 135,
+      "repo": "mediawiki",
+      "loc": 1700887,
+      "rate": 49837,
+      "time": 34.13
+    },
+    {
+      "rank": 136,
+      "repo": "deno",
+      "loc": 984265,
+      "rate": 49706,
+      "time": 19.8
+    },
+    {
+      "rank": 137,
+      "repo": "coverage",
+      "loc": 43266,
+      "rate": 49615,
+      "time": 0.87
+    },
+    {
+      "rank": 138,
+      "repo": "openzeppelin-contracts",
+      "loc": 91709,
+      "rate": 49601,
+      "time": 1.85
+    },
+    {
+      "rank": 139,
+      "repo": "zod",
+      "loc": 80043,
+      "rate": 49367,
+      "time": 1.62
+    },
+    {
+      "rank": 140,
+      "repo": "jinja2",
+      "loc": 21481,
+      "rate": 49303,
+      "time": 0.44
+    },
+    {
+      "rank": 141,
+      "repo": "@types_node",
+      "loc": 42558,
+      "rate": 49206,
+      "time": 0.86
+    },
+    {
+      "rank": 142,
+      "repo": "aiohttp",
+      "loc": 100200,
+      "rate": 49147,
+      "time": 2.04
+    },
+    {
+      "rank": 143,
+      "repo": "yii2",
+      "loc": 207030,
+      "rate": 49066,
+      "time": 4.22
+    },
+    {
+      "rank": 144,
+      "repo": "river",
+      "loc": 16868,
+      "rate": 49021,
+      "time": 0.34
+    },
+    {
+      "rank": 145,
+      "repo": "pyasn1-modules",
+      "loc": 41110,
+      "rate": 48946,
+      "time": 0.84
+    },
+    {
+      "rank": 146,
+      "repo": "Python",
+      "loc": 126848,
+      "rate": 48903,
+      "time": 2.59
+    },
+    {
+      "rank": 147,
+      "repo": "laravel_core",
+      "loc": 535881,
+      "rate": 48874,
+      "time": 10.96
+    },
+    {
+      "rank": 148,
+      "repo": "pwntools",
+      "loc": 143093,
+      "rate": 48764,
+      "time": 2.93
+    },
+    {
+      "rank": 149,
+      "repo": "angr",
+      "loc": 319225,
+      "rate": 48726,
+      "time": 6.55
+    },
+    {
+      "rank": 150,
+      "repo": "pyparsing",
+      "loc": 93815,
+      "rate": 48696,
+      "time": 1.93
+    },
+    {
+      "rank": 151,
+      "repo": "moment",
+      "loc": 173100,
+      "rate": 48661,
+      "time": 3.56
+    },
+    {
+      "rank": 152,
+      "repo": "beautifulsoup4",
+      "loc": 23200,
+      "rate": 48492,
+      "time": 0.48
+    },
+    {
+      "rank": 153,
+      "repo": "bun",
+      "loc": 1933910,
+      "rate": 48445,
+      "time": 39.92
+    },
+    {
+      "rank": 154,
+      "repo": "CodeIgniter",
+      "loc": 45329,
+      "rate": 48380,
+      "time": 0.94
+    },
+    {
+      "rank": 155,
+      "repo": "werkzeug",
+      "loc": 32918,
+      "rate": 48213,
+      "time": 0.68
+    },
+    {
+      "rank": 156,
+      "repo": "kivy",
+      "loc": 164273,
+      "rate": 48143,
+      "time": 3.41
+    },
+    {
+      "rank": 157,
+      "repo": "nvda",
+      "loc": 248063,
+      "rate": 47976,
+      "time": 5.17
+    },
+    {
+      "rank": 158,
+      "repo": "micropython",
+      "loc": 685083,
+      "rate": 47940,
+      "time": 14.29
+    },
+    {
+      "rank": 159,
+      "repo": "pathspec",
+      "loc": 14513,
+      "rate": 47707,
+      "time": 0.3
+    },
+    {
+      "rank": 160,
+      "repo": "abap2xlsx",
+      "loc": 61073,
+      "rate": 47665,
+      "time": 1.28
+    },
+    {
+      "rank": 161,
+      "repo": "flutter",
+      "loc": 1819740,
+      "rate": 47664,
+      "time": 38.18
+    },
+    {
+      "rank": 162,
+      "repo": "ruff",
+      "loc": 368633,
+      "rate": 47383,
+      "time": 7.78
+    },
+    {
+      "rank": 163,
+      "repo": "docker-py",
+      "loc": 31925,
+      "rate": 47114,
+      "time": 0.68
+    },
+    {
+      "rank": 164,
+      "repo": "mypy",
+      "loc": 290061,
+      "rate": 46940,
+      "time": 6.18
+    },
+    {
+      "rank": 165,
+      "repo": "docutils",
+      "loc": 55577,
+      "rate": 46903,
+      "time": 1.18
+    },
+    {
+      "rank": 166,
+      "repo": "tensorflow",
+      "loc": 3334757,
+      "rate": 46854,
+      "time": 71.17
+    },
+    {
+      "rank": 167,
+      "repo": "bog",
+      "loc": 15427,
+      "rate": 46833,
+      "time": 0.33
+    },
+    {
+      "rank": 168,
+      "repo": "Zig",
+      "loc": 9763,
+      "rate": 46655,
+      "time": 0.21
+    },
+    {
+      "rank": 169,
+      "repo": "openclaw-typescript",
+      "loc": 1026455,
+      "rate": 46558,
+      "time": 22.05
+    },
+    {
+      "rank": 170,
+      "repo": "sqitch",
+      "loc": 35210,
+      "rate": 46530,
+      "time": 0.76
+    },
+    {
+      "rank": 171,
+      "repo": "symfony",
+      "loc": 2017082,
+      "rate": 46523,
+      "time": 43.36
+    },
+    {
+      "rank": 172,
+      "repo": "httpx",
+      "loc": 19059,
+      "rate": 46402,
+      "time": 0.41
+    },
+    {
+      "rank": 173,
+      "repo": "moby",
+      "loc": 398698,
+      "rate": 46104,
+      "time": 8.65
+    },
+    {
+      "rank": 174,
+      "repo": "spock",
+      "loc": 121032,
+      "rate": 46049,
+      "time": 2.63
+    },
+    {
+      "rank": 175,
+      "repo": "vscode",
+      "loc": 2225045,
+      "rate": 46038,
+      "time": 48.33
+    },
+    {
+      "rank": 176,
+      "repo": "rapidfuzz",
+      "loc": 676340,
+      "rate": 45865,
+      "time": 14.75
+    },
+    {
+      "rank": 177,
+      "repo": "selenium",
+      "loc": 520578,
+      "rate": 45815,
+      "time": 11.36
+    },
+    {
+      "rank": 178,
+      "repo": "canvas-lms",
+      "loc": 3347792,
+      "rate": 45678,
+      "time": 73.29
+    },
+    {
+      "rank": 179,
+      "repo": "kafka",
+      "loc": 1547585,
+      "rate": 45528,
+      "time": 33.99
+    },
+    {
+      "rank": 180,
+      "repo": "port_csharp_manageddoom",
+      "loc": 54514,
+      "rate": 45513,
+      "time": 1.2
+    },
+    {
+      "rank": 181,
+      "repo": "@grpc_grpc-js",
+      "loc": 22350,
+      "rate": 45494,
+      "time": 0.49
+    },
+    {
+      "rank": 182,
+      "repo": "azure-identity",
+      "loc": 34120,
+      "rate": 45412,
+      "time": 0.75
+    },
+    {
+      "rank": 183,
+      "repo": "gutenberg",
+      "loc": 1150157,
+      "rate": 45344,
+      "time": 25.37
+    },
+    {
+      "rank": 184,
+      "repo": "micropython-ulab",
+      "loc": 26286,
+      "rate": 45301,
+      "time": 0.58
+    },
+    {
+      "rank": 185,
+      "repo": "cyber",
+      "loc": 78158,
+      "rate": 45160,
+      "time": 1.73
+    },
+    {
+      "rank": 186,
+      "repo": "monolog",
+      "loc": 30061,
+      "rate": 44860,
+      "time": 0.67
+    },
+    {
+      "rank": 187,
+      "repo": "orjson",
+      "loc": 154806,
+      "rate": 44798,
+      "time": 3.46
+    },
+    {
+      "rank": 188,
+      "repo": "curve25519-dalek",
+      "loc": 43731,
+      "rate": 44736,
+      "time": 0.98
+    },
+    {
+      "rank": 189,
+      "repo": "joblib",
+      "loc": 15547,
+      "rate": 44501,
+      "time": 0.35
+    },
+    {
+      "rank": 190,
+      "repo": "desktop",
+      "loc": 186997,
+      "rate": 44454,
+      "time": 4.21
+    },
+    {
+      "rank": 191,
+      "repo": "httpcore",
+      "loc": 13392,
+      "rate": 44447,
+      "time": 0.3
+    },
+    {
+      "rank": 192,
+      "repo": "exiftool",
+      "loc": 211211,
+      "rate": 44373,
+      "time": 4.76
+    },
+    {
+      "rank": 193,
+      "repo": "angular",
+      "loc": 1234994,
+      "rate": 44271,
+      "time": 27.9
+    },
+    {
+      "rank": 194,
+      "repo": "urllib3",
+      "loc": 13524,
+      "rate": 44230,
+      "time": 0.31
+    },
+    {
+      "rank": 195,
+      "repo": "discourse",
+      "loc": 1790243,
+      "rate": 44084,
+      "time": 40.61
+    },
+    {
+      "rank": 196,
+      "repo": "pyasn1",
+      "loc": 21971,
+      "rate": 44082,
+      "time": 0.5
+    },
+    {
+      "rank": 197,
+      "repo": "trpc",
+      "loc": 127246,
+      "rate": 43915,
+      "time": 2.9
+    },
+    {
+      "rank": 198,
+      "repo": "ansible",
+      "loc": 373919,
+      "rate": 43816,
+      "time": 8.53
+    },
+    {
+      "rank": 199,
+      "repo": "matplotlib",
+      "loc": 145897,
+      "rate": 43613,
+      "time": 3.35
+    },
+    {
+      "rank": 200,
+      "repo": "pynacl",
+      "loc": 73371,
+      "rate": 43602,
+      "time": 1.68
+    },
+    {
+      "rank": 201,
+      "repo": "cython",
+      "loc": 338683,
+      "rate": 43456,
+      "time": 7.79
+    },
+    {
+      "rank": 202,
+      "repo": "gitgalaxy",
+      "loc": 132770,
+      "rate": 43454,
+      "time": 3.06
+    },
+    {
+      "rank": 203,
+      "repo": "keystone",
+      "loc": 106079,
+      "rate": 43044,
+      "time": 2.46
+    },
+    {
+      "rank": 204,
+      "repo": "defusedxml",
+      "loc": 5773,
+      "rate": 42781,
+      "time": 0.13
+    },
+    {
+      "rank": 205,
+      "repo": "elasticsearch",
+      "loc": 5862098,
+      "rate": 42771,
+      "time": 137.06
+    },
+    {
+      "rank": 206,
+      "repo": "textual",
+      "loc": 131112,
+      "rate": 42749,
+      "time": 3.07
+    },
+    {
+      "rank": 207,
+      "repo": "ncdu",
+      "loc": 6027,
+      "rate": 42745,
+      "time": 0.14
+    },
+    {
+      "rank": 208,
+      "repo": "airflow",
+      "loc": 1550549,
+      "rate": 42352,
+      "time": 36.61
+    },
+    {
+      "rank": 209,
+      "repo": "ionic-framework",
+      "loc": 254497,
+      "rate": 42329,
+      "time": 6.01
+    },
+    {
+      "rank": 210,
+      "repo": "workers-sdk",
+      "loc": 535978,
+      "rate": 42312,
+      "time": 12.67
+    },
+    {
+      "rank": 211,
+      "repo": "oauthlib",
+      "loc": 22146,
+      "rate": 42309,
+      "time": 0.52
+    },
+    {
+      "rank": 212,
+      "repo": "http.zig",
+      "loc": 13192,
+      "rate": 42071,
+      "time": 0.31
+    },
+    {
+      "rank": 213,
+      "repo": "ruamel-yaml",
+      "loc": 17485,
+      "rate": 41997,
+      "time": 0.42
+    },
+    {
+      "rank": 214,
+      "repo": "raspberrypi",
+      "loc": 87283,
+      "rate": 41686,
+      "time": 2.09
+    },
+    {
+      "rank": 215,
+      "repo": "temp",
+      "loc": 17431,
+      "rate": 41541,
+      "time": 0.42
+    },
+    {
+      "rank": 216,
+      "repo": "bootstrap",
+      "loc": 34675,
+      "rate": 41414,
+      "time": 0.84
+    },
+    {
+      "rank": 217,
+      "repo": "Rocket.Chat",
+      "loc": 877384,
+      "rate": 41368,
+      "time": 21.21
+    },
+    {
+      "rank": 218,
+      "repo": "Excalibur",
+      "loc": 110008,
+      "rate": 41341,
+      "time": 2.66
+    },
+    {
+      "rank": 219,
+      "repo": "guzzle",
+      "loc": 17312,
+      "rate": 41225,
+      "time": 0.42
+    },
+    {
+      "rank": 220,
+      "repo": "tornado",
+      "loc": 47934,
+      "rate": 41205,
+      "time": 1.16
+    },
+    {
+      "rank": 221,
+      "repo": "mall",
+      "loc": 110941,
+      "rate": 41126,
+      "time": 2.7
+    },
+    {
+      "rank": 222,
+      "repo": "CobolCraft",
+      "loc": 31474,
+      "rate": 41049,
+      "time": 0.77
+    },
+    {
+      "rank": 223,
+      "repo": "click",
+      "loc": 21595,
+      "rate": 40921,
+      "time": 0.53
+    },
+    {
+      "rank": 224,
+      "repo": "fp-ts",
+      "loc": 83512,
+      "rate": 40898,
+      "time": 2.04
+    },
+    {
+      "rank": 225,
+      "repo": "pygments",
+      "loc": 183256,
+      "rate": 40897,
+      "time": 4.48
+    },
+    {
+      "rank": 226,
+      "repo": "igv.js",
+      "loc": 112412,
+      "rate": 40639,
+      "time": 2.77
+    },
+    {
+      "rank": 227,
+      "repo": "catalyst-runtime",
+      "loc": 20629,
+      "rate": 40566,
+      "time": 0.51
+    },
+    {
+      "rank": 228,
+      "repo": "react-flow",
+      "loc": 51065,
+      "rate": 40443,
+      "time": 1.26
+    },
+    {
+      "rank": 229,
+      "repo": "black",
+      "loc": 48533,
+      "rate": 40431,
+      "time": 1.2
+    },
+    {
+      "rank": 230,
+      "repo": "xv6-public",
+      "loc": 10821,
+      "rate": 40124,
+      "time": 0.27
+    },
+    {
+      "rank": 231,
+      "repo": "Perl-Critic",
+      "loc": 18401,
+      "rate": 40121,
+      "time": 0.46
+    },
+    {
+      "rank": 232,
+      "repo": "Mainframe",
+      "loc": 5363,
+      "rate": 39784,
+      "time": 0.13
+    },
+    {
+      "rank": 233,
+      "repo": "rust",
+      "loc": 3630679,
+      "rate": 39686,
+      "time": 91.49
+    },
+    {
+      "rank": 234,
+      "repo": "cics-event-consumer",
+      "loc": 14022,
+      "rate": 39597,
+      "time": 0.35
+    },
+    {
+      "rank": 235,
+      "repo": "serenity",
+      "loc": 1507585,
+      "rate": 39274,
+      "time": 38.39
+    },
+    {
+      "rank": 236,
+      "repo": "AppFlowy",
+      "loc": 133001,
+      "rate": 39157,
+      "time": 3.4
+    },
+    {
+      "rank": 237,
+      "repo": "Dancer2",
+      "loc": 17249,
+      "rate": 39040,
+      "time": 0.44
+    },
+    {
+      "rank": 238,
+      "repo": "greenlet",
+      "loc": 16113,
+      "rate": 39039,
+      "time": 0.41
+    },
+    {
+      "rank": 239,
+      "repo": "WorldWideWeb",
+      "loc": 8901,
+      "rate": 38909,
+      "time": 0.23
+    },
+    {
+      "rank": 240,
+      "repo": "blast",
+      "loc": 245453,
+      "rate": 38759,
+      "time": 6.33
+    },
+    {
+      "rank": 241,
+      "repo": "spring-boot",
+      "loc": 843718,
+      "rate": 38397,
+      "time": 21.97
+    },
+    {
+      "rank": 242,
+      "repo": "jenkins",
+      "loc": 638644,
+      "rate": 38345,
+      "time": 16.66
+    },
+    {
+      "rank": 243,
+      "repo": "Cobol-Projects",
+      "loc": 38962,
+      "rate": 38317,
+      "time": 1.02
+    },
+    {
+      "rank": 244,
+      "repo": "AFNetworking",
+      "loc": 24351,
+      "rate": 38064,
+      "time": 0.64
+    },
+    {
+      "rank": 245,
+      "repo": "circuitpython",
+      "loc": 624785,
+      "rate": 37798,
+      "time": 16.53
+    },
+    {
+      "rank": 246,
+      "repo": "vscode_cobol",
+      "loc": 32819,
+      "rate": 37733,
+      "time": 0.87
+    },
+    {
+      "rank": 247,
+      "repo": "cics-genapp",
+      "loc": 17431,
+      "rate": 37674,
+      "time": 0.46
+    },
+    {
+      "rank": 248,
+      "repo": "sqlmap",
+      "loc": 41490,
+      "rate": 37648,
+      "time": 1.1
+    },
+    {
+      "rank": 249,
+      "repo": "magento2",
+      "loc": 2347607,
+      "rate": 37644,
+      "time": 62.36
+    },
+    {
+      "rank": 250,
+      "repo": "libwww-perl",
+      "loc": 9091,
+      "rate": 37578,
+      "time": 0.24
+    },
+    {
+      "rank": 251,
+      "repo": "rollup-plugin-node-builtins",
+      "loc": 6983,
+      "rate": 37470,
+      "time": 0.19
+    },
+    {
+      "rank": 252,
+      "repo": "asm",
+      "loc": 4282,
+      "rate": 37465,
+      "time": 0.11
+    },
+    {
+      "rank": 253,
+      "repo": "@node-red_nodes",
+      "loc": 47152,
+      "rate": 36988,
+      "time": 1.27
+    },
+    {
+      "rank": 254,
+      "repo": "esphome",
+      "loc": 605922,
+      "rate": 36949,
+      "time": 16.4
+    },
+    {
+      "rank": 255,
+      "repo": "fineract",
+      "loc": 823245,
+      "rate": 36947,
+      "time": 22.28
+    },
+    {
+      "rank": 256,
+      "repo": "ant-design",
+      "loc": 272161,
+      "rate": 36684,
+      "time": 7.42
+    },
+    {
+      "rank": 257,
+      "repo": "poetry-core",
+      "loc": 31952,
+      "rate": 36551,
+      "time": 0.87
+    },
+    {
+      "rank": 258,
+      "repo": "ngl",
+      "loc": 86218,
+      "rate": 36381,
+      "time": 2.37
+    },
+    {
+      "rank": 259,
+      "repo": "kotlin",
+      "loc": 6414323,
+      "rate": 36370,
+      "time": 176.36
+    },
+    {
+      "rank": 260,
+      "repo": "sentry",
+      "loc": 3024483,
+      "rate": 36353,
+      "time": 83.2
+    },
+    {
+      "rank": 261,
+      "repo": "cics-banking-sample-appli...",
+      "loc": 67564,
+      "rate": 36301,
+      "time": 1.86
+    },
+    {
+      "rank": 262,
+      "repo": "vue",
+      "loc": 80014,
+      "rate": 36234,
+      "time": 2.21
+    },
+    {
+      "rank": 263,
+      "repo": "@azure_msal-node",
+      "loc": 10421,
+      "rate": 36230,
+      "time": 0.29
+    },
+    {
+      "rank": 264,
+      "repo": "flask",
+      "loc": 19453,
+      "rate": 35709,
+      "time": 0.54
+    },
+    {
+      "rank": 265,
+      "repo": "javascript-algorithms",
+      "loc": 45333,
+      "rate": 35633,
+      "time": 1.27
+    },
+    {
+      "rank": 266,
+      "repo": "spamassassin",
+      "loc": 76029,
+      "rate": 35575,
+      "time": 2.14
+    },
+    {
+      "rank": 267,
+      "repo": "wrapt",
+      "loc": 18932,
+      "rate": 35527,
+      "time": 0.53
+    },
+    {
+      "rank": 268,
+      "repo": "retrofit",
+      "loc": 59410,
+      "rate": 35499,
+      "time": 1.67
+    },
+    {
+      "rank": 269,
+      "repo": "cosmopolitan",
+      "loc": 472471,
+      "rate": 35339,
+      "time": 13.37
+    },
+    {
+      "rank": 270,
+      "repo": "capy",
+      "loc": 26280,
+      "rate": 35295,
+      "time": 0.74
+    },
+    {
+      "rank": 271,
+      "repo": "assemblyscript",
+      "loc": 114387,
+      "rate": 35179,
+      "time": 3.25
+    },
+    {
+      "rank": 272,
+      "repo": "vapor",
+      "loc": 38160,
+      "rate": 35131,
+      "time": 1.09
+    },
+    {
+      "rank": 273,
+      "repo": "charset-normalizer",
+      "loc": 8129,
+      "rate": 34983,
+      "time": 0.23
+    },
+    {
+      "rank": 274,
+      "repo": "multidict",
+      "loc": 15422,
+      "rate": 34976,
+      "time": 0.44
+    },
+    {
+      "rank": 275,
+      "repo": "rich",
+      "loc": 44652,
+      "rate": 34882,
+      "time": 1.28
+    },
+    {
+      "rank": 276,
+      "repo": "zig-okredis",
+      "loc": 9443,
+      "rate": 34802,
+      "time": 0.27
+    },
+    {
+      "rank": 277,
+      "repo": "ack3",
+      "loc": 17492,
+      "rate": 34631,
+      "time": 0.51
+    },
+    {
+      "rank": 278,
+      "repo": "RaspberryPi",
+      "loc": 95885,
+      "rate": 34622,
+      "time": 2.77
+    },
+    {
+      "rank": 279,
+      "repo": "swc",
+      "loc": 3930373,
+      "rate": 34503,
+      "time": 113.91
+    },
+    {
+      "rank": 280,
+      "repo": "django",
+      "loc": 524456,
+      "rate": 34216,
+      "time": 15.33
+    },
+    {
+      "rank": 281,
+      "repo": "pixijs",
+      "loc": 199909,
+      "rate": 34199,
+      "time": 5.85
+    },
+    {
+      "rank": 282,
+      "repo": "soupsieve",
+      "loc": 12140,
+      "rate": 34174,
+      "time": 0.36
+    },
+    {
+      "rank": 283,
+      "repo": "nest",
+      "loc": 121507,
+      "rate": 34143,
+      "time": 3.56
+    },
+    {
+      "rank": 284,
+      "repo": "os-tutorial",
+      "loc": 10926,
+      "rate": 34009,
+      "time": 0.32
+    },
+    {
+      "rank": 285,
+      "repo": "proto-plus",
+      "loc": 8033,
+      "rate": 33989,
+      "time": 0.24
+    },
+    {
+      "rank": 286,
+      "repo": "Babylon.js",
+      "loc": 853385,
+      "rate": 33771,
+      "time": 25.27
+    },
+    {
+      "rank": 287,
+      "repo": "typer",
+      "loc": 24849,
+      "rate": 32846,
+      "time": 0.76
+    },
+    {
+      "rank": 288,
+      "repo": "next.js",
+      "loc": 1851547,
+      "rate": 32003,
+      "time": 57.86
+    },
+    {
+      "rank": 289,
+      "repo": "pydantic-settings",
+      "loc": 15166,
+      "rate": 31856,
+      "time": 0.48
+    },
+    {
+      "rank": 290,
+      "repo": "bitcoin-0.1.0",
+      "loc": 20257,
+      "rate": 31658,
+      "time": 0.64
+    },
+    {
+      "rank": 291,
+      "repo": "python-dotenv",
+      "loc": 4040,
+      "rate": 31326,
+      "time": 0.13
+    },
+    {
+      "rank": 292,
+      "repo": "Rex",
+      "loc": 9842,
+      "rate": 31056,
+      "time": 0.32
+    },
+    {
+      "rank": 293,
+      "repo": "bootloader",
+      "loc": 11294,
+      "rate": 30590,
+      "time": 0.37
+    },
+    {
+      "rank": 294,
+      "repo": "PowerToys",
+      "loc": 621245,
+      "rate": 30522,
+      "time": 20.35
+    },
+    {
+      "rank": 295,
+      "repo": "msal",
+      "loc": 13697,
+      "rate": 30415,
+      "time": 0.45
+    },
+    {
+      "rank": 296,
+      "repo": "excalidraw",
+      "loc": 225234,
+      "rate": 30237,
+      "time": 7.45
+    },
+    {
+      "rank": 297,
+      "repo": "cobol-check",
+      "loc": 32926,
+      "rate": 30069,
+      "time": 1.1
+    },
+    {
+      "rank": 298,
+      "repo": "sdk",
+      "loc": 2928980,
+      "rate": 30050,
+      "time": 97.47
+    },
+    {
+      "rank": 299,
+      "repo": "runtime",
+      "loc": 10435027,
+      "rate": 30018,
+      "time": 347.63
+    },
+    {
+      "rank": 300,
+      "repo": "typescript-eslint",
+      "loc": 310724,
+      "rate": 29784,
+      "time": 10.43
+    },
+    {
+      "rank": 301,
+      "repo": "typeorm",
+      "loc": 291800,
+      "rate": 29630,
+      "time": 9.85
+    },
+    {
+      "rank": 302,
+      "repo": "filelock",
+      "loc": 5726,
+      "rate": 29610,
+      "time": 0.19
+    },
+    {
+      "rank": 303,
+      "repo": "che-che4z-lsp-for-cobol",
+      "loc": 774985,
+      "rate": 29260,
+      "time": 26.49
+    },
+    {
+      "rank": 304,
+      "repo": "google-cloud-core",
+      "loc": 4634,
+      "rate": 29065,
+      "time": 0.16
+    },
+    {
+      "rank": 305,
+      "repo": "tailwindcss",
+      "loc": 145249,
+      "rate": 29001,
+      "time": 5.01
+    },
+    {
+      "rank": 306,
+      "repo": "prisma",
+      "loc": 262840,
+      "rate": 28823,
+      "time": 9.12
+    },
+    {
+      "rank": 307,
+      "repo": "fd",
+      "loc": 10385,
+      "rate": 28610,
+      "time": 0.36
+    },
+    {
+      "rank": 308,
+      "repo": "@livekit_rtc-node",
+      "loc": 6441,
+      "rate": 28374,
+      "time": 0.23
+    },
+    {
+      "rank": 309,
+      "repo": "fastapi",
+      "loc": 110587,
+      "rate": 28334,
+      "time": 3.9
+    },
+    {
+      "rank": 310,
+      "repo": "js-beautify",
+      "loc": 7753,
+      "rate": 28251,
+      "time": 0.27
+    },
+    {
+      "rank": 311,
+      "repo": "storybook",
+      "loc": 376375,
+      "rate": 28138,
+      "time": 13.38
+    },
+    {
+      "rank": 312,
+      "repo": "cachetools",
+      "loc": 4477,
+      "rate": 28095,
+      "time": 0.16
+    },
+    {
+      "rank": 313,
+      "repo": "python-dateutil",
+      "loc": 6755,
+      "rate": 28069,
+      "time": 0.24
+    },
+    {
+      "rank": 314,
+      "repo": "pyjwt",
+      "loc": 7675,
+      "rate": 28019,
+      "time": 0.27
+    },
+    {
+      "rank": 315,
+      "repo": "requests",
+      "loc": 13021,
+      "rate": 28009,
+      "time": 0.46
+    },
+    {
+      "rank": 316,
+      "repo": "alphafold_2018",
+      "loc": 5025,
+      "rate": 27968,
+      "time": 0.18
+    },
+    {
+      "rank": 317,
+      "repo": "tqdm",
+      "loc": 9666,
+      "rate": 27952,
+      "time": 0.35
+    },
+    {
+      "rank": 318,
+      "repo": "python-discovery",
+      "loc": 5470,
+      "rate": 27895,
+      "time": 0.2
+    },
+    {
+      "rank": 319,
+      "repo": "pylint",
+      "loc": 126769,
+      "rate": 27871,
+      "time": 4.55
+    },
+    {
+      "rank": 320,
+      "repo": "db-tutorial",
+      "loc": 32347,
+      "rate": 27871,
+      "time": 1.16
+    },
+    {
+      "rank": 321,
+      "repo": "FlameGraph",
+      "loc": 7913,
+      "rate": 27862,
+      "time": 0.28
+    },
+    {
+      "rank": 322,
+      "repo": "prettier",
+      "loc": 220608,
+      "rate": 27338,
+      "time": 8.07
+    },
+    {
+      "rank": 323,
+      "repo": "python-simplebench",
+      "loc": 137223,
+      "rate": 27222,
+      "time": 5.04
+    },
+    {
+      "rank": 324,
+      "repo": "jellyfin",
+      "loc": 242646,
+      "rate": 27187,
+      "time": 8.93
+    },
+    {
+      "rank": 325,
+      "repo": "node-stdlib-browser",
+      "loc": 4931,
+      "rate": 26966,
+      "time": 0.18
+    },
+    {
+      "rank": 326,
+      "repo": "capstone",
+      "loc": 246714,
+      "rate": 26889,
+      "time": 9.18
+    },
+    {
+      "rank": 327,
+      "repo": "odoo",
+      "loc": 2879878,
+      "rate": 26566,
+      "time": 108.4
+    },
+    {
+      "rank": 328,
+      "repo": "cics-java-jcics-samples",
+      "loc": 6429,
+      "rate": 26373,
+      "time": 0.24
+    },
+    {
+      "rank": 329,
+      "repo": "gradle",
+      "loc": 2252729,
+      "rate": 26271,
+      "time": 85.75
+    },
+    {
+      "rank": 330,
+      "repo": "wheel",
+      "loc": 3596,
+      "rate": 26259,
+      "time": 0.14
+    },
+    {
+      "rank": 331,
+      "repo": "rsa",
+      "loc": 3078,
+      "rate": 25942,
+      "time": 0.12
+    },
+    {
+      "rank": 332,
+      "repo": "@whatwg-node_node-fetch",
+      "loc": 6590,
+      "rate": 25668,
+      "time": 0.26
+    },
+    {
+      "rank": 333,
+      "repo": "regex",
+      "loc": 40745,
+      "rate": 25186,
+      "time": 1.62
+    },
+    {
+      "rank": 334,
+      "repo": "element",
+      "loc": 117767,
+      "rate": 24940,
+      "time": 4.72
+    },
+    {
+      "rank": 335,
+      "repo": "msgpack",
+      "loc": 4248,
+      "rate": 24900,
+      "time": 0.17
+    },
+    {
+      "rank": 336,
+      "repo": "platformdirs",
+      "loc": 4091,
+      "rate": 24740,
+      "time": 0.17
+    },
+    {
+      "rank": 337,
+      "repo": "node-red-node-ui-table",
+      "loc": 3261,
+      "rate": 24646,
+      "time": 0.13
+    },
+    {
+      "rank": 338,
+      "repo": "quote",
+      "loc": 4144,
+      "rate": 24509,
+      "time": 0.17
+    },
+    {
+      "rank": 339,
+      "repo": "@node-red_runtime",
+      "loc": 1924,
+      "rate": 24483,
+      "time": 0.08
+    },
+    {
+      "rank": 340,
+      "repo": "berry",
+      "loc": 117620,
+      "rate": 24340,
+      "time": 4.83
+    },
+    {
+      "rank": 341,
+      "repo": "grafana",
+      "loc": 2730762,
+      "rate": 24269,
+      "time": 112.52
+    },
+    {
+      "rank": 342,
+      "repo": "pillman",
+      "loc": 2182,
+      "rate": 23832,
+      "time": 0.09
+    },
+    {
+      "rank": 343,
+      "repo": "contourpy",
+      "loc": 15625,
+      "rate": 23797,
+      "time": 0.66
+    },
+    {
+      "rank": 344,
+      "repo": "isodate",
+      "loc": 2551,
+      "rate": 23692,
+      "time": 0.11
+    },
+    {
+      "rank": 345,
+      "repo": "deprecated",
+      "loc": 2665,
+      "rate": 23644,
+      "time": 0.11
+    },
+    {
+      "rank": 346,
+      "repo": "more-itertools",
+      "loc": 16904,
+      "rate": 23330,
+      "time": 0.72
+    },
+    {
+      "rank": 347,
+      "repo": "COBOL_Tutorial",
+      "loc": 3532,
+      "rate": 23204,
+      "time": 0.15
+    },
+    {
+      "rank": 348,
+      "repo": "config",
+      "loc": 1705,
+      "rate": 23099,
+      "time": 0.07
+    },
+    {
+      "rank": 349,
+      "repo": "sse-starlette",
+      "loc": 2575,
+      "rate": 22743,
+      "time": 0.11
+    },
+    {
+      "rank": 350,
+      "repo": "sokol-zig",
+      "loc": 62707,
+      "rate": 22598,
+      "time": 2.77
+    },
+    {
+      "rank": 351,
+      "repo": "aws-mainframe-modernizati...",
+      "loc": 50007,
+      "rate": 22268,
+      "time": 2.25
+    },
+    {
+      "rank": 352,
+      "repo": "x86-bare-metal-examples",
+      "loc": 4177,
+      "rate": 22219,
+      "time": 0.19
+    },
+    {
+      "rank": 353,
+      "repo": "voyager",
+      "loc": 3014,
+      "rate": 21917,
+      "time": 0.14
+    },
+    {
+      "rank": 354,
+      "repo": "zopeneditor-sample",
+      "loc": 3463,
+      "rate": 21747,
+      "time": 0.16
+    },
+    {
+      "rank": 355,
+      "repo": "typing-inspection",
+      "loc": 2323,
+      "rate": 21499,
+      "time": 0.11
+    },
+    {
+      "rank": 356,
+      "repo": "exceptiongroup",
+      "loc": 3258,
+      "rate": 21366,
+      "time": 0.15
+    },
+    {
+      "rank": 357,
+      "repo": "python-patterns",
+      "loc": 5441,
+      "rate": 21122,
+      "time": 0.26
+    },
+    {
+      "rank": 358,
+      "repo": "node-cleanup",
+      "loc": 1523,
+      "rate": 20860,
+      "time": 0.07
+    },
+    {
+      "rank": 359,
+      "repo": "@rudderstack_rudder-sdk-node",
+      "loc": 1794,
+      "rate": 20790,
+      "time": 0.09
+    },
+    {
+      "rank": 360,
+      "repo": "cobol-samples",
+      "loc": 2720,
+      "rate": 20749,
+      "time": 0.13
+    },
+    {
+      "rank": 361,
+      "repo": "CICS-Cobol",
+      "loc": 2387,
+      "rate": 20183,
+      "time": 0.12
+    },
+    {
+      "rank": 362,
+      "repo": "css_doom_pure",
+      "loc": 11271,
+      "rate": 19989,
+      "time": 0.56
+    },
+    {
+      "rank": 363,
+      "repo": "@ledgerhq_hw-transport-no...",
+      "loc": 1387,
+      "rate": 19677,
+      "time": 0.07
+    },
+    {
+      "rank": 364,
+      "repo": "deepl-node",
+      "loc": 1414,
+      "rate": 19612,
+      "time": 0.07
+    },
+    {
+      "rank": 365,
+      "repo": "@ledgerhq_hw-transport-no...",
+      "loc": 1333,
+      "rate": 19514,
+      "time": 0.07
+    },
+    {
+      "rank": 366,
+      "repo": "Much-Assembly-Required",
+      "loc": 65696,
+      "rate": 19353,
+      "time": 3.39
+    },
+    {
+      "rank": 367,
+      "repo": "type-challenges",
+      "loc": 15898,
+      "rate": 19115,
+      "time": 0.83
+    },
+    {
+      "rank": 368,
+      "repo": "watchfiles",
+      "loc": 3152,
+      "rate": 19107,
+      "time": 0.16
+    },
+    {
+      "rank": 369,
+      "repo": "HelloSilicon",
+      "loc": 3954,
+      "rate": 18817,
+      "time": 0.21
+    },
+    {
+      "rank": 370,
+      "repo": "@duckdb_node-api",
+      "loc": 1222,
+      "rate": 18693,
+      "time": 0.07
+    },
+    {
+      "rank": 371,
+      "repo": "avvio",
+      "loc": 1574,
+      "rate": 18433,
+      "time": 0.09
+    },
+    {
+      "rank": 372,
+      "repo": "core",
+      "loc": 3572858,
+      "rate": 18415,
+      "time": 194.02
+    },
+    {
+      "rank": 373,
+      "repo": "decorator",
+      "loc": 2807,
+      "rate": 18394,
+      "time": 0.15
+    },
+    {
+      "rank": 374,
+      "repo": "css_doom_typescript",
+      "loc": 4443,
+      "rate": 17907,
+      "time": 0.25
+    },
+    {
+      "rank": 375,
+      "repo": "tenacity",
+      "loc": 5075,
+      "rate": 17569,
+      "time": 0.29
+    },
+    {
+      "rank": 376,
+      "repo": "bootOS",
+      "loc": 2021,
+      "rate": 17393,
+      "time": 0.12
+    },
+    {
+      "rank": 377,
+      "repo": "rollup-plugin-node-polyfills",
+      "loc": 45900,
+      "rate": 17276,
+      "time": 2.66
+    },
+    {
+      "rank": 378,
+      "repo": "srfi-1",
+      "loc": 5316,
+      "rate": 17234,
+      "time": 0.31
+    },
+    {
+      "rank": 379,
+      "repo": "cobol-programming-course",
+      "loc": 13148,
+      "rate": 17173,
+      "time": 0.77
+    },
+    {
+      "rank": 380,
+      "repo": "TypeScript",
+      "loc": 3519910,
+      "rate": 17160,
+      "time": 205.12
+    },
+    {
+      "rank": 381,
+      "repo": "node-cache",
+      "loc": 987,
+      "rate": 16745,
+      "time": 0.06
+    },
+    {
+      "rank": 382,
+      "repo": "check-node-version",
+      "loc": 1018,
+      "rate": 16715,
+      "time": 0.06
+    },
+    {
+      "rank": 383,
+      "repo": "roslyn",
+      "loc": 5351289,
+      "rate": 16571,
+      "time": 322.93
+    },
+    {
+      "rank": 384,
+      "repo": "cobol-dialect-template",
+      "loc": 1969,
+      "rate": 16506,
+      "time": 0.12
+    },
+    {
+      "rank": 385,
+      "repo": "tar",
+      "loc": 1579,
+      "rate": 16412,
+      "time": 0.1
+    },
+    {
+      "rank": 386,
+      "repo": "browserstack-node-sdk",
+      "loc": 6260,
+      "rate": 16382,
+      "time": 0.38
+    },
+    {
+      "rank": 387,
+      "repo": "diff-so-fancy",
+      "loc": 2845,
+      "rate": 16366,
+      "time": 0.17
+    },
+    {
+      "rank": 388,
+      "repo": "aiohappyeyeballs",
+      "loc": 3330,
+      "rate": 16304,
+      "time": 0.2
+    },
+    {
+      "rank": 389,
+      "repo": "propcache",
+      "loc": 1810,
+      "rate": 15892,
+      "time": 0.11
+    },
+    {
+      "rank": 390,
+      "repo": "webbol",
+      "loc": 1217,
+      "rate": 15654,
+      "time": 0.08
+    },
+    {
+      "rank": 391,
+      "repo": "material-ui",
+      "loc": 498964,
+      "rate": 15375,
+      "time": 32.45
+    },
+    {
+      "rank": 392,
+      "repo": "cypress",
+      "loc": 588256,
+      "rate": 15291,
+      "time": 38.47
+    },
+    {
+      "rank": 393,
+      "repo": "yauzl",
+      "loc": 2193,
+      "rate": 15198,
+      "time": 0.14
+    },
+    {
+      "rank": 394,
+      "repo": "node-linux-x64",
+      "loc": 124970,
+      "rate": 15172,
+      "time": 8.24
+    },
+    {
+      "rank": 395,
+      "repo": "@sveltejs_adapter-node",
+      "loc": 2205,
+      "rate": 15169,
+      "time": 0.15
+    },
+    {
+      "rank": 396,
+      "repo": "DOOM-fire-zig",
+      "loc": 1776,
+      "rate": 15026,
+      "time": 0.12
+    },
+    {
+      "rank": 397,
+      "repo": "jsonschema-specifications",
+      "loc": 1011,
+      "rate": 14982,
+      "time": 0.07
+    },
+    {
+      "rank": 398,
+      "repo": "macports-base",
+      "loc": 19388,
+      "rate": 14667,
+      "time": 1.32
+    },
+    {
+      "rank": 399,
+      "repo": "pywat",
+      "loc": 699,
+      "rate": 14607,
+      "time": 0.05
+    },
+    {
+      "rank": 400,
+      "repo": "@rollup_wasm-node",
+      "loc": 858,
+      "rate": 14512,
+      "time": 0.06
+    },
+    {
+      "rank": 401,
+      "repo": "Correios-Brasil",
+      "loc": 1590,
+      "rate": 14299,
+      "time": 0.11
+    },
+    {
+      "rank": 402,
+      "repo": "brew",
+      "loc": 18100,
+      "rate": 14252,
+      "time": 1.27
+    },
+    {
+      "rank": 403,
+      "repo": "zigup",
+      "loc": 2400,
+      "rate": 13906,
+      "time": 0.17
+    },
+    {
+      "rank": 404,
+      "repo": "log4js",
+      "loc": 1215,
+      "rate": 13596,
+      "time": 0.09
+    },
+    {
+      "rank": 405,
+      "repo": "jcl-assess",
+      "loc": 1671,
+      "rate": 13466,
+      "time": 0.12
+    },
+    {
+      "rank": 406,
+      "repo": "tcpip_historical",
+      "loc": 23080,
+      "rate": 13270,
+      "time": 1.74
+    },
+    {
+      "rank": 407,
+      "repo": "alacritty",
+      "loc": 43114,
+      "rate": 13036,
+      "time": 3.31
+    },
+    {
+      "rank": 408,
+      "repo": "@segment_analytics-node",
+      "loc": 1299,
+      "rate": 12989,
+      "time": 0.1
+    },
+    {
+      "rank": 409,
+      "repo": "laravel",
+      "loc": 2117,
+      "rate": 12926,
+      "time": 0.16
+    },
+    {
+      "rank": 410,
+      "repo": "cics-async-api-credit-car...",
+      "loc": 2043,
+      "rate": 12834,
+      "time": 0.16
+    },
+    {
+      "rank": 411,
+      "repo": "markupsafe",
+      "loc": 1182,
+      "rate": 12827,
+      "time": 0.09
+    },
+    {
+      "rank": 412,
+      "repo": "@nx_node",
+      "loc": 1486,
+      "rate": 12754,
+      "time": 0.12
+    },
+    {
+      "rank": 413,
+      "repo": "chartjs-node-canvas",
+      "loc": 1024,
+      "rate": 12727,
+      "time": 0.08
+    },
+    {
+      "rank": 414,
+      "repo": "node-abi",
+      "loc": 714,
+      "rate": 12678,
+      "time": 0.06
+    },
+    {
+      "rank": 415,
+      "repo": "node-html-markdown",
+      "loc": 614,
+      "rate": 12654,
+      "time": 0.05
+    },
+    {
+      "rank": 416,
+      "repo": "customerio-node",
+      "loc": 618,
+      "rate": 12555,
+      "time": 0.05
+    },
+    {
+      "rank": 417,
+      "repo": "node-fzf",
+      "loc": 1568,
+      "rate": 12466,
+      "time": 0.13
+    },
+    {
+      "rank": 418,
+      "repo": "colorama",
+      "loc": 1289,
+      "rate": 12406,
+      "time": 0.1
+    },
+    {
+      "rank": 419,
+      "repo": "pyyaml",
+      "loc": 5812,
+      "rate": 12287,
+      "time": 0.47
+    },
+    {
+      "rank": 420,
+      "repo": "html5-boilerplate",
+      "loc": 1140,
+      "rate": 12244,
+      "time": 0.09
+    },
+    {
+      "rank": 421,
+      "repo": "node-addon-api",
+      "loc": 12019,
+      "rate": 12026,
+      "time": 1.0
+    },
+    {
+      "rank": 422,
+      "repo": "pg-pool",
+      "loc": 934,
+      "rate": 11883,
+      "time": 0.08
+    },
+    {
+      "rank": 423,
+      "repo": "ChrysaLisp",
+      "loc": 30933,
+      "rate": 11819,
+      "time": 2.62
+    },
+    {
+      "rank": 424,
+      "repo": "smmap",
+      "loc": 1108,
+      "rate": 11474,
+      "time": 0.1
+    },
+    {
+      "rank": 425,
+      "repo": "zopeneditor_compilers",
+      "loc": 1018,
+      "rate": 11447,
+      "time": 0.09
+    },
+    {
+      "rank": 426,
+      "repo": "@onesignal_node-onesignal",
+      "loc": 636,
+      "rate": 11341,
+      "time": 0.06
+    },
+    {
+      "rank": 427,
+      "repo": "nx",
+      "loc": 881584,
+      "rate": 11185,
+      "time": 78.82
+    },
+    {
+      "rank": 428,
+      "repo": "http-parser-js",
+      "loc": 838,
+      "rate": 10917,
+      "time": 0.08
+    },
+    {
+      "rank": 429,
+      "repo": "tomli",
+      "loc": 1178,
+      "rate": 10809,
+      "time": 0.11
+    },
+    {
+      "rank": 430,
+      "repo": "compilers",
+      "loc": 894,
+      "rate": 10801,
+      "time": 0.08
+    },
+    {
+      "rank": 431,
+      "repo": "fetch-blob",
+      "loc": 714,
+      "rate": 10597,
+      "time": 0.07
+    },
+    {
+      "rank": 432,
+      "repo": "object-inspect",
+      "loc": 1300,
+      "rate": 10528,
+      "time": 0.12
+    },
+    {
+      "rank": 433,
+      "repo": "zap",
+      "loc": 24350,
+      "rate": 10508,
+      "time": 2.32
+    },
+    {
+      "rank": 434,
+      "repo": "cron",
+      "loc": 1430,
+      "rate": 10406,
+      "time": 0.14
+    },
+    {
+      "rank": 435,
+      "repo": "@node-red_editor-client",
+      "loc": 4140,
+      "rate": 10383,
+      "time": 0.4
+    },
+    {
+      "rank": 436,
+      "repo": "cobol-on-wheelchair",
+      "loc": 927,
+      "rate": 10287,
+      "time": 0.09
+    },
+    {
+      "rank": 437,
+      "repo": "@expo_rudder-sdk-node",
+      "loc": 753,
+      "rate": 10280,
+      "time": 0.07
+    },
+    {
+      "rank": 438,
+      "repo": "unist-util-is",
+      "loc": 469,
+      "rate": 10234,
+      "time": 0.05
+    },
+    {
+      "rank": 439,
+      "repo": "node-jq",
+      "loc": 497,
+      "rate": 10185,
+      "time": 0.05
+    },
+    {
+      "rank": 440,
+      "repo": "node-abort-controller",
+      "loc": 512,
+      "rate": 10169,
+      "time": 0.05
+    },
+    {
+      "rank": 441,
+      "repo": "port_rust_lidoom",
+      "loc": 863,
+      "rate": 10142,
+      "time": 0.09
+    },
+    {
+      "rank": 442,
+      "repo": "d3",
+      "loc": 2656,
+      "rate": 10096,
+      "time": 0.26
+    },
+    {
+      "rank": 443,
+      "repo": "@octokit_graphql",
+      "loc": 465,
+      "rate": 9266,
+      "time": 0.05
+    },
+    {
+      "rank": 444,
+      "repo": "BareMetal-OS",
+      "loc": 1105,
+      "rate": 9227,
+      "time": 0.12
+    },
+    {
+      "rank": 445,
+      "repo": "@textlint_ast-node-types",
+      "loc": 630,
+      "rate": 9119,
+      "time": 0.07
+    },
+    {
+      "rank": 446,
+      "repo": "@devlikeapro_n8n-openapi-...",
+      "loc": 429,
+      "rate": 8976,
+      "time": 0.05
+    },
+    {
+      "rank": 447,
+      "repo": "node-schedule",
+      "loc": 446,
+      "rate": 8959,
+      "time": 0.05
+    },
+    {
+      "rank": 448,
+      "repo": "@sentry-internal_node-cpu...",
+      "loc": 1328,
+      "rate": 8934,
+      "time": 0.15
+    },
+    {
+      "rank": 449,
+      "repo": "node-exports-info",
+      "loc": 746,
+      "rate": 8870,
+      "time": 0.08
+    },
+    {
+      "rank": 450,
+      "repo": "zig-book",
+      "loc": 4704,
+      "rate": 8850,
+      "time": 0.53
+    },
+    {
+      "rank": 451,
+      "repo": "acorn-node",
+      "loc": 416,
+      "rate": 8815,
+      "time": 0.05
+    },
+    {
+      "rank": 452,
+      "repo": "editables",
+      "loc": 495,
+      "rate": 8772,
+      "time": 0.06
+    },
+    {
+      "rank": 453,
+      "repo": "@types_node-forge",
+      "loc": 1725,
+      "rate": 8634,
+      "time": 0.2
+    },
+    {
+      "rank": 454,
+      "repo": "@launchdarkly_openfeature...",
+      "loc": 418,
+      "rate": 8585,
+      "time": 0.05
+    },
+    {
+      "rank": 455,
+      "repo": "pn",
+      "loc": 700,
+      "rate": 8539,
+      "time": 0.08
+    },
+    {
+      "rank": 456,
+      "repo": "dom-serialize",
+      "loc": 453,
+      "rate": 8428,
+      "time": 0.05
+    },
+    {
+      "rank": 457,
+      "repo": "@node-ipc_js-queue",
+      "loc": 452,
+      "rate": 8407,
+      "time": 0.05
+    },
+    {
+      "rank": 458,
+      "repo": "poop",
+      "loc": 915,
+      "rate": 8285,
+      "time": 0.11
+    },
+    {
+      "rank": 459,
+      "repo": "touch",
+      "loc": 417,
+      "rate": 8194,
+      "time": 0.05
+    },
+    {
+      "rank": 460,
+      "repo": "node-red-vue",
+      "loc": 579,
+      "rate": 8179,
+      "time": 0.07
+    },
+    {
+      "rank": 461,
+      "repo": "lazy",
+      "loc": 569,
+      "rate": 8178,
+      "time": 0.07
+    },
+    {
+      "rank": 462,
+      "repo": "@tiptap_extension-node-range",
+      "loc": 506,
+      "rate": 8147,
+      "time": 0.06
+    },
+    {
+      "rank": 463,
+      "repo": "mdurl",
+      "loc": 567,
+      "rate": 8003,
+      "time": 0.07
+    },
+    {
+      "rank": 464,
+      "repo": "node-geocoder",
+      "loc": 470,
+      "rate": 7989,
+      "time": 0.06
+    },
+    {
+      "rank": 465,
+      "repo": "@pollyjs_adapter-node-http",
+      "loc": 548,
+      "rate": 7943,
+      "time": 0.07
+    },
+    {
+      "rank": 466,
+      "repo": "slack-node",
+      "loc": 342,
+      "rate": 7890,
+      "time": 0.04
+    },
+    {
+      "rank": 467,
+      "repo": "gatsby-node-helpers",
+      "loc": 469,
+      "rate": 7876,
+      "time": 0.06
+    },
+    {
+      "rank": 468,
+      "repo": "util.promisify",
+      "loc": 450,
+      "rate": 7808,
+      "time": 0.06
+    },
+    {
+      "rank": 469,
+      "repo": "formdata-polyfill",
+      "loc": 685,
+      "rate": 7803,
+      "time": 0.09
+    },
+    {
+      "rank": 470,
+      "repo": "node-loader",
+      "loc": 316,
+      "rate": 7699,
+      "time": 0.04
+    },
+    {
+      "rank": 471,
+      "repo": "unist-util-position",
+      "loc": 325,
+      "rate": 7637,
+      "time": 0.04
+    },
+    {
+      "rank": 472,
+      "repo": "cross-fetch",
+      "loc": 320,
+      "rate": 7503,
+      "time": 0.04
+    },
+    {
+      "rank": 473,
+      "repo": "cobol-unit-test",
+      "loc": 7520,
+      "rate": 7351,
+      "time": 1.02
+    },
+    {
+      "rank": 474,
+      "repo": "node-static",
+      "loc": 482,
+      "rate": 7345,
+      "time": 0.07
+    },
+    {
+      "rank": 475,
+      "repo": "@types_node-sass",
+      "loc": 573,
+      "rate": 7203,
+      "time": 0.08
+    },
+    {
+      "rank": 476,
+      "repo": "cobol-is-fun",
+      "loc": 674,
+      "rate": 7102,
+      "time": 0.09
+    },
+    {
+      "rank": 477,
+      "repo": "unist-util-find-after",
+      "loc": 310,
+      "rate": 7088,
+      "time": 0.04
+    },
+    {
+      "rank": 478,
+      "repo": "jaraco-context",
+      "loc": 544,
+      "rate": 7056,
+      "time": 0.08
+    },
+    {
+      "rank": 479,
+      "repo": "mdast-util-to-string",
+      "loc": 307,
+      "rate": 7055,
+      "time": 0.04
+    },
+    {
+      "rank": 480,
+      "repo": "iwubi",
+      "loc": 801,
+      "rate": 6863,
+      "time": 0.12
+    },
+    {
+      "rank": 481,
+      "repo": "node-source-walk",
+      "loc": 314,
+      "rate": 6863,
+      "time": 0.05
+    },
+    {
+      "rank": 482,
+      "repo": "redox",
+      "loc": 15356,
+      "rate": 6849,
+      "time": 2.24
+    },
+    {
+      "rank": 483,
+      "repo": "pytudes",
+      "loc": 8335,
+      "rate": 6733,
+      "time": 1.24
+    },
+    {
+      "rank": 484,
+      "repo": "bindings",
+      "loc": 373,
+      "rate": 6682,
+      "time": 0.06
+    },
+    {
+      "rank": 485,
+      "repo": "node-opcua-pki",
+      "loc": 322,
+      "rate": 6634,
+      "time": 0.05
+    },
+    {
+      "rank": 486,
+      "repo": "why-is-node-running",
+      "loc": 337,
+      "rate": 6615,
+      "time": 0.05
+    },
+    {
+      "rank": 487,
+      "repo": "awesome-cobol",
+      "loc": 407,
+      "rate": 6604,
+      "time": 0.06
+    },
+    {
+      "rank": 488,
+      "repo": "@opentelemetry_instrument...",
+      "loc": 399,
+      "rate": 6556,
+      "time": 0.06
+    },
+    {
+      "rank": 489,
+      "repo": "@opentelemetry_auto-instr...",
+      "loc": 332,
+      "rate": 6547,
+      "time": 0.05
+    },
+    {
+      "rank": 490,
+      "repo": "language-cobol",
+      "loc": 628,
+      "rate": 6538,
+      "time": 0.1
+    },
+    {
+      "rank": 491,
+      "repo": "@lydell_node-pty",
+      "loc": 343,
+      "rate": 6444,
+      "time": 0.05
+    },
+    {
+      "rank": 492,
+      "repo": "learning-cobol",
+      "loc": 367,
+      "rate": 6415,
+      "time": 0.06
+    },
+    {
+      "rank": 493,
+      "repo": "node-api-headers",
+      "loc": 1741,
+      "rate": 6390,
+      "time": 0.27
+    },
+    {
+      "rank": 494,
+      "repo": "cash-account-cobol",
+      "loc": 495,
+      "rate": 6315,
+      "time": 0.08
+    },
+    {
+      "rank": 495,
+      "repo": "@swc-node_register",
+      "loc": 499,
+      "rate": 6180,
+      "time": 0.08
+    },
+    {
+      "rank": 496,
+      "repo": "tunnel",
+      "loc": 246,
+      "rate": 6148,
+      "time": 0.04
+    },
+    {
+      "rank": 497,
+      "repo": "@types_node-fetch",
+      "loc": 373,
+      "rate": 6133,
+      "time": 0.06
+    },
+    {
+      "rank": 498,
+      "repo": "@flmngr_flmngr-server-node",
+      "loc": 394,
+      "rate": 6112,
+      "time": 0.06
+    },
+    {
+      "rank": 499,
+      "repo": "shellingham",
+      "loc": 545,
+      "rate": 6092,
+      "time": 0.09
+    },
+    {
+      "rank": 500,
+      "repo": "react-remove-scroll",
+      "loc": 276,
+      "rate": 6078,
+      "time": 0.05
+    },
+    {
+      "rank": 501,
+      "repo": "rimraf",
+      "loc": 390,
+      "rate": 6052,
+      "time": 0.06
+    },
+    {
+      "rank": 502,
+      "repo": "@module-federation_node",
+      "loc": 368,
+      "rate": 6008,
+      "time": 0.06
+    },
+    {
+      "rank": 503,
+      "repo": "node-version",
+      "loc": 236,
+      "rate": 5942,
+      "time": 0.04
+    },
+    {
+      "rank": 504,
+      "repo": "node-hook",
+      "loc": 286,
+      "rate": 5901,
+      "time": 0.05
+    },
+    {
+      "rank": 505,
+      "repo": "@types_node-jose",
+      "loc": 403,
+      "rate": 5847,
+      "time": 0.07
+    },
+    {
+      "rank": 506,
+      "repo": "node-vibrant",
+      "loc": 286,
+      "rate": 5804,
+      "time": 0.05
+    },
+    {
+      "rank": 507,
+      "repo": "ini",
+      "loc": 227,
+      "rate": 5711,
+      "time": 0.04
+    },
+    {
+      "rank": 508,
+      "repo": "@pollyjs_node-server",
+      "loc": 369,
+      "rate": 5697,
+      "time": 0.06
+    },
+    {
+      "rank": 509,
+      "repo": "renderkid",
+      "loc": 249,
+      "rate": 5549,
+      "time": 0.04
+    },
+    {
+      "rank": 510,
+      "repo": "cics-async-fetch-variatio...",
+      "loc": 393,
+      "rate": 5523,
+      "time": 0.07
+    },
+    {
+      "rank": 511,
+      "repo": "@workos-inc_node",
+      "loc": 218,
+      "rate": 5458,
+      "time": 0.04
+    },
+    {
+      "rank": 512,
+      "repo": "@types_node-notifier",
+      "loc": 253,
+      "rate": 5271,
+      "time": 0.05
+    },
+    {
+      "rank": 513,
+      "repo": "vscode-languageserver",
+      "loc": 266,
+      "rate": 5245,
+      "time": 0.05
+    },
+    {
+      "rank": 514,
+      "repo": "babel-plugin-dynamic-impo...",
+      "loc": 224,
+      "rate": 5165,
+      "time": 0.04
+    },
+    {
+      "rank": 515,
+      "repo": "xero-node",
+      "loc": 712,
+      "rate": 5129,
+      "time": 0.14
+    },
+    {
+      "rank": 516,
+      "repo": "FPS.cob",
+      "loc": 3294,
+      "rate": 5009,
+      "time": 0.66
+    },
+    {
+      "rank": 517,
+      "repo": "node-opcua-crypto",
+      "loc": 207,
+      "rate": 5001,
+      "time": 0.04
+    },
+    {
+      "rank": 518,
+      "repo": "raf",
+      "loc": 217,
+      "rate": 4988,
+      "time": 0.04
+    },
+    {
+      "rank": 519,
+      "repo": "@sentry_node-core",
+      "loc": 397,
+      "rate": 4926,
+      "time": 0.08
+    },
+    {
+      "rank": 520,
+      "repo": "node-sql-parser",
+      "loc": 1096,
+      "rate": 4861,
+      "time": 0.23
+    },
+    {
+      "rank": 521,
+      "repo": "@protobufjs_aspromise",
+      "loc": 233,
+      "rate": 4773,
+      "time": 0.05
+    },
+    {
+      "rank": 522,
+      "repo": "@improved_node",
+      "loc": 284,
+      "rate": 4770,
+      "time": 0.06
+    },
+    {
+      "rank": 523,
+      "repo": "pg-types",
+      "loc": 198,
+      "rate": 4764,
+      "time": 0.04
+    },
+    {
+      "rank": 524,
+      "repo": "@types_node-schedule",
+      "loc": 285,
+      "rate": 4752,
+      "time": 0.06
+    },
+    {
+      "rank": 525,
+      "repo": "@xmldom_is-dom-node",
+      "loc": 184,
+      "rate": 4702,
+      "time": 0.04
+    },
+    {
+      "rank": 526,
+      "repo": "xmlhttprequest-ssl",
+      "loc": 188,
+      "rate": 4645,
+      "time": 0.04
+    },
+    {
+      "rank": 527,
+      "repo": "sniffio",
+      "loc": 278,
+      "rate": 4642,
+      "time": 0.06
+    },
+    {
+      "rank": 528,
+      "repo": "port_rust_doomgeneric",
+      "loc": 264,
+      "rate": 4589,
+      "time": 0.06
+    },
+    {
+      "rank": 529,
+      "repo": "methods",
+      "loc": 189,
+      "rate": 4580,
+      "time": 0.04
+    },
+    {
+      "rank": 530,
+      "repo": "@rolldown_plugin-node-pol...",
+      "loc": 168,
+      "rate": 4474,
+      "time": 0.04
+    },
+    {
+      "rank": 531,
+      "repo": "@opentelemetry_sdk-trace-...",
+      "loc": 196,
+      "rate": 4464,
+      "time": 0.04
+    },
+    {
+      "rank": 532,
+      "repo": "@types_node-rsa",
+      "loc": 290,
+      "rate": 4451,
+      "time": 0.07
+    },
+    {
+      "rank": 533,
+      "repo": "code4z",
+      "loc": 294,
+      "rate": 4410,
+      "time": 0.07
+    },
+    {
+      "rank": 534,
+      "repo": "annotated-doc",
+      "loc": 219,
+      "rate": 4370,
+      "time": 0.05
+    },
+    {
+      "rank": 535,
+      "repo": "node-gyp-build",
+      "loc": 209,
+      "rate": 4300,
+      "time": 0.05
+    },
+    {
+      "rank": 536,
+      "repo": "rollup-plugin-polyfill-node",
+      "loc": 168,
+      "rate": 4253,
+      "time": 0.04
+    },
+    {
+      "rank": 537,
+      "repo": "@toruslabs_fetch-node-det...",
+      "loc": 164,
+      "rate": 4245,
+      "time": 0.04
+    },
+    {
+      "rank": 538,
+      "repo": "node-readable-to-web-read...",
+      "loc": 164,
+      "rate": 4204,
+      "time": 0.04
+    },
+    {
+      "rank": 539,
+      "repo": "supports-preserve-symlink...",
+      "loc": 176,
+      "rate": 4109,
+      "time": 0.04
+    },
+    {
+      "rank": 540,
+      "repo": "@types_node-statsd",
+      "loc": 234,
+      "rate": 4101,
+      "time": 0.06
+    },
+    {
+      "rank": 541,
+      "repo": "Cisp",
+      "loc": 953,
+      "rate": 4029,
+      "time": 0.24
+    },
+    {
+      "rank": 542,
+      "repo": "create-hmac",
+      "loc": 179,
+      "rate": 4024,
+      "time": 0.04
+    },
+    {
+      "rank": 543,
+      "repo": "is-reference",
+      "loc": 171,
+      "rate": 3986,
+      "time": 0.04
+    },
+    {
+      "rank": 544,
+      "repo": "simple-lru-cache",
+      "loc": 181,
+      "rate": 3985,
+      "time": 0.05
+    },
+    {
+      "rank": 545,
+      "repo": "Adafruit_CircuitPython_Bu...",
+      "loc": 1085,
+      "rate": 3984,
+      "time": 0.27
+    },
+    {
+      "rank": 546,
+      "repo": "lazystream",
+      "loc": 162,
+      "rate": 3959,
+      "time": 0.04
+    },
+    {
+      "rank": 547,
+      "repo": "async-timeout",
+      "loc": 301,
+      "rate": 3921,
+      "time": 0.08
+    },
+    {
+      "rank": 548,
+      "repo": "node-gyp-build-optional-p...",
+      "loc": 190,
+      "rate": 3909,
+      "time": 0.05
+    },
+    {
+      "rank": 549,
+      "repo": "@snowplow_node-tracker",
+      "loc": 148,
+      "rate": 3901,
+      "time": 0.04
+    },
+    {
+      "rank": 550,
+      "repo": "please-upgrade-node",
+      "loc": 158,
+      "rate": 3780,
+      "time": 0.04
+    },
+    {
+      "rank": 551,
+      "repo": "@types_node-polyglot",
+      "loc": 170,
+      "rate": 3710,
+      "time": 0.05
+    },
+    {
+      "rank": 552,
+      "repo": "tzdata",
+      "loc": 1116,
+      "rate": 3705,
+      "time": 0.3
+    },
+    {
+      "rank": 553,
+      "repo": "node-libs-browser",
+      "loc": 152,
+      "rate": 3666,
+      "time": 0.04
+    },
+    {
+      "rank": 554,
+      "repo": "eslint-import-resolver-node",
+      "loc": 157,
+      "rate": 3634,
+      "time": 0.04
+    },
+    {
+      "rank": 555,
+      "repo": "node-statsd",
+      "loc": 135,
+      "rate": 3554,
+      "time": 0.04
+    },
+    {
+      "rank": 556,
+      "repo": "prokka",
+      "loc": 4126,
+      "rate": 3549,
+      "time": 1.16
+    },
+    {
+      "rank": 557,
+      "repo": "broccoli-node-info",
+      "loc": 276,
+      "rate": 3484,
+      "time": 0.08
+    },
+    {
+      "rank": 558,
+      "repo": "@node-minify_utils",
+      "loc": 147,
+      "rate": 3426,
+      "time": 0.04
+    },
+    {
+      "rank": 559,
+      "repo": "@types_node-cron",
+      "loc": 185,
+      "rate": 3353,
+      "time": 0.06
+    },
+    {
+      "rank": 560,
+      "repo": "batch_test_reports",
+      "loc": 239,
+      "rate": 3273,
+      "time": 0.07
+    },
+    {
+      "rank": 561,
+      "repo": "@mergeapi_merge-node-client",
+      "loc": 121270,
+      "rate": 3239,
+      "time": 37.44
+    },
+    {
+      "rank": 562,
+      "repo": "init-package-json",
+      "loc": 123,
+      "rate": 3228,
+      "time": 0.04
+    },
+    {
+      "rank": 563,
+      "repo": "node-api-version",
+      "loc": 140,
+      "rate": 3216,
+      "time": 0.04
+    },
+    {
+      "rank": 564,
+      "repo": "util-promisify",
+      "loc": 149,
+      "rate": 3131,
+      "time": 0.05
+    },
+    {
+      "rank": 565,
+      "repo": "fonttools",
+      "loc": 5271,
+      "rate": 2973,
+      "time": 1.77
+    },
+    {
+      "rank": 566,
+      "repo": "@slack_logger",
+      "loc": 111,
+      "rate": 2924,
+      "time": 0.04
+    },
+    {
+      "rank": 567,
+      "repo": "@jsonjoy.com_fs-core",
+      "loc": 122,
+      "rate": 2923,
+      "time": 0.04
+    },
+    {
+      "rank": 568,
+      "repo": "@types_node-int64",
+      "loc": 125,
+      "rate": 2917,
+      "time": 0.04
+    },
+    {
+      "rank": 569,
+      "repo": "node-fetch-retry",
+      "loc": 120,
+      "rate": 2894,
+      "time": 0.04
+    },
+    {
+      "rank": 570,
+      "repo": "dom-walk",
+      "loc": 108,
+      "rate": 2848,
+      "time": 0.04
+    },
+    {
+      "rank": 571,
+      "repo": "@sentry_node",
+      "loc": 211,
+      "rate": 2821,
+      "time": 0.07
+    },
+    {
+      "rank": 572,
+      "repo": "@node-minify_terser",
+      "loc": 107,
+      "rate": 2796,
+      "time": 0.04
+    },
+    {
+      "rank": 573,
+      "repo": "fflib-apex-common",
+      "loc": 189,
+      "rate": 2791,
+      "time": 0.07
+    },
+    {
+      "rank": 574,
+      "repo": "prosemirror-trailing-node",
+      "loc": 113,
+      "rate": 2741,
+      "time": 0.04
+    },
+    {
+      "rank": 575,
+      "repo": "node-zip",
+      "loc": 111,
+      "rate": 2727,
+      "time": 0.04
+    },
+    {
+      "rank": 576,
+      "repo": "@types_webpack-node-exter...",
+      "loc": 117,
+      "rate": 2678,
+      "time": 0.04
+    },
+    {
+      "rank": 577,
+      "repo": "@node-minify_core",
+      "loc": 101,
+      "rate": 2641,
+      "time": 0.04
+    },
+    {
+      "rank": 578,
+      "repo": "node-range",
+      "loc": 103,
+      "rate": 2539,
+      "time": 0.04
+    },
+    {
+      "rank": 579,
+      "repo": "@types_node-uuid",
+      "loc": 158,
+      "rate": 2528,
+      "time": 0.06
+    },
+    {
+      "rank": 580,
+      "repo": "@types_analytics-node",
+      "loc": 180,
+      "rate": 2382,
+      "time": 0.08
+    },
+    {
+      "rank": 581,
+      "repo": "@hapi_hoek",
+      "loc": 95,
+      "rate": 2306,
+      "time": 0.04
+    },
+    {
+      "rank": 582,
+      "repo": "@rspack_binding",
+      "loc": 122,
+      "rate": 2292,
+      "time": 0.05
+    },
+    {
+      "rank": 583,
+      "repo": "@jsii_check-node",
+      "loc": 91,
+      "rate": 2253,
+      "time": 0.04
+    },
+    {
+      "rank": 584,
+      "repo": "vscode-languageserver-types",
+      "loc": 85,
+      "rate": 2253,
+      "time": 0.04
+    },
+    {
+      "rank": 585,
+      "repo": "string_decoder",
+      "loc": 83,
+      "rate": 2166,
+      "time": 0.04
+    },
+    {
+      "rank": 586,
+      "repo": "@aws-sdk_util-user-agent-...",
+      "loc": 88,
+      "rate": 2127,
+      "time": 0.04
+    },
+    {
+      "rank": 587,
+      "repo": "@univerjs_rpc-node",
+      "loc": 85,
+      "rate": 2100,
+      "time": 0.04
+    },
+    {
+      "rank": 588,
+      "repo": "reddit_data",
+      "loc": 1131,
+      "rate": 2074,
+      "time": 0.55
+    },
+    {
+      "rank": 589,
+      "repo": "@smithy_util-defaults-mod...",
+      "loc": 85,
+      "rate": 2072,
+      "time": 0.04
+    },
+    {
+      "rank": 590,
+      "repo": "xmlhttprequest",
+      "loc": 81,
+      "rate": 2022,
+      "time": 0.04
+    },
+    {
+      "rank": 591,
+      "repo": "@node-red_util",
+      "loc": 121,
+      "rate": 2013,
+      "time": 0.06
+    },
+    {
+      "rank": 592,
+      "repo": "node-stream",
+      "loc": 111,
+      "rate": 2013,
+      "time": 0.06
+    },
+    {
+      "rank": 593,
+      "repo": "@reactflow_node-toolbar",
+      "loc": 80,
+      "rate": 1981,
+      "time": 0.04
+    },
+    {
+      "rank": 594,
+      "repo": "@aws-sdk_eventstream-hand...",
+      "loc": 77,
+      "rate": 1930,
+      "time": 0.04
+    },
+    {
+      "rank": 595,
+      "repo": "@tsconfig_node14",
+      "loc": 71,
+      "rate": 1880,
+      "time": 0.04
+    },
+    {
+      "rank": 596,
+      "repo": "@smithy_hash-stream-node",
+      "loc": 78,
+      "rate": 1854,
+      "time": 0.04
+    },
+    {
+      "rank": 597,
+      "repo": "@smithy_hash-node",
+      "loc": 76,
+      "rate": 1838,
+      "time": 0.04
+    },
+    {
+      "rank": 598,
+      "repo": "@smithy_eventstream-serde...",
+      "loc": 73,
+      "rate": 1812,
+      "time": 0.04
+    },
+    {
+      "rank": 599,
+      "repo": "COBOL-Guide",
+      "loc": 81,
+      "rate": 1801,
+      "time": 0.04
+    },
+    {
+      "rank": 600,
+      "repo": "@tsconfig_node10",
+      "loc": 69,
+      "rate": 1789,
+      "time": 0.04
+    },
+    {
+      "rank": 601,
+      "repo": "@tsconfig_node16",
+      "loc": 71,
+      "rate": 1772,
+      "time": 0.04
+    },
+    {
+      "rank": 602,
+      "repo": "@npmcli_node-gyp",
+      "loc": 68,
+      "rate": 1718,
+      "time": 0.04
+    },
+    {
+      "rank": 603,
+      "repo": "@node-rs_helper",
+      "loc": 68,
+      "rate": 1715,
+      "time": 0.04
+    },
+    {
+      "rank": 604,
+      "repo": "@tsconfig_node12",
+      "loc": 71,
+      "rate": 1707,
+      "time": 0.04
+    },
+    {
+      "rank": 605,
+      "repo": "@nrwl_node",
+      "loc": 98,
+      "rate": 1706,
+      "time": 0.06
+    },
+    {
+      "rank": 606,
+      "repo": "node-fingerprint",
+      "loc": 67,
+      "rate": 1704,
+      "time": 0.04
+    },
+    {
+      "rank": 607,
+      "repo": "@types_node-gzip",
+      "loc": 64,
+      "rate": 1659,
+      "time": 0.04
+    },
+    {
+      "rank": 608,
+      "repo": "fake_cobol_repo",
+      "loc": 83,
+      "rate": 1475,
+      "time": 0.06
+    },
+    {
+      "rank": 609,
+      "repo": "@docknetwork_node-types",
+      "loc": 54,
+      "rate": 1391,
+      "time": 0.04
+    },
+    {
+      "rank": 610,
+      "repo": "git-node-fs",
+      "loc": 55,
+      "rate": 1383,
+      "time": 0.04
+    },
+    {
+      "rank": 611,
+      "repo": "@apollo_utils.isnodelike",
+      "loc": 52,
+      "rate": 1377,
+      "time": 0.04
+    },
+    {
+      "rank": 612,
+      "repo": "@node-red_editor-api",
+      "loc": 54,
+      "rate": 1346,
+      "time": 0.04
+    },
+    {
+      "rank": 613,
+      "repo": "fs-constants",
+      "loc": 51,
+      "rate": 1291,
+      "time": 0.04
+    },
+    {
+      "rank": 614,
+      "repo": "@nangohq_node",
+      "loc": 44,
+      "rate": 1220,
+      "time": 0.04
+    },
+    {
+      "rank": 615,
+      "repo": "core-util-is",
+      "loc": 43,
+      "rate": 1134,
+      "time": 0.04
+    },
+    {
+      "rank": 616,
+      "repo": "@apollo_utils.createhash",
+      "loc": 64,
+      "rate": 1039,
+      "time": 0.06
+    },
+    {
+      "rank": 617,
+      "repo": "@node-red_registry",
+      "loc": 39,
+      "rate": 1008,
+      "time": 0.04
+    },
+    {
+      "rank": 618,
+      "repo": "@rspack_binding-linux-x64...",
+      "loc": 47,
+      "rate": 1004,
+      "time": 0.05
+    },
+    {
+      "rank": 619,
+      "repo": "@node-llama-cpp_linux-armv7l",
+      "loc": 52,
+      "rate": 942,
+      "time": 0.06
+    },
+    {
+      "rank": 620,
+      "repo": "otterkit",
+      "loc": 123,
+      "rate": 919,
+      "time": 0.13
+    },
+    {
+      "rank": 621,
+      "repo": "dprint-node",
+      "loc": 80,
+      "rate": 898,
+      "time": 0.09
+    },
+    {
+      "rank": 622,
+      "repo": "@rspack_binding-linux-x64...",
+      "loc": 47,
+      "rate": 852,
+      "time": 0.06
+    },
+    {
+      "rank": 623,
+      "repo": "@node-llama-cpp_linux-arm64",
+      "loc": 52,
+      "rate": 758,
+      "time": 0.07
+    },
+    {
+      "rank": 624,
+      "repo": "@node-llama-cpp_linux-x64...",
+      "loc": 51,
+      "rate": 696,
+      "time": 0.07
+    },
+    {
+      "rank": 625,
+      "repo": "@lydell_node-pty-linux-x64",
+      "loc": 21,
+      "rate": 559,
+      "time": 0.04
+    },
+    {
+      "rank": 626,
+      "repo": "@node-llama-cpp_linux-x64",
+      "loc": 51,
+      "rate": 349,
+      "time": 0.15
+    },
+    {
+      "rank": 627,
+      "repo": "ziglings",
+      "loc": 9,
+      "rate": 189,
+      "time": 0.05
+    },
+    {
+      "rank": 628,
+      "repo": "zig-gamedev",
+      "loc": 9,
+      "rate": 104,
+      "time": 0.09
+    }
+  ]
+}
