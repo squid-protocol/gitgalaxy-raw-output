@@ -1,0 +1,974 @@
+# ARCHITECTURAL_BRIEF: opencv
+> INSTRUCTION: Deterministic Syntactic Analysis. Base architectural insights on Structural Magnitude, Extracted Signatures, and Risk overlays.
+
+## 0. FORENSIC TRACEABILITY
+| Metadata | Value |
+|---|---|
+| **Engine** | `GitGalaxy Scope vlatest (Delta Mode)` |
+| **Git Remote** | `https://github.com/opencv/opencv.git` |
+| **Zero-Dependency Mode** | `ACTIVE (Degraded Precision)` |
+| **File Archetype Brain** | corpus `master_db_v2.9.0.db` @ `71f3d405a2d8` · trainer `2b0cd20` · engine `unknown` · contract `92c0b8a801d69bb0` · trained `2026-09-19T12:02:33+00:00` |
+| **Repo Archetype Brain** | corpus `master_db_v2.9.0.db` @ `71f3d405a2d8` · trainer `2b0cd20` · engine `unknown` · contract `7f4885b42206d553` · trained `2026-09-19T12:02:41+00:00` |
+
+> **⚠️ ZERO-DEPENDENCY MODE ACTIVE:**
+> Optional engines missing during this scan: `tiktoken`, `pandas`, `xgboost`. Metrics that need them were NOT computed -- shown as `n/a` or omitted, and no value shown for them is a measurement: Token Mass and Financial Read Cost (`tiktoken`); AI threat classification (`xgboost`/`pandas`/`numpy`). Every graph metric (PageRank / Blast Radius, the centralities, the repo network table, connection counts) is computed natively and matches full precision. Do not infer values for the missing metrics.
+
+## 0.5 AI THREAT AUDIT STATUS
+> **✅ SECURE_NO_THREATS_DETECTED**
+> XGBoost Structural Signatures model found no malicious artifacts.
+
+## 1. EXECUTIVE SUMMARY
+- **Scope:** 5988 analyzed artifact(s), 1429406 LOC.
+- **Load-bearing artifact:** `modules/core/include/opencv2/core.hpp` -- 353 in-repo importer(s) depend on it. Changes here propagate furthest.
+- **Top orchestrator:** `modules/ts/src/ts_gtest.cpp` -- pulls in 63 dependencies, the widest assembly point in the scan.
+- **Heaviest artifact:** `3rdparty/openjpeg/openjp2/j2k.c` at magnitude 10182.02 (structural weight, not risk).
+- **How to read this brief:** section 11 ranks artifacts by structural magnitude with a blast-radius line each; section 7 has the full dependency graph. The surface vectors in section 6 describe what is present in a file, not the probability of a defect -- Appendix A has the equations and the validation record behind that distinction.
+
+## 1.5 SYSTEM ROLE & PHILOSOPHY
+> You are a Senior Technical Storyteller and Codebase Architect. GitGalaxy has translated the non-visual architecture of this repository into measurable Structural Signatures (regex-derived counts, not an AST or compiler pass). Your job is to weave those signatures into a coherent, factual narrative about how this system is built -- its architecture, design patterns, and complexity -- not to render a verdict.
+> 
+> **CORE DIRECTIVES:**
+> 1. **Narrate the Architecture, Don't Judge the Author:** Frame every observation as a blameless description of the system's physical reality. A high Structural Surface Profile reading (formerly called Risk Exposure; e.g., Complexity Load, formerly Cognitive Load Exposure) describes where the architecture may be drifting into fragile territory, not developer incompetence -- it is a prompt to investigate, never a verdict. These are activity/content surface meters, not defect-probability estimates (gitgalaxy#2991, evidence in #2982) -- describe what is there, don't imply it predicts a bug.
+> 2. **The Physical Reality Rule:** Base your narrative strictly on the provided Structural Signatures and the numbers derived from them. Do not hallucinate meaning, and do not restate a heuristic's raw label (e.g. a 'Logic Bomb' or 'O(2^N)' flag) as a confirmed finding of malice or a guaranteed defect -- explain what the signature actually measures, weave it into the story of the file, and let the reader draw their own conclusion.
+> 3. **Risk vs. Defense:** Code is a balance. A file with high `flux` (state mutation) is risky unless balanced by `freeze_hits` (immutability). High `danger` is brittle unless wrapped in `safety`. Tell that balance as part of the narrative, not as an isolated alarm.
+> 
+> **THE STRUCTURAL SIGNATURE LEXICON:**
+> * **Structure & Mass:** `branch` (splits), `linear` (paths), `args` (coupling), `func_start` (entry points).
+> * **Risk & Volatility:** `danger` (dynamic execution), `flux` (state mutation), `graveyard` (commented-out logic), `safety_neg` (security bypasses).
+> * **Architecture & Domain:** `io` (network latency), `concurrency` (async orchestration), `api` (public surface), `import` (dependencies).
+> * **Defensive Guardrails:** `safety` (Error handling), `freeze_hits` (immutability), `cleanup` (state destruction).
+> *(Section 2, the structural-surface lexicon and its equations, is now **Appendix A** at the end of this brief -- the findings come first.)*
+
+## 3. MACRO STATE
+| Metric | Value |
+|---|---|
+| Total Artifacts | 7688 |
+| Analyzed Artifacts (Scanned) | 5988 |
+| Excluded Artifacts (Unparsable data, binaries, unsupported formats) | 1700 |
+| Total LOC | 1429406 |
+| Volatility Index | 0.001 |
+| % Scanned of codebase = | 77.9% |
+| Dominant Lang | CPP |
+
+## 3.5 MACRO-NETWORK TOPOLOGY (Resilience & Coupling)
+| Metric | Value | Interpretation |
+|---|---|---|
+| Modularity | 0.7848 | High = Clean micro-boundaries. Low = Spaghetti coupling. |
+| Assortativity | -0.1068 | Positive = Resilient core. Negative = Fragile single-points-of-failure. |
+| Cyclic Density | 0.9% | % of files trapped in dependency loops (Static Friction). |
+| Avg Path Length | 5.0 | Mean import hops from a file to each file it transitively depends on. Higher = Longer dependency chains. |
+| Articulation Pts | 415 | Number of single files that, if removed, shatter the network. |
+
+## 4. COMPOSITION
+| Lang | Files | LOC | Share |
+|---|---|---|---|
+| CPP | 3371 | 977933 | 56.3% |
+| C | 838 | 289574 | 14.0% |
+| PYTHON | 375 | 41136 | 6.3% |
+| MARKDOWN | 357 | 0 | 6.0% |
+| JAVA | 204 | 25910 | 3.4% |
+| PLAINTEXT | 181 | 6 | 3.0% |
+| OBJECTIVE-C | 142 | 27201 | 2.4% |
+| HTML | 97 | 9654 | 1.6% |
+| ASSEMBLY | 96 | 30922 | 1.6% |
+| XML | 81 | 0 | 1.4% |
+| JAVASCRIPT | 42 | 6226 | 0.7% |
+| JSON | 37 | 2927 | 0.6% |
+| SWIFT | 32 | 6125 | 0.5% |
+| SHELL | 26 | 982 | 0.4% |
+| GROOVY | 19 | 672 | 0.3% |
+| M4 | 17 | 658 | 0.3% |
+| CSHARP | 12 | 592 | 0.2% |
+| PROTO | 10 | 1165 | 0.2% |
+| MAKEFILE | 9 | 411 | 0.2% |
+| BATCH | 9 | 550 | 0.2% |
+| YAML | 8 | 426 | 0.1% |
+| GLSL | 6 | 701 | 0.1% |
+| SCALA | 5 | 95 | 0.1% |
+| CSS | 4 | 2139 | 0.1% |
+| KOTLIN | 3 | 145 | 0.1% |
+| POWERSHELL | 2 | 350 | 0.0% |
+| DOCKERFILE | 2 | 42 | 0.0% |
+| PERL | 2 | 496 | 0.0% |
+| PBTXT | 1 | 2368 | 0.0% |
+
+## 4.5 REPOSITORY ECOSYSTEM BASELINE (GLOBAL ARCHITECTURE)
+> **Assigned Ecosystem Baseline:** `Hub-Coupled Monorepo`
+> **Architectural Drift Z-Score:** `3.929`
+> **Composition Archetype:** `Hub-Coupled Monorepo` (z +3.93; from the repo's file-archetype mix)
+> **File Composition:** Declarative / Non-Code 20%, Large Core Modules (3) 17%, Data / Markup / Trivial 16%, Many-Argument Workhorses Files 12%, Parameter Forwarders Files 8%
+> **⚠️ UNIQUE INTERPRETATION:** This repository has a high Z-Score. While it maps closest to this archetype, its internal structure is a highly unique or hybrid interpretation of the pattern.
+
+## 4.6 FILE ARCHETYPES & STATIC ASSETS
+### Active Execution Logic (ML Clusters)
+| Archetype | Count | Repo % |
+|---|---|---|
+| Unclassified | 5450 | 91.0% |
+| Unknown | 6 | 0.1% |
+
+### Inert Structural Mass (Static Categories)
+| Category | Count | Repo % |
+|---|---|---|
+| Static: Literature & Documentation | 532 | 8.9% |
+
+## 5. EXCLUDED ARTIFACTS (Unparsable or Shielded Files)
+*Total Excluded Artifacts: 1700*
+
+**Composition by Extension & Reason:**
+- `.jpg`: 579x Excluded (Explicitly Denied Extension: '.jpg'), 1x Excluded (Explicitly Denied Extension: '.JPG')
+- `.png`: 443x Excluded (Explicitly Denied Extension: '.png')
+- `.cmake`: 180x Excluded (Unsupported Extension: '.cmake'), 1x Unsupported Format (.cmake)
+- `no_extension`: 36x Excluded (System Exclusion, Hidden Directory, or Dynamic Ignored Dir), 17x Unsupported Format (.undeterminable), 7x Excluded (Unsupported Extension: '.appxmanifest')
+- `.patch`: 46x Excluded (Unsupported Extension: '.patch')
+- `.xml`: 3x Excluded (Massive Static Asset Blob: 24351 LOC), 3x Excluded (Static Asset Blob without Intent: 1506 LOC), 1x Excluded (Massive Static Asset Blob: 12214 LOC)
+- `.cu`: 30x Unsupported Format (.cu), 2x Excluded (Unsupported Extension: '.cu')
+- `.h`: 2x Excluded (Embedded Hex Payload: 37664 hex tokens in 9447 LOC), 1x Excluded (Lexical Monotony: High structural repetition detected in 4666 LOC), 1x Excluded (Machine-Generated Source Code Signature: 180 LOC)
+- `.gz`: 21x Excluded (Explicitly Denied Extension: '.gz')
+- `.hpp`: 1x Excluded (Lexical Monotony: High structural repetition detected in 4496 LOC), 1x Excluded (Embedded Array/Matrix Payload: 14225 commas in 2019 LOC), 1x Excluded (Lexical Monotony: High structural repetition detected in 3442 LOC)
+- `.xaml`: 21x Excluded (Unsupported Extension: '.xaml')
+- `.cc`: 1x Excluded (Machine-Generated Source Code Signature: 11126 LOC), 1x Excluded (Embedded Array/Matrix Payload: 2664 commas in 616 LOC), 1x Excluded (Monolithic Amalgamation: 34121 LOC exceeds safe regex boundaries)
+- `.c`: 1x Excluded (Embedded Hex Payload: 3538 hex tokens in 518 LOC), 1x Excluded (Embedded Array/Matrix Payload: 65538 commas in 4135 LOC), 1x Excluded (Machine-Generated Source Code Signature: 852 LOC)
+- `.jpeg`: 11x Excluded (Explicitly Denied Extension: '.jpeg')
+- `.yml`: 6x Excluded (System Exclusion, Hidden Directory, or Dynamic Ignored Dir), 1x Excluded (Monolithic Amalgamation: 31794 LOC exceeds safe regex boundaries), 1x Zero-Density Threshold (LOC: 166, Signals: 0)
+
+## 6. STRUCTURAL SURFACE PROFILE (formerly Risk Exposure) ANALYSIS (0-100%)
+| Structural Surface Vector | Min | Max | Mean | Med | Mode |
+|---|---|---|---|---|---|
+| Complexity Load (formerly Cognitive Load Exposure) | 0.0 | 100.0 | 31.0 | 18.8 | 0.0 |
+| Guard Balance (formerly Error & Exception Exposure) | 0.0 | 100.0 | 56.2 | 67.9 | 0.0 |
+| Debt Markers (formerly Tech Debt Exposure) | 0.0 | 100.0 | 24.9 | 0.0 | 0.0 |
+| Test Surface (formerly Testing Exposure) | 0.0 | 80.0 | 22.2 | 2.4 | 80.0 |
+| Connectivity (formerly API Exposure) | 0.0 | 100.0 | 9.5 | 0.9 | 0.0 |
+| Concurrency Surface (formerly Concurrency Exposure) | 0.0 | 100.0 | 1.3 | 0.0 | 0.0 |
+| Mutation Surface (formerly State Flux Exposure) | 0.0 | 100.0 | 47.0 | 25.6 | 0.0 |
+| Dead Code Surface (formerly Commented Logic Exposure) | 0.0 | 99.7 | 2.2 | 0.0 | 0.0 |
+| Historical Stability (predictive layer, promotion pending #2987) (formerly Instability Exposure) | 0.0 | 2.8 | 0.2 | 0.0 | 0.0 |
+| Historical Churn (predictive layer, promotion pending #2987) (formerly Volatility Exposure) | 0.0 | 100.0 | 2.4 | 0.0 | 0.0 |
+| Doc Surface (formerly Documentation Exposure) _(coverage)_ | 0.0 | 100.0 | 65.5 | 100.0 | 100.0 |
+| Credential Material (formerly Hardcoded Payload Artifacts) | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+> `Doc Surface (formerly Documentation Exposure)` is **documentation coverage, not a fragility driver**. It is reported for context beside program length, and is deliberately excluded from the ranked-file drivers in this brief: it measures the share of a file's unit weight a reader cannot recover from documentation, so on a codebase that documents little it sits near ceiling everywhere and describes the repo rather than distinguishing files within it.
+> `Spec Alignment (formerly Specification Exposure)` was **not measured** on this scan and is therefore absent above rather than reported as 0 (which would assert full alignment). Enable it with `--spec-alignment` if this codebase uses the corresponding convention.
+
+## 6b. SURFACE FAMILY PROFILE (Tier 1/2/3 -- gitgalaxy#2994)
+> Percentile columns elsewhere in this brief that come from the Tier-2 snapshot percentiles are SNAPSHOT-RELATIVE: "87" means this file's value sits at the 87th percentile of THIS repo's files for that surface -- true by construction (Hazen average-rank), not a calibrated 0-100 risk threshold like the section 6 sigmoid scores above. An all-zero surface across the whole repo reads as 0.0 for every file, never a false-median 50.
+| Family | Repo Total | Files w/ Signal | P90 File Value | Top File |
+|---|---|---|---|---|
+| memory | 237777 | 3802 | 100 | `3rdparty/openjpeg/openjp2/j2k.c` |
+| cleanup | 1366 | 389 | 0 | `modules/java/test/android_test/src/org/opencv/test/OpenCVTestCase.java` |
+| guards | 127775 | 3991 | 50 | `3rdparty/include/vulkan/vulkan_core.h` |
+| danger | 13039 | 1670 | 4 | `3rdparty/include/vulkan/vulkan_core.h` |
+| concurrency | 2264 | 355 | 0 | `modules/gapi/test/streaming/gapi_streaming_utils_test.cpp` |
+| connectivity | 21869 | 2832 | 9 | `doc/stylesheet.css` |
+| io | 2389 | 519 | 0 | `platforms/android/build_sdk.py` |
+| crypto | 3 | 3 | 0 | `modules/python/test/tests_common.py` |
+| ipc | 128 | 46 | 0 | `modules/gapi/test/streaming/gapi_streaming_tests.cpp` |
+| time | 138 | 54 | 0 | `hal/openvx/hal/openvx_hal.cpp` |
+| serialization | 26 | 10 | 0 | `3rdparty/protobuf/src/google/protobuf/descriptor.cc` |
+| regex | 287 | 71 | 0 | `modules/objc/generator/gen_objc.py` |
+| events | 1504 | 270 | 0 | `modules/gapi/src/api/kernels_core.cpp` |
+| tests | 15856 | 562 | 0 | `modules/core/test/test_mat.cpp` |
+| docs | 16389 | 2089 | 4 | `3rdparty/openjpeg/openjp2/openjpeg.h` |
+| debt | 9648 | 1643 | 4 | `hal/riscv-rvv/src/imgproc/color.cpp` |
+| mutation | 478925 | 4250 | 207 | `3rdparty/libjpeg/jidctint.c` |
+| dead_code | 20226 | 2790 | 9 | `modules/ts/src/ts_gtest.cpp` |
+| credential | 33 | 17 | 0 | `samples/dnn/models.yml` |
+| threat | 14184 | 2174 | 4 | `modules/core/include/opencv2/core/hal/msa_macros.h` |
+| ml_ai | 3766 | 554 | 0 | `3rdparty/libjpeg-turbo/simd/mips64/loongson-mmintrin.h` |
+| ui | 1012 | 170 | 0 | `modules/highgui/src/window_QT.h` |
+
+**Relations (repo medians):**
+- `guard_balance_ratio` (guards / (danger + 1)): **2.0**
+- `alloc_cleanup_pairing` (cleanup / (memory + 1)): **0.0**
+
+## 7. ARCHITECTURAL CHOKE POINTS & DEPENDENCIES
+### Top I/O Latency Risks
+- `platforms/android/build_sdk.py` (Hits: 98)
+- `platforms/ios/build_framework.py` (Hits: 97)
+- `modules/objc/generator/gen_objc.py` (Hits: 81)
+
+### Top 5 Structural Pillars (Highest 'Imported By' / Blast Radius)
+These are the most interconnected files relative to the rest of this repository. On a repo with dense internal coupling, that means core load-bearing infrastructure -- changes carry real cascading-break risk. On a repo with a flatter internal architecture, the gap between #1 and #5 may be small, and this list is a weaker signal accordingly; compare the connection counts below before treating it as a verdict.
+
+1. **core.hpp** (`modules/core/include/opencv2/core.hpp`) — 353 inbound connections
+2. **string.h** (`3rdparty/flatbuffers/include/flatbuffers/string.h`) — 335 inbound connections
+3. **imgproc.hpp** (`modules/imgproc/include/opencv2/imgproc.hpp`) — 308 inbound connections
+4. **highgui.hpp** (`modules/highgui/include/opencv2/highgui.hpp`) — 290 inbound connections
+5. **vector.h** (`3rdparty/flatbuffers/include/flatbuffers/vector.h`) — 281 inbound connections
+
+### Top 5 Orchestrators (Highest 'Imports' / Fragility Index)
+These files pull in the most external dependencies. They are highly coupled and fragile to API changes.
+
+1. **ts_gtest.cpp** (`modules/ts/src/ts_gtest.cpp`) — 63 outbound dependencies
+2. **system.cpp** (`modules/core/src/system.cpp`) — 46 outbound dependencies
+3. **opj_includes.h** (`3rdparty/openjpeg/openjp2/opj_includes.h`) — 42 outbound dependencies
+4. **descriptor.cc** (`3rdparty/protobuf/src/google/protobuf/descriptor.cc`) — 36 outbound dependencies
+5. **parallel.cpp** (`modules/core/src/parallel.cpp`) — 36 outbound dependencies
+
+## 8. CORE FUNCTION HITLIST (Heaviest Functions)
+> *Note: The 'Impact' metric below represents Structural Magnitude (complexity, arguments, and length), NOT operational risk. These are the load-bearing pillars of the logic.*
+
+- `OAST_9_16` **(Many-Argument Workhorses)** (@ `modules/features2d/src/agast.cpp`) -> Impact: **2006.5** | LOC: 1089
+- `AGAST_7_12s` **(Many-Argument Workhorses)** (@ `modules/features2d/src/agast.cpp`) -> Impact: **1390.0** | LOC: 1040
+- `AGAST_7_12d` **(Many-Argument Workhorses)** (@ `modules/features2d/src/agast.cpp`) -> Impact: **1365.0** | LOC: 1021
+- `AGAST_5_8` **(Many-Argument Workhorses)** (@ `modules/features2d/src/agast.cpp`) -> Impact: **952.1** | LOC: 762
+  * *Intent:* #if (defined __i386__ || defined(_M_IX86) || defined __x86_64__ || defined(_M_X64) || defined(_M_ARM64) || defined(__aarch64__) || defined(__arm__))
+- `opj_t1_ht_decode_cblk` **(Many-Argument Workhorses)** (@ `3rdparty/openjpeg/openjp2/ht_dec.c`) -> Impact: **868.2** | LOC: 1525
+  * *Intent:* //************************************************************************/ /** @brief Decodes one codeblock, processing the cleanup, siginificance * ...
+- `copyIntoDeepFrameBuffer` **(Many-Argument Workhorses)** (@ `3rdparty/openexr/IlmImf/ImfMisc.cpp`) -> Impact: **786.5** | LOC: 700
+- `operator()` **(Many-Argument Workhorses)** (@ `modules/imgproc/src/connectedcomponents.cpp`) -> Impact: **784.0** | LOC: 788
+- `packInputData` **(Many-Argument Workhorses)** (@ `modules/dnn/src/layers/cpu_kernels/convolution.cpp`) -> Impact: **782.2** | LOC: 498
+- `TIFFFetchNormalTag` **(Many-Argument Workhorses)** (@ `3rdparty/libtiff/tif_dirread.c`) -> Impact: **772.2** | LOC: 1365
+  * *Intent:* /* * Fetch a tag that is not handled by special case code. */
+- `Reflection::Swap` **(Many-Argument Workhorses)** (@ `3rdparty/protobuf/src/google/protobuf/generated_message_reflection.cc`) -> Impact: **614.5** | LOC: 1413
+
+*Function archetypes referenced above:*
+  * **Many-Argument Workhorses**: large, many-parameter procedural function doing heavy lifting
+
+## 9. DIRECTORY GROUPS (Top 10 Heaviest Modules)
+| Folder Path | Files | Total Impact | Avg Complexity Load | Avg Debt Markers |
+|---|---|---|---|---|
+| `modules/imgproc/src` | 102 | 93002.64 | 54.82% | 23.56% |
+| `modules/core/src` | 109 | 81627.38 | 56.74% | 33.91% |
+| `3rdparty/libtiff` | 60 | 38916.5 | 45.88% | 30.29% |
+| `3rdparty/openjpeg/openjp2` | 66 | 36181.14 | 27.46% | 35.41% |
+| `modules/calib3d/src` | 47 | 30510.22 | 47.84% | 19.54% |
+| `3rdparty/libjasper` | 63 | 28655.66 | 31.45% | 25.52% |
+| `hal/carotene/src` | 57 | 28325.04 | 52.65% | 11.64% |
+| `modules/videoio/src` | 63 | 26472.56 | 43.0% | 44.38% |
+| `3rdparty/libpng` | 24 | 24791.64 | 46.89% | 37.21% |
+| `3rdparty/openexr/IlmImf` | 200 | 23374.4 | 14.9% | 36.43% |
+
+## 10. TARGETED STRUCTURAL SURFACE VECTORS (formerly Risk Vectors, Top 5 by Surface)
+### Highest Debt Markers (formerly Tech Debt; Fragile/Planned)
+- `3rdparty/openjpeg/openjp2/jp2.h` -> **100.0%** Exposure
+- `3rdparty/openjpeg/openjp2/pi.h` -> **100.0%** Exposure
+- `samples/hal/c_hal/impl.c` -> **100.0%** Exposure
+- `3rdparty/openexr/IlmImf/ImfIO.cpp` -> **100.0%** Exposure
+- `3rdparty/openexr/Imath/ImathLimits.h` -> **100.0%** Exposure
+### Highest Mutation Surface (formerly State Flux; Mutation/Volatility)
+- `3rdparty/cpufeatures/cpu-features.c` -> **100.0%** Exposure
+- `3rdparty/cpufeatures/cpu-features.h` -> **100.0%** Exposure
+- `3rdparty/libjasper/jas_cm.c` -> **100.0%** Exposure
+- `3rdparty/libjasper/jas_getopt.c` -> **100.0%** Exposure
+- `3rdparty/libjasper/jas_icc.c` -> **100.0%** Exposure
+### Highest Design Slop (Dead & Duplicated Logic)
+- `modules/ts/src/ts_gtest.cpp` -> **255** Orphaned Functions | **10** Duplicates
+- `3rdparty/protobuf/src/google/protobuf/descriptor.cc` -> **226** Orphaned Functions | **0** Duplicates
+- `modules/highgui/src/window_QT.cpp` -> **197** Orphaned Functions | **0** Duplicates
+- `modules/core/src/ocl.cpp` -> **178** Orphaned Functions | **2** Duplicates
+- `modules/imgproc/misc/java/test/ImgprocTest.java` -> **172** Orphaned Functions | **0** Duplicates
+
+## 10.5 AI THREAT INTELLIGENCE (XGBoost)
+*No files met the threshold for malicious structural signatures.*
+
+## 10.6 WEAPONIZABLE SURFACE EXPOSURES (RULE-BASED SAST)
+> Secondary Evidence: The following files tripped specific static threat signatures. Use these to explain *why* the XGBoost model flagged the files above.
+
+*No critical vulnerabilities or security lens thresholds breached.*
+
+## 10.7 ECOSYSTEM SECURITY AUDITS
+> **AI CONTEXT:** High-level perimeter defense metrics from the X-Ray, Supply Chain Firewall, and API Network Mapper.
+
+### ☢️ X-Ray & 🧱 Supply Chain Firewall
+- **Binary Anomalies (X-Ray):** `66` (High entropy, packed payloads, or magic byte mismatches).
+- **Blacklisted Dependencies:** `0` explicitly banned packages imported.
+- **Unknown Dependencies:** `20862` packages imported that bypass the Zero-Trust whitelist.
+
+## 11. RANKED ARTIFACTS (Top 25 by Structural Magnitude)
+> Ranked by Structural Magnitude: the file's structural weight and centralization within the system. Magnitude is **not** a risk score and is independent of the surface vectors in section 6. Each entry carries a **Blast Radius** line stating what a change to it would reach -- that, not the vector percentages, is the actionable part.
+
+### `3rdparty/openjpeg/openjp2/j2k.c` (C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_6` (Drift: 0.0 IQR)
+- **Magnitude:** 10182.02 | **LOC:** 13596 | **CtrlFlow:** 17.1% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **1**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (96.0%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (57.0%)
+- **Documentation Coverage:** 84.8039% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `opj_j2k_setup_encoder` **(Many-Argument Workhorses)** (Impact: 426.9)
+  * `opj_j2k_is_imf_compliant` **(Many-Argument Workhorses)** (Impact: 307.9)
+  * `opj_j2k_read_tile_header` **(Many-Argument Workhorses)** (Impact: 283.8)
+  * `opj_j2k_read_siz` **(Many-Argument Workhorses)** (Impact: 188.9)
+    * *Intent:* /** * Reads a SIZ marker (image and tile size) * @param p_j2k the jpeg2000 file codec. * @param p_he...
+  * `opj_j2k_read_sot` **(Many-Argument Workhorses)** (Impact: 122.5)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1629 instances
+* *State Mutation (weighted view):* 5442
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1675`, `structural_boundaries: 894`, `args: 345`, `func_start: 173`, `class_start: 35`
+* *Risk/State:* `safety_bypasses: 122`, `state_mutation: 2184`, `dead_code: 12`, `planned_debt: 16`, `fragile_debt: 37`, `unreferenced_by_name: 21`
+* *Architecture:* `api: 32`, `import: 1`
+* *Defense:* `safety: 298`, `doc: 140`, `immutability_locks: 91`, `cleanup: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` opj_includes.h
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `3rdparty/include/vulkan/vulkan_core.h` (OBJECTIVE-C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_7` (Drift: 0.0 IQR)
+- **Magnitude:** 8832.67 | **LOC:** 17007 | **CtrlFlow:** 0.1% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** changing it is visible to **1** in-repo importer(s); it depends on **5**; blast radius 0.115; role: Transceiver (Middle-Tier)
+- **Top Surface Vectors:** Guard Balance (formerly Safety Score) (73.2%), Connectivity (formerly Api Exposure) (8.1%), Complexity Load (formerly Cognitive Load) (4.5%), Test Surface (formerly Verification) (2.3%)
+- **Documentation Coverage:** 0.0% of unit weight undocumented
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 21`, `structural_boundaries: 3012`, `args: 581`, `func_start: 1170`
+* *Risk/State:* `safety_bypasses: 737`, `state_mutation: 219`
+* *Architecture:* `api: 1`, `import: 1`
+* *Defense:* `immutability_locks: 1663`
+* *Network Topology:*
+  * `Ecosystem Role:` Transceiver (Middle-Tier) | `Dependency Blast Radius (PageRank):` 0.115
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.002364
+  * `Imports (Out-Degree: 1):` vk_platform.h, vulkan_video_codec_h264std.h, vulkan_video_codec_h264std_decode.h, vulkan_video_codec_h265std.h, vulkan_video_codec_h265std_decode.h
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `3rdparty/libtiff/tif_dirread.c` (C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 7975.08 | **LOC:** 8448 | **CtrlFlow:** 24.3% | **Authorship Centralization:** 100.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **6**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (95.7%), Complexity Load (formerly Cognitive Load) (92.8%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 50.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `TIFFFetchNormalTag` **(Many-Argument Workhorses)** (Impact: 772.2)
+    * *Intent:* /* * Fetch a tag that is not handled by special case code. */
+  * `TIFFReadDirectory` **(Many-Argument Workhorses)** (Impact: 368.1)
+    * *Intent:* } /*-- CalcFinalIFDdatasizeReading() --*/ /* * Read the next TIFF directory from a file and convert ...
+  * `TIFFFetchDirectory` **(Many-Argument Workhorses)** (Impact: 162.1)
+    * *Intent:* /* * Read IFD structure from the specified offset. If the pointer to * nextdiroff variable has been ...
+  * `TIFFReadDirEntryFloatArray` **(Many-Argument Workhorses)** (Impact: 135.8)
+  * `TIFFReadDirEntryDoubleArray` **(Many-Argument Workhorses)** (Impact: 129.4)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1201 instances
+* *State Mutation (weighted view):* 3662
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1845`, `structural_boundaries: 1070`, `args: 213`, `func_start: 120`, `class_start: 40`
+* *Risk/State:* `safety_bypasses: 183`, `state_mutation: 1260`, `dead_code: 5`, `fragile_debt: 12`, `unreferenced_by_name: 6`
+* *Architecture:* `api: 17`, `import: 6`
+* *Defense:* `safety: 140`, `immutability_locks: 66`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 2):` float.h, limits.h, stdlib.h, string.h, tiffconf.h, tiffiop.h
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `3rdparty/libspng/spng.c` (C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_4` (Drift: 0.0 IQR)
+- **Magnitude:** 7542.42 | **LOC:** 6981 | **CtrlFlow:** 32.7% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **13**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (98.1%), Complexity Load (formerly Cognitive Load) (95.4%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `spng_decode_image` **(Many-Argument Workhorses)** (Impact: 391.8)
+  * `read_non_idat_chunks` **(Compute Cores)** (Impact: 385.1)
+  * `write_chunks_before_idat` **(Many-Argument Workhorses)** (Impact: 157.1)
+  * `spng_strerror` **(Compute Cores)** (Impact: 143.3)
+  * `spng_encode_image` **(Many-Argument Workhorses)** (Impact: 141.7)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1132 instances
+* *State Mutation (weighted view):* 3695
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1699`, `structural_boundaries: 1214`, `args: 259`, `func_start: 171`, `class_start: 85`
+* *Risk/State:* `safety_bypasses: 5`, `state_mutation: 1431`, `dead_code: 3`, `planned_debt: 2`, `fragile_debt: 6`, `unreferenced_by_name: 59`
+* *Architecture:* `io: 2`, `api: 65`, `import: 14`
+* *Defense:* `safety: 134`, `immutability_locks: 173`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 2):` arm64_neon.h, arm_neon.h, immintrin.h, inttypes.h, limits.h, math.h, miniz.h, pthread.h...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/features2d/src/agast.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 6513.86 | **LOC:** 8200 | **CtrlFlow:** 66.7% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **2**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (57.2%), Guard Balance (formerly Safety Score) (57.0%), Mutation Surface (formerly State Flux) (34.4%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `OAST_9_16` **(Many-Argument Workhorses)** (Impact: 2006.5)
+  * `AGAST_7_12s` **(Many-Argument Workhorses)** (Impact: 1390.0)
+  * `AGAST_7_12d` **(Many-Argument Workhorses)** (Impact: 1365.0)
+  * `AGAST_5_8` **(Many-Argument Workhorses)** (Impact: 952.1)
+    * *Intent:* #if (defined __i386__ || defined(_M_IX86) || defined __x86_64__ || defined(_M_X64) || defined(_M_ARM...
+  * `AGAST` **(Many-Argument Workhorses)** (Impact: 125.5)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 119 instances
+* *State Mutation (weighted view):* 376
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 5377`, `structural_boundaries: 1710`, `args: 33`, `func_start: 16`, `class_start: 1`
+* *Risk/State:* `state_mutation: 138`, `dead_code: 1`, `unreferenced_by_name: 4`
+* *Architecture:* `api: 1`, `import: 2`
+* *Defense:* `immutability_locks: 46`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` agast_score.hpp, precomp.hpp
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `apps/traincascade/old_ml_tree.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 5584.32 | **LOC:** 4154 | **CtrlFlow:** 25.2% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **2**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.8%), Complexity Load (formerly Cognitive Load) (90.9%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 98.75% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `CvDTreeTrainData::set_data` **(Many-Argument Workhorses)** (Impact: 484.4)
+  * `CvDTree::predict` **(Many-Argument Workhorses)** (Impact: 115.7)
+  * `CvDTree::find_split_cat_class` **(Many-Argument Workhorses)** (Impact: 107.3)
+  * `CvDTreeTrainData::get_vectors` **(Many-Argument Workhorses)** (Impact: 82.4)
+  * `CvDTree::split_node_data` **(Many-Argument Workhorses)** (Impact: 82.0)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1117 instances
+* *State Mutation (weighted view):* 3473
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 837`, `structural_boundaries: 98`, `args: 115`, `func_start: 80`, `class_start: 3`
+* *Risk/State:* `safety_bypasses: 4`, `state_mutation: 1239`, `dead_code: 8`, `planned_debt: 3`, `unreferenced_by_name: 59`
+* *Architecture:* `api: 3`, `import: 2`
+* *Defense:* `safety: 4`, `doc: 4`, `immutability_locks: 165`, `cleanup: 4`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` ctype.h, old_ml_precomp.hpp
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/ts/src/ts_func.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 5560.94 | **LOC:** 3322 | **CtrlFlow:** 36.1% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **4**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.5%), Complexity Load (formerly Cognitive Load) (81.3%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `threshold` **(Many-Argument Workhorses)** (Impact: 190.8)
+  * `cmpEps` **(Many-Argument Workhorses)** (Impact: 160.4)
+    * *Intent:* #define CMP_EPS_OK 0 #define CMP_EPS_BIG_DIFF -1 #define CMP_EPS_INVALID_TEST_DATA -2 // there is Na...
+  * `muldiv` **(Many-Argument Workhorses)** (Impact: 96.2)
+  * `copyMakeBorder` **(Many-Argument Workhorses)** (Impact: 80.0)
+  * `transform` **(Many-Argument Workhorses)** (Impact: 77.7)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 849 instances
+* *State Mutation (weighted view):* 2559
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1065`, `structural_boundaries: 172`, `args: 99`, `func_start: 93`, `class_start: 1`
+* *Risk/State:* `safety_bypasses: 5`, `state_mutation: 861`, `dead_code: 1`, `unreferenced_by_name: 30`
+* *Architecture:* `import: 4`
+* *Defense:* `immutability_locks: 406`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` float.h, limits.h, types_c.h, precomp.hpp
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `3rdparty/libjasper/jpc_qmfb.c` (C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_3` (Drift: 0.0 IQR)
+- **Magnitude:** 5445.52 | **LOC:** 3145 | **CtrlFlow:** 16.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **7**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (100.0%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (64.0%)
+- **Documentation Coverage:** 92.8571% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `jpc_ns_fwdlift_colres` **(Many-Argument Workhorses)** (Impact: 96.1)
+  * `jpc_ns_invlift_colres` **(Many-Argument Workhorses)** (Impact: 96.1)
+  * `jpc_ns_fwdlift_colgrp` **(Many-Argument Workhorses)** (Impact: 88.6)
+  * `jpc_ns_invlift_colgrp` **(Many-Argument Workhorses)** (Impact: 88.6)
+  * `jpc_ns_fwdlift_col` **(Many-Argument Workhorses)** (Impact: 53.5)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 1383 instances
+* *State Mutation (weighted view):* 4168
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 426`, `structural_boundaries: 50`, `args: 134`, `func_start: 28`
+* *Risk/State:* `high_risk_execution: 8`, `state_mutation: 1402`, `unreferenced_by_name: 2`
+* *Architecture:* `api: 54`, `import: 7`
+* *Defense:* `safety: 1`, `doc: 6`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 6):` assert.h, jas_fix.h, jas_malloc.h, jas_math.h, jpc_math.h, jpc_qmfb.h, jpc_tsfb.h
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `hal/riscv-rvv/include/types.hpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_0` (Drift: 0.0 IQR)
+- **Magnitude:** 5260.71 | **LOC:** 879 | **CtrlFlow:** 3.5% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** changing it is visible to **1** in-repo importer(s); it depends on **2**; blast radius 0.603; role: Pure Producer (Foundation)
+- **Top Surface Vectors:** Guard Balance (formerly Safety Score) (53.7%), Mutation Surface (formerly State Flux) (14.8%), Complexity Load (formerly Cognitive Load) (11.8%), Test Surface (formerly Verification) (2.3%)
+- **Documentation Coverage:** 0.0% of unit weight undocumented
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 25`, `structural_boundaries: 397`, `args: 351`, `func_start: 79`, `class_start: 16`
+* *Risk/State:* `state_mutation: 14`
+* *Architecture:* `import: 2`
+* *Defense:* `immutability_locks: 5`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Producer (Foundation) | `Dependency Blast Radius (PageRank):` 0.603
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.003874
+  * `Imports (Out-Degree: 0):` riscv_vector.h, type_traits
+  * `Imported By (In-Degree: 1):` (Excluded from Brief to save tokens)
+
+### `modules/imgproc/src/histogram.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 5206.54 | **LOC:** 3658 | **CtrlFlow:** 27.5% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **5**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.5%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (73.8%)
+- **Documentation Coverage:** 92.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `calcHist_` **(Many-Argument Workhorses)** (Impact: 335.7)
+    * *Intent:* ////////////////////////////////// C A L C U L A T E H I S T O G R A M /////////////////////////////...
+  * `calcHist_8u` **(Many-Argument Workhorses)** (Impact: 170.3)
+  * `calcBackProj_` **(Many-Argument Workhorses)** (Impact: 157.0)
+  * `cv::calcHist` **(Many-Argument Workhorses)** (Impact: 139.4)
+    * *Intent:* #endif
+  * `cv::compareHist` **(Many-Argument Workhorses)** (Impact: 116.8)
+    * *Intent:* ////////////////// C O M P A R E H I S T O G R A M S ////////////////////////
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 866 instances
+* *State Mutation (weighted view):* 2692
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 841`, `structural_boundaries: 121`, `args: 83`, `func_start: 50`, `class_start: 4`
+* *Risk/State:* `safety_bypasses: 1`, `state_mutation: 960`, `planned_debt: 2`, `duplicate_logic: 2`, `unreferenced_by_name: 10`
+* *Architecture:* `api: 4`, `import: 5`
+* *Defense:* `safety: 3`, `doc: 6`, `sync_locks: 5`, `immutability_locks: 239`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 3):` opencl_kernels_imgproc.hpp, intrin.hpp, ovx_defs.hpp, tls.hpp, precomp.hpp
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/imgproc/src/color_lab.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 5157.4 | **LOC:** 4854 | **CtrlFlow:** 16.7% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **5**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.0%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (66.5%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `cvtBGRtoLab` **(Many-Argument Workhorses)** (Impact: 167.5)
+    * *Intent:* // 8u, 32f
+  * `cvtLabtoBGR` **(Many-Argument Workhorses)** (Impact: 160.6)
+    * *Intent:* // 8u, 32f
+  * `cvtBGRtoXYZ` **(Many-Argument Workhorses)** (Impact: 91.0)
+  * `cvtXYZtoBGR` **(Many-Argument Workhorses)** (Impact: 87.8)
+  * `operator()` **(Many-Argument Workhorses)** (Impact: 73.2)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 857 instances
+* *State Mutation (weighted view):* 3047
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 658`, `structural_boundaries: 182`, `args: 285`, `func_start: 87`, `class_start: 24`
+* *Risk/State:* `state_mutation: 1333`, `dead_code: 13`, `planned_debt: 3`, `duplicate_logic: 11`, `unreferenced_by_name: 12`
+* *Architecture:* `import: 5`
+* *Defense:* `doc: 4`, `immutability_locks: 278`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 2):` color.hpp, opencl_kernels_imgproc.hpp, intrin.hpp, softfloat.hpp, precomp.hpp
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `3rdparty/libpng/pngrtran.c` (C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_8` (Drift: 0.0 IQR)
+- **Magnitude:** 5128.22 | **LOC:** 5160 | **CtrlFlow:** 22.1% | **Authorship Centralization:** 100.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **3**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.3%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (70.9%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `png_do_compose` **(Many-Argument Workhorses)** (Impact: 322.8)
+    * *Intent:* /* Replace any alpha or transparency with the supplied background color. * "background" is already i...
+  * `png_set_quantize` **(Many-Argument Workhorses)** (Impact: 183.6)
+  * `png_init_read_transformations` **(Many-Argument Workhorses)** (Impact: 176.2)
+    * *Intent:* #endif /* READ_GAMMA */
+  * `png_do_read_transformations` **(Many-Argument Workhorses)** (Impact: 120.6)
+    * *Intent:* #endif /* READ_QUANTIZE */ /* Transform the row. The order of transformations is significant, * and ...
+  * `png_do_expand` **(Many-Argument Workhorses)** (Impact: 111.2)
+    * *Intent:* /* If the bit depth < 8, it is expanded to 8. Also, if the already * expanded transparency value is ...
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 990 instances
+* *State Mutation (weighted view):* 3166
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 812`, `structural_boundaries: 147`, `args: 75`, `func_start: 48`, `class_start: 2`
+* *Risk/State:* `state_mutation: 1186`, `dead_code: 11`, `planned_debt: 7`, `fragile_debt: 2`, `unreferenced_by_name: 17`
+* *Architecture:* `api: 27`, `import: 3`
+* *Defense:* `safety: 53`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` arm64_neon.h, arm_neon.h, pngpriv.h
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `3rdparty/protobuf/src/google/protobuf/descriptor.cc` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_4` (Drift: 0.0 IQR)
+- **Magnitude:** 5068.02 | **LOC:** 8026 | **CtrlFlow:** 23.1% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **36**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (99.8%), Debt Markers (formerly Tech Debt) (97.1%), Complexity Load (formerly Cognitive Load) (89.6%), Guard Balance (formerly Safety Score) (85.7%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `DescriptorBuilder::BuildFieldOrExtension` **(Many-Argument Workhorses)** (Impact: 239.6)
+  * `DescriptorBuilder::OptionInterpreter::SetOptionValue` **(Many-Argument Workhorses)** (Impact: 158.2)
+  * `DescriptorBuilder::CrossLinkField` **(Many-Argument Workhorses)** (Impact: 111.7)
+  * `DescriptorBuilder::BuildFileImpl` **(Compute Cores)** (Impact: 94.2)
+  * `DescriptorBuilder::OptionInterpreter::InterpretSingleOption` **(Many-Argument Workhorses)** (Impact: 82.3)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 536 instances
+* *State Mutation (weighted view):* 1713
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1387`, `structural_boundaries: 846`, `args: 478`, `func_start: 348`, `class_start: 29`
+* *Risk/State:* `safety_bypasses: 35`, `state_mutation: 641`, `dead_code: 16`, `planned_debt: 12`, `fragile_debt: 5`, `unreferenced_by_name: 226`
+* *Architecture:* `api: 10`, `import: 36`
+* *Defense:* `safety: 13`, `sync_locks: 11`, `immutability_locks: 800`, `cleanup: 3`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 27):` algorithm, array, functional, any.h, descriptor.h, descriptor.pb.h, descriptor_database.h, dynamic_message.h...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/core/src/dxt.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_6` (Drift: 0.0 IQR)
+- **Magnitude:** 5009.7 | **LOC:** 4722 | **CtrlFlow:** 19.9% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **5**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (98.7%), Complexity Load (formerly Cognitive Load) (90.3%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 100.0% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `DFT` **(Many-Argument Workhorses)** (Impact: 144.2)
+    * *Intent:* // mixed-radix complex discrete Fourier transform: double-precision version
+  * `DFTInit` **(Many-Argument Workhorses)** (Impact: 128.7)
+  * `init` **(Many-Argument Workhorses)** (Impact: 119.5)
+  * `init` **(Many-Argument Workhorses)** (Impact: 102.3)
+  * `ippi_DCT_32f` **(Many-Argument Workhorses)** (Impact: 86.2)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 837 instances
+* *State Mutation (weighted view):* 2828
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 793`, `structural_boundaries: 366`, `args: 171`, `func_start: 123`, `class_start: 27`
+* *Risk/State:* `safety_bypasses: 28`, `state_mutation: 1154`, `dead_code: 3`, `planned_debt: 4`, `unreferenced_by_name: 17`
+* *Architecture:* `api: 10`, `import: 5`
+* *Defense:* `doc: 3`, `immutability_locks: 282`, `cleanup: 1`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 2):` map, opencl_kernels_core.hpp, opencl_clfft.hpp, opencl_core.hpp, precomp.hpp
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `samples/winrt/FaceDetection/FaceDetection/FaceDetection_TemporaryKey.pfx` (PLAINTEXT | Tier 0 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_2` (Drift: N/A IQR)
+- **Magnitude:** 5000.0 | **LOC:** 1 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** isolated in the scanned graph -- no in-repo artifact imports it and it imports none
+- **Top Surface Vectors:** None above 0%
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `samples/winrt/ImageManipulations/MediaCapture_TemporaryKey.pfx` (PLAINTEXT | Tier 0 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_2` (Drift: N/A IQR)
+- **Magnitude:** 5000.0 | **LOC:** 1 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** isolated in the scanned graph -- no in-repo artifact imports it and it imports none
+- **Top Surface Vectors:** None above 0%
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `samples/winrt/JavaScript/MediaCaptureJavaScript_TemporaryKey.pfx` (PLAINTEXT | Tier 0 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_2` (Drift: N/A IQR)
+- **Magnitude:** 5000.0 | **LOC:** 1 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** isolated in the scanned graph -- no in-repo artifact imports it and it imports none
+- **Top Surface Vectors:** None above 0%
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `samples/winrt/OcvImageProcessing/OcvImageProcessing/OcvImageProcessing_TemporaryKey.pfx` (PLAINTEXT | Tier 0 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_2` (Drift: N/A IQR)
+- **Magnitude:** 5000.0 | **LOC:** 1 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** isolated in the scanned graph -- no in-repo artifact imports it and it imports none
+- **Top Surface Vectors:** None above 0%
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `samples/winrt_universal/VideoCaptureXAML/video_capture_xaml/video_capture_xaml.Windows/video_capture_xaml.Windows_TemporaryKey.pfx` (PLAINTEXT | Tier 0 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_2` (Drift: N/A IQR)
+- **Magnitude:** 5000.0 | **LOC:** 1 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** isolated in the scanned graph -- no in-repo artifact imports it and it imports none
+- **Top Surface Vectors:** None above 0%
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `samples/winrt_universal/VideoCaptureXAML/video_capture_xaml/video_capture_xaml.WindowsPhone/video_capture_xaml.WindowsPhone_TemporaryKey.pfx` (PLAINTEXT | Tier 0 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_2` (Drift: N/A IQR)
+- **Magnitude:** 5000.0 | **LOC:** 1 | **CtrlFlow:** 0.0% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** isolated in the scanned graph -- no in-repo artifact imports it and it imports none
+- **Top Surface Vectors:** None above 0%
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* None
+* *Risk/State:* None
+* *Architecture:* None
+* *Defense:* None
+* *Network Topology:*
+  * `Ecosystem Role:` Isolated/Orphan | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 0):` None
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/imgproc/src/resize.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_4` (Drift: 0.0 IQR)
+- **Magnitude:** 4649.58 | **LOC:** 4261 | **CtrlFlow:** 18.4% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **9**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.0%), Complexity Load (formerly Cognitive Load) (88.2%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 99.0099% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `resize` **(Many-Argument Workhorses)** (Impact: 288.9)
+  * `ocl_resize` **(Many-Argument Workhorses)** (Impact: 127.1)
+  * `ipp_resize` **(Many-Argument Workhorses)** (Impact: 120.5)
+    * *Intent:* #endif
+  * `operator()` **(Many-Argument Workhorses)** (Impact: 90.7)
+  * `resize_bitExact` **(Many-Argument Workhorses)** (Impact: 67.9)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 897 instances
+* *State Mutation (weighted view):* 2874
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 683`, `structural_boundaries: 490`, `args: 384`, `func_start: 101`, `class_start: 63`
+* *Risk/State:* `safety_bypasses: 10`, `state_mutation: 1080`, `dead_code: 4`, `duplicate_logic: 2`, `unreferenced_by_name: 3`
+* *Architecture:* `api: 15`, `import: 9`
+* *Defense:* `safety: 6`, `doc: 4`, `immutability_locks: 327`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 5):` fixedpoint.inl.hpp, hal_replacement.hpp, opencl_kernels_imgproc.hpp, intrin.hpp, ovx_defs.hpp, softfloat.hpp, buffer_area.private.hpp, precomp.hpp...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/objdetect/src/qrcode.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_6` (Drift: 0.0 IQR)
+- **Magnitude:** 4410.12 | **LOC:** 4744 | **CtrlFlow:** 21.3% | **Authorship Centralization:** 20.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **11**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (97.7%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (69.4%)
+- **Documentation Coverage:** 97.8102% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `QRDetect::getQuadrilateral` **(Many-Argument Workhorses)** (Impact: 98.5)
+  * `QRDetectMulti::findNumberLocalizationPoints` **(Compute Cores)** (Impact: 80.1)
+  * `ImplContour::decodeMulti` **(Many-Argument Workhorses)** (Impact: 61.0)
+  * `QRDecode::findTempPatternsAddingPoints` **(Compute Cores)** (Impact: 51.5)
+  * `QRDetectMulti::ParallelSearch::operator()` **(Compute Cores)** (Impact: 45.2)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 828 instances
+* *State Mutation (weighted view):* 2620
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 885`, `structural_boundaries: 313`, `args: 142`, `func_start: 137`, `class_start: 16`
+* *Risk/State:* `safety_bypasses: 1`, `state_mutation: 964`, `dead_code: 1`, `planned_debt: 5`, `fragile_debt: 1`, `unreferenced_by_name: 78`
+* *Architecture:* `api: 7`, `import: 11`
+* *Defense:* `safety: 8`, `doc: 4`, `immutability_locks: 294`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 5):` array, cmath, graphical_code_detector_impl.hpp, limits, map, calib3d.hpp, logger.hpp, objdetect.hpp...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/core/src/ocl.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_12` (Drift: 0.0 IQR)
+- **Magnitude:** 4390.78 | **LOC:** 7665 | **CtrlFlow:** 18.1% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **27**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (86.5%), Debt Markers (formerly Tech Debt) (86.4%), Test Surface (formerly Verification) (80.0%)
+- **Documentation Coverage:** 98.0296% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `selectOpenCLDevice` **(Many-Argument Workhorses)** (Impact: 151.0)
+  * `Kernel::Impl::run` **(Many-Argument Workhorses)** (Impact: 84.0)
+  * `convertFromImage` **(Many-Argument Workhorses)** (Impact: 67.7)
+    * *Intent:* /* // Convert OpenCL image2d_t memory to UMat */
+  * `checkContinuous` **(Many-Argument Workhorses)** (Impact: 65.6)
+  * `deallocate_` **(Many-Argument Workhorses)** (Impact: 64.6)
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 551 instances
+* *State Mutation (weighted view):* 1904
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1177`, `structural_boundaries: 700`, `args: 507`, `func_start: 402`, `class_start: 31`
+* *Risk/State:* `safety_bypasses: 86`, `high_risk_execution: 1`, `state_mutation: 802`, `dead_code: 6`, `planned_debt: 11`, `duplicate_logic: 2`, `unreferenced_by_name: 178`
+* *Architecture:* `io: 7`, `api: 15`, `import: 27`
+* *Defense:* `safety: 72`, `doc: 13`, `sync_locks: 37`, `immutability_locks: 487`, `cleanup: 3`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 18):` deque, fstream, inttypes.h, list, map, ocl_disabled.impl.hpp, opencl_kernels_core.hpp, bufferpool.hpp...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `modules/ts/src/ts_gtest.cpp` (CPP | Tier 2 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_15` (Drift: 0.0 IQR)
+- **Magnitude:** 4383.46 | **LOC:** 11449 | **CtrlFlow:** 19.1% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **63**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Debt Markers (formerly Tech Debt) (98.5%), Test Surface (formerly Verification) (80.0%), Guard Balance (formerly Safety Score) (73.5%), Mutation Surface (formerly State Flux) (73.5%)
+- **Documentation Coverage:** 99.8374% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `IsValidUTF8` **(Compute Cores)** (Impact: 55.4)
+  * `PrintAsCharLiteralTo` **(Compute Cores)** (Impact: 45.7)
+    * *Intent:* // Prints a wide or narrow char c as a character literal without the // quotes, escaping it when nec...
+  * `CreateUnifiedDiff` **(Many-Argument Workhorses)** (Impact: 45.0)
+    * *Intent:* // Create a list of diff hunks in Unified diff format. // Each hunk has a header generated by PrintH...
+  * `DefaultDeathTestFactory::Create` **(Many-Argument Workhorses)** (Impact: 42.1)
+    * *Intent:* # endif // !GTEST_OS_WINDOWS // Creates a concrete DeathTest-derived class that depends on the // --...
+  * `XmlUnitTestResultPrinter::EscapeXml` **(Compute Cores)** (Impact: 41.9)
+    * *Intent:* // Returns an XML-escaped copy of the input string str. If is_attribute // is true, the text is mean...
+**Contextual Mitigations & Amplifications:**
+* *Mitigated Memory Allocs:* 1 instances
+* *Amplified Cascading Flux:* 355 instances
+* *Memory Alloc (weighted view):* 41
+* *State Mutation (weighted view):* 1162
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 1370`, `structural_boundaries: 1098`, `args: 670`, `func_start: 619`, `class_start: 49`
+* *Risk/State:* `safety_bypasses: 14`, `high_risk_execution: 6`, `state_mutation: 452`, `dead_code: 26`, `planned_debt: 2`, `fragile_debt: 26`, `duplicate_logic: 10`, `unreferenced_by_name: 255`
+* *Architecture:* `io: 5`, `api: 36`, `import: 39`
+* *Defense:* `safety: 7`, `doc: 3`, `test: 18`, `sync_locks: 32`, `immutability_locks: 1100`, `cleanup: 22`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 4):` failure_signal_handler.h, stacktrace.h, symbolize.h, str_cat.h, algorithm, inet.h, cctype, climits...
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+### `3rdparty/openjpeg/openjp2/dwt.c` (C | Tier 1.5 | AI Safe: 0.0%)
+- **Global Archetype:** `file_cluster_6` (Drift: 0.0 IQR)
+- **Magnitude:** 4089.2 | **LOC:** 3980 | **CtrlFlow:** 16.4% | **Authorship Centralization:** 0.0%
+- **Blast Radius:** nothing in-repo imports it (entrypoint or orphan); it depends on **6**; blast radius 0.067; role: Pure Consumer (Orchestrator)
+- **Top Surface Vectors:** Mutation Surface (formerly State Flux) (100.0%), Guard Balance (formerly Safety Score) (99.2%), Test Surface (formerly Verification) (80.0%), Complexity Load (formerly Cognitive Load) (67.4%)
+- **Documentation Coverage:** 88.1579% of unit weight undocumented
+**Top Internal Functions/Classes:**
+  * `opj_dwt_encode_and_deinterleave_v` **(Many-Argument Workhorses)** (Impact: 157.0)
+    * *Intent:* /* Forward 5-3 transform, for the vertical pass, processing cols columns */ /* where cols <= NB_ELTS...
+  * `opj_dwt_decode_partial_1_parallel` **(Many-Argument Workhorses)** (Impact: 101.9)
+    * *Intent:* #define OPJ_S_off(i,off) a[(OPJ_UINT32)(i)*2*4+off] #define OPJ_D_off(i,off) a[(1+(OPJ_UINT32)(i)*2)...
+  * `opj_dwt_decode_tile_97` **(Many-Argument Workhorses)** (Impact: 73.1)
+    * *Intent:* /* <summary> */ /* Inverse 9-7 wavelet transform in 2-D. */ /* </summary> */...
+  * `opj_dwt_encode_procedure` **(Many-Argument Workhorses)** (Impact: 64.9)
+    * *Intent:* /* <summary> */ /* Forward 5-3 wavelet transform in 2-D. */ /* </summary> */...
+  * `opj_dwt_decode_tile` **(Many-Argument Workhorses)** (Impact: 58.1)
+    * *Intent:* /* <summary> */ /* Inverse wavelet transform in 2-D. */ /* </summary> */...
+**Contextual Mitigations & Amplifications:**
+* *Amplified Cascading Flux:* 784 instances
+* *State Mutation (weighted view):* 2566
+**Structural Signatures (Net Mitigated Signals):**
+* *Structure:* `branch: 523`, `structural_boundaries: 173`, `args: 154`, `func_start: 62`, `class_start: 9`
+* *Risk/State:* `safety_bypasses: 45`, `state_mutation: 998`, `dead_code: 2`, `fragile_debt: 22`, `unreferenced_by_name: 6`
+* *Architecture:* `api: 23`, `import: 6`
+* *Defense:* `safety: 46`, `doc: 18`, `immutability_locks: 143`
+* *Network Topology:*
+  * `Ecosystem Role:` Pure Consumer (Orchestrator) | `Dependency Blast Radius (PageRank):` 0.067
+  * `Choke Point (Betweenness):` 0.0 | `Ripple Effect (Closeness):` 0.0
+  * `Imports (Out-Degree: 1):` assert.h, emmintrin.h, immintrin.h, opj_includes.h, tmmintrin.h, xmmintrin.h
+  * `Imported By (In-Degree: 0):` None (Orphan / Entrypoint)
+
+## 12. ARCHITECTURAL DRIFT ANOMALIES & ANTI-PATTERNS
+> **AI CONTEXT:** Pay close attention to 'Anti-Pattern' files. These files blend in globally (Low Global Drift), but heavily violate the standard conventions of their native programming language (High Local Drift). 'Mixed-Responsibility' files sit perfectly between two global archetypes (Delta <= 0.9 IQR), indicating a violation of the Single Responsibility Principle.
+
+*No highly conflicted/drifting files detected within the 0.9 IQR threshold.*
+
+## 12.5 STRATEGIC REFACTORING TARGETS (Volatility & Authorship Centralization)
+> **AI CONTEXT:** Use these intersections to recommend pragmatic next steps. Risk is exponentially worse when combined with high churn (frequent edits) or high authorship centralization (single points of failure).
+
+### 🔥 The Hotspot Matrix (High Volatility + High Risk)
+These files are messy, complex, and modified frequently. They are the primary source of developer friction.
+
+- `hal/ipp/src/warp_ipp.cpp` -> Churn: **77.55%** | Cog Load: 58.0365% | Debt: 21.1709%
+- `modules/dnn/src/onnx/onnx_importer.cpp` -> Churn: **77.23%** | Cog Load: 68.8442% | Debt: 17.5391%
+- `modules/imgcodecs/src/utils.cpp` -> Churn: **73.33%** | Cog Load: 69.2287% | Debt: 96.624%
+- `modules/videoio/src/cap_msmf.cpp` -> Churn: **65.71%** | Cog Load: 74.0722% | Debt: 39.0088%
+- `modules/imgcodecs/src/grfmt_bmp.cpp` -> Churn: **64.5%** | Cog Load: 79.9948% | Debt: 43.507%
+
+### 👤 Key Person Dependencies (High Impact + Siloed Knowledge)
+These are massive, load-bearing files written almost entirely by a single developer. They represent severe 'Bus Factor' risk.
+
+- `3rdparty/libtiff/tif_dirread.c` -> **Kumataro** (100.0% isolated ownership) | Magnitude: 7975.08
+- `3rdparty/libpng/pngrtran.c` -> **Alexander Smorkalov** (100.0% isolated ownership) | Magnitude: 5128.22
+- `apps/pattern-tools/svgfig.py` -> **Alexander Smorkalov** (100.0% isolated ownership) | Magnitude: 3854.42
+- `modules/imgproc/src/smooth.simd.hpp` -> **Madan mohan Manokar** (100.0% isolated ownership) | Magnitude: 3566.96
+- `3rdparty/libpng/pngrutil.c` -> **Alexander Smorkalov** (100.0% isolated ownership) | Magnitude: 3550.4
+
+## 12.8 SYSTEMIC NETWORK BOTTLENECKS (N-Dimensional Topology)
+> **AI CONTEXT:** These metrics cross-multiply Network Graph Theory against Risk Exposure to identify the exact mechanisms of runtime failure.
+
+### ☣️ Cascading State Flux (Betweenness * State Flux)
+These files act as structural bridges between components, but possess highly volatile, mutating state. They cause unpredictable side-effects for all downstream consumers.
+
+- `modules/core/include/opencv2/core/utility.hpp` -> **Severity: 0.076** (Bridge: 0.0008 * Flux: 99.5502%)
+- `modules/core/include/opencv2/core/base.hpp` -> **Severity: 0.044** (Bridge: 0.0004 * Flux: 99.9738%)
+- `modules/core/include/opencv2/core/cvdef.h` -> **Severity: 0.034** (Bridge: 0.0006 * Flux: 61.7204%)
+- `modules/core/include/opencv2/core/types.hpp` -> **Severity: 0.025** (Bridge: 0.0004 * Flux: 62.3308%)
+- `modules/dnn/src/cuda4dnn/csl/stream.hpp` -> **Severity: 0.02** (Bridge: 0.0003 * Flux: 78.1336%)
+
+### 🃏 House of Cards (Closeness * Error Risk)
+These files are deeply embedded (1 or 2 hops from the entire codebase) but possess high error exposure. A runtime exception here will cascade instantly across the application.
+
+- `3rdparty/flatbuffers/include/flatbuffers/vector.h` -> **Severity: 9.44** (Embedded: 0.1615 * Error Risk: 58.4467%)
+- `modules/core/include/opencv2/core/base.hpp` -> **Severity: 8.973** (Embedded: 0.1016 * Error Risk: 88.304%)
+- `modules/core/include/opencv2/core/utility.hpp` -> **Severity: 8.218** (Embedded: 0.0924 * Error Risk: 88.9841%)
+- `3rdparty/flatbuffers/include/flatbuffers/buffer.h` -> **Severity: 8.176** (Embedded: 0.1209 * Error Risk: 67.6276%)
+- `3rdparty/flatbuffers/include/flatbuffers/base.h` -> **Severity: 8.149** (Embedded: 0.133 * Error Risk: 61.2515%)
+
+### 🙈 Opaque Critical Nodes (Dependency Blast Radius * Doc Risk)
+These are 'Core Architecture Nodes' that the entire ecosystem relies upon, but they lack human intent, documentation, or ownership metadata. Modifying them is flying blind.
+
+- `3rdparty/flatbuffers/include/flatbuffers/vector.h` -> **Severity: 2589.4** (Blast Radius: 25.894 * Doc Risk: 100.0%)
+- `3rdparty/flatbuffers/include/flatbuffers/string.h` -> **Severity: 2017.1** (Blast Radius: 20.171 * Doc Risk: 100.0%)
+- `modules/core/include/opencv2/core/cvdef.h` -> **Severity: 1901.52** (Blast Radius: 23.769 * Doc Risk: 80.0%)
+- `3rdparty/flatbuffers/include/flatbuffers/base.h` -> **Severity: 1872.463** (Blast Radius: 20.165 * Doc Risk: 92.8571%)
+- `modules/core/src/algorithm.cpp` -> **Severity: 1434.5** (Blast Radius: 14.345 * Doc Risk: 100.0%)
+
+## APPENDIX A. STRUCTURAL SURFACE LEXICON (EQUATIONS & CONTEXT)
+> **How the SAST Engine Calculates the Structural Surface Profile (Lower 0 - Higher Surface Presence 100%):**
+> Most scores use a Sigmoid curve based on density (Hits / LOC) to prevent massive files from mathematically hiding their flaws. These 13 vectors are activity/content surface meters -- they describe what is present in a file, not the probability of a defect. The temporal-crucible validation record (gitgalaxy#2982, ~3,550 scanned snapshots, two repositories, pre-registered) tested the per-file-standing-risk claim to exhaustion and found it does not hold; see docs/vectors.md for the full record and gitgalaxy#2991 for the rename this drove. `risk_*` names remain the underlying column/key names for schema compatibility -- see the 'formerly' aliases below.
+> 
+> 1. **Complexity Load** (formerly Cognitive Load Exposure)**:** Measures the mental effort required for a developer to read and understand the file. `Density(Branches + (Flux * 2) + Async/Danger)` mitigated by `Doc Coverage`.
+> 2. **Guard Balance** (formerly Error & Exception Risk Exposure)**:** Measures structural integrity and resilience against runtime errors. `Net Exposure = (Danger + Safety_Neg + Flux) - (Safety + Tests + Docs)`.
+> 3. **Debt Markers** (formerly Tech Debt Exposure)**:** Measures the density of developer-annotated structural stress. `Density(TODOs [1x] + FIXMEs/Hacks [3x] + Empty Stubs [0.5x])`.
+> 4. **Test Surface** (formerly Verification Risk Exposure)**:** Evaluates test coverage by comparing a function's structural complexity against the scope of the tests validating it.
+> 5. **Connectivity** (formerly API Risk Exposure)**:** Measures the public surface area of a module. `Ratio(API Hits / Total Functions & Classes)`.
+> 6. **Concurrency Surface** (formerly Concurrency Risk Exposure)**:** Measures the density of asynchronous operations, threading, and parallel execution logic.
+> 7. **Mutation Surface** (formerly State Flux Risk Exposure)**:** Measures the frequency of data mutation and variable reassignment.
+> 8. **Dead Code Surface** (formerly Commented Logic (dead code))**:** Measures the presence of abandoned, commented-out logic blocks.
+> 9. **Spec Alignment** (formerly Spec Match Risk Exposure)**:** Measures how closely code aligns with formal specifications or architectural requirements.
+> 10. **Historical Stability** (formerly Stability; predictive layer, promotion pending #2987)**:** Measures the recency of edits relative to the repository's entire lifespan. Part of the family the validation record actually supports as predictive -- currently ablated to zero in every scan (`GITGALAXY_DISABLE_GIT_HISTORY`, temporal-crucible#29).
+> 11. **Historical Churn** (formerly Deep Churn; predictive layer, promotion pending #2987)**:** Measures the historical volatility and frequency of modification. Same predictive-layer status and ablation caveat as Historical Stability above.
+> 12. **Documentation Surface** (formerly Documentation Risk Exposure)**:** Of the units extracted from a file, the weight-share a reader cannot recover from documentation -- public units count double, runtime-dynamic units count more, and a folder-level documentation umbrella shields the whole file. A ratio over units, not a density over lines; files with no extracted units have no value.
+> 13. **Indentation Consistency:** Measures formatting alignment (Tabs vs. Spaces). Provided for codebase standardization context, not a functional risk.
+> 
+> **--- THE SECURITY & VULNERABILITY LENS ---**
+> 14. **Obfuscation & Evasion Risk:** Measures the density of obfuscated logic, packed strings, and non-standard encoding.
+> 15. **Logic Bomb / Sabotage Risk:** Measures condition-heavy execution leading to destructive OS, memory, or process commands.
+> 16. **Injection Surface Risk Exposure:** Measures external network/I/O input flowing directly into dynamic execution contexts (XSS, SQLi, RCE).
+> 17. **Memory Corruption Risk Exposure:** Measures the density of raw pointer math and manual memory allocations (Buffer Overflows, UAF).
+> 18. **Credential Material** (formerly Secrets Risk Exposure)**:** Measures the presence of hardcoded credentials exposed to logs or globals.
+> 
+> **--- STRUCTURAL MAGNITUDE (NOT RISK) ---**
+> **19. Function Magnitude (Impact Score):** Measures the physical footprint and 'heaviness' of a specific function. `((BranchHits + 1) * (Args + 1) + (0.05 * LOC)) * 10`. This is NOT a risk score.
+> **20. File Magnitude (Total Impact):** Measures the total structural impact of a file. `Sum(Function Impacts) + API + Concurrency + Flux + (LOC / 50)`. This is NOT a risk score.
+
+## AI SYSTEM INSTRUCTIONS (OUTPUT FORMAT)
+> **CRITICAL TONE DIRECTIVE:** Stay in the Senior Technical Storyteller persona from Section 1. Use grounded, professional software engineering terminology (e.g., coupling, cohesion, technical debt, single responsibility) woven into a cohesive narrative -- not a dry, disconnected bullet-point audit. DO NOT use sci-fi, dramatic, or sensational jargon (e.g., 'Trojan', 'violently violates', 'parasitic', 'chimeric'). Be objective and factual, but write like you're explaining the codebase to a colleague, not filing a verdict.
+> **When the user asks for an architectural review, structure your response using these directives:**
+> 1. **Information Flow & Purpose (The Executive Summary):** Synthesize the overarching purpose of the codebase. Trace the information flow by analyzing the Top Dependencies ('Imports' and 'Imported By') and the Language Composition. Explain how the system's archetype drives its design, but only mention Z-Score deviations if they are highly abnormal.
+> 2. **Notable Structures & Architecture:** Discuss the architecture based on the Dependency Graph. Identify the foundational load-bearers (highest inbound connections) versus the fragile orchestrators (highest outbound imports).
+> 3. **Security & Vulnerabilities:** Immediately surface any critical threats flagged in the `AI THREAT INTELLIGENCE (XGBoost)` section. If none exist, briefly confirm the repository is secure from recognized structural threats.
+> 4. **Outliers & Extremes:** Focus strictly on statistical anomalies. Highlight files or directory groups with high Structural Magnitude combined with a wide Blast Radius, severe Z-Scores (Architectural Drift), or extreme spikes in individual surface vectors (like Mutation Surface or Complexity Load). Do NOT sum the surface vectors together or treat any total of them as a score -- they are independently scaled meters in different units (#3112). Ignore normal, healthy code.
+> 5. **Recommended Next Steps (Refactoring for Stability):** Provide 2-3 highly specific, pragmatic suggestions focused strictly on reducing outliers. Instruct the user on how to refactor high Z-score files, decouple massive central nodes, or mitigate extreme risk exposures to stabilize the system's architecture.
