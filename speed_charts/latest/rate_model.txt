@@ -1,9 +1,9 @@
 GitGalaxy Scan Rate Model
-v2.9.1 batch, 2026-09-19 (636 repos)
+v2.12.0-b64f42bfcfb7 batch, 2026-11-06 (643 repos)
 
-Regime 1 -- Fixed overhead:  1 - 2,373 LOC  ->  ~0.04s (flat)
-  Floor = median time of the 63 smallest repos (<=147 LOC).
+Regime 1 -- Fixed overhead:  1 - 2,193 LOC  ->  ~0.10s (flat)
+  Floor = median time of the 64 smallest repos (<=249 LOC).
 
-Regime 2 -- Scan-bound:      2,373+ LOC  ->  time(s) ~= 1.718e-05 * LOC^0.9975
-  R^2=0.924, n=233, fit range 50,727-33,940,665 LOC.
-  Reference exponent (top-quartile-by-LOC repos only, n=159, >=148,275 LOC): 1.0229
+Regime 2 -- Scan-bound:      2,193+ LOC  ->  time(s) ~= 6.574e-05 * LOC^0.9524
+  R^2=0.874, n=289, fit range 30,442-29,178,905 LOC.
+  Reference exponent (top-quartile-by-LOC repos only, n=161, >=165,334 LOC): 0.9500
