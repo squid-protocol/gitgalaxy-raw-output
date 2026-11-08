@@ -28,6 +28,18 @@ HISTORY_FIELDS = [
     "typosquat_hits", "typosquat_repos",
 ]
 
+# Dark house style of gitgalaxy docs/media (owner 2026-11-08). The README shows
+# these PNGs through <img>, where prefers-color-scheme follows the viewer's OS,
+# so this dark palette is the only one -- no light variant.
+DARK_BG = (0x0f, 0x11, 0x17)
+DARK_TEXT = (0xf0, 0xef, 0xec)       # primary
+DARK_TEXT_2 = (0xc3, 0xc2, 0xb7)     # secondary
+DARK_MUTED = (0x8f, 0x8e, 0x86)
+DARK_FAINT = (0x77, 0x76, 0x6f)
+DARK_STRIPE = (0x17, 0x1a, 0x22)
+DARK_TRACK = (0x22, 0x25, 0x2e)
+DARK_RULE = (0x3c, 0x3d, 0x46)       # rules / gridlines / borders
+
 FONT_CANDIDATES_SANS = [
     "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     "/usr/share/fonts/dejavu/DejaVuSans.ttf",
@@ -306,15 +318,16 @@ def render_rate_model_card(version: str, summary: dict, model: dict, out_path: P
     f_body = f_sans(17)
     f_foot = f_sans(14)
 
-    COL_BG = (255, 255, 255)
-    COL_CARD = (246, 249, 255)
-    COL_BORDER = (215, 222, 228)
+    COL_BG = DARK_BG
+    COL_CARD = DARK_STRIPE
+    COL_BORDER = DARK_RULE
     COL_KICKER = (0, 110, 255)
-    COL_TITLE = (16, 21, 27)
-    COL_RANGE = (16, 21, 27)
-    COL_HEADLINE = (0, 78, 199)
-    COL_BODY = (55, 64, 75)
-    COL_FOOT = (120, 129, 140)
+    COL_TITLE = DARK_TEXT
+    COL_RANGE = DARK_TEXT
+    # was (0, 78, 199): 2.4:1 on the dark card, so lifted to a lighter blue
+    COL_HEADLINE = (77, 158, 255)
+    COL_BODY = DARK_TEXT_2
+    COL_FOOT = DARK_MUTED
 
     def text_w(text, font):
         bbox = font.getbbox(text)
@@ -409,7 +422,7 @@ def render_rate_model_card(version: str, summary: dict, model: dict, out_path: P
 
 
 # ---------------------------------------------------------------------------
-# Chart: LOC vs engine time, triangle-cluster label layout (square, white bg)
+# Chart: LOC vs engine time, triangle-cluster label layout (square, dark bg)
 # ---------------------------------------------------------------------------
 
 def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
@@ -423,17 +436,17 @@ def render_loc_vs_time_chart(version: str, summary: dict, out_path: Path):
     f_axis = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), max(28, LABEL_FONT_SIZE + 2))
     f_label = ImageFont.truetype(find_font(FONT_CANDIDATES_SANS_BOLD), LABEL_FONT_SIZE)
 
-    COL_BG = (255, 255, 255)
-    COL_PLOT_BORDER = (215, 222, 228)
-    COL_GRID = (232, 236, 240)
-    COL_TICK = (90, 99, 110)
-    COL_AXIS = (35, 43, 53)
-    COL_TITLE = (16, 21, 27)
-    COL_SUB = (108, 118, 130)
+    COL_BG = DARK_BG
+    COL_PLOT_BORDER = DARK_RULE
+    COL_GRID = DARK_RULE
+    COL_TICK = DARK_MUTED
+    COL_AXIS = DARK_TEXT
+    COL_TITLE = DARK_TEXT
+    COL_SUB = DARK_TEXT_2
     COL_DOT = (0, 110, 255)
-    COL_DOT_RING = (255, 255, 255)
-    COL_LINE = (203, 211, 220)
-    COL_LABEL = (40, 46, 54)
+    COL_DOT_RING = DARK_BG  # the ring separates a labelled dot from its neighbours
+    COL_LINE = DARK_RULE
+    COL_LABEL = DARK_TEXT_2
 
     PLOT_W = PLOT_H = 1000
     loc_vals = [r["loc"] for r in rows]
